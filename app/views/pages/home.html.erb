@@ -1,3 +1,6 @@
+<%= render "shared/clouds"%>
+
+
 <div class="">
 <%= render "shared/navbar" %>
 <section class="bg-slate-100">
@@ -26,9 +29,9 @@
 </section>
 <section class="flex flex-col items-center pb-10">
   <div class="w-4/5 lg:w-3/5 pt-10 flex flex-col items-center">
-    <h3 class="font-bold text-center text-3xl">
+    <h1 class="font-bold text-center text-3xl">
       Discover how to increase your sales and grow your school with our Flight School Marketing System 
-    </h3>
+    </h1>
     <p class="text-2xl py-10 lg:w-3/5 w-4/5 text-center">
       We're here to implement our tested strategies to take your flight school to the next level. There's a lot of so called “marketing experts” out there, but they don't know the aviation industry like we do.  <br> They're not pilots.
     </p>
@@ -36,9 +39,136 @@
       Our mission is to help you become the preferred flight school in your local area.  Increase your flight school's revenue.  Train the next generation of pilots.
     </p>
   </div>
+  <%= link_to root_path, class: "lg:ml-8 lg:mr-2 my-10" do %>
+    <div class="bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-center sm:text-lg lg:text-xl py-2 px-5">➡ Learn more about our system</div>
+  <% end %>
 </section>
 
 <!--Future section for testimonials (what our clients think about us)-->
 <!--Future section for book-->
+
+<!--Section for the four forces of flight schools-->
+<section class="bg-gradient-to-t from-blue-100 to-blue-300 py-10 text-slate-800">
+    <!--Clouds-->
+      <!--
+      <div id="progress" class="absolute">
+        <%= image_tag "cloudlong1.png", class: "mt-60" %>
+      </div>
+      <div id="progress2" class="absolute ">
+        <%= image_tag "cloudlong2.png", class: "" %>
+      </div>
+      <div id="progress3" class="absolute mt-10 ">
+        <%= image_tag "cloudlong1.png", class: "mt-48" %>
+      </div>
+      -->
+    <p class="text-center">
+      We all know about the four forces of flight, but have you heard of the...
+    </p>
+    <h3 class="lg:hidden text-4xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
+      Four Forces of<br> Flight Schools
+    </h3>
+    <h3 class="hidden lg:block text-4xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
+      Four Forces of Flight Schools
+    </h3>
+
+    <div class="grid grid-cols-3 gap-4 justify-items-center font-semibold text-sm lg:text-3xl">
+      <div class="col-span-3">
+        <div class="flex flex-col items-center">
+          <div class="">
+            Student Success
+          </div>
+          <div class="text-xl lg:text-6xl text-green-500 pb-5">
+          ▲
+          </div>
+        </div>
+      </div>
+
+      <div class="justify-self-end flex flex-col-reverse lg:flex-row items-center">
+        <div class="text-center">
+          Student Attrition
+        </div>
+        <div class="text-xl lg:text-6xl text-red-500">
+          ◀
+        </div>
+        
+      </div>
+
+      <div class="animate-[wiggle_15s_ease-in-out_infinite]">
+        <%= image_tag "cessna172.png", class: "" %>
+      </div>
+
+      <div class="justify-self-start flex flex-col lg:flex-row items-center justify-end">
+        <div class="text-xl lg:text-6xl text-green-500">
+          ▶
+        </div>
+        <div class="text-center">
+        New Students
+        </div>
+        
+      </div>
+    
+      <div class="col-span-3">
+        <div class="flex flex-col items-center">
+          <div class="text-xl lg:text-6xl text-red-500">
+          ▼
+          </div>
+          <div class="">
+            Inadequate Service
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  
+</section>
+
+
+<section class="bg-slate-100">
+<div class="flex flex-col items-center pb-20">
+    <h4 class="text-xl font-semibold text-blue-900 lg:w-2/5 w-4/5 text-center lg:pb-10">Let's take a look at the strategies we implement to help your flight school get more students<br> than you've ever had before</h4>
+  </div>
+
+  <!--Number font, google letters-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+    .g-blue{ color:#4285F4; }
+    .o-red{ color:#DB4437; }
+    .o-yellow{ color:#F4B400; }
+    .l-green{ color:#0F9D58; }
+  </style>
+
+  <div class="flex flex-col items-center">
+    <div class="flex flex-col-reverse lg:flex-row lg:justify-center">
+
+      <div class="lg:w-2/5 mx-5">
+        <div class="text-blue-900 text-4xl lg:text-5xl font-semibold py-5" style="">
+          1. Create a modern website and get on <span class="font-serif"><span class="g-blue">G</span><span
+        class="o-red">o</span><span class="o-yellow">o</span><span class="g-blue">g</span><span
+        class="l-green">l</span><span class="o-red e-red">e</span></span>
+        </div>
+
+        
+    
+
+
+        <p class="text-slate-900 text-lg">
+          asd
+        </p>
+
+      </div>
+
+
+      <div class="lg:w-2/5 lg:pt-32">
+      <%= image_tag "websites.jpg" %>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
 
 
