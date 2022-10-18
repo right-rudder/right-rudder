@@ -1,172 +1,421 @@
 <%= render "shared/clouds"%>
 
 
-<div class="">
-<%= render "shared/navbar" %>
-<section class="bg-slate-100">
-  <div class="flex flex-col lg:flex-row lg:items-center pt-10">
-    <!--Text Section-->
-    <div class="lg:w-1/2 flex flex-col justify-center items-center pb-10">
-      <p class="hidden lg:block text-3xl text-center">Become the Best Flight School<br> in your area with</p>
-      <p class="lg:hidden text-3xl text-center">Become the Best<br> Flight School <br> in your area with</p>
-      <h2 class="font-bold text-5xl pt-5 text-center">The <span class="text-blue-700">#1 Flight School</span></h2>
-      <h2 class="font-bold text-5xl text-center">Marketing Agency</h2>
-      <p class="w-3/5 pt-5">
-      Are you tired of other schools taking your students? Does your "marketing company" seem out of touch with the general aviation industry?
-      </p>
-      <p class="w-3/5 pt-5">
-      Right Rudder Marketing is the leader in helping <b>ONLY flight schools</b> leverage the internet and use well executed marketing strategies to take their business out of the clouds and into VFR.
-      </p>
-    </div>
-    <!--video section-->
-    <div class="lg:w-1/2">
-      <div class="grid place-items-center">
-        <iframe class="lg:w-4/5 w-full aspect-video" height="350" src="https://www.youtube.com/embed/z4tsBrxaNXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="text-lg">
+  <%= render "shared/navbar" %>
+  <section class="bg-slate-100">
+    <div class="flex flex-col lg:flex-row lg:items-center pt-10">
+      <!--Text Section-->
+      <div class="lg:w-1/2 flex flex-col justify-center items-center pb-10">
+        <p class="hidden lg:block text-3xl text-center">Become the Best Flight School<br> in your area with</p>
+        <p class="lg:hidden text-3xl text-center">Become the Best<br> Flight School <br> in your area with</p>
+        <h2 class="font-bold text-5xl pt-5 text-center">The <span class="text-blue-700">#1 Flight School</span></h2>
+        <h2 class="font-bold text-5xl text-center">Marketing Agency</h2>
+        <p class="w-3/5 pt-5 ">
+        Are you tired of other schools taking your students? Does your "marketing company" seem out of touch with the general aviation industry?
+        </p>
+        <p class="w-3/5 pt-5">
+        Right Rudder Marketing is the leader in helping <b>ONLY flight schools</b> leverage the internet and use well executed marketing strategies to take their business out of the clouds and into VFR.
+        </p>
       </div>
-    </div>
-  
-  </div>
-</section>
-<section class="flex flex-col items-center pb-10">
-  <div class="w-4/5 lg:w-3/5 pt-10 flex flex-col items-center">
-    <h1 class="font-bold text-center text-3xl">
-      Discover how to increase your sales and grow your school with our Flight School Marketing System 
-    </h1>
-    <p class="text-2xl py-10 lg:w-3/5 w-4/5 text-center">
-      We're here to implement our tested strategies to take your flight school to the next level. There's a lot of so called “marketing experts” out there, but they don't know the aviation industry like we do.  <br> They're not pilots.
-    </p>
-    <p class="font-semibold text-xl lg:w-3/5 w-4/5 text-center">
-      Our mission is to help you become the preferred flight school in your local area.  Increase your flight school's revenue.  Train the next generation of pilots.
-    </p>
-  </div>
-  <%= link_to root_path, class: "lg:ml-8 lg:mr-2 my-10" do %>
-    <div class="bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-center sm:text-lg lg:text-xl py-2 px-5">➡ Learn more about our system</div>
-  <% end %>
-</section>
-
-<!--Future section for testimonials (what our clients think about us)-->
-<!--Future section for book-->
-
-<!--Section for the four forces of flight schools-->
-<section class="bg-gradient-to-t from-blue-100 to-blue-300 py-10 text-slate-800">
-    <!--Clouds-->
-      <!--
-      <div id="progress" class="absolute">
-        <%= image_tag "cloudlong1.png", class: "mt-60" %>
-      </div>
-      <div id="progress2" class="absolute ">
-        <%= image_tag "cloudlong2.png", class: "" %>
-      </div>
-      <div id="progress3" class="absolute mt-10 ">
-        <%= image_tag "cloudlong1.png", class: "mt-48" %>
-      </div>
-      -->
-    <p class="text-center">
-      We all know about the four forces of flight, but have you heard of the...
-    </p>
-    <h3 class="lg:hidden text-4xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
-      Four Forces of<br> Flight Schools
-    </h3>
-    <h3 class="hidden lg:block text-4xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
-      Four Forces of Flight Schools
-    </h3>
-
-    <div class="grid grid-cols-3 gap-4 justify-items-center font-semibold text-sm lg:text-3xl">
-      <div class="col-span-3">
-        <div class="flex flex-col items-center">
-          <div class="">
-            Student Success
-          </div>
-          <div class="text-xl lg:text-6xl text-green-500 pb-5">
-          ▲
-          </div>
+      <!--video section-->
+      <div class="lg:w-1/2">
+        <div class="grid place-items-center">
+          <iframe class="lg:w-4/5 w-full aspect-video" height="350" src="https://www.youtube.com/embed/z4tsBrxaNXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-      </div>
-
-      <div class="justify-self-end flex flex-col-reverse lg:flex-row items-center">
-        <div class="text-center">
-          Student Attrition
-        </div>
-        <div class="text-xl lg:text-6xl text-red-500">
-          ◀
-        </div>
-        
-      </div>
-
-      <div class="animate-[wiggle_15s_ease-in-out_infinite]">
-        <%= image_tag "cessna172.png", class: "" %>
-      </div>
-
-      <div class="justify-self-start flex flex-col lg:flex-row items-center justify-end">
-        <div class="text-xl lg:text-6xl text-green-500">
-          ▶
-        </div>
-        <div class="text-center">
-        New Students
-        </div>
-        
       </div>
     
-      <div class="col-span-3">
-        <div class="flex flex-col items-center">
+    </div>
+  </section>
+  <section class="flex flex-col items-center pb-10">
+    <div class="w-4/5 lg:w-3/5 pt-10 flex flex-col items-center">
+      <h1 class="font-bold text-center text-3xl">
+        Discover how to increase your sales and grow your school with our Flight School Marketing System 
+      </h1>
+      <p class="text-2xl py-10 lg:w-3/5 w-4/5 text-center">
+        We're here to implement our tested strategies to take your flight school to the next level. There's a lot of so called “marketing experts” out there, but they don't know the aviation industry like we do.  <br> They're not pilots.
+      </p>
+      <p class="font-semibold text-xl lg:w-3/5 w-4/5 text-center">
+        Our mission is to help you become the preferred flight school in your local area.  Increase your flight school's revenue.  Train the next generation of pilots.
+      </p>
+    </div>
+    <%= link_to root_path, class: "lg:ml-8 lg:mr-2 my-10" do %>
+      <div class="bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-center sm:text-lg lg:text-xl py-2 px-5">➡ Learn more about our system</div>
+    <% end %>
+  </section>
+
+  <!--Future section for testimonials (what our clients think about us)-->
+  <!--Future section for book-->
+
+  <!--Section for the four forces of flight schools-->
+  <section class="bg-gradient-to-t from-blue-100 to-blue-300 py-10 text-slate-800">
+      <!--Clouds-->
+        <!--
+        <div id="progress" class="absolute">
+          <%= image_tag "cloudlong1.png", class: "mt-60" %>
+        </div>
+        <div id="progress2" class="absolute ">
+          <%= image_tag "cloudlong2.png", class: "" %>
+        </div>
+        <div id="progress3" class="absolute mt-10 ">
+          <%= image_tag "cloudlong1.png", class: "mt-48" %>
+        </div>
+        -->
+      <p class="text-center">
+        We all know about the four forces of flight, but have you heard of the...
+      </p>
+      <!--Mobilke-->
+      <h3 class="lg:hidden text-3xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
+        Four Forces of<br> Flight Schools
+      </h3>
+      <!--Desktop-->
+      <h3 class="hidden lg:block text-4xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
+        Four Forces of Flight Schools
+      </h3>
+
+      <div class="grid grid-cols-3 gap-4 justify-items-center font-semibold text-sm lg:text-3xl">
+        <div class="col-span-3">
+          <div class="flex flex-col items-center">
+            <div class="">
+              Student Success
+            </div>
+            <div class="text-xl lg:text-6xl text-green-500 lg:pb-5">
+            ▲
+            </div>
+          </div>
+        </div>
+
+        <div class="justify-self-end flex flex-col-reverse lg:flex-row items-center">
+          <div class="text-center">
+            Student Attrition
+          </div>
           <div class="text-xl lg:text-6xl text-red-500">
-          ▼
+            ◀
           </div>
-          <div class="">
-            Inadequate Service
+          
+        </div>
+
+        <div class="animate-[wiggle_15s_ease-in-out_infinite]">
+          <%= image_tag "cessna172.png", class: "" %>
+        </div>
+
+        <div class="justify-self-start flex flex-col lg:flex-row items-center justify-end">
+          <div class="text-xl lg:text-6xl text-green-500">
+            ▶
+          </div>
+          <div class="text-center">
+          New Students
+          </div>
+          
+        </div>
+      
+        <div class="col-span-3">
+          <div class="flex flex-col items-center">
+            <div class="text-xl lg:text-6xl text-red-500">
+            ▼
+            </div>
+            <div class="">
+              Inadequate Service
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
+      
+      <div class="flex flex-col items-center pt-20 w-full">
+        <p class="w-4/5 lg:w-3/5">
+          According to 
+          <%= link_to "https://www.boldmethod.com/blog/lists/2016/12/11-reasons-why-student-pilots-drop-out-of-training/", class: "text-blue-500 hover:underline", target: :blank do%>
+          AOPA and General Aviation News<%end%>, 
+          80% of student pilots drop out of training each year before receiving their pilot certificate.  While we might already know this and not think much about this statistic, this high dropout rate is directly correlated to your profits and revenue.  
+        </p>
 
-  
-</section>
+        <p class="w-4/5 lg:w-3/5 pt-10">
+          When student pilots quit, they stop showing up to your school and stop paying for rentals, ground school, and CFI instruction.  It also causes the family and friends of the student pilot to solidify and confirm their preconceived notions that pilot training is difficult and not worth the investment. This reduces the size of the pool of new students which hurts your flight school!  A profitable flight school always has a steady flow of new students and a low student attrition rate.
+        </p>
 
-
-<section class="bg-slate-100">
-<div class="flex flex-col items-center pb-20">
-    <h4 class="text-xl font-semibold text-blue-900 lg:w-2/5 w-4/5 text-center lg:pb-10">Let's take a look at the strategies we implement to help your flight school get more students<br> than you've ever had before</h4>
-  </div>
-
-  <!--Number font, google letters-->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-
-    .g-blue{ color:#4285F4; }
-    .o-red{ color:#DB4437; }
-    .o-yellow{ color:#F4B400; }
-    .l-green{ color:#0F9D58; }
-  </style>
-
-  <div class="flex flex-col items-center">
-    <div class="flex flex-col-reverse lg:flex-row lg:justify-center">
-
-      <div class="lg:w-2/5 mx-5">
-        <div class="text-blue-900 text-4xl lg:text-5xl font-semibold py-5" style="">
-          1. Create a modern website and get on <span class="font-serif"><span class="g-blue">G</span><span
-        class="o-red">o</span><span class="o-yellow">o</span><span class="g-blue">g</span><span
-        class="l-green">l</span><span class="o-red e-red">e</span></span>
+        <p class="w-4/5 lg:w-3/5 pt-10">
+          Pilot training is hard and intense so it is understandable that there are going to be students who don't make the cut.  We need to make sure the future generation of pilots fly safely and follow FAA regulations.  However, if your school is failing to get a steady flow of new students to join your school to replace the ones that quit, then your flight school will never be able to scale up.
+        </p>
+        <div class="flex flex-col items-center py-20">
+          <h4 class="text-2xl font-semibold text-blue-900 lg:w-1/2 w-4/5 text-center">Let's take a look at the strategies we implement to help get you more students than you've ever had before</h4>
         </div>
+      </div>
+  </section>
 
-        
+
+  <section class="bg-slate-100 py-10">
+    <!--Number font, google letters-->
+    <style>
+      .g-blue{ color:#4285F4; }
+      .o-red{ color:#DB4437; }
+      .o-yellow{ color:#F4B400; }
+      .l-green{ color:#0F9D58; }
+    </style>
+
+    <div class="flex flex-col items-center">
+      <div class="flex flex-col-reverse lg:flex-row lg:justify-center lg:items-center">
+
+        <div class="lg:w-2/5 mx-5">
+          <h5 class="text-blue-900 text-4xl font-semibold py-5" style="">
+            1. Create a SEO optimized modern website to funnel new students
+          </h5>
+          
+        </div>
+        <div class="lg:w-2/5 flex flex-col items-center">
+          <%= image_tag "websites.jpg" ,  class: "w-4/5" %>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:justify-center">
+        <div class="lg:w-2/5 mx-5 lg:px-5">
+          <p class="text-slate-900 text-lg py-5">
+            The foundation of our Flight School Marketing System is your beautiful website we'll design and develop.  We've tested hundreds of different methods to create a website and we know what works and what doesn't.  Our websites are programmed line by line from scratch and do not use WordPress and other page builders.  This makes them less prone to hacking and load much faster which makes our websites rank higher on Google.
+          </p>
+          <p class="text-slate-900 text-lg py-5">
+            We'll implement slick call to actions on both mobile and desktop to make it easy for future students to schedule a call and get a discovery flight in the books.  We'll publish custom tailored content, imagery, and branding for your flight school.
+          </p>
+          <h6 class="font-semibold text-xl py-5">Your flight school will look spectacular and potential students will want to make contact with you. We've proven it time and time again in our testing. And we'll have your website up and running for your flight school in less than a month.</h6>
+        </div>
     
+        <div class="lg:w-2/5 mx-5">
+          <p class="text-slate-900 text-lg py-5">
+            As a client of Right Rudder Marketing,  you'll get every aspect of this site custom built specifically for your flight school. Your website will have the following features:
+          </p>
+          <ul class="lg:pb-10 pr-5 py-5">
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Mobile friendly and responsive design that reformats on any device
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Dozens of pages of well structured general aviation content to help your site rank immediately upon launch
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Multi-step high converting forms that push potential students to request more information
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  High quality images and videos
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Fast loading hosting and top Google Page Speed scores to ensure you don't lose visitors due to slow speeds
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Completely SEO optimized custom content
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  An updated blog with regularly published SEO friendly content
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <div class="flex flex-col items-center">
+      <div class="flex flex-col-reverse lg:flex-row lg:justify-center lg:items-center">
 
+        <div class="lg:w-2/5 mx-5">
+          <h5 class="text-blue-900 text-4xl font-semibold py-5" style="">
+            2. Use SEO to rank high on <span class="font-serif"><span class="g-blue">G</span><span
+          class="o-red">o</span><span class="o-yellow">o</span><span class="g-blue">g</span><span
+          class="l-green">l</span><span class="o-red e-red">e</span></span> Maps and <span class="font-serif"><span class="g-blue">G</span><span
+          class="o-red">o</span><span class="o-yellow">o</span><span class="g-blue">g</span><span
+          class="l-green">l</span><span class="o-red e-red">e</span></span> Search
+          </h5>
+          
+        </div>
+        <div class="lg:w-2/5 flex flex-col items-center">
+          <%= image_tag "google-maps.jpg",  class: "w-3/5" %>
+          <div class="text-sm italic text-slate-500 pt-2">Ranking #1 on Google is Powerful</div>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:justify-center">
+        <div class="lg:w-2/5 mx-5 lg:px-5">
+          <p class="text-slate-900 text-lg py-5">
+            We've mentioned the acronym SEO a few times already and you may be wondering what that is.  SEO stands for <b>search engine optimization</b> and it is the art of crafting your website to help Google and other search engines know what your website is about and how relevant it is to user searches.
+          </p>
+          <p class="text-slate-900 text-lg py-5">
+            You'll see a clear difference in the number of students you are attracting when you see your school ranks in the top 3 results.  Having you school listed at the top is a game changer and we typically see movement within the first 90 days of working with our clients.
+          </p>
+          <p class="text-slate-900 text-lg py-5">
+          There are two parts to local search engine marketing for flight schools. The first part is on-page optimization:
+          </p>
+          <ul class="lg:pb-10 pr-5 py-5">
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Optimizing page titles and headlines for your geographic area
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Using relevant flight school keywords throughout your site for search engines
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Optimizing images and video content
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Creating content that positions your school as the expert in your area
+              </div>
+            </li>
+          </ul>
+        </div>
+    
+        <div class="lg:w-2/5 mx-5">
+          <p class="text-slate-900 text-lg py-5">
+            The next part is off-site optimization. Here are some things we do for this:
+          </p>
+          <ul class="lg:pb-10 pr-5 pb-5">
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Building high quality relevant backlinks to your site from related general aviation and local area websites
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Building mentions and citations for your business in prominent business directories on the internet
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Making your flight school stand out across the internet by creating links to your web site's content
+              </div>
+            </li>
+          </ul>
+          <p class="text-slate-900 text-lg py-5">
+            In the end, you'll be appearing up at the top of search results more than ever before.
+          </p>
+          <p class="text-slate-900 text-lg py-5">
+            Our SEO team is one of the best in the flight school marketing business.  We stay on top of all the latest SEO trends. This ensures that you're getting the best strategies deployed for the fastest results.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="flex flex-col-reverse lg:flex-row lg:justify-center lg:items-center">
+
+        <div class="lg:w-2/5 mx-5">
+          <h5 class="text-blue-900 text-4xl font-semibold py-5" style="">
+            3. Use targeted social media and <span class="font-serif"><span class="g-blue">G</span><span
+          class="o-red">o</span><span class="o-yellow">o</span><span class="g-blue">g</span><span
+          class="l-green">l</span><span class="o-red e-red">e</span></span> ads to get in front of interested students
+          </h5>
+          
+        </div>
+        <div class="lg:w-2/5 flex flex-col items-center">
+          <%= image_tag "mapad.jpg",  class: "w-3/5" %>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:justify-center">
+        <div class="lg:w-2/5 mx-5 lg:px-5">
+          <p class="text-slate-900 text-lg py-5">
+            We want your flight school to be seen everywhere that pilots look. It's how our proven system generates so many leads so consistently.
+          </p>
+          <p class="text-slate-900 text-lg py-5">
+            That starts with Google Ads and other pay per click advertising sources. We'll have your company running campaigns almost immediately and showing up for the terms you want to show up for on Google in your local area.  
+          </p>
+          <p class="text-slate-900 text-lg py-5">
+            In addition, we'll implement a social media strategy which can go a long way.  There are a billion registered users on Facebook and Instagram and it's growing everyday.  You need to reach these future students which are spending their time on social media.
+          </p>
+        </div>
+    
+        <div class="lg:w-2/5 mx-5">
+          <p class="text-slate-900 text-lg py-5">
+            Facebook and Instagram ads are a great way to do this. We can target users on social media platforms with ads for your flight school directly and show them offers, branded videos, and more at the click of a button. 
+          </p>
+          <p class="text-slate-900 text-lg py-5">
+            We'll work with you to create highly targeted ads that showcase your flight school in order to build trust and confidence before future students end up requesting a discovery flight from you.
+          </p>
+          <ul class="lg:pb-10 pr-5 pb-5">
+          <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Google pay per click ads
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Branding ad campaigns
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Retargeting ad campaigns
+              </div>
+            </li>
+            <li class="pb-5">
+              <div class="flex flex-row">
+                <div class="text-green-500 pr-3">✓</div>
+                  Discovery flight ads
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col-reverse lg:flex-row lg:justify-center">
+      <div class="lg:w-2/5 mx-5">
+        <h5 class="text-blue-900 text-4xl font-semibold py-5" style="">
+          4. Get more online reviews
+        </h5>
         <p class="text-slate-900 text-lg">
           asd
         </p>
-
       </div>
-
-
       <div class="lg:w-2/5 lg:pt-32">
-      <%= image_tag "websites.jpg" %>
+        <%= image_tag "websites.jpg" %>
       </div>
-      
     </div>
-  </div>
-</section>
+
+    <div class="flex flex-col-reverse lg:flex-row lg:justify-center">
+      <div class="lg:w-2/5 mx-5">
+        <h5 class="text-blue-900 text-4xl font-semibold py-5" style="">
+          5. Set your flight school apart with video
+        </h5>
+        <p class="text-slate-900 text-lg">
+          asd
+        </p>
+      </div>
+      <div class="lg:w-2/5 lg:pt-32">
+        <%= image_tag "websites.jpg" %>
+      </div>
+    </div>
+  </section>
+</div>
 
 
 
