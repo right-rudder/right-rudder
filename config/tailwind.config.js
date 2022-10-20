@@ -22,7 +22,15 @@ module.exports = {
           '70%': { transform: 'rotate(0deg) translateY(0rem)', opacity: '1'},
           '100%': { transform: 'rotate(-30deg) translateX(75rem) scale(.5)', opacity: '0'  },
         },
-      }
+      },
+      backgroundImage : {
+        'head' : "url('cessnalake.jpg')",
+      },
+      height: theme => ({
+        'screen-1/2': '50vh',
+        'screen-2/3': '75vh',
+        'screen-1/3': 'calc(100vh / 3)',
+      }),
     },
   },
   plugins: [
