@@ -1,0 +1,108 @@
+<!--Footer-->
+<section class="w-full bg-blue-900 text-slate-100">
+  <div class="flex flex-col lg:flex-row justify-center items-start pt-10">
+    <!--Logo and mission-->
+    <div class="lg:w-1/4 flex flex-col justify-center lg:justify -start px-10">
+      <%= image_tag "rightruddermarketinglogo750white.png", class: "w-1/2"%>
+      <p class="py-5">
+        We are a rapidly expanding pilot owned digital marketing agency working exclusively with flight schools throughout the United States. We're on a mission to help 100 flight schools double their student body and dominate their service area by 2025.
+      </p>
+    </div>
+    <!--Links-->
+    <div class="lg:w-1/4 flex flex-col justify-center px-10">
+      <h3 class="font-bold text-xl pt-10 pb-5 lg:pb-10 lg:hidden">Free Resources<br> and Information</h3>
+      <h3 class="font-bold text-xl pt-10 pb-5 lg:pb-10 hidden lg:block">Free Resources<br> and Information</h3>
+      <ul class="font-semibold ">
+        <li class="pb-3"><%= link_to root_path, class: "hover:underline" do %>Flight School Marketing System<%end%></li>
+        <li class="pb-3"><%= link_to root_path, class: "hover:underline" do %>Watch our FREE webinar<%end%></li>
+        <li class="pb-3"><%= link_to root_path, class: "hover:underline" do %>View tips to grow your school<%end%></li>
+        <li class="pb-3"><%= link_to root_path, class: "hover:underline" do %>Free marketing guides<%end%></li>
+        <li class="pb-3"><%= link_to root_path, class: "hover:underline" do %>About Us<%end%></li>
+        <li class="pb-3"><%= link_to root_path, class: "hover:underline" do %>Careers<%end%></li>
+      </ul>
+    </div>
+    <!--Contact-->
+    <div class="lg:w-1/4 flex flex-col justify-center lg:px-3 px-10">
+      <h3 class="font-bold text-xl pt-10 pb-3 lg:pt-12 lg:pb-10">Contact Us</h3>
+      <ul class="pr-5 py-5 w-full">
+        <li class="pb-5">
+          <div class="flex flex-row">
+            <div class="pr-3">
+              <%= image_tag "pin.png", class: "h-5 invert pt-1"%>
+            </div>
+            770 Market Street<br>
+            Suite 2026<br>
+            Farmington, MO 63640<br>
+          </div>
+        </li>
+        <li class="pb-5">
+          <div class="flex flex-row">
+            <div class="pr-3">
+              <%= image_tag "phone.png", class: "h-5 invert pt-1" %>
+            </div>
+            1-314-358-2100
+          </div>
+        </li>
+        <li class="pb-5">
+          <div class="flex flex-row">
+            <div class="pr-3"><%= image_tag "email.png", class: "h-5 invert pt-1 object-contain" %></div>
+            <p>
+              <%= mail_to "info@rightruddermarketing.com", class: "hover:underline"%>
+            </p>
+          </div>
+        </li>
+        <li class="pb-5">
+          <div class="flex flex-row">
+            <div class="pr-3">
+              <%= image_tag "support.png", class: "h-5 invert pt-1" %>
+            </div>
+              <%= link_to "Support Ticket", root_path, class: "hover:underline"%>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--News Letter-->
+    <div class="lg:w-1/4 flex flex-col justify-center px-5">
+      <h3 class="font-bold text-xl pt-10 pb-3 lg:pt-12 lg:pb-14">Newsletter</h3>
+      <div class="flex flex-row items-center w-full">
+        <input type="email" id="email" pattern=".+@globex\.com" required class="text-black w-2/3" placeholder="name@email.com">
+        <%=link_to root_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-xl text-white rounded-lg text-center py-2 px-5 ml-3 mr-2" do%>
+          Join
+        <%end%>
+      </div>
+      <p class="py-10">
+        Sign up for our latest news and articles.  We will not send you spam nor share your information with other thrid parties.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="bg-slate-700 text-slate-300 py-5 lg:pl-9 text-center lg:text-left flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
+  <div>
+    <div class="">
+      Copyright 2022 Right Rudder Marketing LLC
+    </div> 
+    <div class="">
+      <%=link_to root_path, class: "hover:underline" do%>Privacy Policy<%end%> | <%= link_to root_path, class: "hover:underline" do%>Terms of Service<%end%>
+    </div>
+  </div>
+  <div class="flex flex-row justify-center gap-3 lg:pr-10">
+    <div class="hover:underline">
+      <%= image_tag "whatsappicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
+    </div>
+    <div class="hover:underline">
+      <%= image_tag "facebookicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
+    </div>
+    <div class="hover:underline">
+    <%= image_tag "instagramicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
+    </div>
+    <div class="hover:underline">
+      <%= image_tag "youtubeicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
+    </div>
+    <div class="hover:underline">
+      <%= image_tag "twittericon.png", class: "invert hover:scale-125 transition-all duration-300"%>
+    </div>
+    <div class="hover:underline">
+      <%= image_tag "linkedinicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
+    </div>
+  </div>
+</section>
