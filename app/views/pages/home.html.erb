@@ -551,7 +551,9 @@
           </li>
           <li class="pb-5">
             <div class="flex flex-row">
-              <div class="text-green-500 pr-3">✓</div>
+              <div class="pr-3">
+                <%= image_tag "support.png", class: "h-5 invert pt-1" %>
+              </div>
                 Support Ticket
             </div>
           </li>
@@ -572,7 +574,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-slate-700 text-slate-300 py-5 lg:pl-9 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
+  <section class="bg-slate-700 text-slate-300 py-5 lg:pl-9 text-center lg:text-left flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
     <div>
       <div class="">
         Copyright 2022 Right Rudder Marketing LLC
@@ -581,7 +583,7 @@
         <%=link_to root_path, class: "hover:underline" do%>Privacy Policy<%end%> | <%= link_to root_path, class: "hover:underline" do%>Terms of Service<%end%>
       </div>
     </div>
-    <div class="flex flex-row gap-3 pr-10">
+    <div class="flex flex-row justify-center gap-3 lg:pr-10">
       <div class="hover:underline">
       WhatsApp
       </div>
