@@ -13,6 +13,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
+        //mobile
         wiggle: {
           '0%': { transform: 'translateX(-10rem) translateY(8rem) scale(.6)', opacity: '0' },
           '10%': { transform: 'rotate(0deg) translateY(0rem) scale(1)', opacity: '1'},
@@ -20,7 +21,17 @@ module.exports = {
           '40%': { transform: 'rotate(5deg)'},
           '55%': { transform: 'rotate(7deg)'},
           '70%': { transform: 'rotate(0deg) translateY(0rem)', opacity: '1'},
-          '100%': { transform: 'rotate(-30deg) translateX(75rem) scale(.5)', opacity: '0'  },
+          '100%': { transform: 'rotate(-30deg) translateX(25rem) translateY(-8rem) scale(.5)', opacity: '0'  },
+        },
+        //desktop
+        wiggle2: {
+          '0%': { transform: 'translateX(-10rem) translateY(8rem) scale(.6)', opacity: '0' },
+          '10%': { transform: 'rotate(0deg) translateY(0rem) scale(1)', opacity: '1'},
+          '25%': { transform: 'rotate(7deg)'},
+          '40%': { transform: 'rotate(5deg)'},
+          '55%': { transform: 'rotate(7deg)'},
+          '70%': { transform: 'rotate(0deg) translateY(0rem)', opacity: '1'},
+          '100%': { transform: 'rotate(-30deg) translateX(85rem) translateY(-1rem) scale(.5)', opacity: '0'  },
         },
       },
       backgroundImage : {
