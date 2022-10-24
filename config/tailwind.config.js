@@ -31,7 +31,7 @@ module.exports = {
           '40%': { transform: 'rotate(5deg)'},
           '55%': { transform: 'rotate(7deg)'},
           '70%': { transform: 'rotate(0deg) translateY(0rem)', opacity: '1'},
-          '100%': { transform: 'rotate(-30deg) translateX(85rem) translateY(-1rem) scale(.5)', opacity: '0'  },
+          '100%': { transform: 'rotate(-20deg) translateX(40rem) translateY(-3rem) scale(.7)', opacity: '0'  },
         },
       },
       backgroundImage : {
