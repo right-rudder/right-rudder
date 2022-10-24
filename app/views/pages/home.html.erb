@@ -332,7 +332,7 @@
       <div class="flex flex-col lg:flex-row lg:justify-center">
         <div class="lg:w-2/5 mx-5 lg:px-5">
           <p class="text-slate-900 text-lg py-5">
-            We want your flight school to be seen everywhere that pilots look. It's how our proven system generates so many leads so consistently.
+            We want your flight school to be seen everywhere that prospective student pilots look. It's how our proven system generates so many leads so consistently.
           </p>
           <p class="text-slate-900 text-lg py-5">
             That starts with Google Ads and other pay per click advertising sources. We'll have your company running campaigns almost immediately and showing up for the terms you want to show up for on Google in your local area.  
@@ -538,14 +538,14 @@
               <div class="pr-3">
                 <%= image_tag "phone.png", class: "h-5 invert pt-1" %>
               </div>
-              +1 (314) 358-2100
+              1-314-358-2100
             </div>
           </li>
           <li class="pb-5">
             <div class="flex flex-row">
               <div class="pr-3"><%= image_tag "email.png", class: "h-5 invert pt-1 object-contain" %></div>
               <p>
-                info@rightruddermarketing.com
+                <%= mail_to "info@rightruddermarketing.com", class: "hover:underline"%>
               </p>
             </div>
           </li>
@@ -554,7 +554,7 @@
               <div class="pr-3">
                 <%= image_tag "support.png", class: "h-5 invert pt-1" %>
               </div>
-                Support Ticket
+                <%= link_to "Support Ticket", root_path, class: "hover:underline"%>
             </div>
           </li>
         </ul>
@@ -585,19 +585,22 @@
     </div>
     <div class="flex flex-row justify-center gap-3 lg:pr-10">
       <div class="hover:underline">
-      WhatsApp
+        <%= image_tag "whatsappicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
       </div>
       <div class="hover:underline">
-      LinkedIn
+        <%= image_tag "facebookicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
       </div>
       <div class="hover:underline">
-      FB
+      <%= image_tag "instagramicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
       </div>
       <div class="hover:underline">
-      Insta
+        <%= image_tag "youtubeicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
       </div>
       <div class="hover:underline">
-      YouTube
+        <%= image_tag "twittericon.png", class: "invert hover:scale-125 transition-all duration-300"%>
+      </div>
+      <div class="hover:underline">
+        <%= image_tag "linkedinicon.png", class: "invert hover:scale-125 transition-all duration-300"%>
       </div>
     </div>
   </section>
