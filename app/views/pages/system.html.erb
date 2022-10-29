@@ -1,12 +1,12 @@
 <!--Set Page font size and limit sticky-->
 <div class="text-lg">
   <%= render "shared/navbar"%>
-  <section class="w-full bg-headsys bg-cover bg-top flex justify-center items-center">
+  <section class="w-full bg-headsys2 bg-cover h-screen-1/2 lg:h-screen bg-center flex justify-center items-center">
     <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center drop-shadow-2xl text-slate-100">
-        <h2 class="font-bold text-4xl text-center hidden lg:block">Reach More Students, Book More Flights, and Train More Pilots</h2>
-        <h2 class="font-bold text-2xl text-center lg:hidden">Reach More Students<br>Book More Flights<br>Train More Pilots</h2>
-        <p class="py-10 text-xl lg:text-2xl"><b>Results</b> guaranteed.</p>
-        <%= link_to "SEE IF YOUR SCHOOL QUALIFIES", root_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2" %>
+        <h2 class="font-bold lg:text-4xl text-center hidden lg:block">Reach More Students, Book More Flights, and Train More Pilots</h2>
+        <h2 class="font-bold text-xl text-center lg:hidden">Reach More Students<br>Book More Flights<br>Train More Pilots</h2>
+        <p class="py-10 lg:py-16 text-lg lg:text-2xl"><b>Results</b> guaranteed.</p>
+        <%= link_to "SEE IF YOUR SCHOOL QUALIFIES", root_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 text-xs lg:text-lg transition-all duration-300 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2" %>
     </div>
   </section>
   <section>
@@ -121,15 +121,15 @@
     <!--Step 1-->
     <div class="flex flex-col lg:flex-row justify-center items-center py-20">
       <!--Text-->
-      <div class="w-4/5 lg:1/2 px-5 lg:px-20">
+      <div class="w-4/5 lg:1/2 px-5 lg:px-20 pb-20">
         <h3 class="text-2xl font-bold pb-5">1. Flood Your School With Targeted Prospective Students</h3>
         <p class="pb-5">Your competitors are doing it. And they're pulling more students online than you. Especially that one accelerated flight school that has the same name as a pilot certificate airline pilots.  How could you ever compete?</p>
-        <p class="pb-5">This is where the Right Rudder Marketing Crew comes in! Our proven Flight School Marking System includes everything from creating a beautiful website that generates real potential students to proven and tested SEO strategies for flight schools that increase rankings on Google. Get new student pilots on demand through using targeted pay per click ad campaigns on Google and social media.  Create and build marketing video ads to promote your flight school.  It's all here in one place for you. Schedule a call today.</p>
-        <%= link_to "Schedule Call", root_path, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+        <p class="pb-5">This is where the Right Rudder Marketing Crew comes in! Our proven Flight School Marking System includes everything from creating a beautiful website that generates real potential students to proven and tested SEO strategies for flight schools that increase rankings on Google. Get new student pilots on demand through using targeted pay per click ad campaigns on Google and social media.  Create and build marketing video ads to promote your flight school.  It's all here in one place for you. Schedule a FREE consultation today and see how you can implement this at your school.</p>
+        <%= link_to "Schedule Consultation", root_path, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
       </div>
       <!--Picture-->
-      <div class="w-full lg:1/2 lg:px-20">
-        <%= image_tag "nature.jpg", class: "" %>
+      <div class="w-full lg:1/2 lg:px-20 grid place-items-center">
+        <%= image_tag "jared.jpg", class: "" %>
       </div>
     </div>
 
@@ -140,21 +140,27 @@
         <h3 class="text-2xl font-bold pb-5">2. Get Your Prospective Students on the Calendar with a Discovery Flight</h3>
         <p class="pb-5">Your competitors are doing it. And they're pulling more students online than you. Especially that one accelerated flight school that has the same name as a pilot certificate airline pilots.  How could you ever compete?</p>
         <p class="pb-5">xyz</p>
+        <%= link_to "Schedule Consultation", root_path, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
       </div>
       <!--Picture-->
-      <div class="w-full lg:w-1/2 lg:px-20">
-        <%= image_tag "zulu.jpg", class: "" %>
+      <div class="w-full lg:w-1/2 lg:px-20 grid place-items-center">
+        <%= image_tag "pull.jpg", class: "" %>
       </div>
     </div>
 
     <!--Step 3-->
-    <div class="flex flex-col lg:flex-row">
+    <div class="flex flex-col lg:flex-row justify-center items-center pb-20">
       <!--Text-->
-      <div class="">
-        <h3></h3>
+      <div class="w-4/5 lg:w-1/2 px-5 lg:px-20">
+        <h3 class="text-2xl font-bold pb-5">2. Get Your Prospective Students on the Calendar with a Discovery Flight</h3>
+        <p class="pb-5">Your competitors are doing it. And they're pulling more students online than you. Especially that one accelerated flight school that has the same name as a pilot certificate airline pilots.  How could you ever compete?</p>
+        <p class="pb-5">xyz</p>
+        <%= link_to "Schedule Consultation", root_path, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
       </div>
       <!--Picture-->
-      <div class=""></div>
+      <div class="w-full lg:w-1/2 lg:px-20 grid place-items-center">
+        <%= image_tag "fsms.png", class: "" %>
+      </div>
     </div>
   </section>
 
