@@ -3,7 +3,6 @@ Last updated 11-7-2022
   X Sent to FIVERR
 - Mobile menu creation
 - Free video webinar
-- Tips to grow your school
 - Call pathway / contact us model
   - Calendly integration?
 - Website page and video
@@ -14,7 +13,11 @@ Last updated 11-7-2022
 - privacy and terms and conditions
 - robots.txt
 - sitemap.xml
+- Blog post model and WYSIWYG
+- about us
+- careers page
 
+X Tips to grow your school
 X add meta data
 X Change photos on main page from template to RRM
 X Set up Google analytics
