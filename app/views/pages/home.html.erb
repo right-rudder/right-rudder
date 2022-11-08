@@ -19,7 +19,18 @@
       <!--video section-->
       <div class="lg:w-1/2">
         <div class="grid place-items-center">
+          <!-- Previous iframe embed 
           <iframe class="lg:w-4/5 w-full aspect-video" loading="lazy" height="315" src="https://www.youtube.com/embed/HIZq5vIAquo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          -->
+          <!--Using rvere's iframe.  If obsolete, need to download NPM package https://github.com/paulirish/lite-youtube-embed-->
+          <iframe
+            class="lg:w-4/5 w-full aspect-video" loading="lazy" height="315"
+            src="https://tube.rvere.com/embed?v=HIZq5vIAquo"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen>
+          </iframe>
         </div>
       </div>
     
