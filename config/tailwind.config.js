@@ -35,9 +35,9 @@ module.exports = {
         },
       },
       backgroundImage : {
-        'head' : "url('cessnalake.jpg')",
-        'headsys' : "url('cockpitblue2.jpg')",
-        'headsys2' : "url('dave.jpg')",
+        'head' : "url('cessnalake.webp')",
+        'headsys' : "url('cockpitblue2.webp')",
+        'headsys2' : "url('dave.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
