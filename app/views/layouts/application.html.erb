@@ -50,7 +50,12 @@
 
     <!--JS-->
     <%= javascript_importmap_tags %>
+    <!-- Alpine Core -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!--For Alpine Intersect-->
+    <style>
+      [x-cloak] { display: none !important; }
+    </style>
   </head>
   
   <!-- Google Analytics // Google tag (gtag.js) -->

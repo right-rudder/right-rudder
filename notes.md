@@ -1,4 +1,4 @@
-Last updated 11-10-2022
+Last updated 11-11-2022
 
 # WEBSITE
 - Fix audio clipping
@@ -35,14 +35,6 @@ Last updated 11-10-2022
   - Marketing 101
   - Sales and negotiation tactics
   - Design basics
-C social media links
-  C whats app https://wa.me/13143582100
-  C facebook  https://www.facebook.com/rightruddermarketing/ (C is for created but not linked or profile complete)
-    - location coordinates are in atlantic ocean?? hours are off
-  C instagram https://www.instagram.com/rightruddermarketing/
-  C youtube https://www.youtube.com/@rightruddermarketing
-  C Twitter https://twitter.com/timjedrek NEED TO BUY OUT RIGHT RUDDER 
-  C Linkedin http://linkedin.com/company/rightruddermarketing
 - INTERVIEWS for BLOG
   - Michael Coscia, author: Wings Over America: The Fact-Filled Guide to The Major and Regional Airlines of the U.S.A.
   - David Kleinschmidt, AGI at St. Charles Flying Service
@@ -54,6 +46,14 @@ X Change photos on main page from template to RRM
 X Set up Google analytics
 X add alt to images
 X convert images to webp
+X social media links
+  X whats app https://wa.me/13143582100
+  X facebook  https://www.facebook.com/rightruddermarketing/ (C is for created but not linked or profile complete)
+    - location coordinates are in atlantic ocean?? hours are off
+  X instagram https://www.instagram.com/rightruddermarketing/
+  X youtube https://www.youtube.com/@rightruddermarketing
+  X Twitter https://twitter.com/timjedrek NEED TO BUY OUT RIGHT RUDDER 
+  C Linkedin http://linkedin.com/company/rightruddermarketing
 
 
 # DOMAIN
