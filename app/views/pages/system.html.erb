@@ -6,7 +6,7 @@
         <h2 class="font-bold lg:text-4xl text-center hidden lg:block">Reach More Students, Book More Flights, and Train More Pilots</h2>
         <h2 class="font-bold text-xl text-center lg:hidden">Reach More Students<br>Book More Flights<br>Train More Pilots</h2>
         <p class="py-10 lg:py-16 text-lg lg:text-2xl"><b>Results</b> guaranteed.</p>
-        <%= link_to "SEE IF YOUR SCHOOL QUALIFIES", root_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 text-xs lg:text-lg transition-all duration-300 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2" %>
+        <%= link_to "SEE IF YOUR SCHOOL QUALIFIES", schedule_call_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 text-xs lg:text-lg transition-all duration-300 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2" %>
     </div>
   </section>
   <section>
@@ -127,7 +127,7 @@
         <p class="pb-5">This is where the Right Rudder Marketing Crew comes in! Our proven Flight School Marking System includes everything from creating a beautiful website that generates real potential students to proven to tested SEO strategies for flight schools that increase rankings on Google. </p>
         <p class="pb-5">Get new student pilots on demand through using targeted pay per click ad campaigns on Google and social media.  Create and build marketing video ads to promote your flight school.  It's all here in one place for you. </p>
         <p class="pb-5">Schedule a FREE consultation today and see how you can implement this at your school.</p>
-        <%= link_to "Schedule Consultation", root_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+        <%= link_to "Schedule Consultation", schedule_call_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
       </div>
       <!--Picture-->
       <div class="w-full lg:1/2 lg:px-20 grid place-items-center">
@@ -144,7 +144,7 @@
         <p class="pb-5">Don't let these opportunities slip by!  Have a targeted marketing strategy and attract the right students for your flight school.</p>
         <p class="pb-5">Our Flight School Marketing System captures prospective student pilots who are actively looking online for more information to start pilot training and helps you turn them into booked discovery flights that turn into long term customers.</p>
         <p class="pb-5">Book a call today and see how your flight school can implement the Flight School Marketing System.</p>
-        <%= link_to "Book a Call", root_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+        <%= link_to "Book a Call", schedule_call_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
       </div>
       <!--Picture-->
       <div class="w-full lg:w-1/2 lg:px-20 grid place-items-center">
@@ -160,8 +160,10 @@
         <p class="pb-5">Most marketing agencies don't understand the aviation industry.  They offer a wide range of services at different price points, which makes it hard to compare the value of each service.  And because most flight schools need help with multiple marketing channels like website design, SEO, social media, and PPC advertising; they end up paying too much for an ineffective mix of services that doesn't get results.</p>
         <p class="pb-5">Right Rudder Marketing is pilot owned and understands the flight training industry first hand.  Our Flight School Marketing Plan includes all of the essential services needed by flight schools in one afforable package - including website design, SEO, social media, and PPC advertising.</p>
         <p class="pb-5 font-semibold">We're here to help you book more discovery flights, be more profitable, and keep your CFIs happy with consistent work.</p>
-        <%= link_to "Schedule an Accelerator Call", root_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300 hidden lg:block" %>
-        <%= link_to "Call Us Today", root_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300 lg:hidden" %>
+        <%= link_to schedule_call_path, class: "" do%>
+          <div class="bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center w-1/2 py-2 transition-all duration-300 hidden lg:block">Schedule an accelerator call</div>
+        <%end%>
+        <%= link_to "Call Us Today", schedule_call_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300 lg:hidden" %>
       </div>
       <!--Picture-->
       <div class="w-full lg:w-1/2 lg:px-20 grid place-items-center">
