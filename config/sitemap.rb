@@ -1,7 +1,20 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.example.com"
+SitemapGenerator::Sitemap.default_host = "https://rightruddermarketing.com"
 
 SitemapGenerator::Sitemap.create do
+  add 'marketing-system'
+  add 'schedule-call'
+  add '/privacy-policy'
+  add '/terms-of-service'
+  add '/website-design'
+  add '/search-engine-optimization'
+  add '/pay-per-click-ads'
+  add '/video-creation'
+  add '/email-campaigns'
+  add '/social-media-management'
+  add '/reputation-management'
+
+
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
