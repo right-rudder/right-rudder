@@ -113,7 +113,8 @@ X privacy and terms and conditions
   - GOFIR (looks to be abandoned)
   - aviatorshotline
   - AgencyVista
-  - Google My Business
+  X Google My Business
+    - Need to add descriptions to products
   - Apple Maps
   - Bing Places
   - Chamber of commerce

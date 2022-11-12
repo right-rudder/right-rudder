@@ -54,6 +54,7 @@ gem "bootsnap", require: false
 ## MY GEMS ##
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'calendly'
+gem 'sitemap_generator'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
