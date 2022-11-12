@@ -13,7 +13,13 @@ Last updated 11-11-2022
   - shoot
   - edit
 - Call pathway / contact us model
-  - Calendly integration?
+  - Calendly integration
+    - for now, just plugin the widget.
+    X Install gem
+    X Add API token
+    - make custom form that sends data to Calendly API
+    - Use custom form to save data into CRM
+    - OR ... create our own version of Calendly
   - Video for encouragement
 - Website creation page and video
 - SEO page and video
@@ -102,7 +108,7 @@ X social media links
   - Yellowpages
   - Yellowbook
   - D&B (needs a real address...)
-  - BBB (not available until 6 months - April)
+  - BBB (not available until 6 months - April 2023)
 - Associations to join
   - FSANA
   - https://www.gslbaa.org GREATER ST. LOUIS BUSINESS AVIATION ASSOCIATION

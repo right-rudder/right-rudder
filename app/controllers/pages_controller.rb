@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def system
   end
+
+  def schedule_booking
+  end
 end
