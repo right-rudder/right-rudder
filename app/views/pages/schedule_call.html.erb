@@ -1,8 +1,43 @@
-<!-- Calendly inline widget begin -->
-<div 
-  class="calendly-inline-widget" 
-  data-url="https://calendly.com/rightruddermarketing/appointment?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1e40af" 
-  style="min-width:320px;height:630px;">
-</div>
+<header class="bg-slate-900 text-slate-200 py-10 lg:py-20 ">
+  <div class=" text-3xl lg:text-4xl text-center">
+    Are you ready to take your <b>Flight School</b> to the <b>Next Level</b>?
+  </div>
+  <div class="text-2xl lg:text-3xl text-center pt-10">
+    Book a <span class="text-orange-500 underline font-bold ">FREE</span> flight school <span class="text-orange-500 underline font-bold ">growth accelerator call</span> below!
+  </div>
+</header>
+
+<section class="">
+  <div class="flex flex-col lg:flex-row lg:items-center">
+
+    <!--Youtube Video-->
+    <div class="lg:w-1/2">
+      <div class="grid place-items-center">
+        <iframe
+          class="lg:w-4/5 w-full aspect-video" loading="lazy" height="315"
+          src="https://tube.rvere.com/embed?v=HIZq5vIAquo"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen>
+        </iframe>
+      </div>
+    </div>
+    <!-- Calendly inline widget begin -->
+    <div class="lg:w-1/2 flex flex-row justify-center lg:py-20">
+      <div class="lg:w-4/5">
+        <div 
+          class="calendly-inline-widget" 
+          data-url="https://calendly.com/rightruddermarketing/appointment?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1e40af" 
+          style="min-width:320px;height:630px;">
+        </div>
+      </div>
+    </div>
+    <!-- Calendly inline widget end -->
+  </div>
+</section>
+
+<%= render "shared/copyright_social_footer"%>
+
+<!--Calendly JS-->
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
