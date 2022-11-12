@@ -1,4 +1,4 @@
-<%= link_to root_path do %>
+<%= link_to schedule_call_path do %>
   <header class="sticky bg-orange-500 text-white lg:hidden flex-row justify-between py-2 pl-5 pr-8">
     <div class="font-semibold text-md text-center grid place-items-center">
       Click to schedule a FREE call
@@ -33,7 +33,7 @@
         <%= link_to "Our System", our_system_path, class: "px-3 hover:text-blue-700 transition-all duration-300" %>
         <%= link_to "Resources", root_path, class: "px-3 hover:text-blue-700 transition-all duration-300" %>
         <%= link_to "Blog", root_path, class: "px-3 hover:text-blue-700 transition-all duration-300" %>
-        <%= link_to "Schedule Call", root_path, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2 transition-all duration-300" %>
+        <%= link_to "Schedule Call", schedule_call_path, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2 transition-all duration-300" %>
       </div>
   </div>
   <!--Mobile Menu-->
@@ -43,7 +43,7 @@
       <li class="py-3"><%= link_to "Our System", our_system_path, class: "hover:text-blue-700 transition-all duration-300" %></li>
       <li class="py-3"><%= link_to "Resources", root_path, class: "hover:text-blue-700 transition-all duration-300" %></li>
       <li class="py-3"><%= link_to "Blog", root_path, class: "hover:text-blue-700 transition-all duration-300" %></li>
-      <li class="py-3"><%= link_to "Schedule Call", root_path, class: "hover:text-blue-700 transition-all duration-300" %></li>
+      <li class="py-3"><%= link_to "Schedule Call", schedule_call_path, class: "hover:text-blue-700 transition-all duration-300" %></li>
     </ul>
   </div>
 </nav>

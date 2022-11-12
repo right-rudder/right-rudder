@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "pages#home"
 
-  get 'our-system', to: 'pages#system'
-  get 'schedule-booking', to: 'pages#schedule_booking'
+  get 'marketing-system', to: 'pages#system'
+  get 'schedule-call', to: 'pages#schedule_call'
 end
