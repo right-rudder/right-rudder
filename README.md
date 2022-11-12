@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Website for Right Rudder Marketing.  A rapidly expanding pilot owned digital marketing agency working exclusively with flight schools throughout the United States. We're on a mission to help 100 flight schools double their student body and dominate their service area by 2025.
 
-Things you may want to cover:
+Visit: https://rightruddermarketing.com
 
-* Ruby version
+Last updated: November 11, 2022
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Are you a developer?  Are you a pilot, training to be a pilot, or be willing to train to become a pilot?  If so send an email to careers@rightruddermarketing.com and be part of the Right Rudder Marketing team and develop web applications for flight schools!
