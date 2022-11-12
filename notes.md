@@ -13,14 +13,19 @@ Last updated 11-11-2022
   - shoot
   - edit
 - Call pathway / contact us model
-  - Calendly integration
-    - for now, just plugin the widget.
+  X Calendly integration
+    x for now, just plugin the widget.
     X Install gem
     X Add API token
     - make custom form that sends data to Calendly API
     - Use custom form to save data into CRM
     - OR ... create our own version of Calendly
   - Video for encouragement
+  - "See if your school qualifies" button takes it to a different pathway where it asks questions then leads to scheduler
+    - Do you have a minimum of two instructors?
+    - Are you actively advertising to generate business?
+    - Do you have the ability to handle more students?
+    - Do you deliver quality service and instruction?
 - Website creation page and video
 - SEO page and video
 - Advertising page
@@ -32,7 +37,17 @@ Last updated 11-11-2022
 - Blog post model and WYSIWYG
 - About us 
 - Careers page
-  - Decide whether to create model / form or hard code it
+  - Hard code for now
+    - Add page
+    - Add job descriptions
+      - Client Success Manager
+      - Web Developer
+      - If you'd like to invest and become one of the owners of Right Rudder Marketing, please send Tim Jedrek an email at 
+  - Create model and application form
+- Chat widget
+  X research https://getbutton.io
+    X it looks like it just provides links
+  - find a widget
 - Resources
   C Tips to grow your school
   - Webinar
@@ -51,7 +66,7 @@ Last updated 11-11-2022
   - David Kleinschmidt, AGI at St. Charles Flying Service
   - Dennis Bampton, President at St. Charles Flying Service
 
-# Completed
+# Completed (and semicompleted, like... it's okay live but we can make it better later)
 X Mobile menu creation
 X add meta data
 X Change photos on main page from template to RRM
