@@ -12,20 +12,6 @@ Last updated 11-11-2022
   X drafted
   - shoot
   - edit
-- Call pathway / contact us model
-  X Calendly integration
-    x for now, just plugin the widget.
-    X Install gem
-    X Add API token
-    - make custom form that sends data to Calendly API
-    - Use custom form to save data into CRM
-    - OR ... create our own version of Calendly
-  - Video for encouragement
-  - "See if your school qualifies" button takes it to a different pathway where it asks questions then leads to scheduler
-    - Do you have a minimum of two instructors?
-    - Are you actively advertising to generate business?
-    - Do you have the ability to handle more students?
-    - Do you deliver quality service and instruction?
 - Website creation page and video
 - SEO page and video
 - Advertising page
@@ -84,7 +70,20 @@ X social media links
     - need cover photo
   X Linkedin http://linkedin.com/company/rightruddermarketing
     - need cover photo
-
+x Call pathway / contact us model
+  X Calendly integration
+    x for now, just plugin the widget.
+    X Install gem
+    X Add API token
+    - make custom form that sends data to Calendly API
+    - Use custom form to save data into CRM
+    - OR ... create our own version of Calendly
+  - Video for encouragement
+  - "See if your school qualifies" button takes it to a different pathway where it asks questions then leads to scheduler
+    - Do you have a minimum of two instructors?
+    - Are you actively advertising to generate business?
+    - Do you have the ability to handle more students?
+    - Do you deliver quality service and instruction?
 
 # DOMAIN
 - buy out rightrudder.com (rapier aerospace?)
