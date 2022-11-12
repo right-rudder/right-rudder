@@ -1,0 +1,43 @@
+<!--Copyright and social-->
+<section class="bg-slate-700 text-slate-300 py-5 lg:pl-9 text-center lg:text-left flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
+  <div>
+    <div class="">
+      Copyright <%= Date.today.year %> Right Rudder Marketing LLC.  All Rights Reserved.
+    </div> 
+    <div class="">
+      <%=link_to root_path, class: "hover:underline" do%>Privacy Policy<%end%> | <%= link_to root_path, class: "hover:underline" do%>Terms of Service<%end%>
+    </div>
+  </div>
+  <div class="flex flex-row justify-center gap-5 lg:gap-3 lg:pr-10 pb-3 lg:pb-0">
+    <div class="hover:underline">
+      <%=link_to "https://wa.me/13143582100", target: :blank do%>
+        <%= image_tag "whatsappicon.webp", alt: "whatsapp icon", class: "invert hover:scale-125 transition-all duration-300"%>
+      <% end %>
+    </div>
+    <div class="hover:underline">
+      <%=link_to "https://www.facebook.com/rightruddermarketing", target: :blank do%>
+        <%= image_tag "facebookicon.webp", alt:"facebook icon", class: "invert hover:scale-125 transition-all duration-300"%>
+      <% end %>
+    </div>
+    <div class="hover:underline">
+      <%=link_to "https://www.instagram.com/rightruddermarketing/", target: :blank do%>
+        <%= image_tag "instagramicon.webp", alt:"instagram icon", class: "invert hover:scale-125 transition-all duration-300"%>
+      <% end %>
+    </div>
+    <div class="hover:underline">
+      <%=link_to "https://www.youtube.com/@rightruddermarketing", target: :blank do%>
+        <%= image_tag "youtubeicon.webp", alt:"youtube icon", class: "invert hover:scale-125 transition-all duration-300"%>
+      <% end %>
+    </div>
+    <div class="hover:underline">
+      <%=link_to "https://twitter.com/timjedrek", target: :blank do%>  
+        <%= image_tag "twittericon.webp", alt:"twitter icon", class: "invert hover:scale-125 transition-all duration-300"%>
+      <% end %>
+    </div>
+    <div class="hover:underline">
+      <%=link_to "http://linkedin.com/company/rightruddermarketing", target: :blank do%>
+        <%= image_tag "linkedinicon.webp", alt:"linkedin icon", class: "invert hover:scale-125 transition-all duration-300"%>
+      <% end %>
+    </div>
+  </div>
+</section>
