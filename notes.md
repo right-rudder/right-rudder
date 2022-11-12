@@ -19,6 +19,7 @@ Last updated 11-11-2022
 - privacy and terms and conditions
 - robots.txt
 - sitemap.xml
+- errors page 404 / 500
   - Use ruby gem https://github.com/kjvarga/sitemap_generator
 - Blog post model and WYSIWYG
 - About us 
