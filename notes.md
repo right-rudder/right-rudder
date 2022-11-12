@@ -2,14 +2,18 @@ Last updated 11-10-2022
 
 # WEBSITE
 - Fix audio clipping
-  X Sent to FIVERR
-  - Apparently, it was recorded with bad quality.. the device you have might suck.  Need to record a dub over
+  X Sent to FIVERR.  
+    X Apparently, it was recorded with bad quality.. the device you have might suck.  
+  - Need to record a dub over
+  - reedit video
+  - republish video
 - Mobile menu creation
+- Configure meta data and title to change with each page. (yield and content_for)
 - Free video webinar
 - Call pathway / contact us model
   - Calendly integration?
   - Video for encouragement
-- Website page and video
+- Website creation page and video
 - SEO page and video
 - Advertising page
 - favicons
@@ -17,29 +21,34 @@ Last updated 11-10-2022
 - privacy and terms and conditions
 - robots.txt
 - sitemap.xml
-  - Use ruby gem
+  - Use ruby gem https://github.com/kjvarga/sitemap_generator
 - Blog post model and WYSIWYG
-- about us 
-- careers page
+- About us 
+- Careers page
+  - Decide whether to create model / form or hard code it
 - Resources
   X Tips to grow your school
   - Webinar
+    X drafted
+    - record
+    - edit
   - Marketing 101
   - Sales and negotiation tactics
   - Design basics
-- social media links
-  - whats app https://wa.me/13143582100
+C social media links
+  C whats app https://wa.me/13143582100
   C facebook  https://www.facebook.com/rightruddermarketing/ (C is for created but not linked or profile complete)
     - location coordinates are in atlantic ocean?? hours are off
   C instagram https://www.instagram.com/rightruddermarketing/
   C youtube https://www.youtube.com/@rightruddermarketing
   C Twitter https://twitter.com/timjedrek NEED TO BUY OUT RIGHT RUDDER 
   C Linkedin http://linkedin.com/company/rightruddermarketing
+- INTERVIEWS for BLOG
+  - Michael Coscia, author: Wings Over America: The Fact-Filled Guide to The Major and Regional Airlines of the U.S.A.
+  - David Kleinschmidt, AGI at St. Charles Flying Service
+  - Dennis Bampton, President at St. Charles Flying Service
 
-# DOMAIN
-- buy out rightrudder.com (rapier aerospace?)
-- rightrudder.marketing
-
+# Completed
 X add meta data
 X Change photos on main page from template to RRM
 X Set up Google analytics
@@ -47,12 +56,27 @@ X add alt to images
 X convert images to webp
 
 
+# DOMAIN
+- buy out rightrudder.com (rapier aerospace?)
+- rightrudder.marketing for email campaigns
+
+# Sales
+- Create proposal
+- Create agreement
+- Create payment forms
+  - stripe
+- invoice and receipt?
+
 # OFF PAGE SEO
 - Data aggregators
   - Express Update (infogroup)
   - Neustar localeze
   - Factual
-- Back link building
+- Back link building 
+  https://www.brightlocal.com/resources/top-citation-sites/general/top-50/ 
+  https://www.brightlocal.com/resources/top-citation-sites/industry/marketing/
+  - Top SEOs
+  - Google Partner (need $10,000 spend)
   - Aviation Business News
   - Business air
   - global air
@@ -70,7 +94,6 @@ X convert images to webp
   - Yellowbook
   - D&B (needs a real address...)
   - BBB (not available until 6 months - April)
-  - 
 - Associations to join
   - FSANA
   - https://www.gslbaa.org GREATER ST. LOUIS BUSINESS AVIATION ASSOCIATION
@@ -90,16 +113,13 @@ X convert images to webp
   - Write articles and get them posted on other sites
     - Why student pilots quit training
     - 8 things that need to change in the pilot training industry
-  - Podcast
-     
-
-
-  INTERVIEWS for BLOG
-    - Michael Coscia, author: Wings Over America: The Fact-Filled Guide to The Major and Regional Airlines of the U.S.A.
-    - David Kleinschmidt, AGI at St. Charles Flying Service
-    - Dennis Bampton, President at St. Charles Flying Service
+    - http://aeroexperience.blogspot.com
+- Podcast
 
 
 
 
 
+
+
+ONELINER: Attract more student pilots and grow your flight school with digital marketing
