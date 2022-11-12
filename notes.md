@@ -16,7 +16,6 @@ Last updated 11-11-2022
 - SEO page and video
 - Advertising page
 - favicons
-- privacy and terms and conditions
 - robots.txt
 - sitemap.xml
 - errors page 404 / 500
@@ -85,6 +84,7 @@ x Call pathway / contact us model
     - Are you actively advertising to generate business?
     - Do you have the ability to handle more students?
     - Do you deliver quality service and instruction?
+X privacy and terms and conditions
 
 # DOMAIN
 - buy out rightrudder.com (rapier aerospace?)
