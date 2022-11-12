@@ -34,6 +34,6 @@
 !/app/assets/builds/.keep
 
 
-# Additional ignores -> fuck.. added this too late.. Shoulda added it before I started working on the site during the initial commit.  Oh well..
+# Additional ignores
 */.DS_Store/*
 .DS_Store
