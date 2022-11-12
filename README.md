@@ -1,6 +1,6 @@
 # README
 
-Website for Right Rudder Marketing.  A rapidly expanding pilot owned digital marketing agency working exclusively with flight schools throughout the United States. We're on a mission to help 100 flight schools double their student body and dominate their service area by 2025.
+Git Repository for the website of Right Rudder Marketing.  A rapidly expanding pilot owned digital marketing agency working exclusively with flight schools throughout the United States. We're on a mission to help 100 flight schools double their student body and dominate their service area by 2025.
 
 Visit: https://rightruddermarketing.com
 
