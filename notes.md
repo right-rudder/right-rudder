@@ -7,7 +7,6 @@ Last updated 11-11-2022
   - Need to record a dub over
   - reedit video
   - republish video
-- Mobile menu creation
 - Configure meta data and title to change with each page. (yield and content_for)
 - Free video webinar
 - Call pathway / contact us model
@@ -17,7 +16,6 @@ Last updated 11-11-2022
 - SEO page and video
 - Advertising page
 - favicons
-- change titles for each page
 - privacy and terms and conditions
 - robots.txt
 - sitemap.xml
@@ -35,12 +33,14 @@ Last updated 11-11-2022
   - Marketing 101
   - Sales and negotiation tactics
   - Design basics
+  - SEO Tips
 - INTERVIEWS for BLOG
   - Michael Coscia, author: Wings Over America: The Fact-Filled Guide to The Major and Regional Airlines of the U.S.A.
   - David Kleinschmidt, AGI at St. Charles Flying Service
   - Dennis Bampton, President at St. Charles Flying Service
 
 # Completed
+X Mobile menu creation
 X add meta data
 X Change photos on main page from template to RRM
 X Set up Google analytics
