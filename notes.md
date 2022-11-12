@@ -8,7 +8,10 @@ Last updated 11-11-2022
   - reedit video
   - republish video
 - Configure meta data and title to change with each page. (yield and content_for)
-- Free video webinar
+- Free video (keynote presentation)
+  X drafted
+  - shoot
+  - edit
 - Call pathway / contact us model
   - Calendly integration?
   - Video for encouragement
@@ -25,9 +28,12 @@ Last updated 11-11-2022
 - Careers page
   - Decide whether to create model / form or hard code it
 - Resources
-  X Tips to grow your school
+  C Tips to grow your school
   - Webinar
-    X drafted
+    - Use LinkedIn Events
+    - On page, refer to the next webinar and previous webinars
+    - Refer to keynote video
+    - drafted
     - record
     - edit
   - Marketing 101
@@ -52,8 +58,11 @@ X social media links
     - location coordinates are in atlantic ocean?? hours are off
   X instagram https://www.instagram.com/rightruddermarketing/
   X youtube https://www.youtube.com/@rightruddermarketing
+    - need cover photo
   X Twitter https://twitter.com/timjedrek NEED TO BUY OUT RIGHT RUDDER 
-  C Linkedin http://linkedin.com/company/rightruddermarketing
+    - need cover photo
+  X Linkedin http://linkedin.com/company/rightruddermarketing
+    - need cover photo
 
 
 # DOMAIN
@@ -114,7 +123,7 @@ X social media links
     - Why student pilots quit training
     - 8 things that need to change in the pilot training industry
     - http://aeroexperience.blogspot.com
-- Podcast
+    - AOPA Flight training magazine
 
 
 
