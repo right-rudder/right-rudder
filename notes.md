@@ -47,10 +47,12 @@ Last updated 11-12-2022
   - Sales and negotiation tactics
   - Design basics
   - SEO Tips
-- INTERVIEWS for BLOG
+- INTERVIEWS for BLOG and BLOG IDEAs
   - Michael Coscia, author: Wings Over America: The Fact-Filled Guide to The Major and Regional Airlines of the U.S.A.
   - David Kleinschmidt, AGI at St. Charles Flying Service
   - Dennis Bampton, President at St. Charles Flying Service
+  - Why student pilots quit training
+  - 8 things that need to change in the pilot training industry
 
 # Completed (and semicompleted, like... it's okay live but we can make it better later)
 X Mobile menu creation
@@ -102,7 +104,7 @@ X privacy and terms and conditions
   - Express Update (infogroup)
   - Neustar localeze
   - Factual
-- Back link building 
+- Back link building
   https://www.brightlocal.com/resources/top-citation-sites/general/top-50/ 
   https://www.brightlocal.com/resources/top-citation-sites/industry/marketing/
   - Top SEOs
@@ -127,12 +129,19 @@ X privacy and terms and conditions
   - BBB (not available until 6 months - April 2023)
 - Associations to join
   - FSANA
+    - Use conference to join and be a sponsor ($3000 for Leader, $5000 for Builder)
+      - Due December 19, 2022
+      
   - https://www.gslbaa.org GREATER ST. LOUIS BUSINESS AVIATION ASSOCIATION
   - AOPA
-  - NBAA
+    - AOPA Flight training magazine
+      - Become a writer for them
+  - NBAA - National Business Aviation Association
+    - $370 for Professional Member
   - NAFI
+  - PAPA - professional asian pilot association
   - General aviation news
-  - FLYING
+  - FLYING Magazine
   - http://www.aviationeducation.org
   - missouri chamber of commerce
 - PUBLISHING BOOK
@@ -140,12 +149,9 @@ X privacy and terms and conditions
   - Bluewater press LLC
 - Guest posting
   - get posts that link to my site
-    - FIVERR
+    - FIVERR (artificial SEO)
   - Write articles and get them posted on other sites
-    - Why student pilots quit training
-    - 8 things that need to change in the pilot training industry
     - http://aeroexperience.blogspot.com
-    - AOPA Flight training magazine
 
 
 
