@@ -14,6 +14,12 @@
 
     <title>Flight School Internet Marketing | Website Design, SEO, Advertising</title>
 
+    <!--Favicon--> 
+    <%= favicon_link_tag asset_path('favicon/favicon.ico') %>
+    <% %w(57 72 76 114 120 144 152 180).each do |size| %>
+      <%= favicon_link_tag "favicon/apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+    <% end %>
+
     <!--Meta Tags-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
