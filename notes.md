@@ -12,16 +12,17 @@ Last updated 11-12-2022
   X drafted
   - shoot
   - edit
-- Website creation page and video
-- SEO page and video
-- Advertising page
+C Website creation page and video
+C SEO page and video
+C Advertising page
 - favicons
-- robots.txt
-- sitemap.xml
 - errors page 404 / 500
-  - Use ruby gem https://github.com/kjvarga/sitemap_generator
 - Blog post model and WYSIWYG
-- About us 
+  - Blogs are called NOTAMS lol
+- About us
+  - Chamber of Commerce Badge
+    - <a id='COCBadgeURL' href='https://www.chamberofcommerce.com/united-states/missouri/farmington/marketing-agency/2017680081-right-rudder-marketing?source=memberwebsite' target='_tab'><img style='width:auto;height:150px;' id='COCBadgeIMG' src='https://coc.codes/images/badge/2017680081'></a>
+
 - Careers page
   - Hard code for now
     - Add page
@@ -34,6 +35,8 @@ Last updated 11-12-2022
   X research https://getbutton.io
     X it looks like it just provides links
   - find a widget
+    or
+  - Create one your damn self
 - Resources
   C Tips to grow your school
   - Webinar
@@ -87,6 +90,10 @@ x Call pathway / contact us model
     - Do you have the ability to handle more students?
     - Do you deliver quality service and instruction?
 X privacy and terms and conditions
+x robots.txt
+x sitemap.xml
+  - Use ruby gem https://github.com/kjvarga/sitemap_generator
+  - still manual, check out https://www.ombulabs.com/blog/seo/sitemap/ruby/update-sitemaps-during-heroku-deploy.html
 
 # DOMAIN
 - buy out rightrudder.com (rapier aerospace?)
@@ -97,53 +104,71 @@ X privacy and terms and conditions
 - Create agreement
 - Create payment forms
   - stripe
-- invoice and receipt?
+- invoice and receipts
 
 # OFF PAGE SEO
 - Data aggregators
   - Express Update (infogroup)
-  - Neustar localeze
-  - Factual
+  - Neustar localeze - $79
+  - Factual (foursquare)
+    - Actually.. it's foursquare
+    - website doesnt work 11/13/2022
 - Back link building
   https://www.brightlocal.com/resources/top-citation-sites/general/top-50/ 
   https://www.brightlocal.com/resources/top-citation-sites/industry/marketing/
-  - Top SEOs
+  X Top SEOs
   - Google Partner (need $10,000 spend)
   - Aviation Business News
   - Business air
-  - global air
+  X global air
+    - submitted 11/13/2022
+    - 1-888-236-4309
   - GOFIR (looks to be abandoned)
   - aviatorshotline
-  - AgencyVista
+  X AgencyVista
   X Google My Business
     - Need to add descriptions to products
-  - Apple Maps
-  - Bing Places
-  - Chamber of commerce
-  - Missouri chamber of commerce
-  - Foursquare
-  - Yelp
+  X Apple Maps
+  X Bing Places
+  X Chamber of commerce
+  C Missouri chamber of commerce
+  X Yelp
   - Yellowpages
+    - no link to add listing
+    - call 1-866-794-0889 
   - Yellowbook
+    - 
   - D&B (needs a real address...)
-  - BBB (not available until 6 months - April 2023)
+  - BBB (not available until 6 months - April 2023.. $510)
 - Associations to join
   - FSANA
     - Use conference to join and be a sponsor ($3000 for Leader, $5000 for Builder)
       - Due December 19, 2022
-      
+      - create posters, flyers, business cards, swag
   - https://www.gslbaa.org GREATER ST. LOUIS BUSINESS AVIATION ASSOCIATION
+    - $180 for 3 members
+  - NBAA - National Business Aviation Association
+    - $370 for Professional Member
+  - GSLBAA - Greater St. Louis Business Aviation Association
+    - 
   - AOPA
     - AOPA Flight training magazine
       - Become a writer for them
-  - NBAA - National Business Aviation Association
-    - $370 for Professional Member
-  - NAFI
+  - NAFI - National Association of Flight Instructors
+    - $59 -> member
+    - $ 2000 for educator sponsorship, $4000 for CFI sponsorship
   - PAPA - professional asian pilot association
   - General aviation news
   - FLYING Magazine
   - http://www.aviationeducation.org
   - missouri chamber of commerce
+  - chamber of commerce
+    - started account but it is deactivated bc they can't verify on google?
+    - sent email to support@chamberofcommerce.com
+  - AMA - American Marketing Association
+    - $149 a year
+    - https://amasaintlouis.org seems to be a bit outdated and not working.
+
 - PUBLISHING BOOK
   - Amazon
   - Bluewater press LLC
@@ -152,6 +177,7 @@ X privacy and terms and conditions
     - FIVERR (artificial SEO)
   - Write articles and get them posted on other sites
     - http://aeroexperience.blogspot.com
+      - Carmelo Turdo, STL
 
 
 
