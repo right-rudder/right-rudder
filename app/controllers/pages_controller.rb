@@ -11,30 +11,41 @@ class PagesController < ApplicationController
   def schedule_call
   end
 
+  # Qualify Quiz
+  # Questions
   def one
     render 'pages/qualify_quiz/one'
   end
-
   def two
     render 'pages/qualify_quiz/two'
   end
-
   def three
     render 'pages/qualify_quiz/three'
   end
-
   def four
     render 'pages/qualify_quiz/four'
   end
 
+  # Quiz Pass Results
   def qualified
     render 'pages/qualify_quiz/qualified'
   end
 
-  def unqualified
-    render 'pages/qualify_quiz/unqualified'
+  # Quiz fail pages
+  def unqualified_CFI
+    render 'pages/qualify_quiz/unqualified_CFI'
+  end
+  def unqualified_ad
+    render 'pages/qualify_quiz/unqualified_ad'
+  end
+  def unqualified_capacity
+    render 'pages/qualify_quiz/unqualified_capacity'
+  end
+  def unqualified_service
+    render 'pages/qualify_quiz/unqualified_service'
   end
 
+  # Legal
   def privacy_policy
     render 'pages/legal/privacy_policy'
   end

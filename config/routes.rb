@@ -8,12 +8,15 @@ Rails.application.routes.draw do
   get 'schedule-call', to: 'pages#schedule_call'
 
   # Qualify Quiz
-  get 'qualify_quiz', to: "pages#one", as: :quiz_one
-  get 'qualify_quiz/two', to: "pages#two", as: :quiz_two
-  get 'qualify_quiz/three', to: "pages#three", as: :quiz_three
-  get 'qualify_quiz/four', to: "pages#four", as: :quiz_four
+  get 'qualify_quiz', to: "pages#one", as: :quiz_start
+  get 'qualify_quiz/two', to: "pages#two", as: :quiz_question_two
+  get 'qualify_quiz/three', to: "pages#three", as: :quiz_question_three
+  get 'qualify_quiz/four', to: "pages#four", as: :quiz_question_four
   get 'qualify_quiz/qualified', to: "pages#qualified", as: :quiz_qualified
-  get 'qualify_quiz/unqualified', to: "pages#unqualified", as: :quiz_unqualified
+  get 'qualify_quiz/unqualified_CFI', to: "pages#unqualified_CFI", as: :quiz_unqualified_CFI
+  get 'qualify_quiz/unqualified_ad', to: "pages#unqualified_ad", as: :quiz_unqualified_ad
+  get 'qualify_quiz/unqualified_capacity', to: "pages#unqualified_capacity", as: :quiz_unqualified_capacity
+  get 'qualify_quiz/unqualified_service', to: "pages#unqualified_service", as: :quiz_unqualified_service
 
 
   # Offering Pages / Services

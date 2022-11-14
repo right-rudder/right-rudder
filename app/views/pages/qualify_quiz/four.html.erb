@@ -1,0 +1,13 @@
+<%= turbo_frame_tag "frame1", class: "" do %>
+<div class="flex flex-col lg:flex-row items-center justify-between">
+  <!--Question-->
+  <div class="pb-10 lg:pb-0">
+    Does your flight school deliver quality service and flight instruction?
+  </div>
+  <!--buttons-->
+  <div class="flex flex-row lg:w-min justify-center gap-5 lg:ml-10">
+    <%= link_to "Yes", quiz_qualified_path, class: "w-20 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+    <%= link_to "No", quiz_unqualified_service_path, class: "w-20 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+  </div>
+</div>
+<% end %>

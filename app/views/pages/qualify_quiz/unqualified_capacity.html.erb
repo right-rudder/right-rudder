@@ -1,0 +1,15 @@
+<%= turbo_frame_tag "frame1" do %>
+  <!--Question-->
+  <div class="pb-10 lg:pb-0">
+    Unfortunately, your flight school does not qualify.  Using our Flight School Marketing System, it's expected that many more students will become interested with training at your flight school.  If your flight school cannot handle additional capacity, then you're setting future student pilots up for failure.
+    <br>
+    <br>
+    If you think you'd be able to handle additional student pilots at your flight school and you'd like to continue to see what other criteria is required, click continue below.
+    <br>
+    <br>
+  </div>
+  <!--buttons-->
+  <div class="flex flex-row w-full justify-center gap-5">
+    <%= link_to "Continue", quiz_question_four_path, class: "w-30 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+  </div>
+<% end %>

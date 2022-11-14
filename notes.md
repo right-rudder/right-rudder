@@ -81,11 +81,11 @@ x Call pathway / contact us model
     - Use custom form to save data into CRM
     - OR ... create our own version of Calendly
   - Video for encouragement
-  - "See if your school qualifies" button takes it to a different pathway where it asks questions then leads to scheduler
-    - Do you have a minimum of two instructors?
-    - Are you actively advertising to generate business?
-    - Do you have the ability to handle more students?
-    - Do you deliver quality service and instruction?
+  X "See if your school qualifies" button takes it to a different pathway where it asks questions then leads to scheduler
+    X Do you have a minimum of two instructors?
+    X Are you actively advertising to generate business?
+    X Do you have the ability to handle more students?
+    X Do you deliver quality service and instruction?
 X privacy and terms and conditions
 x robots.txt
 x sitemap.xml

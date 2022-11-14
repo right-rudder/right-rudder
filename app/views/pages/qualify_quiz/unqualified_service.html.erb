@@ -1,0 +1,12 @@
+<%= turbo_frame_tag "frame1" do %>
+  <!--Question-->
+  <div class="pb-10 lg:pb-0">
+    Unfortunately, your flight school does not qualify.  If you're flight school is not giving quality service and flight instruction, then you're setting future student pilots up for failure.  Sending more students to your flight school would be a disservice to future pilots and the aviation community.
+    <br>
+    <br>
+  </div>
+  <!--buttons-->
+  <div class="flex flex-row w-full justify-center gap-5">
+    <%= link_to "Return", marketing_system_path, data: { turbo_frame: "_top" }, class: "w-30 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+  </div>
+<% end %>
