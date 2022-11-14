@@ -12,9 +12,11 @@ class PagesController < ApplicationController
   end
 
   def privacy_policy
+    render 'pages/legal/privacy_policy'
   end
 
   def terms_of_service
+    render 'pages/legal/terms_of_service'
   end
 
   def website_design
