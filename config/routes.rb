@@ -7,9 +7,14 @@ Rails.application.routes.draw do
   get 'marketing-system', to: 'pages#system'
   get 'schedule-call', to: 'pages#schedule_call'
 
-  # Legal Footer Pages
-  get 'privacy-policy', to: 'pages#privacy_policy'
-  get 'terms-of-service', to: 'pages#terms_of_service'
+  # Qualify Quiz
+  get 'qualify_quiz', to: "pages#one", as: :quiz_one
+  get 'qualify_quiz/two', to: "pages#two", as: :quiz_two
+  get 'qualify_quiz/three', to: "pages#three", as: :quiz_three
+  get 'qualify_quiz/four', to: "pages#four", as: :quiz_four
+  get 'qualify_quiz/qualified', to: "pages#qualified", as: :quiz_qualified
+  get 'qualify_quiz/unqualified', to: "pages#unqualified", as: :quiz_unqualified
+
 
   # Offering Pages / Services
   get 'website-design', to: 'pages#website_design'
@@ -20,7 +25,8 @@ Rails.application.routes.draw do
   get 'social-media-management', to: 'pages#social_media_management'
   get 'reputation-management', to: 'pages#reputation_management'
 
-
-
+  # Legal Footer Pages
+  get 'privacy-policy', to: 'pages#privacy_policy'
+  get 'terms-of-service', to: 'pages#terms_of_service'
 
 end

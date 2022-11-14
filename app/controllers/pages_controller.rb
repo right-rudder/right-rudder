@@ -11,6 +11,30 @@ class PagesController < ApplicationController
   def schedule_call
   end
 
+  def one
+    render 'pages/qualify_quiz/one'
+  end
+
+  def two
+    render 'pages/qualify_quiz/two'
+  end
+
+  def three
+    render 'pages/qualify_quiz/three'
+  end
+
+  def four
+    render 'pages/qualify_quiz/four'
+  end
+
+  def qualified
+    render 'pages/qualify_quiz/qualified'
+  end
+
+  def unqualified
+    render 'pages/qualify_quiz/unqualified'
+  end
+
   def privacy_policy
     render 'pages/legal/privacy_policy'
   end
