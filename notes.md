@@ -15,14 +15,10 @@ Last updated 11-12-2022
 C Website creation page and video
 C SEO page and video
 C Advertising page
-- favicons
 - errors page 404 / 500
 - Blog post model and WYSIWYG
   - Blogs are called NOTAMS lol
 - About us
-  - Chamber of Commerce Badge
-    - <a id='COCBadgeURL' href='https://www.chamberofcommerce.com/united-states/missouri/farmington/marketing-agency/2017680081-right-rudder-marketing?source=memberwebsite' target='_tab'><img style='width:auto;height:150px;' id='COCBadgeIMG' src='https://coc.codes/images/badge/2017680081'></a>
-
 - Careers page
   - Hard code for now
     - Add page
@@ -58,6 +54,7 @@ C Advertising page
   - 8 things that need to change in the pilot training industry
 
 # Completed (and semicompleted, like... it's okay live but we can make it better later)
+X favicons
 X Mobile menu creation
 X add meta data
 X Change photos on main page from template to RRM
