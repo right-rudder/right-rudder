@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'privacy-policy', to: 'pages#privacy_policy'
   get 'terms-of-service', to: 'pages#terms_of_service'
 
-  # Offering Pages
+  # Offering Pages / Services
   get 'website-design', to: 'pages#website_design'
   get 'search-engine-optimization', to: 'pages#search_engine_optimization'
   get 'pay-per-click-ads', to: 'pages#pay_per_click_ads'
