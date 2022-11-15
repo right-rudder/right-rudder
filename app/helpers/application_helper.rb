@@ -15,14 +15,14 @@ module ApplicationHelper
     content_for :meta_keywords, text
   end
 
-  # OG Picture
-  def og_picture(text)
-    content_for :og_picture, text
+  # OG Image
+  def og_image(image_url)
+    content_for :og_image, image_url
   end
 
-  # Twitter Picture
-  def twitter_picture(text)
-    content_for :twitter_picture, text
+  # Twitter Image
+  def twitter_image(text)
+    content_for :twitter_image, text
   end
 
 end
