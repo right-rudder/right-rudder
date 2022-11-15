@@ -1,6 +1,8 @@
 @tailwind base;
 
-/*To escape tailwind for tinymce*/
+/*To escape tailwind for tinymce and fix link tag.. I had to convert the code from scss to css lol*/
+/*https://stackoverflow.com/questions/66180213/how-to-prevent-css-libraries-like-tailwindcss-and-bootstrap-to-effect-wysiwyg-ed*/
+/*https://gist.github.com/sw-yx/28c25962485101ca291ec1947b9d0b3e*/
 @layer base {
   .no-tailwindcss-base h1, .no-tailwindcss-base h2, .no-tailwindcss-base h3, .no-tailwindcss-base h4, .no-tailwindcss-base h5, .no-tailwindcss-base h6 {
     font-size: revert;
@@ -10,6 +12,9 @@
     list-style: revert;
     margin: revert;
     padding: revert;
+ }
+ .no-tailwindcss-base a {
+  @apply text-blue-700 underline;
  }
 }
 
