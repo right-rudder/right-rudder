@@ -214,6 +214,8 @@ GEM
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.0)
+    tinymce-rails (6.2.0)
+      railties (>= 3.1.1)
     turbo-rails (1.1.1)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
@@ -257,6 +259,7 @@ DEPENDENCIES
   sprockets-rails
   stimulus-rails
   tailwindcss-rails
+  tinymce-rails
   turbo-rails
   tzinfo-data
   web-console
