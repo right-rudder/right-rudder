@@ -7,7 +7,6 @@ Last updated 11-12-2022
   - Need to record a dub over
   - reedit video
   - republish video
-- Configure meta data and title to change with each page. (yield and content_for)
 - Free video (keynote presentation)
   X drafted
   - shoot
@@ -50,8 +49,8 @@ C Advertising page
   - Dennis Bampton, President at St. Charles Flying Service
   - Why student pilots quit training
   - 8 things that need to change in the pilot training industry
-
 # Completed (and semicompleted, like... it's okay live but we can make it better later)
+X Configure meta data and title to change with each page. (yield and content_for)
 X favicons
 X Mobile menu creation
 X add meta data
