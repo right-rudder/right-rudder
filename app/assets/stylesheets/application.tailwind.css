@@ -1,4 +1,18 @@
 @tailwind base;
+
+/*To escape tailwind for tinymce*/
+@layer base {
+  .no-tailwindcss-base h1, .no-tailwindcss-base h2, .no-tailwindcss-base h3, .no-tailwindcss-base h4, .no-tailwindcss-base h5, .no-tailwindcss-base h6 {
+    font-size: revert;
+    font-weight: revert;
+ }
+  .no-tailwindcss-base ol, .no-tailwindcss-base ul {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+ }
+}
+
 @tailwind components;
 @tailwind utilities;
 

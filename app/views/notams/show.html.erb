@@ -6,7 +6,7 @@
 
     <%= render @notam %>
 
-    <%= link_to 'Edit this notam', edit_notam_path(@notam), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this notam', edit_notam_path(@notam), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium", data: { turbo: false } %>
     <div class="inline-block ml-2">
       <%= button_to 'Destroy this notam', notam_path(@notam), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>

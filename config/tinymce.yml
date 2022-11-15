@@ -1,7 +1,70 @@
+# bc effem..
+promotion: false
 toolbar:
-  - styleselect | bold italic | undo redo
-  - image | link
+  - undo redo styleselect | bold italic underline | forecolor backcolor | alignleft aligncenter alignright alignjustify bullist numlist | image link
 plugins:
+  - table
   - image
   - link
-promotion: false
+  - lists
+  - media
+  - autoresize
+  - help
+
+
+
+
+
+
+
+
+
+
+
+# default
+#toolbar:
+#  - styleselect | bold italic | undo redo
+#  - image | link
+#plugins:
+#  - image
+#  - link
+
+#### copied mostly from https://www.tiny.cloud/docs/tinymce/6/quickbars/ sans the quickbars and added underline
+#plugins:
+#  - table
+#  - image
+#  - link
+#  - lists
+#  - media
+#  - autoresize
+#  - help
+#toolbar:
+#  - undo redo | blocks | bold italic underline | alignleft aligncentre alignright alignjustify | indent outdent | bullist numlist
+
+
+
+#### https://www.tiny.cloud/docs/tinymce/6/classic-demo/
+#toolbar:
+#  - undo redo bold italic underline forecolor backcolor codesample alignleft aligncenter alignright alignjustify bullist numlist link image
+#plugins:
+#  - advcode
+#  - advlist
+#  - anchor
+#  - autolink
+#  - codesample
+#  - fullscreen
+#  - help
+#  - image
+#  - editimage
+#  - tinydrive
+#  - lists
+#  - link
+#  - media
+#  - powerpaste
+#  - preview
+#  - searchreplace
+#  - table
+#  - template
+#  - tinymcespellchecker
+#  - visualblocks
+#  - wordcount
