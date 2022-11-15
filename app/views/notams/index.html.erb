@@ -18,13 +18,35 @@
     </div>
   </section>-->
 
-  <!--Featured Article-->
-  <section>
+  <!--Top Section-->
+  <div class="flex flex-col lg:flex-row">
+    <!--Featured Article-->
+    <section>
+      <div class="">
+      </div>
+    </section>
+    <!--Side with recent articles-->
+    <aside>
+    </aside>
+  </div>
+
+  <!--Next section with categories-->
+  <div class="flex flex-col lg:flex-row">
+    <!--Category 1: News and Announcements-->
     <div class="">
     </div>
-  </section>
+    <!--Category 2: Aviation and Flying-->
+    <div class="">
+    </div>
+    <!--Category 3: Business and Marketing-->
+    <div class="">
+    </div>
+  </div>
+  
+  <%= render "shared/cta1" %>
+  <%= render "shared/footer" %>
 
-  <!--Default -->
+  <!--Default
   <div class="w-full">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
@@ -42,5 +64,4 @@
 </div>
 -->
 
-<%= render "shared/cta1" %>
-<%= render "shared/footer" %>
+
