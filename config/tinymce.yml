@@ -10,7 +10,7 @@ plugins:
   - media
   - autoresize
   - help
-
+images_upload_url: '/uploader/image'
 
 
 

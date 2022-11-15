@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
+  post 'uploader/image', to: 'uploader#image'
   resources :notams
   root "pages#home"
+
 
   ### Static pages routes
 
