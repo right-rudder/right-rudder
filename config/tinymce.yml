@@ -1,7 +1,7 @@
 # bc effem..
 promotion: false
 toolbar:
-  - undo redo styleselect | bold italic underline | forecolor backcolor | alignleft aligncenter alignright alignjustify bullist numlist | image link
+  - undo redo | blocks | bold italic underline | forecolor backcolor | alignleft aligncenter alignright alignjustify bullist numlist | image link
 plugins:
   - table
   - image
