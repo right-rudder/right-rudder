@@ -16,13 +16,13 @@ module ApplicationHelper
   end
 
   # OG Image
-  def og_image(image_url)
-    content_for :og_image, image_url
+  def og_image(image_name)
+    content_for :og_image, image_name
   end
 
   # Twitter Image
-  def twitter_image(text)
-    content_for :twitter_image, text
+  def twitter_image(image_name)
+    content_for :twitter_image, image_name
   end
 
 end
