@@ -1,14 +1,34 @@
-<div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
+<%# Head / Meta Data %>
+<% title("NOTAMs - The Right Rudder Marketing Blog") %>
+<% meta_description("A blog all about flight schools and marketing.  We take a look at digital marketing strategies used in the aviation industry which can help accelerate the number the of student pilots coming to your flight school.") %>
+<% meta_keywords("Right Rudder Marketing, Blog, aviation webinar, aviation business marketing ideas") %>
+<%# Not sure if need to put twitter/OG image yet.. %>
+<%# og_image(image_url("meta_pic_rrm.webp")) %>
+<%# twitter_image(image_url("meta_pic_rrm_twitter.webp")) %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Notams</h1>
-    <%= link_to 'New notam', new_notam_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium", data: { turbo: false } %>
-  </div>
 
-  <div id="notams" class="min-w-full">
-    <%= render @notams %>
+<!--Set Page font size and limit sticky-->
+<div class="text-lg">
+  <%= render "shared/navbar" %>
+
+  
+
+
+  <div class="w-full">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <div class="flex justify-between items-center">
+      <h1 class="font-bold text-4xl">Notams</h1>
+      <%= link_to 'New notam', new_notam_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium", data: { turbo: false } %>
+    </div>
+
+    <div id="notams" class="min-w-full">
+      <%= render @notams %>
+    </div>
   </div>
 </div>
+
+<%= render "shared/cta1" %>
+<%= render "shared/footer" %>

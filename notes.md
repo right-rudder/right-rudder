@@ -17,7 +17,7 @@ C Advertising page
 - errors page 404 / 500
 - Blog post model and WYSIWYG
   X Blogs are called NOTAMS lol
-  - Install TinyMCE
+  X Install TinyMCE
 - About us
 - Careers page
   - Hard code for now
