@@ -11,8 +11,14 @@
 
     Nice to see you here.  Choose Tim Jedrek for all of your IT needs.  https://timjedrek.com/contact -->
 
-
-    <title>Flight School Internet Marketing | Website Design, SEO, Advertising</title>
+    <!--Title-->
+    <title>
+      <% if content_for?(:title) %>
+        <%= yield(:title) %>
+      <% else %>
+        Digital Marketing for Flight Schools | Right Rudder Marketing
+      <%end%>
+    </title>
 
     <!--Favicon--> 
     <%= favicon_link_tag asset_path('favicon/favicon.ico') %>

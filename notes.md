@@ -17,7 +17,8 @@ C SEO page and video
 C Advertising page
 - errors page 404 / 500
 - Blog post model and WYSIWYG
-  - Blogs are called NOTAMS lol
+  X Blogs are called NOTAMS lol
+  - Install TinyMCE
 - About us
 - Careers page
   - Hard code for now
@@ -38,10 +39,7 @@ C Advertising page
   - Webinar
     - Use LinkedIn Events
     - On page, refer to the next webinar and previous webinars
-    - Refer to keynote video
-    - drafted
-    - record
-    - edit
+    - refer to keynote video
   - Marketing 101
   - Sales and negotiation tactics
   - Design basics
@@ -67,11 +65,11 @@ X social media links
     - location coordinates are in atlantic ocean?? hours are off
   X instagram https://www.instagram.com/rightruddermarketing/
   X youtube https://www.youtube.com/@rightruddermarketing
-    - need cover photo
+    X need cover photo
   X Twitter https://twitter.com/timjedrek NEED TO BUY OUT RIGHT RUDDER 
-    - need cover photo
+    X need cover photo
   X Linkedin http://linkedin.com/company/rightruddermarketing
-    - need cover photo
+    X need cover photo
 x Call pathway / contact us model
   X Calendly integration
     x for now, just plugin the widget.
@@ -81,6 +79,9 @@ x Call pathway / contact us model
     - Use custom form to save data into CRM
     - OR ... create our own version of Calendly
   - Video for encouragement
+    X Drafted
+    - Shoot
+    - Edit
   X "See if your school qualifies" button takes it to a different pathway where it asks questions then leads to scheduler
     X Do you have a minimum of two instructors?
     X Are you actively advertising to generate business?
@@ -89,7 +90,7 @@ x Call pathway / contact us model
 X privacy and terms and conditions
 x robots.txt
 x sitemap.xml
-  - Use ruby gem https://github.com/kjvarga/sitemap_generator
+  X Use ruby gem https://github.com/kjvarga/sitemap_generator
   - still manual, check out https://www.ombulabs.com/blog/seo/sitemap/ruby/update-sitemaps-during-heroku-deploy.html
 
 # DOMAIN
@@ -144,8 +145,8 @@ x sitemap.xml
       - create posters, flyers, business cards, swag
   - https://www.gslbaa.org GREATER ST. LOUIS BUSINESS AVIATION ASSOCIATION
     - $180 for 3 members
-  - NBAA - National Business Aviation Association
-    - $370 for Professional Member
+  X NBAA - National Business Aviation Association
+    X $370 for Professional Member
   - GSLBAA - Greater St. Louis Business Aviation Association
     - 
   - AOPA
@@ -159,12 +160,12 @@ x sitemap.xml
   - FLYING Magazine
   - http://www.aviationeducation.org
   - missouri chamber of commerce
-  - chamber of commerce
-    - started account but it is deactivated bc they can't verify on google?
-    - sent email to support@chamberofcommerce.com
-  - AMA - American Marketing Association
-    - $149 a year
-    - https://amasaintlouis.org seems to be a bit outdated and not working.
+  X chamber of commerce
+    X started account but it is deactivated bc they can't verify on google?
+    X sent email to support@chamberofcommerce.com
+  X AMA - American Marketing Association
+    X $149 a year
+    X https://amasaintlouis.org seems to be a bit outdated and not working.
 
 - PUBLISHING BOOK
   - Amazon
