@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notams
   root "pages#home"
 
   ### Static pages routes

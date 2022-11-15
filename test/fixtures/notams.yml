@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  notam_date: 2022-11-14
+  author: MyString
+  notam_body: MyText
+
+two:
+  title: MyString
+  notam_date: 2022-11-14
+  author: MyString
+  notam_body: MyText

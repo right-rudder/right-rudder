@@ -1,0 +1,2 @@
+class Notam < ApplicationRecord
+end

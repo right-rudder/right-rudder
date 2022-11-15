@@ -1,0 +1,27 @@
+<div id="<%= dom_id notam %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= notam.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Notam date:</strong>
+    <%= notam.notam_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Author:</strong>
+    <%= notam.author %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Notam body:</strong>
+    <%= notam.notam_body %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this notam", notam, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this notam', edit_notam_path(notam), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
