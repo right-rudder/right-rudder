@@ -31,7 +31,7 @@ C Advertising page
   X research https://getbutton.io
     X it looks like it just provides links
   - find a widget
-    or
+    - look into pusher
   - Create one your damn self
 - Resources
   C Tips to grow your school
