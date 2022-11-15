@@ -1,3 +1,5 @@
+<%= tinymce_assets %>
+
 <%= form_with(model: notam, class: "contents") do |form| %>
   <% if notam.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
@@ -33,7 +35,8 @@
 
   <div class="my-5">
     <%= form.label :notam_body %>
-    <%= form.text_area :notam_body, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_area :notam_body, rows: 20, class: "tinymce block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= tinymce %>
   </div>
 
   <div class="inline">

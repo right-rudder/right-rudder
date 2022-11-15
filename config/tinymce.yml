@@ -4,3 +4,4 @@ toolbar:
 plugins:
   - image
   - link
+promotion: false
