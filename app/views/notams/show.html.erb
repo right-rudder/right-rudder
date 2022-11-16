@@ -2,10 +2,47 @@
 <% title(@notam.title + " | Right Rudder Marketing") %>
 <% meta_description(if @notam.meta_description? then @notam.meta_description end) %>
 <% meta_keywords(if @notam.meta_keywords? then @notam.meta_keywords end) %>
-<% og_image(image_url(@notam.feature_image.url)) %>
-<% twitter_image(image_url(@notam.feature_image.url)) %>
+<%# og_image(polymorphic_url(@notam.feature_image)) # test this out later if not working. %>
+<% og_image(@notam.feature_image.url) %>
+<% twitter_image(@notam.feature_image.url) %>
 
+<!--Set Page font size and limit sticky-->
+<div class="text-lg bg-gradient-to-r from-slate-100 to-blue-100">
+  <%= render "shared/navbar" %>
 
+  <div class="flex flex-col items-center">
+    <div class="lg:border-1 lg:w-3/5 flex flex-col lg:rounded-xl lg:my-10 border-slate-300 bg-slate-50">
+      <!--Header-->
+      <%=image_tag @notam.feature_image.url, class:"w-full object-cover object-center lg:rounded-t-xl"%>
+      <!--Text-->
+      <div class="">
+        <div class="p-3">
+          <h2 class="font-bold text-3xl"><%= @notam.title %></h2>
+          <div class="text-md font-semibold"><%= @notam.category %></div>      
+          <div class="text-sm font-semibold"><%= I18n.localize(@notam.notam_date, :format => '%^a %^b %-d %Y') %></div>
+          <div class="text-sm italic">Written by <%= @notam.author%></div>          
+        </div>
+        <%# Shown only when logged in %>
+        <hr class="border-slate-300 hidden">        
+        <div class="p-3 hidden">
+          <div>Status: <span class="italic"><%= @notam.status %></span></div>
+          <div class="flex flex-row gap-3">
+            <%= link_to 'Edit this post', edit_notam_path(@notam), class: "font-semibold hover:underline", data: { turbo: false } %>
+            <span class="hidden"> | </span>
+            <%= button_to 'Delete this post', notam_path(@notam), method: :delete, class: " font-semibold hover:underline" %>
+          </div>
+        </div>
+        <hr class="border-slate-300">
+      </div>
+      <!--Content-->
+      <div class="p-3">
+        <%= raw @notam.notam_body %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/cta1" %>
+<%= render "shared/footer" %>
 
 
 <!--Default Hidden-->

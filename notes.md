@@ -31,6 +31,7 @@ C Advertising page
     - look into pusher
   - Create one your damn self
 - Blog
+  - Create webinar column so we can filter for webinars
   C 5 Tips to grow your school (FEATURED) *Business
   - Website Launch *NEWS
   - (Webinar DEC 1, 2022) Creating a website that to get more discovery flights *NEWS
