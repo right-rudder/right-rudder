@@ -34,9 +34,12 @@
     <section class="w-full lg:w-3/5 h-screen-2/3 bg-featured-notam bg-cover bg-center flex flex-col justify-end lg:mx-5 lg:rounded-lg">
       <!--Bottom Section of image feature-->
       <div class="w-full bg-gradient-to-r from-slate-50/50 to-slate-50/50 pl-10 py-5">
-        <h3 class="font-bold text-3xl">This is the featured article's title</h3>
+        <h3 class="font-bold text-2xl">This is the featured article's title</h3>
         <div class="font-semibold text-sm">
           JAN 01 2022
+        </div>
+        <div class="text-sm italic">
+        Business and Marketing
         </div>
       </div>
     </section>
@@ -45,6 +48,7 @@
     <aside class="w-full lg:w-2/5 h-screen-2/3 flex flex-col items-center justify-between lg:mr-5">
       <h3 class="text-center font-semibold py-5 text-2xl">Recent NOTAMs</h3>
       <% @notams.last(4).reverse_each do |post| %> 
+        <%= link_to post do%>
         <div class="flex flex-row items-center bg-slate-100 w-full lg:rounded-lg h-24 lg:mb-0">
           <!--image-->
           <div class="w-2/6 flex flex-row items-center">
@@ -55,6 +59,7 @@
             <%= post.title %><br>
           </div>
         </div>
+        <% end %>
       <%end %>
     </aside>
   </div>
