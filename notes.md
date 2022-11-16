@@ -31,12 +31,18 @@ C Advertising page
     - look into pusher
   - Create one your damn self
 - Blog
+  C 5 Tips to grow your school (FEATURED) *Business
+  - Website Launch *NEWS
+  - (Webinar DEC 1, 2022) Creating a website that to get more discovery flights *NEWS
+  - Create your own Flight School Marketing System *Business
+  - What the Artemis-1 Launch means to the flight training industry *Aviation *Flying
+  - Does winter put a halt to flight training? *Flying
+  - Creating a video for your flight school *Business
+
+- Resources (business / marketing blog articles)
   C Tips to grow your school
-  - Website Launch
-  - 
-- Resources
-  C Tips to grow your school
-  - Webinar
+  - Webinar PAGE
+    - Create model for webinar
     - Use LinkedIn Events
     - On page, refer to the next webinar and previous webinars
     - refer to keynote video
