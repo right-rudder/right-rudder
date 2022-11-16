@@ -1,7 +1,7 @@
 <%# Head / Meta Data %>
 <% title("NOTAMs - The Right Rudder Marketing Blog") %>
 <% meta_description("A blog all about flight schools and marketing.  We take a look at digital marketing strategies used in the aviation industry which can help accelerate the number the of student pilots coming to your flight school.") %>
-<% meta_keywords("Right Rudder Marketing, Blog, aviation webinar, aviation business marketing ideas") %>
+<% meta_keywords("Right Rudder Marketing, Blog, aviation webinar, aviation marketing, aviation business marketing ideas") %>
 <%# Not sure if need to put twitter/OG image yet.. %>
 <%# og_image(image_url("meta_pic_rrm.webp")) %>
 <%# twitter_image(image_url("meta_pic_rrm_twitter.webp")) %>
@@ -12,7 +12,7 @@
   <%= render "shared/navbar" %>
   <!--Header Section-->
   <section class="grid place-items-center">
-    <div class="py-20 flex flex-col-reverse lg:flex-row lg:w-5/6">
+    <div class="py-20 flex flex-col lg:flex-row lg:w-5/6">
       <!--Blog image-->
       <div class="grid place-items-center">
         <%= image_tag "rrm-notams-trans.webp"%>
@@ -21,8 +21,8 @@
       <!--Text about blog-->
       <div class="px-5 lg:px-0">
         <h1 class="text-5xl font-bold text-center pt-20 pb-5">Right Rudder Marketing NOTAMs</h1>
-        <h2 class=" text-lg lg:text-2xl font-semibold text-center pb-5">An aviation and flying blog.<br>Read business and marketing.<br>Hear the lastest news.</h2>
-        <p class="pb-20 text-sm lg:text-xl text-center">The Right Rudder Marketing blog</p>
+        <h2 class=" text-lg lg:text-2xl font-semibold text-center pb-5">An aviation and flying blog.<br>Learn business and marketing.<br>Hear the lastest news.</h2>
+        <p class="lg:pb-20 text-sm lg:text-xl text-center">The Right Rudder Marketing blog</p>
       </div>
     </div>
   </section>
@@ -31,7 +31,7 @@
   <div class="flex flex-col lg:flex-row mb-10">
     
     <!--Featured Article-->
-    <section class="w-full lg:w-3/5 h-screen-2/3 bg-featured-notam bg-cover bg-center flex flex-col justify-end lg:mx-5 rounded-lg">
+    <section class="w-full lg:w-3/5 h-screen-2/3 bg-featured-notam bg-cover bg-center flex flex-col justify-end lg:mx-5 lg:rounded-lg">
       <!--Bottom Section of image feature-->
       <div class="w-full bg-gradient-to-r from-slate-50/50 to-slate-50/50 pl-10 py-5">
         <h3 class="font-bold text-3xl">This is the featured article's title</h3>
@@ -42,20 +42,23 @@
     </section>
 
     <!--Side with recent articles-->
-    <aside class=" w-full lg:w-2/5 mx-5 h-screen-2/3">
+    <aside class="w-full lg:w-2/5 h-screen-2/3">
       <h3 class="text-center font-semibold py-10 text-2xl">Recent NOTAMs</h3>
       <div class="flex flex-col items-center px-5">
         <% @notams.last(3).each do |post| %> 
-          <div class="flex flex-row items-center bg-red-100 w-full">
+          <div class="flex flex-row items-center bg-slate-100 w-full">
             <!--image-->
             <div class="w-2/6 flex flex-row items-center h-24 ">
-              <%#= image_tag post.feature_image.url, class: "h-24 object-contain"%>
+              <%= image_tag post.feature_image.url, class: "h-24 object-contain"%>
               <%#= post.feature_image %><br>    
             </div>
-            <div class="w-4/6">
+            <div class="ml-5 w-4/6">
               <%= post.title %><br>
             </div>
           </div>
+          <% unless post[2] %>
+          <hr class="my-2 mx-auto w-full h-0.5 bg-slate-500 rounded border-0" >
+          <% end %>
         <%end %>
       </div>
     </aside>
