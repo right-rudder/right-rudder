@@ -9,5 +9,11 @@ class Notam < ApplicationRecord
   
   has_one_attached :feature_image
 
+  scope :business_and_marketing, -> {where(category: "Business and Marketing")}
+  scope :aviation_and_flying, -> {where(category: "Aviation and Flying")}
+  scope :news_and_announcements, -> {where(category: "News and Announcements")}
+
+  scope :published, -> {where(status: "Published")}
+
   #belongs_to :featured_notam
 end
