@@ -23,8 +23,8 @@
           <div class="text-sm italic">Written by <%= @notam.author%></div>          
         </div>
         <%# Shown only when logged in %>
-        <hr class="border-slate-300 hidden">        
-        <div class="p-3 hidden">
+        <hr class="border-slate-300">        
+        <div class="p-3">
           <div>Status: <span class="italic"><%= @notam.status %></span></div>
           <div class="flex flex-row gap-3">
             <%= link_to 'Edit this post', edit_notam_path(@notam), class: "font-semibold hover:underline", data: { turbo: false } %>
@@ -43,21 +43,3 @@
 </div>
 <%= render "shared/cta1" %>
 <%= render "shared/footer" %>
-
-
-<!--Default Hidden-->
-<div class="mx-auto md:w-2/3 w-full flexx hidden">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
-
-    <%= render @notam %>
-
-    <%= link_to 'Edit this notam', edit_notam_path(@notam), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium", data: { turbo: false } %>
-    <div class="inline-block ml-2">
-      <%= button_to 'Destroy this notam', notam_path(@notam), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <%= link_to 'Back to notams', notams_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  </div>
-</div>
