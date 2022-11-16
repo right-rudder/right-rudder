@@ -65,6 +65,6 @@ class NotamsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def notam_params
-      params.require(:notam).permit(:title, :notam_date, :author, :notam_body, :category)
+      params.require(:notam).permit(:title, :notam_date, :author, :notam_body, :category, :status, :tags, :meta_description, :meta_keywords)
     end
 end
