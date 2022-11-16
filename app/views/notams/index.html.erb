@@ -2,9 +2,8 @@
 <% title("NOTAMs - The Right Rudder Marketing Blog") %>
 <% meta_description("A blog all about flight schools and marketing.  We take a look at digital marketing strategies used in the aviation industry which can help accelerate the number the of student pilots coming to your flight school.") %>
 <% meta_keywords("Right Rudder Marketing, Blog, aviation webinar, aviation marketing, aviation business marketing ideas") %>
-<%# Not sure if need to put twitter/OG image yet.. %>
-<%# og_image(image_url("meta_pic_rrm.webp")) %>
-<%# twitter_image(image_url("meta_pic_rrm_twitter.webp")) %>
+<% og_image(image_url("rrm-notams-trans.webp")) %>
+<% twitter_image(image_url("rrm-notams-trans.webp")) %>
 
 
 <!--Set Page font size and limit sticky-->
@@ -45,17 +44,17 @@
     </section>
 
     <!--Side with recent articles-->
-    <aside class="w-full lg:w-2/5 h-screen-2/3 flex flex-col items-center justify-between lg:mr-5">
-      <h3 class="text-center font-semibold py-5 text-2xl">Recent NOTAMs</h3>
+    <aside class="w-full lg:w-2/5 h-screen-2/3 flex flex-col items-center lg:justify-between lg:mr-5">
+      <h3 class="text-center font-semibold py-5 text-2xl">Recent Articles</h3>
       <% @notams.last(4).reverse_each do |post| %> 
-        <%= link_to post do%>
-        <div class="flex flex-row items-center bg-slate-100 w-full lg:rounded-lg h-24 lg:mb-0">
+        <%= link_to post, class: "" do%>
+        <div class="flex flex-row items-center bg-gradient-to-b from-slate-50 to-slate-200 hover:from-slate-200 hover:to-slate-300 w-full lg:rounded-lg h-24 lg:mb-0 transition-all duration-300">
           <!--image-->
           <div class="w-2/6 flex flex-row items-center">
             <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 w-full"%>
             <%#= post.feature_image %><br>    
           </div>
-          <div class="ml-5 w-4/6">
+          <div class="ml-5 w-4/6 text-md">
             <%= post.title %><br>
           </div>
         </div>
@@ -64,8 +63,6 @@
     </aside>
   </div>
 
-  <!--Hide template-->
-  <div class="hidden">
   <!--Next section with categories-->
   <div class="flex flex-col lg:flex-row lg:justify-between mb-10">
     <!--Category 1: Business and Marketing<-->
@@ -95,7 +92,6 @@
         <li>This is a post</li>
       </ul>
     </div>
-  </div>
   </div>
   
   <%= render "shared/footer" %>
