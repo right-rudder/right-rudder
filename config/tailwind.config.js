@@ -39,6 +39,7 @@ module.exports = {
         //'head' : "url('cessnalake.webp')",
         'headsys' : "url('cockpitblue2.webp')",
         'headsys2' : "url('dave.webp')",
+        'featured-notam' : "url('computer.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',

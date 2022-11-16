@@ -8,48 +8,90 @@
 
 
 <!--Set Page font size and limit sticky-->
-<div class="text-lg bg-gradient-to-r from-slate-50 to-blue-200">
+<div class="text-lg bg-gradient-to-r from-slate-100 to-blue-100">
   <%= render "shared/navbar" %>
   <!--Header Section-->
-  <section class="bg-slate-100">
-    <div class="py-48 bg-gradient-to-r from-slate-50 to-blue-100">
-      <h1 class="text-5xl font-bold text-center pt-20 pb-5">Right Rudder Marketing NOTAMs</h1>
-      <h2 class="text-2xl font-semibold text-center pb-20">A blog about aviation and flying.  Learn business and marketing.  Hear the lastest news.</h2>
+  <section class="grid place-items-center">
+    <div class="py-20 flex flex-col-reverse lg:flex-row lg:w-5/6">
+      <!--Blog image-->
+      <div class="grid place-items-center">
+        <%= image_tag "rrm-notams-trans.webp"%>
+      </div>
+      
+      <!--Text about blog-->
+      <div class="px-5 lg:px-0">
+        <h1 class="text-5xl font-bold text-center pt-20 pb-5">Right Rudder Marketing NOTAMs</h1>
+        <h2 class=" text-lg lg:text-2xl font-semibold text-center pb-5">An aviation and flying blog.<br>Read business and marketing.<br>Hear the lastest news.</h2>
+        <p class="pb-20 text-sm lg:text-xl text-center">The Right Rudder Marketing blog</p>
+      </div>
     </div>
   </section>
 
   <!--Top Section-->
-  <div class="flex flex-col lg:flex-row">
+  <div class="flex flex-col lg:flex-row mb-10">
+    
     <!--Featured Article-->
-    <section>
-      <div class="">
-        <!--Image Background-->
-        <div class="">
+    <section class="w-full lg:w-3/5 h-screen-2/3 bg-featured-notam bg-cover bg-center flex flex-col justify-end lg:mx-5 rounded-lg">
+      <!--Bottom Section of image feature-->
+      <div class="w-full bg-gradient-to-r from-slate-50/50 to-slate-50/50 pl-10 py-5">
+        <h3 class="font-bold text-3xl">This is the featured article's title</h3>
+        <div class="font-semibold text-sm">
+          JAN 01 2022
         </div>
       </div>
     </section>
+
     <!--Side with recent articles-->
-    <aside>
-      <%= @notams.reverse_each do |notam| %> 
-        <%= notam.title %>
-      <% end %>
+    <aside class=" w-full lg:w-2/5 mx-5 h-screen-2/3">
+      <h3 class="text-center font-semibold py-10 text-2xl">Recent Notices</h3>
+      <div class="flex flex-col items-center px-5">
+        <% @notams.last(3).each do |post| %> 
+          <div class="flex flex-row items-center bg-red-100 w-full">
+            <!--image-->
+            <div class="w-2/6 flex flex-row items-center h-24 ">
+              <%= image_tag post.feature_image.url, class: "h-24 object-contain"%>
+              <%#= post.feature_image %><br>    
+            </div>
+            <div class="w-4/6">
+              <%= post.title %><br>
+            </div>
+          </div>
+        <%end %>
+      </div>
     </aside>
   </div>
 
   <!--Next section with categories-->
-  <div class="flex flex-col lg:flex-row">
-    <!--Category 1: News and Announcements-->
-    <div class="">
+  <div class="flex flex-col lg:flex-row lg:justify-between mb-10">
+    <!--Category 1: Business and Marketing<-->
+    <div class="lg:w-1/3 mx-5 bg-slate-100/70 flex flex-col items-center py-5 rounded-3xl ">
+      <h3 class="font-semibold pb-5">Business and Marketing</h3>
+      <ul>
+        <li>This is a post</li>
+        <li>This is a post</li>
+        <li>This is a post</li>
+      </ul>
     </div>
     <!--Category 2: Aviation and Flying-->
-    <div class="">
+    <div class="lg:w-1/3 mx-5 bg-slate-100/70 flex flex-col items-center py-5 rounded-3xl ">
+      <h3 class="font-semibold pb-5">Aviation and Flying</h3>
+      <ul>
+        <li>This is a post</li>
+        <li>This is a post</li>
+        <li>This is a post</li>
+      </ul>
     </div>
-    <!--Category 3: Business and Marketing-->
-    <div class="">
+    <!--Category 3: News and announcements -->
+    <div class="lg:w-1/3 mx-5 bg-slate-100/70 flex flex-col items-center py-5 rounded-3xl ">
+        <h3 class="font-semibold pb-5">News and Announcements</h3>
+        <ul>
+        <li>This is a post</li>
+        <li>This is a post</li>
+        <li>This is a post</li>
+      </ul>
     </div>
   </div>
   
-  <%= render "shared/cta1" %>
   <%= render "shared/footer" %>
 
   <!--Default
