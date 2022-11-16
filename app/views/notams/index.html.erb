@@ -43,13 +43,13 @@
 
     <!--Side with recent articles-->
     <aside class=" w-full lg:w-2/5 mx-5 h-screen-2/3">
-      <h3 class="text-center font-semibold py-10 text-2xl">Recent Notices</h3>
+      <h3 class="text-center font-semibold py-10 text-2xl">Recent NOTAMs</h3>
       <div class="flex flex-col items-center px-5">
         <% @notams.last(3).each do |post| %> 
           <div class="flex flex-row items-center bg-red-100 w-full">
             <!--image-->
             <div class="w-2/6 flex flex-row items-center h-24 ">
-              <%= image_tag post.feature_image.url, class: "h-24 object-contain"%>
+              <%#= image_tag post.feature_image.url, class: "h-24 object-contain"%>
               <%#= post.feature_image %><br>    
             </div>
             <div class="w-4/6">

@@ -2,54 +2,76 @@
 
 <%= form_with(model: notam, class: "contents") do |form| %>
   <% if notam.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(notam.errors.count, "error") %> prohibited this notam from being saved:</h2>
+    <div class="px-10 lg:pl-20 lg:pr-20 pb-10" >
+      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+        <h2><%= pluralize(notam.errors.count, "mistake") %>.  Cannot save. Please Fix.</h2>
 
-      <ul>
-        <% notam.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% notam.errors.each do |error| %>
+            <li class="list-disc ml-5"><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
+  <% if current_page?(new_notam_path) %>
+    <h1 class="font-bold text-4xl lg:pl-20 lg:text-left text-center">New NOTAM</h1>
+  <% else %>
+    <h1 class="font-bold text-4xl lg:pl-20 lg:text-left text-center">Edit NOTAM</h1>
+  <% end %>
 
-  <div class="my-5">
-    <%= form.label :status %>
-    <%= form.select(:status, ['','Published','Drafting'], {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800'}) %>
-  </div>
+  <div class="flex flex-col lg:flex-row lg:px-10">
+    <div class="px-10 lg:w-1/3 pr-10">
+      <!--Blog Data-->
+      <div class="my-5">
+        <%= form.select(:status, ['NOTAM Status','Published','Drafting'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800'}) %>
+      </div>
 
-  <div class="my-5">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+      <div class="my-5">
+        <%= form.select(:category, ['NOTAM Category','Business and Marketing','Aviation and Flying', 'News and Announcement'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800'}) %>
+      </div>
 
-  <div class="my-5">
-    <%= form.label :category %>
-    <%= form.text_field :category, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+      <div class="my-5">
+        <%= form.text_field :title, placeholder: "NOTAM Title", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
 
-  <div class="my-5">
-    <%= form.label :notam_date %>
-    <%= form.date_field :notam_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+      <div class="my-5">
+        <%= form.date_field :notam_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
 
-  <div class="my-5">
-    <%= form.label :author %>
-    <%= form.text_field :author, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div> 
+      <div class="my-5">
+        <%= form.text_field :author, placeholder: "Author", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div> 
 
-  <div class="my-5">
-    <%= form.label :feature_image %> <br>
-    <%= form.file_field :feature_image %>
+      <div class="my-5">
+        <%= form.text_area :meta_description, rows: 3, placeholder: "Meta Description", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
 
-  <div class="my-5">
-    <%= form.label :notam_body %>
-    <%= form.text_area :notam_body, rows: 20, class: "tinymce block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-    <%= tinymce %>
-  </div>
+      <div class="my-5">
+        <%= form.text_field :meta_keywords, placeholder: "Meta Keywords", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
 
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+      <div class="my-5">
+        <%= form.file_field :feature_image, class: "text-sm text-grey-500
+            file:py-2 file:px-6
+            file:rounded-lg file:border-0
+            file:text-sm file:font-medium
+            file:bg-blue-100 file:text-blue-700
+            hover:file:cursor-pointer hover:file:bg-blue-200
+            hover:file:text-blue-700" %>
+      </div>
+
+      <div class="inline">
+        <%= form.submit class: "rounded-lg py-2 px-4 bg-blue-600 hover:bg-blue-800 text-sm text-white inline-block font-medium cursor-pointer", data: { turbo: false } %>
+      </div>
+    </div>
+    <!--Blog editor-->
+    <div class="lg:w-2/3 lg:pl-5 lg:pr-10">
+      <div class="my-5">
+        <%= form.text_area :notam_body, rows: 30, class: "tinymce block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        <%= tinymce %>
+      </div>
+    </div>
   </div>
 <% end %>
 

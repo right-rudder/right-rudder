@@ -1,7 +1,15 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New notam</h1>
+<%# Head / Meta Data %>
+<% title("Publish New NOTAM | Right Rudder Marketing Blog") %>
+<% meta_description("Publish a new NOTAM on the Right Rudder Marketing Blog") %>
+<% meta_keywords("aviation blog, flight school blog, aviation business blog, news about business aviation, flight school news") %>
+
+<%= render "shared/navbar" %>
+
+<div class="pt-10 bg-slate-100">
 
   <%= render "form", notam: @notam %>
 
   <%= link_to 'Back to notams', notams_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 </div>
+
+<%= render "shared/footer"%>
