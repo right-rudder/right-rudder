@@ -34,7 +34,7 @@ C Advertising page
   C 5 Tips to grow your school (FEATURED) *Business
   - Website Launch *NEWS
   - (Webinar DEC 1, 2022) Creating a website that to get more discovery flights *NEWS
-  - Create your own Flight School Marketing System *Business
+  - Create your own Flight School Marketing System *BusinessV(KEYNOTE)
   - What the Artemis-1 Launch means to the flight training industry *Aviation *Flying
   - Does winter put a halt to flight training? *Flying
   - Creating a video for your flight school *Business

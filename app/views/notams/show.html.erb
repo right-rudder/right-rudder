@@ -1,4 +1,15 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<%# Head / Meta Data %>
+<% title(@notam.title + " | Right Rudder Marketing") %>
+<% meta_description(if @notam.meta_description? then @notam.meta_description end) %>
+<% meta_keywords(if @notam.meta_keywords? then @notam.meta_keywords end) %>
+<% og_image(image_url(@notam.feature_image.url)) %>
+<% twitter_image(image_url(@notam.feature_image.url)) %>
+
+
+
+
+<!--Default Hidden-->
+<div class="mx-auto md:w-2/3 w-full flexx hidden">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
