@@ -22,7 +22,7 @@
       <div class="px-5 lg:px-0">
         <h1 class="text-5xl font-bold text-center pt-20 pb-5">Right Rudder Marketing NOTAMs</h1>
         <h2 class=" text-lg lg:text-2xl font-semibold text-center pb-5">An aviation and flying blog.<br>Learn business and marketing.<br>Hear the lastest news.</h2>
-        <p class="lg:pb-20 text-sm lg:text-xl text-center">The Right Rudder Marketing blog</p>
+        <p class="lg:pb-20 text-md px-10 lg:text-xl text-center">The Right Rudder Marketing blog</p>
       </div>
     </div>
   </section>
@@ -42,7 +42,7 @@
     </section>
 
     <!--Side with recent articles-->
-    <aside class="w-full lg:w-2/5 h-screen-2/3 flex flex-col items-center justify-between">
+    <aside class="w-full lg:w-2/5 h-screen-2/3 flex flex-col items-center justify-between lg:mr-5">
       <h3 class="text-center font-semibold py-5 text-2xl">Recent NOTAMs</h3>
       <% @notams.last(4).reverse_each do |post| %> 
         <div class="flex flex-row items-center bg-slate-100 w-full lg:rounded-lg h-24 lg:mb-0">
@@ -59,6 +59,8 @@
     </aside>
   </div>
 
+  <!--Hide template-->
+  <div class="hidden">
   <!--Next section with categories-->
   <div class="flex flex-col lg:flex-row lg:justify-between mb-10">
     <!--Category 1: Business and Marketing<-->
@@ -88,6 +90,7 @@
         <li>This is a post</li>
       </ul>
     </div>
+  </div>
   </div>
   
   <%= render "shared/footer" %>

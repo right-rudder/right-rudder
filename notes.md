@@ -15,9 +15,6 @@ C Website creation page and video
 C SEO page and video
 C Advertising page
 - errors page 404 / 500
-- Blog post model and WYSIWYG
-  X Blogs are called NOTAMS lol
-  X Install TinyMCE
 - About us
 - Careers page
   - Hard code for now
@@ -33,6 +30,10 @@ C Advertising page
   - find a widget
     - look into pusher
   - Create one your damn self
+- Blog
+  C Tips to grow your school
+  - Website Launch
+  - 
 - Resources
   C Tips to grow your school
   - Webinar
@@ -50,6 +51,9 @@ C Advertising page
   - Why student pilots quit training
   - 8 things that need to change in the pilot training industry
 # Completed (and semicompleted, like... it's okay live but we can make it better later)
+X Blog post model and WYSIWYG
+  X Blogs are called NOTAMS lol
+  X Install TinyMCE
 X Configure meta data and title to change with each page. (yield and content_for)
 X favicons
 X Mobile menu creation
@@ -175,6 +179,12 @@ x sitemap.xml
   - Write articles and get them posted on other sites
     - http://aeroexperience.blogspot.com
       - Carmelo Turdo, STL
+      - Mentour Pilot
+      - Captain Joe
+      - MzeroA
+      - Flight Mike Alpha FLy8MA
+      - Pilot institute
+      - Checkrideprep
 
 
 
