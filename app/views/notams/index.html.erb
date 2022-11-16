@@ -42,25 +42,20 @@
     </section>
 
     <!--Side with recent articles-->
-    <aside class="w-full lg:w-2/5 h-screen-2/3">
-      <h3 class="text-center font-semibold py-10 text-2xl">Recent NOTAMs</h3>
-      <div class="flex flex-col items-center px-5">
-        <% @notams.last(3).each do |post| %> 
-          <div class="flex flex-row items-center bg-slate-100 w-full">
-            <!--image-->
-            <div class="w-2/6 flex flex-row items-center h-24 ">
-              <%= image_tag post.feature_image.url, class: "h-24 object-contain"%>
-              <%#= post.feature_image %><br>    
-            </div>
-            <div class="ml-5 w-4/6">
-              <%= post.title %><br>
-            </div>
+    <aside class="w-full lg:w-2/5 h-screen-2/3 flex flex-col items-center justify-between">
+      <h3 class="text-center font-semibold py-5 text-2xl">Recent NOTAMs</h3>
+      <% @notams.last(4).reverse_each do |post| %> 
+        <div class="flex flex-row items-center bg-slate-100 w-full lg:rounded-lg h-24 lg:mb-0">
+          <!--image-->
+          <div class="w-2/6 flex flex-row items-center">
+            <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 "%>
+            <%#= post.feature_image %><br>    
           </div>
-          <% unless post[2] %>
-          <hr class="my-2 mx-auto w-full h-0.5 bg-slate-500 rounded border-0" >
-          <% end %>
-        <%end %>
-      </div>
+          <div class="ml-5 w-4/6">
+            <%= post.title %><br>
+          </div>
+        </div>
+      <%end %>
     </aside>
   </div>
 
