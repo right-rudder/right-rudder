@@ -30,6 +30,9 @@
     </section>
     <!--Side with recent articles-->
     <aside>
+      <%= @notams.reverse_each do |notam| %> 
+        <%= notam.title %>
+      <% end %>
     </aside>
   </div>
 

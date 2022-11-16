@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  get 'featured_notams/select', to: "featured_notams#select"
 
-  post 'uploader/image', to: 'uploader#image'
-  resources :notams
   root "pages#home"
+
+  # Notams
+  get 'notams/select_featured', to: 'notams#select_featured_notams'
+  post 'uploader/image', to: 'uploader#image' #add upload image to notams 
+  resources :notams
+
+  
 
 
   ### Static pages routes
