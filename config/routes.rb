@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :webinars
   get 'featured_notams/select', to: "featured_notams#select"
 
   root "pages#home"

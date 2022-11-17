@@ -1,0 +1,2 @@
+class Webinar < ApplicationRecord
+end

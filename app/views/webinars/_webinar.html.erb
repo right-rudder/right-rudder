@@ -1,0 +1,32 @@
+<div id="<%= dom_id webinar %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= webinar.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Host:</strong>
+    <%= webinar.host %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Webinar date:</strong>
+    <%= webinar.webinar_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Meta description:</strong>
+    <%= webinar.meta_description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Meta keywords:</strong>
+    <%= webinar.meta_keywords %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this webinar", webinar, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this webinar', edit_webinar_path(webinar), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
