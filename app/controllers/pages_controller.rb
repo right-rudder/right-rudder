@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   # "Static" pages
 
-
   def home
   end
 
@@ -9,6 +8,9 @@ class PagesController < ApplicationController
   end
 
   def schedule_call
+  end
+
+  def about_us
   end
 
   # Qualify Quiz
@@ -54,6 +56,7 @@ class PagesController < ApplicationController
     render 'pages/legal/terms_of_service'
   end
 
+  # services
   def website_design
     render 'pages/services/website_design'
   end

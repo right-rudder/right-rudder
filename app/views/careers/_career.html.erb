@@ -1,0 +1,22 @@
+<div id="<%= dom_id career %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Role:</strong>
+    <%= career.role %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location:</strong>
+    <%= career.location %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Post date:</strong>
+    <%= career.post_date %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this career", career, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this career', edit_career_path(career), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

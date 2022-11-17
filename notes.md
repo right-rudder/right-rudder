@@ -30,7 +30,8 @@ C Advertising page
   - find a widget
     - look into pusher
   - Create one your damn self
-- Blog
+X Blog
+  - Delete confirmation page
   X Create webinar column so we can filter for webinars
     X created separate model
   X 5 Tips to grow your school (FEATURED) *Business
