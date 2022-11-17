@@ -30,7 +30,7 @@
   <div class="flex flex-col lg:flex-row mb-10">
     
     <!--Featured Article-->
-    <% @notams.published.featured.last(1).each do |feature| %> 
+    <% @notams.published.featured.limit(1).reverse_each do |feature| %> 
       <%= link_to feature, class: "w-full w-full lg:w-3/5 h-screen-2/3" do %>
       <section style="background-image: url(<%=feature.feature_image.url%>)" class="h-screen-2/3 bg-cover bg-center flex flex-col justify-end lg:mx-5 lg:rounded-lg">
         <!--Bottom Section of image feature-->
