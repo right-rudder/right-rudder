@@ -24,11 +24,15 @@
     <div class="px-10 lg:w-1/3 pr-10">
       <!--Blog Data-->
       <div class="my-5">
-        <%= form.select(:status, ['NOTAM Status','Published','Drafting'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800'}) %>
+        <%= form.select(:status, ['NOTAM Status','Published','Drafting'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
       </div>
 
       <div class="my-5">
-        <%= form.select(:category, ['NOTAM Category','Business and Marketing','Aviation and Flying', 'News and Announcements'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800'}) %>
+        <%= form.select(:category, ['NOTAM Category','Business and Marketing','Aviation and Flying', 'News and Announcements'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
+      </div>
+
+      <div class="my-5">
+        <%= form.select(:featured, ['Featured?','Yes','No'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
       </div>
 
       <div class="my-5">
