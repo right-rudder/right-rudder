@@ -60,7 +60,7 @@ class WebinarsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_webinar
-      @webinar = Webinar.find(params[:id])
+      @webinar = Webinar.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
