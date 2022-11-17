@@ -1,5 +1,6 @@
 class NotamsController < ApplicationController
   before_action :set_notam, only: %i[ show edit update destroy ]
+  before_action :authenticate_admin!, except: [:index, :show]
 
   # GET /notams or /notams.json
   def index
