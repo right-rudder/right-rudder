@@ -1,3 +1,10 @@
+<% if notice %>
+  <p class="bg-green-100 text-green-700 px-5 py-1 text-center lg:text-left"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="bg-red-100 text-red-700 px-5 py-1 text-center lg:text-left"><%= alert %></p>
+<% end %>
+
 <!--Book now (mobile screens)-->
 <nav class="top-0 z-50">
   <%= render "shared/navbar_orange_call"%>

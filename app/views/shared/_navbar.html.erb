@@ -4,6 +4,13 @@ out in here and into partials.  That way I can keep the same filename in this pa
 partial navbar_nonsticky which still renders the same code as this but isn't sticky.  Gotta keep it DRY bro.
 %>
 
+<% if notice %>
+  <p class="sticky bg-green-100 text-green-700 px-5 py-1 text-center lg:text-left"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="sticky bg-red-100 text-red-700 px-5 py-1 text-center lg:text-left"><%= alert %></p>
+<% end %>
+
 <!--Book now (mobile screens)-->
 <nav class="sticky top-0 z-50">
   <%= render "shared/navbar_orange_call"%>
