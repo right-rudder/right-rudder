@@ -1,5 +1,6 @@
 # bc effem..
 promotion: false
+toolbar_sticky: true
 toolbar:
   - undo redo | blocks | bold italic underline | forecolor backcolor | alignleft aligncenter alignright alignjustify bullist numlist | image link
 plugins:
