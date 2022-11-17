@@ -35,7 +35,7 @@
       <section style="background-image: url(<%=feature.feature_image.url%>)" class="h-screen-2/3 bg-cover bg-center flex flex-col justify-end lg:mx-5 lg:rounded-lg">
         <!--Bottom Section of image feature-->
         <div class="bg-gradient-to-r from-slate-50/50 to-slate-50/50 pl-10 py-5">
-          <h3 class="font-bold text-2xl lg:text-3xl"><%= feature.title%></h3>
+          <h3 class="font-bold text-2xl lg:text-3xl line-clamp-3"><%= feature.title%></h3>
           <div class="font-semibold text-sm">
             <%= I18n.localize(feature.notam_date, :format => '%^a %^b %-d %Y') %>
           </div>
@@ -58,7 +58,7 @@
             <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 w-full"%>
             <%#= post.feature_image %><br>    
           </div>
-          <div class="ml-5 w-4/6 text-md">
+          <div class="ml-5 w-4/6 text-md line-clamp-3">
             <%= post.title %><br>
           </div>
         </div>
@@ -80,7 +80,7 @@
             <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 w-full"%>
             <%#= post.feature_image %><br>    
           </div>
-          <div class="ml-5 w-4/6 text-md">
+          <div class="ml-5 w-4/6 text-md line-clamp-3">
             <%= post.title %><br>
           </div>
         </div>
@@ -98,7 +98,7 @@
             <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 w-full"%>
             <%#= post.feature_image %><br>    
           </div>
-          <div class="ml-5 w-4/6 text-md">
+          <div class="ml-5 w-4/6 text-md line-clamp-3">
             <%= post.title %><br>
           </div>
         </div>
@@ -116,7 +116,7 @@
             <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 w-full"%>
             <%#= post.feature_image %><br>    
           </div>
-          <div class="ml-5 w-4/6 text-md">
+          <div class="ml-5 w-4/6 text-md line-clamp-3">
             <%= post.title %><br>
           </div>
         </div>
