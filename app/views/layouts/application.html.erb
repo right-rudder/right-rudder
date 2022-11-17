@@ -80,6 +80,10 @@
 </script>
   <body>
     <main class="">
+    <% if admin_signed_in? %>
+      <!--USER MENU-->
+      <%= render "shared/user_menu" %>
+    <% end %>
       <%= yield %>
     </main>
   </body>

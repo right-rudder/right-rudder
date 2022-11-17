@@ -1,0 +1,43 @@
+<div x-data="{ usermenu: false }" class="font-mono ">
+  <div class="w-full lg:h-10 h-16 bg-slate-700 flex flex-row justify-between items-center sticky z-50">
+    <div class="pl-5 text-slate-100">
+      Welcome, admin <%#= current_admin.email %>
+    </div>
+
+    <!--Hamburger button-->
+    <button @click="usermenu = ! usermenu;" class="text-slate-500 text-4xl pr-5 pb-1 hover:text-slate-800 lg:hidden">
+      ☰
+    </button >
+    
+    <!--desktop menu-->
+    <div class="hidden lg:flex lg:flex-row lg:pr-10 xl:pr-5">
+      <!--Button-->
+      <%= button_to 'New Webinar', new_notam_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <%= button_to 'New NOTAM', new_notam_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <%= button_to 'NOTAM drafts', root_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <%= button_to 'Newsletter', root_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <%= button_to 'Support Tickets', root_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <%= button_to 'Careers', root_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <%= button_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+    </div>
+  </div>
+
+    <!--Mobile Menu--->
+    <div x-cloak x-show="usermenu" x-transition.duration.200ms class="bg-slate-700 flex flex-col justify-start items-center pb-10 z-50">
+      <!--Spacer-->
+      <div class="h-12"></div>
+      <%= button_to 'New Webinar', new_notam_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'New NOTAM', new_notam_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'NOTAM drafts', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'Newsletter', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'Support Tickets', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'Careers', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+
+    <!--Close button-->
+    <button @click="usermenu = ! usermenu;" class="leading-10 text-slate-100 hover:text-slate-400 hover:bg-slate-700 border-2 hover:border-slate-400 w-min mt-5 px-5 rounded-full py-1">
+      X
+    </button>
+
+    </div>
+  </div>
