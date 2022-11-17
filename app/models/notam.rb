@@ -1,4 +1,7 @@
 class Notam < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   validates :status, inclusion: { :in => ['Published','Drafting']}
   validates :title, presence: true
   validates :category, inclusion: { :in => ['Business and Marketing','Aviation and Flying', 'News and Announcements']}
