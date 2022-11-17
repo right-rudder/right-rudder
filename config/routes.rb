@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   resources :webinars
   get 'featured_notams/select', to: "featured_notams#select"
 
