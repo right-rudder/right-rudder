@@ -31,21 +31,24 @@ C Advertising page
     - look into pusher
   - Create one your damn self
 - Blog
-  - Create webinar column so we can filter for webinars
-  C 5 Tips to grow your school (FEATURED) *Business
+  X Create webinar column so we can filter for webinars
+    X created separate model
+  X 5 Tips to grow your school (FEATURED) *Business
+  X What the Artemis-1 Launch means to the flight training industry *Aviation *Flying
   - Website Launch *NEWS
   - (Webinar DEC 1, 2022) Creating a website that to get more discovery flights *NEWS
-  - Create your own Flight School Marketing System *BusinessV(KEYNOTE)
-  - What the Artemis-1 Launch means to the flight training industry *Aviation *Flying
+  - Create your own Flight School Marketing System *BusinessV(KEYNOTE)  
   - Does winter put a halt to flight training? *Flying
   - Creating a video for your flight school *Business
-
+- Users
+  - need to limit to one user only
+  - need to put recaptcha
 - Resources (business / marketing blog articles)
   C Tips to grow your school
-  - Webinar PAGE
-    - Create model for webinar
+  X Webinar PAGE
+    X Create model for webinar
     - Use LinkedIn Events
-    - On page, refer to the next webinar and previous webinars
+    X On page, refer to the next webinar and previous webinars
     - refer to keynote video
   - Marketing 101
   - Sales and negotiation tactics
