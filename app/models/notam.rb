@@ -15,5 +15,4 @@ class Notam < ApplicationRecord
 
   scope :published, -> {where(status: "Published")}
 
-  #belongs_to :featured_notam
 end
