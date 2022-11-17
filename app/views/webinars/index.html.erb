@@ -1,33 +1,33 @@
+<%# Head / Meta Data %>
+<% title("The Right Rudder Marketing Webinar Series") %>
+<% meta_description("The Right Rudder Marketing Webinar Series is a series created to inspire flight schools to achieve optimal success in their businesses.") %>
+<% meta_keywords("Right Rudder Marketing, Blog, aviation webinar, aviation marketing, aviation business marketing ideas") %>
+<% og_image(image_url("rrm-notams-trans.webp")) %>
+<% twitter_image(image_url("rrm-notams-trans.webp")) %>
+
+
+<!--Set Page font size and limit sticky-->
 <div class="text-lg bg-gradient-to-r from-slate-100 to-blue-100">
   <%= render "shared/navbar" %>
-  <section class=h-screen-2/3>
-    <div class="grid place-items-center h-full">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold">Right Rudder Marketing Webinar Page</h1>
-        <h2 class="text-2xl py-5">Coming Soon</h2>
+  <!--Header Section-->
+  <section class="grid place-items-center">
+    <div class="py-20 flex flex-col lg:flex-row-reverse lg:w-5/6">
+      <!--Blog image-->
+      <div class="grid place-items-center">
+        <%= image_tag "webinartrans.webp", class: "w-3/4"%>
       </div>
       
+      <!--Text about blog-->
+      <div class="px-5 lg:px-0">
+        <h1 class="text-5xl font-bold text-center pt-20 pb-5">Right Rudder Marketing Webinar Series</h1>
+        <h2 class=" text-lg lg:text-2xl font-semibold text-center pb-5">Hosted by Tim Jedrek</h2>
+        <p class="lg:pb-20 text-md px-10 lg:text-xl text-left">The Right Rudder Marketing Webinar Series is a series created to inspire flight schools to achieve optimal success in their businesses.</p>
+      </div>
     </div>
   </section>
-</div>
+
 
 <%= render "shared/cta1" %>
 <%= render "shared/footer" %>
 
 
-<!-- ## DEFAULT.  REMOVE LATER.  Keep for reference...
-<div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Webinars</h1>
-    <%= link_to 'New webinar', new_webinar_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
-  <div id="webinars" class="min-w-full">
-    <%= render @webinars %>
-  </div>
-</div>
--->
