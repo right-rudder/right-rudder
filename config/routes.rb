@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  devise_scope :admin do
+    # Redirests signing out users back to sign-in
+    get "admins", to: "devise/sessions#new"
+  end
+  
   devise_for :admins
-  resources :webinars
-  get 'featured_notams/select', to: "featured_notams#select"
+
 
   root "pages#home"
 
@@ -10,6 +14,8 @@ Rails.application.routes.draw do
   post 'uploader/image', to: 'uploader#image' #add upload image to notams 
   resources :notams
 
+  # Webinars
+  resources :webinars
   
 
 
