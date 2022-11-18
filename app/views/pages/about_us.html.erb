@@ -11,33 +11,42 @@
   <section class="bg-slate-100">
     <div class="flex flex-col lg:flex-row items-center justify-center">
       <!--Text-->
-      <div class="lg:w-1/2 flex flex-col items-center">
+      <div class="lg:w-1/2 flex flex-col items-end">
         <!--Container for text so I can align them-->
-        <div class="lg:w-3/4 text-center lg:text-left pt-20 lg:pt-0">
-          <div class="pb-5 w-full">ABOUT US</div>
-          <h1 class="font-bold text-5xl pb-20">Meet Tim Jedrek.</h1>
-          <div class="text-base">
+        <div class="lg:w-3/4 text-center lg:text-left pt-20 lg:pt-10">
+          <div class="pb-3 w-full">ABOUT US</div>
+          <h1 class="font-bold text-5xl pb-8">Meet Tim Jedrek.</h1>
+          <!--Mobile image-->
+          <%= image_tag "ppl_tim.webp", class: "lg:hidden"%>
+          <div class="italic text-slate-500 text-center text-sm px-5 lg:hidden pb-10">
+            Tim Jedrek posing for a picture <br>after passing his private pilot checkride
+          </div>
+          
+          <div class="text-base text-left px-10 lg:pl-0 lg:pr-8">
             <p class="pb-5">
-              I'm the founder of Right Rudder Marketing and I'm leading the strategic forces behind Right Rudder Marketing.
+              I'm the founder and pilot in command of Right Rudder Marketing. I'm leading the strategic forces behind Right Rudder Marketing.
             </p>
             <p class="pb-5">
               I'm looking forward to bringing the decades of experience I have in computer science and business leadership to my one true love, aviation.
             </p>
             <p class="pb-5">
-              I started programming when I was a teenager and taught myself to code.  I started with the basics like Java, HTML, CSS, and JavaScript.  I went on to learn the modern technologies and frameworks that are used to power web applications and websites in fortune 500 companies, like Ruby on Rails, Node.JS, and Python Django.
+              The flight school community is underserved when it comes to their digital marketing.  Many schools rely on local web designers or big name low value digital marketing companies to advertise online, but these marketing providers just don't really understand the pilot training process.
             </p>
             <p class="pb-5">
-              My career is in business
+              Right Rudder Marketing is a <strong>pilot owned</strong> modern professional digital marketing agency that delivers real quality.
+            </p>
+            <p class="font-semibold text-xl py-5">
+              Our flight school specialized digital marketing team just does everything better than everyone else.
             </p>
           </div>
         </div>
       </div>
-      <!--Picture-->
-      <div class="lg:w-1/2 py-20 flex flex-col items-center">
+      <!--Desktop Picture-->
+      <div class="lg:w-1/2 py-20 lg:flex flex-col items-center hidden">
         <div class="flex flex-col items-center lg:w-1/2">
           <%= image_tag "ppl_tim.webp", class: "lg:rounded-xl"%>
-          <div class="italic text-slate-500 text-center">
-            Tim Jedrek posing for a picture after passing his private pilot checkride
+          <div class="italic text-slate-500 text-center text-sm">
+            Tim Jedrek posing for a picture <br>after passing his private pilot checkride
           </div>
         </div>
       </div>
