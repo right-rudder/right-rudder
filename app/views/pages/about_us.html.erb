@@ -9,6 +9,39 @@
 <div class="text-lg">
   <%= render "shared/navbar" %>
   <section class="bg-slate-100">
+    <div class="flex flex-col lg:flex-row items-center justify-center">
+      <!--Text-->
+      <div class="lg:w-1/2 flex flex-col items-center">
+        <!--Container for text so I can align them-->
+        <div class="lg:w-3/4 text-center lg:text-left pt-20 lg:pt-0">
+          <div class="pb-5 w-full">ABOUT US</div>
+          <h1 class="font-bold text-5xl pb-20">Meet Tim Jedrek.</h1>
+          <div class="text-base">
+            <p class="pb-5">
+              I'm the founder of Right Rudder Marketing and I'm leading the strategic forces behind Right Rudder Marketing.
+            </p>
+            <p class="pb-5">
+              I'm looking forward to bringing the decades of experience I have in computer science and business leadership to my one true love, aviation.
+            </p>
+            <p class="pb-5">
+              I started programming when I was a teenager and taught myself to code.  I started with the basics like Java, HTML, CSS, and JavaScript.  I went on to learn the modern technologies and frameworks that are used to power web applications and websites in fortune 500 companies, like Ruby on Rails, Node.JS, and Python Django.
+            </p>
+            <p class="pb-5">
+              My career is in business
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Picture-->
+      <div class="lg:w-1/2 py-20 flex flex-col items-center">
+        <div class="flex flex-col items-center lg:w-1/2">
+          <%= image_tag "ppl_tim.webp", class: "lg:rounded-xl"%>
+          <div class="italic text-slate-500 text-center">
+            Tim Jedrek posing for a picture after passing his private pilot checkride
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </div>
 
