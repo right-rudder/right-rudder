@@ -44,14 +44,14 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rightruddermarketing.com">
+    <meta property="og:url" content="<%= request.original_url %>">
     <meta property="og:title" content="<%= if content_for?(:title) then yield(:title) else 'Right Rudder Marketing' end %>">
     <meta property="og:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Attract more student pilots and grow your flight school with digitial marketing' end %>">
     <meta property="og:image" content="<%= if content_for?(:og_image) then yield(:og_image) else image_url('rrmlogo.webp') end %>">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://rightruddermarketing.com">
+    <meta property="twitter:url" content="<%= request.original_url %>">
     <meta property="twitter:title" content="<%= if content_for?(:title) then yield(:title) else "Right Rudder Marketing" end %>">
     <meta property="twitter:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Attract more student pilots and grow your flight school with digitial marketing' end %>">
     <meta property="twitter:image" content="<%= if content_for?(:twitter_image) then yield(:twitter_image) else image_url('rrmlogo.webp') end %>">
