@@ -34,7 +34,7 @@
       <%= link_to feature, class: "w-full w-full lg:w-1/2 h-screen-1/2" do %>
       <section style="background-image: url(<%=feature.feature_image.url%>)" class="h-screen-1/2 bg-cover bg-center flex flex-col justify-end lg:mx-5 lg:rounded-lg">
         <!--Bottom Section of image feature-->
-        <div class="bg-gradient-to-r from-slate-50/50 to-slate-50/50 pl-10 py-5">
+        <div class="bg-gradient-to-r from-slate-50/50 to-slate-50/50 pl-10 py-5 hover:from-slate-50/60 hover:to-slate-50/60 transition-all duration-300">
           <h3 class="font-bold text-2xl lg:text-3xl line-clamp-3"><%= feature.title%></h3>
           <div class="font-semibold text-sm">
             <%= I18n.localize(feature.notam_date, :format => '%^a %^b %-d %Y') %>
