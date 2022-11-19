@@ -114,9 +114,17 @@ x sitemap.xml
 # Sales
 - Create proposal
 - Create agreement
+  -https://github.com/Brantron/john_hancock
 - Create payment forms
   - stripe
 - invoice and receipts
+- client intake form
+  - Have you given our team Google Analytics and Google Search Console Access?*
+    - https://www.loom.com/share/5d2d30707f934249b0198e131d374250
+    - 80 secs
+  - Have you given our team Google My Business access?
+    - https://www.loom.com/share/c74d3ff290ec4ffc93889695093e04ab
+    - 51 secs
 
 # OFF PAGE SEO
 - Data aggregators
