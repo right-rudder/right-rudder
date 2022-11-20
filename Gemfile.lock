@@ -139,6 +139,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jmespath (1.6.1)
+    json (2.6.2)
     jwt (2.5.0)
     loofah (2.19.0)
       crass (~> 1.0.2)
@@ -214,6 +215,8 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    recaptcha (5.12.3)
+      json
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -292,6 +295,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
+  recaptcha
   selenium-webdriver
   sitemap_generator
   sprockets-rails
