@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get "admins", to: "devise/sessions#new"
   end
   
-  devise_for :admins
+  devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
 
 
   root "pages#home"
