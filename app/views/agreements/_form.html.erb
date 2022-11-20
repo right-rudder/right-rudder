@@ -12,21 +12,25 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :name %>
+    <%= form.label "Legal Name" %>
     <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
     <div class="my-5">
     <%= form.label :company %>
-    <%= form.text_field :company class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :company, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :sign_date %>
-    <%= form.date_field :sign_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= link_to "Continue", form2_path,  class: "rounded-lg py-3 px-5 bg-blue-600 hover:bg-blue-800 text-white inline-block font-medium cursor-pointer" %>
+    <%#= form.label :sign_date %>
+    <%#= form.date_field :sign_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%#= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
+
+
+

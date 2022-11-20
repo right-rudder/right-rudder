@@ -114,7 +114,9 @@ x sitemap.xml
 # Sales
 - Create proposal
 - Create agreement
-  -https://github.com/Brantron/john_hancock
+  - https://github.com/Brantron/john_hancock
+  - has_secure_token : use this later for viewing the form.
+  - http://railscasts.com/episodes/217-multistep-forms
 - Create payment forms
   - stripe
 - invoice and receipts

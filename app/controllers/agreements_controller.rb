@@ -1,6 +1,10 @@
 class AgreementsController < ApplicationController
   before_action :set_agreement, only: %i[ show edit update destroy ]
 
+  def form2
+    
+  end
+  
   # GET /agreements or /agreements.json
   def index
     @agreements = Agreement.all
@@ -65,6 +69,6 @@ class AgreementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def agreement_params
-      params.require(:agreement).permit(:name, :sign_date)
+      params.require(:agreement).permit(:name, :company, :sign_date)
     end
 end

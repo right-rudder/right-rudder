@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :agreements
   resources :careers
   devise_scope :admin do
     # Redirests signing out users back to sign-in
@@ -19,7 +18,9 @@ Rails.application.routes.draw do
   # Webinars
   resources :webinars
   
-
+  # Agreement
+  get 'agreements/form2', to: 'agreements#form2', as: :form2 
+  resources :agreements
 
   ### Static pages routes
 
