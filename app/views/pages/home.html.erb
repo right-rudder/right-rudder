@@ -1,5 +1,5 @@
 <%# Head / Meta Data %>
-<% title("Flight School Internet Marketing - Website Design, SEO, Online Advertising") %>
+<% title("Right Rudder Marketing - Flight School Internet Marketing") %>
 <% meta_description("Attract more student pilots with online advertising by Right Rudder Marketing") %>
 <% meta_keywords("flight school marketing, website design for flight schools, grow flight school business, aviation marketing, website design for flying club fbo, tim jedrek") %>
 <% og_image(image_url("meta_pic_rrm.webp")) %>
@@ -63,6 +63,10 @@
   <!--Associations section-->
   <section class="bg-slate-200">
     <div class="flex flex-col lg:flex-row justify-center items-center gap-20 px-5 py-20 lg:py-10">
+      <!--NBAA-->
+      <%= link_to "https://fsana.com/", class: "lg:w-1/4" do %>
+        <%= image_tag "fsana.webp", alt: "National Business Aviation Association member", class: "hover:scale-105 transition-all duration-300"%>
+      <%end%>
       <!--NBAA-->
       <%= link_to "https://nbaa.org" do %>
         <%= image_tag "nbaa_black.webp", alt: "National Business Aviation Association member", class: "hover:scale-105 transition-all duration-300"%>

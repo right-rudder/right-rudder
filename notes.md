@@ -1,4 +1,4 @@
-Last updated 11-12-2022
+Last updated 11-20-2022
 
 # WEBSITE
 - Fix audio clipping
@@ -15,7 +15,7 @@ C Website creation page and video
 C SEO page and video
 C Advertising page
 - errors page 404 / 500
-- About us
+X About us
 - Careers page
   - Hard code for now
     - Add page
@@ -31,19 +31,20 @@ C Advertising page
     - look into pusher
   - Create one your damn self
 X Blog
+  - Separate views for categories
   - Delete confirmation page
   X Create webinar column so we can filter for webinars
     X created separate model
   X 5 Tips to grow your school (FEATURED) *Business
   X What the Artemis-1 Launch means to the flight training industry *Aviation *Flying
-  - Website Launch *NEWS
+  X Website Launch *NEWS
   - (Webinar DEC 1, 2022) Creating a website that to get more discovery flights *NEWS
   - Create your own Flight School Marketing System *BusinessV(KEYNOTE)  
   - Does winter put a halt to flight training? *Flying
   - Creating a video for your flight school *Business
-- Users
-  - need to limit to one user only
-  - need to put recaptcha
+X Users
+  X need to limit to one user only
+  X need to put recaptcha
 - Resources (business / marketing blog articles)
   C Tips to grow your school
   X Webinar PAGE
