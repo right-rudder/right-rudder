@@ -4,7 +4,6 @@ SitemapGenerator::Sitemap.default_host = "https://rightruddermarketing.com"
 SitemapGenerator::Sitemap.create_index = true
 
 SitemapGenerator::Sitemap.create do
-  add '/'
   add '/schedule-call'
   add '/marketing-system'
   add '/about-us'
