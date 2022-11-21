@@ -1,4 +1,5 @@
 User-agent: *
-Disallow:
+Disallow: /admins
+Disallow: /agreements
 
 Sitemap: https://rightruddermarketing.com/sitemap.xml.gz
