@@ -77,7 +77,7 @@ X convert images to webp
 X social media links
   X whats app https://wa.me/13143582100
   X facebook  https://www.facebook.com/rightruddermarketing/ (C is for created but not linked or profile complete)
-    - location coordinates are in atlantic ocean?? hours are off
+  - location coordinates are in atlantic ocean?? hours are off
   X instagram https://www.instagram.com/rightruddermarketing/
   X youtube https://www.youtube.com/@rightruddermarketing
     X need cover photo
