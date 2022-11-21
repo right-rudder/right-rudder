@@ -11,16 +11,17 @@
   <%= render "shared/navbar" %>
   <!--Header-->
   <div class="flex flex-col items-center">
-    <div class="py-20 px-5">
+    <div class="py-20 px-5 flex flex-col items-center">
       <h1 class="text-4xl font-bold text-center">We're seeking talent to help build marketing platforms for flight schools.</h1>
       <h2 class="text-2xl font-semibold text-center py-10">Do work that matters and create what's next. </h2>
-      <h3 class="text-xl text-center">Bring your expertise to Right Rudder Marketing and help change the flight training industry.  One flight school at a time.</h3>
+      <h3 class="text-xl lg:w-1/2 lg:block hidden text-center">Bring your expertise to Right Rudder Marketing and help change the flight training industry.  One flight school at a time.</h3>
+      <h3 class="text-xl lg:w-1/2 lg:hidden text-center">Bring your expertise to Right Rudder Marketing and help change the flight training industry.  <br>One flight school at a time.</h3>
     </div>       
   </div>
 
   <div class="flex flex-col items-center pb-20">
     <div class="px-5 lg:w-1/3 text-left text-base">
-      If you're a pilot or training to become a pilot and have experience in the following fields: Marketing, Sales, Customer Success, SEO, PPC, or Web Development; Send an updated resume to <%= mail_to "careers@rightruddermarketing.com", class: "text-blue-700 hover:underline"%> and get in touch. Talk to you soon!
+      If you're a pilot or training to become a pilot and have experience in the following fields: Marketing, Sales, Customer Success, SEO, PPC, or Web Development; send an updated resume to <%= mail_to "careers@rightruddermarketing.com", class: "text-blue-700 hover:underline"%> and get in touch. Talk to you soon!
     </div>
   </div>
 
