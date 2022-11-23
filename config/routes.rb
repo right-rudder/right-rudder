@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :newsletter_emails
   resources :careers
   devise_scope :admin do
     # Redirests signing out users back to sign-in

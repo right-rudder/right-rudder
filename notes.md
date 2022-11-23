@@ -17,6 +17,7 @@ C Advertising page
 - errors page 404 / 500
 X About us
 - Careers page
+  X Build a placeholder
   - Hard code for now
     - Add page
     - Add job descriptions
@@ -164,9 +165,13 @@ x sitemap.xml
   - D&B (needs a real address...)
   - BBB (not available until 6 months - April 2023.. $510)
 - Associations to join
-  - FSANA
-    - Use conference to join and be a sponsor ($3000 for Leader, $5000 for Builder)
-      - Due December 19, 2022
+  X FSANA
+    X Use conference to join and be a sponsor ($3000 for Leader, $5000 for Builder)
+      X Due December 19, 2022
+      - Meeting with Robert Rockmaker 11/23/2022
+        - Membership login
+          - Need to get Bill Macons Number (ideal)
+          - 
       - create posters, flyers, business cards, swag
   - https://www.gslbaa.org GREATER ST. LOUIS BUSINESS AVIATION ASSOCIATION
     - $180 for 3 members
@@ -214,4 +219,7 @@ x sitemap.xml
 
 
 
-ONELINER: Attract more student pilots and grow your flight school with digital marketing
+ONELINERS 
+
+Attract more student pilots and grow your flight school with digital marketing
+Grow your flight school and increase enrollment through digital marketing
