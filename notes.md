@@ -1,4 +1,4 @@
-Last updated 11-20-2022
+Last updated 11-22-2022
 
 # WEBSITE
 - Fix audio clipping
@@ -47,7 +47,7 @@ X Users
   X need to limit to one user only
   X need to put recaptcha
 - Resources (business / marketing blog articles)
-  C Tips to grow your school
+  X Tips to grow your school
   X Webinar PAGE
     X Create model for webinar
     - Use LinkedIn Events
@@ -60,6 +60,7 @@ X Users
 - INTERVIEWS for BLOG and BLOG IDEAs
   - Michael Coscia, author: Wings Over America: The Fact-Filled Guide to The Major and Regional Airlines of the U.S.A.
   - David Kleinschmidt, AGI at St. Charles Flying Service
+    - Asked on 11/19/2022.  Follow up after thanksgiving
   - Dennis Bampton, President at St. Charles Flying Service
   - Why student pilots quit training
   - 8 things that need to change in the pilot training industry
@@ -78,7 +79,7 @@ X convert images to webp
 X social media links
   X whats app https://wa.me/13143582100
   X facebook  https://www.facebook.com/rightruddermarketing/ (C is for created but not linked or profile complete)
-  - location coordinates are in atlantic ocean?? hours are off
+  X location coordinates are in atlantic ocean?? hours are off
   X instagram https://www.instagram.com/rightruddermarketing/
   X youtube https://www.youtube.com/@rightruddermarketing
     X need cover photo
@@ -94,10 +95,10 @@ x Call pathway / contact us model
     - make custom form that sends data to Calendly API
     - Use custom form to save data into CRM
     - OR ... create our own version of Calendly
-  - Video for encouragement
+  X Video for encouragement
     X Drafted
-    - Shoot
-    - Edit
+    X Shoot
+    X Edit
   X "See if your school qualifies" button takes it to a different pathway where it asks questions then leads to scheduler
     X Do you have a minimum of two instructors?
     X Are you actively advertising to generate business?
@@ -107,7 +108,7 @@ X privacy and terms and conditions
 x robots.txt
 x sitemap.xml
   X Use ruby gem https://github.com/kjvarga/sitemap_generator
-  - still manual, check out https://www.ombulabs.com/blog/seo/sitemap/ruby/update-sitemaps-during-heroku-deploy.html
+  X still manual, check out https://www.ombulabs.com/blog/seo/sitemap/ruby/update-sitemaps-during-heroku-deploy.html
 
 # DOMAIN
 - buy out rightrudder.com (rapier aerospace?)
