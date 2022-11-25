@@ -65,10 +65,13 @@
     <div class="lg:w-1/4 flex flex-col justify-center px-5">
       <h3 class="font-bold text-xl pt-10 pb-3 lg:pt-12 lg:pb-14">Newsletter</h3>
       <div class="flex flex-row items-center w-full">
+        <!--
         <input type="email" id="email" pattern=".+@globex\.com" required class="text-black w-2/3" placeholder="name@email.com">
         <%=link_to root_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-xl text-white rounded-lg text-center py-2 px-5 ml-3 mr-2" do%>
           Join
         <%end%>
+        -->
+        <%= render "newsletter_emails/form" %>
       </div>
       <p class="py-10">
         Sign up for our latest news and articles.  We will not send you spam nor share your information with other third parties.

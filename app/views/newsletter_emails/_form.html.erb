@@ -1,25 +1,25 @@
-<%= form_with(model: newsletter_email, class: "contents") do |form| %>
-  <% if newsletter_email.errors.any? %>
+<%= form_with(model: @newsletter_email, class: "contents") do |form| %>
+  <% if @newsletter_email.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(newsletter_email.errors.count, "error") %> prohibited this newsletter_email from being saved:</h2>
+      <h2><%= pluralize(@newsletter_email.errors.count, "error") %> prohibited this newsletter_email from being saved:</h2>
 
       <ul>
-        <% newsletter_email.errors.each do |error| %>
+        <% @newsletter_email.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
   <div class="w-full">
-    <div class="my-5">
+    <div class="mb-5">
       <%= form.text_field :name, placeholder: "Name", class: "block shadow rounded-md border border-gray-200 focus:border-orange-500 focus:ring-orange-500 px-3 py-2 w-full" %>
     </div>
     <div class="flex flex-row items-center gap-3">
-      <div class="my-5 w-3/4">
+      <div class="w-3/4">
         <%= form.text_field :email, placeholder: "Email", class: "block shadow rounded-md border border-gray-200 focus:border-orange-500 focus:ring-orange-500 px-3 py-2 w-full"  %>
       </div>
       <div class="inline w-1/4">
-        <%= form.submit class: "rounded-lg py-3 px-5 bg-orange-600 text-white inline-block font-medium cursor-pointer " %>
+        <%= form.submit "Join", class: "rounded-lg py-3 px-5 bg-orange-600 hover:bg-orange-800 text-white inline-block font-medium cursor-pointer w-full" %>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   # "Static" pages
 
   def home
+    @newsletter_email = NewsletterEmail.new
   end
 
     def intro_video_embed
@@ -9,18 +10,21 @@ class PagesController < ApplicationController
     end
 
   def system
+    @newsletter_email = NewsletterEmail.new
   end
 
   def schedule_call
   end
 
   def about_us
+    @newsletter_email = NewsletterEmail.new
   end
 
   # Qualify Quiz
   # Questions
   def one
     render 'pages/qualify_quiz/one'
+    @newsletter_email = NewsletterEmail.new
   end
   def two
     render 'pages/qualify_quiz/two'
@@ -63,30 +67,37 @@ class PagesController < ApplicationController
   # services
   def website_design
     render 'pages/services/website_design'
+    @newsletter_email = NewsletterEmail.new
   end
 
   def search_engine_optimization
     render 'pages/services/search_engine_optimization'
+    @newsletter_email = NewsletterEmail.new
   end
 
   def pay_per_click_ads
     render 'pages/services/pay_per_click_ads'
+    @newsletter_email = NewsletterEmail.new
   end
 
   def video_creation
     render 'pages/services/video_creation'
+    @newsletter_email = NewsletterEmail.new
   end
 
   def email_campaigns
     render 'pages/services/email_campaigns'
+    @newsletter_email = NewsletterEmail.new
   end
 
   def social_media_management
     render 'pages/services/social_media_management'
+    @newsletter_email = NewsletterEmail.new
   end
 
   def reputation_management
     render 'pages/services/reputation_management'
+    @newsletter_email = NewsletterEmail.new
   end
 
 end
