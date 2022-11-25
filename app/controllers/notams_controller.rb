@@ -5,24 +5,29 @@ class NotamsController < ApplicationController
   # GET /notams or /notams.json
   def index
     @notams = Notam.all
+    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /notams/1 or /notams/1.json
   def show
+    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /notams/new
   def new
     @notam = Notam.new
+    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /notams/1/edit
   def edit
+    @newsletter_email = NewsletterEmail.new
   end
 
   # POST /notams or /notams.json
   def create
     @notam = Notam.new(notam_params)
+    @newsletter_email = NewsletterEmail.new
 
     respond_to do |format|
       if @notam.save

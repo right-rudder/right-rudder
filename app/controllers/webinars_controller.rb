@@ -4,6 +4,7 @@ class WebinarsController < ApplicationController
   # GET /webinars or /webinars.json
   def index
     @webinars = Webinar.all
+    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /webinars/1 or /webinars/1.json
