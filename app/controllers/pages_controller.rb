@@ -23,8 +23,9 @@ class PagesController < ApplicationController
   # Qualify Quiz
   # Questions
   def one
-    render 'pages/qualify_quiz/one'
     @newsletter_email = NewsletterEmail.new
+    render 'pages/qualify_quiz/one'
+    
   end
   def two
     render 'pages/qualify_quiz/two'
