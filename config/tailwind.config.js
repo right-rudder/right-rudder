@@ -40,6 +40,7 @@ module.exports = {
         'headsys' : "url('cockpitblue2.webp')",
         'headsys2' : "url('dave.webp')",
         'featured-notam' : "url('computer.webp')",
+        'videothumb' : "url('youtubethumbrrmintro.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',

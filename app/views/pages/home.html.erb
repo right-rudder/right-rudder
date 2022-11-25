@@ -26,18 +26,27 @@
       <!--video section-->
       <div class="lg:w-1/2">
         <div class="grid place-items-center">
-          <!-- Previous iframe embed 
-          <iframe class="lg:w-4/5 w-full aspect-video" loading="lazy" height="315" src="https://www.youtube.com/embed/HIZq5vIAquo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!--Previous iframe embed 
+          <iframe class="lg:w-4/5 w-full aspect-video" loading="lazy" height="315" src="https://www.youtube.com/embed/HeQr92tjMhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           -->
           <!--Using rvere's iframe https://www.rvere.com/how-to-stop-youtube-embeds-from-slowing-down-your-site.  If obsolete, need to download NPM package https://github.com/paulirish/lite-youtube-embed-->
-          <iframe
+          <!--<iframe
             class="lg:w-4/5 w-full aspect-video" loading="lazy" height="315"
-            src="https://tube.rvere.com/embed?v=HIZq5vIAquo"
+            src="https://tube.rvere.com/embed?v=HeQr92tjMhs"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen>
-          </iframe>
+          </iframe>-->
+          
+          <%#= ####YOUTUBE is not displaying thumbnail correctly so we make our own thumbnail, iframe thing to load video%>
+          <%= turbo_frame_tag "frame2", class: "w-full" do %>
+            <%= link_to embed_video_path do%>
+              <div class="lg:w-4/5 w-full aspect-vide bg-videothumb bg-cover bg-center">
+                <%= image_tag "youtube_embed_icon.webp", class: "lg:grayscale hover:grayscale-0 transition-all duration-500"%>
+              </div>
+            <% end %>
+          <% end %>
         </div>
       </div>
     

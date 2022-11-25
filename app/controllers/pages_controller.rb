@@ -4,6 +4,10 @@ class PagesController < ApplicationController
   def home
   end
 
+    def intro_video_embed
+      render 'intro_video_embed'
+    end
+
   def system
   end
 

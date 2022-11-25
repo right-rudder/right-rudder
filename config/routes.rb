@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
 
   root "pages#home"
+  get 'intro_video_embed', to: "pages#intro_video_embed", as: :embed_video
 
   # Notams
   get 'notams/select_featured', to: 'notams#select_featured_notams'
