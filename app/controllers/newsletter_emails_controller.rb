@@ -1,9 +1,14 @@
 class NewsletterEmailsController < ApplicationController
   before_action :set_newsletter_email, only: %i[ show edit update destroy ]
+  before_action :authenticate_admin!, except: [:new, :edit, :create, :update, :confirm]
 
   # GET /newsletter_emails or /newsletter_emails.json
   def index
     @newsletter_emails = NewsletterEmail.all
+  end
+
+  def confirm
+    render 'confirm'
   end
 
   # GET /newsletter_emails/1 or /newsletter_emails/1.json
@@ -25,7 +30,7 @@ class NewsletterEmailsController < ApplicationController
 
     respond_to do |format|
       if @newsletter_email.save
-        format.html { redirect_to newsletter_email_url(@newsletter_email), notice: "Newsletter email was successfully created." }
+        format.html { redirect_to newsletter_confirm_path, notice: @newsletter_email.name }
         format.json { render :show, status: :created, location: @newsletter_email }
       else
         format.html { render :new, status: :unprocessable_entity }
