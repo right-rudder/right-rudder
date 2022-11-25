@@ -25,6 +25,10 @@ X About us
       - Web Developer
       - If you'd like to invest and become one of the owners of Right Rudder Marketing, please send Tim Jedrek an email at 
   - Create model and application form
+C newsletter
+  x build form
+    X restrict views, only have entry when not logged in
+  - send me a confirm email
 - Chat widget
   X research https://getbutton.io
     X it looks like it just provides links
