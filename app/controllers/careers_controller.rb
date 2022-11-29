@@ -5,6 +5,13 @@ class CareersController < ApplicationController
   def index
     @careers = Career.all
     @newsletter_email = NewsletterEmail.new
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @careers }
+      format.json { render :json => @careers }
+    end
+
   end
 
   # GET /careers/1 or /careers/1.json
