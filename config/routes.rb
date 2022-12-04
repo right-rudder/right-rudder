@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'marketing-system', to: 'pages#system'
   get 'schedule-call', to: 'pages#schedule_call'
   get 'about-us', to: 'pages#about_us'
+  get 'system-video', to: 'pages#system_video'
 
   # Qualify Quiz
   get 'qualify_quiz', to: "pages#one", as: :quiz_start

@@ -13,6 +13,9 @@ class PagesController < ApplicationController
     @newsletter_email = NewsletterEmail.new
   end
 
+  def system_video
+  end
+
   def schedule_call
   end
 
