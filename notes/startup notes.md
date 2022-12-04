@@ -4,9 +4,9 @@ Last updated 11-22-2022
 - Fix audio clipping
   X Sent to FIVERR.  
     X Apparently, it was recorded with bad quality.. the device you have might suck.  
-  - Need to record a dub over
-  - reedit video
-  - republish video
+  X Need to record a dub over
+  X reedit video
+  X republish video
 - Free video (keynote presentation)
   X drafted
   - shoot
