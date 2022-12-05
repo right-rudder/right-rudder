@@ -1,17 +1,19 @@
-<%#= render "shared/navbar" %>
+<div class="" x-data="{}">
+<%= render "shared/navbar" %>
 <main>
-  <header class="w-full h-screen bg-errorhead bg-cover bg-center flex justify-center items-center">
-      <div class="flex flex-col justify-center items-center mt-32 mx-20 opacity-0 duration-[1000ms] scale-x-0"
+  <header class="w-full h-screen-2/3 bg-cover bg-center flex justify-center items-center">
+      <div class="flex flex-col justify-center items-center mx-20 opacity-0 duration-[1000ms] scale-x-0"
       x-intersect="$el.classList.add('opacity-100', 'scale-x-100', 'z-0')"
       >
         <h1 class=" text-center text-4xl sm:text-5xl font-bold">
           404 Error<br>
         </h1>
         <p class="text-center py-3">
-        The address you are visiting is not valid
+        The address you are visiting is not valid.
         </p>
-        <%= link_to 'Return Home', root_path, class: "text-center block p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300 " %>
+        <%= link_to 'Return Home', root_path, class: "text-center block p-3 px-6 bg-blue-200 rounded-lg hover:bg-blue-300 " %>
       </div>
   </header>
 </main>
-<%#= render "shared/footer" %>
+<%= render "shared/footer" %>
+</div>
