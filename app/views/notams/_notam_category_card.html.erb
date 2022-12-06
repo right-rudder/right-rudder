@@ -1,11 +1,11 @@
         <%= link_to post, class: "" do%>
           <div class="flex flex-row items-center lg:border-0  w-full lg:rounded-lg h-24 lg:mb-0 hover:brightness-105 transition-all duration-300">
             <!--image-->
-            <div class="w-2/6 flex flex-row items-center">
+            <div class="w-2/5 flex flex-row items-center">
               <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 w-full", alt: "picture for article: #{post.title}"%>
               <%#= post.feature_image %><br>    
             </div>
-            <div class=" pl-5 w-4/6 flex flex-col items-start justify-center h-full text-md pr-5 bg-slate-50 lg:rounded-r-lg lg:bg-gradient-to-b from-slate-50 to-slate-200  ">
+            <div class=" pl-5 w-3/5 flex flex-col items-start justify-center h-full text-md pr-5 bg-slate-50 lg:rounded-r-lg lg:bg-gradient-to-b from-slate-50 to-slate-200  ">
               <div class="line-clamp-2 text-slate-800"><%= post.title %></div>
               <div class="font-semibold text-sm pt-1 text-black">
                 <%= I18n.localize(post.notam_date, :format => '%^a %^b %-d %Y') %>
