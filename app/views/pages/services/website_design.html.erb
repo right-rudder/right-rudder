@@ -6,31 +6,106 @@
 
   <!--Header Section-->
   <section class="grid place-items-center bg-gradient-to-r from-slate-100 to-blue-100">
-    <div class="py-20 flex flex-col-reverse lg:flex-row-reverse">
+    <div class="pt-10 lg:py-20 flex flex-col-reverse lg:flex-row-reverse">
       <!--Image-->
       <div class="grid place-items-center lg:w-1/2">
-        <%= image_tag "programmer.webp", class: "px-10"%>
+        <%= image_tag "programmer.webp", class: "pt-10 lg:px-10"%>
       </div>
       
       <!--Text-->
-      <div class="px-5 lg:px-0 lg:w-1/2 flex flex-col items-center">
-        <h1 class=" text-xl lg:text-3xl font-semibold text-center pb-5">Web design</h1>
-        <h2 class="text-5xl font-bold text-center pb-5">More Than Just a Website</h2>
+      <div class=" lg:w-1/2 px-3 flex flex-col items-center">
+        <h1 class="text-3xl font-semibold text-center pb-5">Web design</h1>
+        <h2 class="text-5xl font-bold text-center">More Than Just a Website</h2>
         <!--Bullet points-->
-        <div class="flex flex-col">
+        <div class="flex flex-col py-10 px-5 gap-5">
           <div class="flex flex-row ">
             <div class="text-green-500 pr-2 font-extrabold">✓</div>
-            <h3 class="pb-5 text-lg px-10 lg:text-xl text-left">Custom programmed content management system</h3>
+            <h3 class="text-lg px-10 lg:text-xl text-left">Custom programmed content management system</h3>
           </div>
           <div class="flex flex-row ">
             <div class="text-green-500 pr-2 font-extrabold">✓</div>
-            <h3 class="pb-5 text-lg px-10 lg:text-xl text-left">No WordPress themes or templates</h3>
+            <h3 class="text-lg px-10 lg:text-xl text-left">No WordPress themes or templates</h3>
           </div>
           <div class="flex flex-row ">
             <div class="text-green-500 pr-2 font-extrabold">✓</div>
-            <h3 class="pb-5 text-lg px-10 lg:text-xl text-left">No WordPress themes or templates</h3>
+            <h3 class="text-lg px-10 lg:text-xl text-left">Multiple landing pages and automated funnels</h3>
+          </div>
+          <div class="flex flex-row ">
+            <div class="text-green-500 pr-2 font-extrabold">✓</div>
+            <h3 class="text-lg px-10 lg:text-xl text-left">Mobile friendly and works on all screen sizes</h3>
+          </div>
+          <div class="flex flex-row ">
+            <div class="text-green-500 pr-2 font-extrabold">✓</div>
+            <h3 class="text-lg px-10 lg:text-xl text-left">Fast page load speeds</h3>
+          </div>
+          <div class="flex flex-row ">
+            <div class="text-green-500 pr-2 font-extrabold">✓</div>
+            <h3 class="text-lg px-10 lg:text-xl text-left">Search engine optimized</h3>
+          </div>
+          <div class="flex flex-row ">
+            <div class="text-green-500 pr-2 font-extrabold">✓</div>
+            <h3 class="text-lg px-10 lg:text-xl text-left">Regularly updated blog and content marketing</h3>
           </div>
         </div>
+        <!--Buttons-->
+        <div class="flex flex-col lg:flex-row gap-5">
+          <%= link_to root_path, class: "" do%>
+            <div class="bg-white font-semibold hover:bg-orange-500 hover:text-white text-orange-500 border-orange-500 border-2 rounded-lg text-center py-2 px-3 transition-all duration-300">Download Checklist</div>
+          <%end%>
+          <%= link_to schedule_call_path, class: "" do%>
+            <div class="bg-orange-500 font-semibold hover:bg-white hover:text-orange-500 border-orange-500 border-2 text-white rounded-lg text-center py-2 px-3 transition-all duration-300">Schedule Consultation</div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Our custom content management system-->
+  <section>
+    <div class="flex justify-center">
+      <div x-data="{faqOne: false, faqTwo:false, faqThree:false}">
+        <div class="px-10 py-12 space-y-4 ">
+            <h3 class="text-2xl font-bold text-center">What is a custom programmed content management system?</h3>
+            <div @click="faqOne = ! faqOne" class="flex justify-between p-3 bg-slate-100 rounded-xl divide-x-2">
+              No page builders, no third party software, no themes or templates
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </div>
+            <div x-show="faqOne" x-transition.duration.800ms class="p-2 border-l-4 border-orange-500 bg-slate-50">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+            </div>
+            <div @click="faqTwo = ! faqTwo" class="flex justify-between p-3 bg-slate-100 rounded-xl">
+              FAQ Two, quia temporibus eveniet a libero incidunt suscipit
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </div>
+              <div x-show="faqTwo" x-transition.duration.800ms class="p-2 border-l-4 border-orange-500 bg-slate-50">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+              </div>
+              <div @click="faqThree = ! faqThree" class="flex justify-between p-3 bg-slate-100 rounded-xl">
+                FAQ Three, quia temporibus eveniet a libero incidunt suscipit
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+              </div>
+              <div x-show="faqThree" x-transition.duration.800ms class="p-2 border-l-4 border-orange-500 bg-slate-50">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.lorem </p>
+              </div>
+              <!-- <div class="p-2 bg-white">Quidem, ipsam illum quis sed voluptatum quae eum fugit earum</div> -->
+          </div>
       </div>
     </div>
   </section>
