@@ -2,6 +2,14 @@ User-agent: *
 Disallow: /admins
 Disallow: /agreements
 Disallow: /agreements
-Disallow: /qualify_quiz/stuff
+Disallow: /qualify_quiz/two
+Disallow: /qualify_quiz/three
+Disallow: /qualify_quiz/four
+Disallow: /qualify_quiz/qualified
+Disallow: /qualify_quiz/unqualified_CFI
+Disallow: /qualify_quiz/unqualified_ad
+Disallow: /qualify_quiz/unqualified_capacity
+Disallow: /qualify_quiz/unqualified_service
+
 
 Sitemap: https://rightruddermarketing.com/sitemap.xml.gz
