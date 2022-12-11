@@ -16,6 +16,22 @@ X Create new page to hold video
 - SOW and payment
 - Change webinar dates
 - Contact form
+- Chat
+  - Use react lazy loader: https://github.com/calibreapp/react-live-chat-loader
+    - more resources for the future: https://developer.chrome.com/docs/lighthouse/performance/third-party-facades/?utm_source=lighthouse&utm_medium=lr
+    X Fix turbo link issue
+      - only enabled on home and system page?
+    - data: { turbo: false }
+- Properly size images
+  - US Chamber of commerce
+  - computermockup
+  - 5 star reviews (review)
+  - FSANA
+  - NBAA
+  - Phone on top screen
+  - AMA
+  - Support headphone
+  - NAFI
 
 
 - Test / Demo
