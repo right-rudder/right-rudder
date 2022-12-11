@@ -20,8 +20,9 @@ X Create new page to hold video
   - Use react lazy loader: https://github.com/calibreapp/react-live-chat-loader
     - more resources for the future: https://developer.chrome.com/docs/lighthouse/performance/third-party-facades/?utm_source=lighthouse&utm_medium=lr
     X Fix turbo link issue
-      - only enabled on home and system page?
-    - data: { turbo: false }
+      X only enabled on home and system page?
+      X Nahhh.. do everything.  
+    X data: { turbo: false }
 - Properly size images
   - US Chamber of commerce
   - computermockup
