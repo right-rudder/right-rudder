@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /admins
 Disallow: /agreements
+Disallow: /agreements
+Disallow: /qualify_quiz/stuff
 
 Sitemap: https://rightruddermarketing.com/sitemap.xml.gz
