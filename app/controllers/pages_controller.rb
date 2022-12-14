@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   # "Static" pages
+  # Newsletteremail model really needs to be called lead generator or something like that.. lol
 
   def home
     @newsletter_email = NewsletterEmail.new
