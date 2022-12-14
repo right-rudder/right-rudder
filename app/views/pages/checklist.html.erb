@@ -1,0 +1,50 @@
+<%# Head / Meta Data %>
+<% title("Growth Accelerator Session | Right Rudder Marketing") %>
+<% meta_description("Book a growth accelerator call for your flight school today.  We'll go over your flight school, your local area and the competition and then indentify ways to really accelerate the number of student pilots coming to your school.") %>
+<% meta_keywords("Grow flight school business, grow aviation business, marketing for flight schools, marketing for aviation business, business ideas for aviation, business ideas for flight schools, how to market to younger generation pilots flight school") %>
+<%# use default og/twitter images (rrm logo with black background) %>
+
+<header class="bg-slate-900 text-slate-200 py-10 lg:py-20 ">
+  <div class=" text-3xl lg:text-4xl text-center">
+    What is the Right Rudder Marketing <b>Flight School Marketing System?</b>
+  </div>
+  <div class="text-2xl lg:text-3xl text-center pt-10">
+    Watch our <span class="text-orange-500 underline font-bold ">FREE</span> training video to learn about implementing a <span class="text-orange-500 underline font-bold ">Flight Schhol Marketing System</span> below!
+  </div>
+</header>
+
+<section class="">
+  <div class="flex flex-col lg:flex-row lg:items-center">
+
+    <!--Youtube Video-->
+    <div class="lg:w-1/2">
+      <div class="grid place-items-center">
+        <iframe
+          class="lg:w-4/5 w-full aspect-video" loading="lazy" height="315"
+          src="https://tube.rvere.com/embed?v=3KSu_gNW63M"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen>
+        </iframe>
+      </div>
+    </div>
+    <!-- Calendly inline widget begin -->
+    <div class="lg:w-1/2 flex flex-row justify-center lg:py-20">
+      <div class="lg:w-4/5">
+        <!--<div 
+          class="calendly-inline-widget" 
+          data-url="https://calendly.com/rightruddermarketing/appointment?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1e40af" 
+          style="min-width:320px;height:630px;">
+        </div>-->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/rightruddermarketing/growth-accelerator-session?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:630px;">
+      </div>
+    </div>
+    <!-- Calendly inline widget end -->
+  </div>
+</section>
+
+<%= render "shared/copyright_social_footer"%>
+
+<!--Calendly JS-->
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
