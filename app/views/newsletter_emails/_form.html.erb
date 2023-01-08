@@ -1,7 +1,7 @@
 <%= form_with(model: @newsletter_email, class: "contents") do |form| %>
   <% if @newsletter_email.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 text-sm font-medium rounded-lg mb-5">
-      <h2><%= pluralize(@newsletter_email.errors.count, "error") %> prohibited you from signing up:</h2>
+      <h2><%= pluralize(@newsletter_email.errors.count, "error") %> prohibited you from continuing:</h2>
 
       <ul>
         <% @newsletter_email.errors.each do |error| %>
