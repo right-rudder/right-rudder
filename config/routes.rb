@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   get 'schedule-call', to: 'pages#schedule_call'
   get 'about-us', to: 'pages#about_us'
   get 'system-video', to: 'pages#system_video'
-  get 'flight-school-marketing-checklist', to: 'pages#checklist'
+  get 'flight-school-marketing-checklist', to: 'pages#checklist', as: "checklist"
 
   # Qualify Quiz
   get 'qualify_quiz', to: "pages#one", as: :quiz_start
