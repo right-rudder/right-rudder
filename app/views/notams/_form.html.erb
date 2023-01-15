@@ -36,6 +36,10 @@
       </div>
 
       <div class="my-5">
+        <%= form.select(:webinar, ['Webinar?','Yes','No'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
+      </div>
+
+      <div class="my-5">
         <%= form.text_field :title, placeholder: "NOTAM Title", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       </div>
 
