@@ -10,6 +10,7 @@ class Notam < ApplicationRecord
   validates :feature_image, presence: true, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg', 'image/webp'], size_range: 1..(2.megabytes) }
   validates :notam_body, presence: true
   validates :featured, inclusion: { :in => ['Yes','No']}
+  validates :webinar, inclusion: { :in => ['Yes','No']}
   
   has_one_attached :feature_image
 
