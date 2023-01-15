@@ -23,6 +23,10 @@ class Notam < ApplicationRecord
   scope :webinar, -> {where(webinar: "Yes")}
   scope :featured, -> {where(featured: "Yes")}
 
+  # Time reference
+  scope :upcoming, -> {where('notam_date >= ?', Time.now)}
+  scope :previous, -> {where('notam_date < ?', Time.now)}
+
   # Status
   scope :draft, -> {where(status: "Drafting")}
   scope :published, -> {where(status: "Published")}

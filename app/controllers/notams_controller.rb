@@ -3,6 +3,7 @@ class NotamsController < ApplicationController
   before_action :authenticate_admin!, except: [:index, :show, :webinars]
 
   def webinars
+    @notams = Notam.webinar
     @newsletter_email = NewsletterEmail.new
   end
 
