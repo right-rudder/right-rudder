@@ -14,13 +14,18 @@ class Notam < ApplicationRecord
   
   has_one_attached :feature_image
 
-  # Types of blog posts
+  # Category of blog posts
   scope :business_and_marketing, -> {where(category: "Business and Marketing")}
   scope :aviation_and_flying, -> {where(category: "Aviation and Flying")}
   scope :news_and_announcements, -> {where(category: "News and Announcements")}
   
-  #  Featured / Status
+  # Types of blog posts (Featured / Webinar)
+  scope :webinar, -> {where(webinar: "Yes")}
   scope :featured, -> {where(featured: "Yes")}
+
+  # Status
+  scope :draft, -> {where(status: "Drafting")}
   scope :published, -> {where(status: "Published")}
+
 
 end
