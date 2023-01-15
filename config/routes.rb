@@ -23,10 +23,11 @@ Rails.application.routes.draw do
   # Notams
   get 'notams/select_featured', to: 'notams#select_featured_notams'
   post 'uploader/image', to: 'uploader#image' #add upload image to notams 
+  get 'webinars', to: 'notams#webinars'
   resources :notams
 
   # Webinars
-  resources :webinars
+  # resources :webinars
   
   # Agreement
   get 'agreements/form2', to: 'agreements#form2', as: :form2 
