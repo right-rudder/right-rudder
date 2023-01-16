@@ -10,7 +10,7 @@
 <div class="text-lg">
   <%= render "shared/navbar" %>
   <!--Header Section-->
-  <section class="grid place-items-center bg-gradient-to-r from-slate-100 to-blue-100">
+  <section class="grid place-items-center bg-gradient-to-r from-slate-100 to-blue-100 lg:to-blue-200">
     <div class="py-20 flex flex-col lg:flex-row-reverse lg:w-5/6">
       <!--Blog image-->
       <div class="grid place-items-center ">
@@ -29,33 +29,55 @@
   </section>
 
   <!--Feed (@notams is already filtered down to just webinars via notam controller)-->
-  <section class="bg-slate-800 text-slate-50 py-20">
+  <section class="bg-gradient-to-l from-slate-900 to-slate-800 lg:to-slate-700 text-slate-50">
     <div class="flex flex-col lg:flex-row">
       
       <!--Upcoming-->
-      <div class="lg:w-1/2 flex flex-col items-center pb-20">
-        <h2 class="text-3xl font-bold pb-10">Upcoming Webinars</h2>
+      <div class="lg:w-1/2 flex flex-col items-center lg:pb-20">
+        <h2 class="text-3xl font-bold py-10">Upcoming Webinars</h2>
         
-        <% if @notams.upcoming.last.present? %>
-        <div class="lg:w-3/4 lg:rounded-xl bg-slate-100 text-slate-800">  
-          <%= image_tag @notams.upcoming.last.feature_image.url, class: "rounded-t-xl w-full" %>
-          <div class="px-5 pb-5">
-            <h3 class="font-bold text-xl pt-5"><%= @notams.upcoming.last.title %></h3>
-            <div class="pb-5 font-semibold"><%=I18n.localize(@notams.upcoming.last.notam_date, :format => '%^a %^b %-d %Y') %></div>
-            <div class="">
-              <%= raw @notams.upcoming.last.notam_body %>
-            </div>
+        <% if @notams.upcoming.published.last.present? %>
+          <div class="lg:w-3/4 lg:rounded-xl bg-slate-100 text-slate-800">  
+            <%= link_to @notams.upcoming.published.last, class: "flex flex-col items-center" do %>
+              <%= image_tag @notams.upcoming.published.last.feature_image.url, class: "lg:rounded-t-xl w-full", alt: "picture for article: #{@notams.upcoming.published.last.title}" %>
+              <div class="px-5 pb-5">
+                <h3 class="font-bold text-xl pt-5"><%= @notams.upcoming.published.last.title %></h3>
+                <div class="pb-5 font-semibold"><%=I18n.localize(@notams.upcoming.published.last.notam_date, :format => '%^a %^b %-d %Y') %></div>
+                <div class="">
+                  <%= raw @notams.upcoming.published.last.notam_body %>
+                </div>
+              </div>
+            <% end %>
           </div>
-        </div>
+          
         <% else %>
           New webinar coming soon!
         <% end %>
       </div>
       
       <!--Previous-->
-      <div class="lg:w-1/2 flex flex-col items-center">
-        <h2 class="text-3xl font-bold pb-10">Previous Webinars</h2>
-        
+      <div class="lg:w-1/2 flex flex-col items-center lg:pb-20">
+        <h2 class="text-3xl font-bold py-10">Previous Webinars</h2>
+        <% if @notams.previous.published.present? %>
+          <% @notams.previous.published.reverse_each do |post| %> 
+            <div class="flex flex-row items-center  lg:w-3/4 lg:rounded-lg h-24 lg:mb-3 hover:brightness-105 transition-all duration-300">
+              <%= link_to post, data: { turbo: false }, class: "flex flex-row items-center" do%>
+                <!--image-->
+                <div class="w-2/5 flex flex-row items-center">
+                  <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 w-full", alt: "picture for article: #{post.title}"%>
+                </div>
+                <div class=" pl-5 w-3/5 flex flex-col justify-center items-start h-24 text-md pr-5 bg-slate-50 lg:rounded-r-lg lg:bg-gradient-to-b from-slate-50 to-slate-200  ">
+                  <div class="line-clamp-2 text-slate-800"><%= post.title %></div>
+                  <div class="font-semibold text-sm pt-1 text-slate-800">
+                    <%= I18n.localize(post.notam_date, :format => '%^a %^b %-d %Y') %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <%end%>
+        <%else%>
+         No webinars publishedn yet!
+        <%end%>
       </div>
     </div>
 
