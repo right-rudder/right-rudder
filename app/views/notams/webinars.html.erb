@@ -36,15 +36,16 @@
       <div class="lg:w-1/2 flex flex-col items-center lg:pb-20">
         <h2 class="text-3xl font-bold py-10">Upcoming Webinars</h2>
         
-        <% if @notams.upcoming.published.last.present? %>
+        <% upcoming_webinar = @notams.upcoming.published.last %>
+        <% if upcoming_webinar.present? %>
           <div class="lg:w-3/4 lg:rounded-xl bg-slate-100 text-slate-800">  
-            <%= link_to @notams.upcoming.published.last, class: "flex flex-col items-center" do %>
-              <%= image_tag @notams.upcoming.published.last.feature_image.url, class: "lg:rounded-t-xl w-full", alt: "picture for article: #{@notams.upcoming.published.last.title}" %>
+            <%= link_to upcoming_webinar, class: "flex flex-col items-center" do %>
+              <%= image_tag upcoming_webinar.feature_image.url, class: "lg:rounded-t-xl w-full", alt: "picture for article: #{upcoming_webinar.title}" %>
               <div class="px-5 pb-5">
-                <h3 class="font-bold text-xl pt-5"><%= @notams.upcoming.published.last.title %></h3>
-                <div class="pb-5 font-semibold"><%=I18n.localize(@notams.upcoming.published.last.notam_date, :format => '%^a %^b %-d %Y') %></div>
+                <h3 class="font-bold text-xl pt-5"><%= upcoming_webinar.title %></h3>
+                <div class="pb-5 font-semibold"><%=I18n.localize(upcoming_webinar.notam_date, :format => '%^a %^b %-d %Y') %></div>
                 <div class="">
-                  <%= raw @notams.upcoming.published.last.notam_body %>
+                  <%= raw upcoming_webinar.notam_body %>
                 </div>
               </div>
             <% end %>
