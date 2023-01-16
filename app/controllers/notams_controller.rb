@@ -47,6 +47,7 @@ class NotamsController < ApplicationController
 
   # PATCH/PUT /notams/1 or /notams/1.json
   def update
+    @newsletter_email = NewsletterEmail.new
     respond_to do |format|
       if @notam.update(notam_params)
         format.html { redirect_to notam_url(@notam), notice: "Notam was successfully updated." }
