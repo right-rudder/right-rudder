@@ -1,8 +1,13 @@
 <!--Copyright and social-->
 <section class="bg-slate-700 text-slate-300 py-5 lg:pl-9 text-center lg:text-left flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
   <div>
-    <div class="">
+    <!--Desktop-->
+    <div class="hidden lg:block">
       Copyright <%= Date.today.year %> <%=link_to root_path, class: "hover:underline" do%>Right Rudder Marketing LLC<%end%>.  All Rights Reserved.
+    </div>
+    <!--Mobile-->
+    <div class="lg:hidden">
+      Copyright <%= Date.today.year %> <%=link_to root_path, class: "hover:underline" do%>Right Rudder Marketing LLC<%end%>.  <br>All Rights Reserved.
     </div> 
     <div class="">
       <%=link_to privacy_policy_path, class: "hover:underline" do%>Privacy Policy<%end%> | <%= link_to terms_of_service_path, class: "hover:underline" do%>Terms of Service<%end%>
