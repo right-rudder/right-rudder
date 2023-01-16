@@ -28,7 +28,7 @@
     </div>
   </section>
 
-  <!--Feed-->
+  <!--Feed (@notams is already filtered down to just webinars via notam controller)-->
   <section class="bg-slate-800 text-slate-50 py-20">
     <div class="flex flex-col lg:flex-row">
       
@@ -40,11 +40,10 @@
         <div class="lg:w-3/4 lg:rounded-xl bg-slate-100 text-slate-800">  
           <%= image_tag @notams.upcoming.last.feature_image.url, class: "rounded-t-xl w-full" %>
           <div class="px-5 pb-5">
-            <h3 class="font-bold text-xl pt-5">Formulating a captivating one liner to clarify your message</h3>
-            <div class="pb-5 font-semibold">FRI DEC 16 2022</div>
+            <h3 class="font-bold text-xl pt-5"><%= @notams.upcoming.last.title %></h3>
+            <div class="pb-5 font-semibold"><%=I18n.localize(@notams.upcoming.last.notam_date, :format => '%^a %^b %-d %Y') %></div>
             <div class="">
-              Our very first episode!  We're going to be presenting our webinar on LinkedIn Events.  During the webinar we'll look at correctly formulating a one liner to clarify your flight school's message.  A one liner is a small one to two sentence catch phrase that businesses use to promote their brand.  We'll look into what makes a great one liner that enlightens and captivates your customers and also look at one liners that don't perform well and confuse your customers.  Looking forward to seeing you all there!  
-              <%= link_to "Attend by clicking here", "https://www.linkedin.com/events/webinar-formulatingacaptivating7005681267363000320/comments/" , class: "text-blue-800 hover:underline"%>
+              <%= raw @notams.upcoming.last.notam_body %>
             </div>
           </div>
         </div>
@@ -56,6 +55,7 @@
       <!--Previous-->
       <div class="lg:w-1/2 flex flex-col items-center">
         <h2 class="text-3xl font-bold pb-10">Previous Webinars</h2>
+        
       </div>
     </div>
 
