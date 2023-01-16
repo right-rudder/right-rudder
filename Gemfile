@@ -53,7 +53,7 @@ gem "bootsnap", require: false
 
 ## MY GEMS ##
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-gem 'calendly'
+gem 'calendly'  # I don't think we need this gem.. It's just a straight embed.  I was messing with the API earlier but didn't do anything with it..
 gem 'sitemap_generator'
 gem 'tinymce-rails'
 gem 'aws-sdk-s3', require: false
@@ -61,6 +61,8 @@ gem 'activestorage-validator'
 gem 'friendly_id', '~> 5.4.0'
 gem 'devise'
 gem "recaptcha"
+gem 'google-api-client', '~> 0.53.0'
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
