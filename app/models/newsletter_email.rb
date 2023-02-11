@@ -21,6 +21,8 @@ class NewsletterEmail < ApplicationRecord
 
     # Save the changes to the Google Sheet
     spreadsheet.save
+
+    delete_json_credentials("config/googleconfig.json")
   end
 
 end

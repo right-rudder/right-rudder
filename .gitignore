@@ -40,4 +40,4 @@
 # Ignore application configuration
 /config/application.yml
 
-config/googleconfig.json
+#config/googleconfig.json

@@ -20,5 +20,11 @@ module NewsletterEmailsHelper
   
     path
   end
+
+  def delete_json_credentials(path)
+    File.open(path, 'w') do |f|
+      f.write(" ")
+    end
+  end
   
 end
