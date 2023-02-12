@@ -12,13 +12,8 @@ class NewsletterEmail < ApplicationRecord
   private
 
   def update_google_sheet
-    path = create_json_credentials("config/googleconfig.json")
-    session = GoogleDrive::Session.from_service_account_key(path)
-
-    #path = create_json_credentials("config/googleconfig.json")
-    #credentials = Google::Auth::ServiceAccountCredentials.make_creds(json_key_io: File.open(path))
-    #credentials_json = credentials.to_json
-    #session = GoogleDrive::Session.from_service_account_key(credentials_json)
+    create_json_credentials("config/googleconfig.json")
+    session = GoogleDrive::Session.from_service_account_key("config/googleconfig.json")
 
     spreadsheet = session.spreadsheet_by_key("1-KvGu8x8Lqqsj7DhKPLhUPXWqFbcyUHYodhs0KdsZkw").worksheets[0]
     
@@ -28,7 +23,7 @@ class NewsletterEmail < ApplicationRecord
     # Save the changes to the Google Sheet
     spreadsheet.save
 
-    delete_json_credentials("config/googleconfig.json")
+    delete_file("config/googleconfig.json")
   end
 
 end
