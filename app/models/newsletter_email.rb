@@ -14,6 +14,12 @@ class NewsletterEmail < ApplicationRecord
   def update_google_sheet
     path = create_json_credentials("config/googleconfig.json")
     session = GoogleDrive::Session.from_service_account_key(path)
+
+    #path = create_json_credentials("config/googleconfig.json")
+    #credentials = Google::Auth::ServiceAccountCredentials.make_creds(json_key_io: File.open(path))
+    #credentials_json = credentials.to_json
+    #session = GoogleDrive::Session.from_service_account_key(credentials_json)
+
     spreadsheet = session.spreadsheet_by_key("1-KvGu8x8Lqqsj7DhKPLhUPXWqFbcyUHYodhs0KdsZkw").worksheets[0]
     
     # Write the data from the new instance of the newsletter_emails model

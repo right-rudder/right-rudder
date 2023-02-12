@@ -1,6 +1,22 @@
 module NewsletterEmailsHelper
 
   def create_json_credentials(path)
+
+    ## Testing
+    puts "TYPE: #{ENV['TYPE']}"
+    puts "PROJECT_ID: #{ENV['PROJECT_ID']}"
+    puts "PRIVATE_KEY_ID: #{ENV['PRIVATE_KEY_ID']}"
+    puts "PRIVATE_KEY: #{ENV['PRIVATE_KEY']}"
+    puts "CLIENT_EMAIL: #{ENV['CLIENT_EMAIL']}"
+    puts "CLIENT_ID: #{ENV['CLIENT_ID']}"
+    puts "AUTH_URI: #{ENV['AUTH_URI']}"
+    puts "TOKEN_URI: #{ENV['TOKEN_URI']}"
+    puts "AUTH_PROVIDER_X509_CERT_URL: #{ENV['AUTH_PROVIDER_X509_CERT_URL']}"
+    puts "CLIENT_X509_CERT_URL: #{ENV['CLIENT_X509_CERT_URL']}"
+
+
+
+
     credentials = {
       "type": ENV['TYPE'],
       "project_id": ENV['PROJECT_ID'],
