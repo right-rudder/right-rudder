@@ -6,7 +6,7 @@ module NewsletterEmailsHelper
       "type": ENV['TYPE'],
       "project_id": ENV['PROJECT_ID'],
       "private_key_id": ENV['PRIVATE_KEY_ID'],
-      "private_key": ENV['PRIVATE_KEY'].gsub('\\\\', '\\'),
+      "private_key": ENV['PRIVATE_KEY'],
       "client_email": ENV['CLIENT_EMAIL'],
       "client_id": ENV['CLIENT_ID'],
       "auth_uri": ENV['AUTH_URI'],
