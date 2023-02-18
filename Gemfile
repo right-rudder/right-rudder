@@ -63,6 +63,7 @@ gem 'devise'
 gem "recaptcha"
 # gem 'google-api-client', '~> 0.53.0'
 gem 'google_drive'
+gem 'invisible_captcha'
 
 
 group :development, :test do

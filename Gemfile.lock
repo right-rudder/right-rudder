@@ -175,6 +175,8 @@ GEM
     importmap-rails (1.1.5)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    invisible_captcha (2.0.0)
+      rails (>= 5.0)
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
@@ -343,6 +345,7 @@ DEPENDENCIES
   friendly_id (~> 5.4.0)
   google_drive
   importmap-rails
+  invisible_captcha
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
