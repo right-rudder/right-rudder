@@ -1,0 +1,2 @@
+class ChecklistEmail < ApplicationRecord
+end

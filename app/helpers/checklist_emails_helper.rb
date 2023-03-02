@@ -1,0 +1,2 @@
+module ChecklistEmailsHelper
+end
