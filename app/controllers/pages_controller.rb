@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def checklist
-    @newsletter_email = NewsletterEmail.new
+    @checklist_email = ChecklistEmail.new
   end
 
   def system_video

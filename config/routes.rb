@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :checklist_emails
   
   # 404/500 pages
   get 'errors/not_found'
@@ -7,6 +6,7 @@ Rails.application.routes.draw do
   match "/404", to: "errors#not_found", via: :all
   match "/500", to: "errors#internal_server_error", via: :all
 
+  resources :checklist_emails
   resources :newsletter_emails
   resources :careers
   devise_scope :admin do
@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   root "pages#home"
   get 'intro_video_embed', to: "pages#intro_video_embed", as: :embed_video
   get 'newsletter_confirm', to: "newsletter_emails#confirm", as: :newsletter_confirm
+
+  # checklist dl page
+  get 'checklist_confirm', to: "checklist_emails#confirm", as: :checklist_confirm
 
   # Notams
   get 'notams/select_featured', to: 'notams#select_featured_notams'

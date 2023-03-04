@@ -1,7 +1,7 @@
 <%= form_with(model: @checklist_email, class: "contents") do |form| %>
   <% if @checklist_email.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 text-sm font-medium rounded-lg mb-5">
-      <h2><%= pluralize(@checklist_email.errors.count, "error") %> prohibited you from continuing:</h2>
+      <h2><%= pluralize(@checklist_email.errors.count, "error") %> prohibited you from signing up:</h2>
 
       <ul>
         <% @checklist_email.errors.each do |error| %>
@@ -26,4 +26,7 @@
     </div>
   </div>
 
+  <p class="py-5">
+  Please enter your information to download your checklist.
+  </p>
 <% end %>
