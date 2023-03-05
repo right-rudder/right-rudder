@@ -19,7 +19,7 @@ class ChecklistEmail < ApplicationRecord
     spreadsheet = session.spreadsheet_by_key("1-KvGu8x8Lqqsj7DhKPLhUPXWqFbcyUHYodhs0KdsZkw").worksheets[0]
     
     # Write the data from the new instance of the newsletter_emails model
-    spreadsheet.insert_rows(spreadsheet.num_rows + 1, [[self.name, self.email, "Checklist Sign Up", self.created_at]])
+    spreadsheet.insert_rows(spreadsheet.num_rows + 1, [[self.name, self.email, self.phone, "Checklist Sign Up", self.created_at]])
 
     # Save the changes to the Google Sheet
     spreadsheet.save
