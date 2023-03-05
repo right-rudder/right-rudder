@@ -31,7 +31,7 @@ class ChecklistEmailsController < ApplicationController
 
     respond_to do |format|
       if @checklist_email.save
-        format.html { redirect_to checklist_email_url(@checklist_email), notice: "Checklist email was successfully created." }
+        format.html { redirect_to checklist_confirm_path, notice: @checklist_email.name }
         format.json { render :show, status: :created, location: @checklist_email }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -44,7 +44,7 @@ class ChecklistEmailsController < ApplicationController
   def update
     respond_to do |format|
       if @checklist_email.update(checklist_email_params)
-        format.html { redirect_to checklist_email_url(@checklist_email), notice: "Checklist email was successfully updated." }
+        format.html { redirect_to checklist_email_url(@checklist_email), notice: "checklist email was successfully updated." }
         format.json { render :show, status: :ok, location: @checklist_email }
       else
         format.html { render :edit, status: :unprocessable_entity }
