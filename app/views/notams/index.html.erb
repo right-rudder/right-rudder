@@ -75,21 +75,21 @@
     <!--Category 1: Business and Marketing<-->
     <div class="lg:w-1/3 lg:mx-5 flex flex-col lg:gap-5 items-center lg:py-5 ">
       <h3 class="font-semibold py-5 lg:pt-0 lg:pb-5 text-2xl">Business and Marketing</h3>
-      <% @notams.published.business_and_marketing.last(3).reverse_each do |post| %> 
+      <% @notams.published.business_and_marketing.last(5).reverse_each do |post| %> 
         <%= render "notam_category_card", post: post %>
       <%end %>
     </div>
     <!--Category 2: Aviation and Flying-->
     <div class="lg:w-1/3 lg:mx-5 flex flex-col items-center py-5 lg:gap-5 ">
       <h3 class="font-semibold pb-5 text-2xl">Aviation and Flying</h3>
-      <% @notams.published.aviation_and_flying.last(3).reverse_each do |post| %> 
+      <% @notams.published.aviation_and_flying.last(5).reverse_each do |post| %> 
         <%= render "notam_category_card", post: post %>
       <%end %>
     </div>
     <!--Category 3: News and announcements -->
     <div class="lg:w-1/3 lg:mx-5 lg:gap-5 flex flex-col lg:py-5 items-center">
       <h3 class="font-semibold pb-5 text-2xl">News and Announcements</h3>
-      <% @notams.published.news_and_announcements.last(3).reverse_each do |post| %> 
+      <% @notams.published.news_and_announcements.last(5).reverse_each do |post| %> 
         <%= render "notam_category_card", post: post %> 
       <%end %>
     </div>
