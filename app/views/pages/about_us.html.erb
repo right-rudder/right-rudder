@@ -52,6 +52,102 @@
       </div>
     </div>
   </section>
+  <section class="bg-gradient-to-t from-blue-100 to-blue-300 pt-10 pb-5 lg:pb-10 text-slate-800">
+    <div class="flex flex-col items-center">
+      <h1 class="font-bold text-5xl mt-10 mb-20">Our Team</h1>
+
+      <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-52">
+        <!--Tim-->
+        <div class="lg:w-1/4 flex flex-col items-center">
+          <%= image_tag "tim_profile.webp", alt: "profile picture of Tim Jedrek", class: "rounded-full w-3/5"%>
+          <div class="font-semibold text-2xl">Tim Jedrek</div>
+          <div class=" text-xl italic pb-5">Founder</div>
+          <p class="text-base text-center mx-10 pb-10 lg:pb-0">
+            Tim started programming as a teenager and then continued on to become a quality manager after graduating university.  He got his private pilot certificate in 2021 and enjoys flying for fun.  He started Right Rudder Marketing in 2022 to bring his two passions, programming and aviation, together.
+          </p>
+
+        </div>
+        <!--Tonie-->
+        <div class="lg:w-1/4 flex flex-col items-center">
+          <%= image_tag "tonie_profile.webp", alt: "profile picture of Tonie Santos", class: "rounded-full w-3/5"%>
+          <div class="font-semibold text-2xl">Tonie Santos</div>
+          <div class=" text-xl italic pb-5">Operations Director</div>
+          <div class="text-base text-center mx-10 pb-10 lg:pb-0">
+            Tonie graduated from the Philippine Military Academy and become a software engineer.  He has been programming for over three decades working with in various industries like steel manufacturing, finance, pharmacy, and telecom.  His son is a pilot and his daughter is in school to be an aeronautical engineer.
+          </div>
+        </div>
+      </div>
+
+      <div class="text-xl lg:w-1/2 text-center lg:pt-20 pb-10 mx-10">Bring your expertise to Right Rudder Marketing and help change the flight training industry.  One flight school at a time.</div>
+      <div class="pb-20 lg:w-1/3 text-base text-center mx-5">
+      We are expanding our team!  If you have experience in the following fields: Marketing, Sales, Customer Success, SEO, PPC, or Web Development; send an updated resume to <%= mail_to "careers@rightruddermarketing.com", class: "text-blue-700 hover:underline"%>
+      </div>
+    </div>
+  </section>
+  <!--Sponsor section-->
+  <section class="bg-slate-200">
+    <div class="flex flex-col items-center">
+      <div class="pt-10">
+        <h2 class="text-xl font-semibold italic text-center px-16">Right Rudder Marketing proudly sponsors the following organizations</h2>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-10 px-20 md:px-48  lg:px-5 pt-10 pb-20 lg:py-10">
+        <!--FSANA-->
+        <%= link_to "https://www.fsana.com/partners.php", class: "lg:w-1/5", target: :blank do %>
+          <%= image_tag "fsana.webp", alt: "Flight School Association of North America logo", class: "hover:scale-105 transition-all duration-300"%>
+        <%end%>
+        <!--NAFI-->
+        <%= link_to "https://www.nafinet.org/sponsors", class: "lg:w-1/5", target: :blank do %>
+          <%= image_tag "nafi2.webp", alt: "National Association of Flight Instructors logo", class: "hover:scale-105 transition-all duration-300 px-5"%>
+        <%end%>
+      </div>
+    </div>
+  </section>
+
+  <!--Member section-->
+  <section class="bg-slate-100">
+    <div class="flex flex-col items-center">
+      <div class="pt-10">
+        <h2 class="text-xl font-semibold italic text-center px-16">Right Rudder Marketing is a proud member of the following organizations</h2>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-10 px-20 md:px-48  lg:px-5 pt-10 pb-20 lg:py-10">
+        <!--GSLFIA-->
+        <%= link_to "https://gslfia.com", class: "lg:w-1/5", target: :blank do %>
+          <%= image_tag "gslfia.webp", alt: "Greater St. Louis Flight Instructor Association logo", class: "hover:scale-105 transition-all duration-300"%>
+        <%end%>
+        <!--NBAA-->
+        <%= link_to "https://nbaa.org", class: "lg:w-1/5", target: :blank do %>
+          <%= image_tag "nbaa.webp", alt: "National Business Aviation Association logo", class: "hover:scale-105 transition-all duration-300"%>
+        <%end%>
+        <!--AMA-->
+        <%= link_to "https://www.ama.org", class: "lg:w-1/5", target: :blank  do %>
+          <%= image_tag "ama.webp", alt: "American Marketing Association logo" , class: "hover:scale-105 transition-all duration-300"%>
+        <%end%>
+        <!--Chamber of commerce-->
+        <%#= link_to "https://www.chamberofcommerce.com/united-states/missouri/farmington/marketing-agency/2017680081-right-rudder-marketing?source=memberwebsite" do %>
+          <%#= image_tag "https://coc.codes/images/badge/2017680081", alt: "Chamber of Commerce Verified logo" , class: "hover:scale-105 transition-all duration-300"%>
+        <%#end%>
+        <!--US Chamber of Commerce-->
+        <%= link_to "https://www.uschamber.com", class: "lg:w-1/4", target: :blank do %>
+          <%= image_tag "uschamber.webp", alt: "U.S. Chamber of Commerce Member" , class: "hover:scale-105 transition-all duration-300"%>
+        <%end%>
+        <!--NAFI-->
+      </div>
+    </div>
+  </section>
+  <!--Affiliate section-->
+  <section class="bg-slate-200">
+    <div class="flex flex-col items-center">
+      <div class="pt-10">
+        <h2 class="text-xl font-semibold italic text-center px-16">Right Rudder Marketing are partner affiliates with the following organizations</h2>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-10 px-20 md:px-48  lg:px-5 pt-10 pb-20 lg:py-10">
+        <!--GSLFIA-->
+        <%= link_to "https://stratus.finance", class: "lg:w-1/2", target: :blank do %>
+          <%= image_tag "stratus_logo.webp", alt: "Stratus Financial logo", class: "hover:scale-105 transition-all duration-300"%>
+        <%end%>
+      </div>
+    </div>
+  </section>
 </div>
 
 <!--CTA-->
