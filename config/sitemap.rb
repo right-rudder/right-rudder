@@ -1,7 +1,8 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://rightruddermarketing.com"
 
-SitemapGenerator::Sitemap.create_index = true
+# I don't think we need this..
+# SitemapGenerator::Sitemap.create_index = true
 
 SitemapGenerator::Sitemap.create do
   add '/schedule-call'
@@ -10,23 +11,24 @@ SitemapGenerator::Sitemap.create do
   add '/webinars'
   #add '/careers'
 
-  #Add all notams
-  Notam.find_each do |notam|
-    add notam_path(notam), :lastmod => notam.updated_at
-  end
-
+ 
   #services
   add '/website-design'
   add '/search-engine-optimization'
-  add '/pay-per-click-ads'
-  add '/video-creation'
-  add '/email-campaigns'
-  add '/social-media-management'
-  add '/reputation-management'
+  #add '/pay-per-click-ads'
+  #add '/video-creation'
+  #add '/email-campaigns'
+  #add '/social-media-management'
+  #add '/reputation-management'
 
   #legal
   add '/privacy-policy'
   add '/terms-of-service'
+
+  #Add all notams
+  Notam.find_each do |notam|
+    add notam_path(notam), :lastmod => notam.updated_at
+  end
 
   # Put links creation logic here.
   #
