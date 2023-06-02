@@ -64,6 +64,7 @@ gem "recaptcha"
 # gem 'google-api-client', '~> 0.53.0'
 gem 'google_drive'
 gem 'invisible_captcha'
+gem 'whenever', require: false
 
 
 group :development, :test do
