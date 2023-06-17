@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :messages
   
+  get '/sitemap.xml.gz', to: redirect("https://rrmsitemaps.s3.us-east-2.amazonaws.com/sitemap.xml.gz")
+  
   # 404/500 pages
   get 'errors/not_found'
   get 'errors/internal_server_error'

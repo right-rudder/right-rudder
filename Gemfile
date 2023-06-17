@@ -65,6 +65,7 @@ gem "recaptcha"
 gem 'google_drive'
 gem 'invisible_captcha'
 gem 'whenever', require: false
+gem 'fog-aws'
 
 
 group :development, :test do
