@@ -30,11 +30,14 @@ SitemapGenerator::Sitemap.create do
   add '/marketing-system'
   add '/about-us'
   add '/webinars'
-  #add '/careers'
+  add '/flight-school-marketing-checklist'
+  add '/notams'
+  add '/careers'
 
  
   #services
   add '/website-design'
+  add '/flight-school-website-design'
   #add '/search-engine-optimization'
   #add '/pay-per-click-ads'
   #add '/video-creation'
