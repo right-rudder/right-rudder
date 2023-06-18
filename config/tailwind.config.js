@@ -46,6 +46,7 @@ module.exports = {
         'screen-1/2': '50vh',
         'screen-2/3': '75vh',
         'screen-1/3': 'calc(100vh / 3)',
+        'screen-80': '80vh',
       }),
     },
   },
