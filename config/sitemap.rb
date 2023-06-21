@@ -38,7 +38,8 @@ SitemapGenerator::Sitemap.create do
   #services
   add '/website-design'
   add '/flight-school-website-design'
-  #add '/search-engine-optimization'
+  add '/search-engine-optimization'
+  add '/flight-school-seo'
   #add '/pay-per-click-ads'
   #add '/video-creation'
   #add '/email-campaigns'
