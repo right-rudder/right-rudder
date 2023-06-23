@@ -2,9 +2,20 @@
 <% title(@notam.title + " | Right Rudder Marketing Blog") %>
 <% meta_description(if @notam.meta_description? then @notam.meta_description end) %>
 <% meta_keywords(if @notam.meta_keywords? then @notam.meta_keywords end) %>
-<%# og_image(polymorphic_url(@notam.feature_image)) # test this out later if not working. %>
-<% og_image(@notam.feature_image.url) %>
-<% twitter_image(@notam.feature_image.url) %>
+<% og_image(rails_storage_proxy_url(@notam.feature_image)) %>
+<% twitter_image(rails_storage_proxy_url(@notam.feature_image)) %>
+
+
+
+<%# PREVIOUS OG IMAGES%>
+<%# og_image(@notam.feature_image.url) %>
+<%# twitter_image(@notam.feature_image.url) %>
+
+
+<!--URL TESTING 
+  <%= rails_storage_proxy_url(@notam.feature_image) %>
+-->
+
 
 <!--Set Page font size and limit sticky-->
 <div class="text-lg bg-gradient-to-r from-slate-100 to-blue-100">
