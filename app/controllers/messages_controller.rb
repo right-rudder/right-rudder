@@ -22,6 +22,7 @@ class MessagesController < ApplicationController
 
   # POST /messages or /messages.json
   def create
+    @newsletter_email = NewsletterEmail.new
     @message = Message.new(message_params)
 
     respond_to do |format|
@@ -36,17 +37,17 @@ class MessagesController < ApplicationController
   end
 
   # PATCH/PUT /messages/1 or /messages/1.json
-  def update
-    respond_to do |format|
-      if @message.update(message_params)
-        format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
-        format.json { render :show, status: :ok, location: @message }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #def update
+  #  respond_to do |format|
+  #    if @message.update(message_params)
+  #      format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
+  #      format.json { render :show, status: :ok, location: @message }
+  #    else
+  #      format.html { render :edit, status: :unprocessable_entity }
+  #      format.json { render json: @message.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /messages/1 or /messages/1.json
   def destroy

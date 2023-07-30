@@ -1,7 +1,7 @@
 <%= form_with(model: message, class: "contents") do |form| %>
   <% if message.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2>Please fix the following<%= pluralize(message.errors.count, "error") %></h2>
+      <h2>Please fix the following <%= pluralize(message.errors.count, "error") %>:</h2>
 
       <ul>
         <% message.errors.each do |error| %>
@@ -18,12 +18,12 @@
 
   <div class="my-5">
     <%= form.label :email %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
+    <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
   </div>
 
   <div class="my-5">
     <%= form.label :phone %>
-    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
+    <%= form.text_field :phone, placeholder: "xxx-xxx-xxxx", class: "placeholder:text-slate-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
   </div>
 
   <div class="my-5">

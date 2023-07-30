@@ -1,7 +1,7 @@
 <%= render "shared/navbar"%>
 
 
-<div class="flex flex-col-reverse lg:flex-row lg:py-10 lg:px-5 lg:items-center">
+<div class="flex flex-col-reverse lg:flex-row lg:py-10 lg:px-5 bg-gradient-to-t from-blue-100 to-slate-50">
   <div class="lg:w-1/2">
     <div class="">
       <!--Row 1-->
@@ -16,7 +16,7 @@
         <!--Row 2-->
         
         <div class="grid place-items-center lg:py-0 py-5 px-5 bg-blue-900 text-slate-50 font-semibold text-2xl italic text-center lg:text-left">
-          Right Rudder Marketing is the only pilot owned digital marketing agency that has gone through the flight training process.
+          Right Rudder Marketing is the only pilot owned digital marketing agency that knows the flight training process firsthand.
         </div>
         <%= image_tag "tim-flying.webp",  class: "lg:h-52 object-contain", alt: "Tim Jedrek flying a small plane.  Contact Right Rudder"%>
       </div>
@@ -25,16 +25,16 @@
         <!--Row 3-->
         <%= image_tag "tim-airport.webp",  class: "lg:h-60 object-contain", alt: "Tim Jedrek at a small airport.  Contact Right Rudder Marketing"%>
         <div class="grid place-items-center lg:py-0 py-5 px-5 bg-slate-100 text-blue-900 font-semibold text-2xl italic text-center lg:text-left">
-          Can't wait to meet you and grow your flight school.  Let's fly together.
+          Can't wait to meet you and grow your flight school.  Send us a message and let's fly together.
         </div>
       </div>
     </div>
   </div>
   <div class="lg:w-1/2 flex flex-col">
     <div class="px-5 lg:px-10 pt-10">
-      <h2 class="text-3xl font-bold">Start a Conversation with Right Rudder Marketing</h2>
+      <h2 class="text-3xl font-bold lg:pr-56">Start a Conversation with Right Rudder Marketing</h2>
     </div>
-    <div class="px-5 lg:px-10">
+    <div class="px-5 lg:px-10 pb-5">
       <%= render "form", message: @message %>
     </div>
   </div>
