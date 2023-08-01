@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :messages
-  
   get '/sitemap.xml.gz', to: redirect("https://rrmsitemaps.s3.us-east-2.amazonaws.com/sitemap.xml.gz")
   
   # 404/500 pages
@@ -9,9 +7,18 @@ Rails.application.routes.draw do
   match "/404", to: "errors#not_found", via: :all
   match "/500", to: "errors#internal_server_error", via: :all
 
+  get 'message_confirm', to: "messages#confirm", as: :message_confirm
+  resources :messages
+
+  # Checklist dl page
+  get 'checklist_confirm', to: "checklist_emails#confirm", as: :checklist_confirm
   resources :checklist_emails
+
+  # Newsletters
+  get 'newsletter_confirm', to: "newsletter_emails#confirm", as: :newsletter_confirm
   resources :newsletter_emails
   
+  # Careers
   get 'careers/web_developer', to: "careers#webdeveloper", as: :webdeveloper
   resources :careers
   
@@ -27,10 +34,8 @@ Rails.application.routes.draw do
   # homepage
   root "pages#home"
   get 'intro_video_embed', to: "pages#intro_video_embed", as: :embed_video
-  get 'newsletter_confirm', to: "newsletter_emails#confirm", as: :newsletter_confirm
 
-  # checklist dl page
-  get 'checklist_confirm', to: "checklist_emails#confirm", as: :checklist_confirm
+
 
   # Notams
   get 'notams/select_featured', to: 'notams#select_featured_notams'

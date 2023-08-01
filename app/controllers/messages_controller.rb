@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
+  before_action :authenticate_admin!, except: [:new, :create, :confirm]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /messages or /messages.json
@@ -9,6 +10,10 @@ class MessagesController < ApplicationController
 
   # GET /messages/1 or /messages/1.json
   def show
+  end
+
+  def confirm
+    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /messages/new
@@ -28,7 +33,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to message_url(@message), notice: "Message was successfully created." }
+        format.html { redirect_to messaage_confirm_path, notice: "Message was successfully created." }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new, status: :unprocessable_entity }
