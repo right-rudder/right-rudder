@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /*To escape tailwind for tinymce and fix link tag.. I had to convert the code from scss to css lol*/
 /*https://stackoverflow.com/questions/66180213/how-to-prevent-css-libraries-like-tailwindcss-and-bootstrap-to-effect-wysiwyg-ed*/
@@ -18,9 +20,15 @@
  }
 }
 
-@tailwind components;
-@tailwind utilities;
+@layer components {
+  .p-text {
+    /*@apply font-paragraph text-lg;*/
+  }
 
+  .btn-primary {
+    @apply font-sans font-semibold bg-blue-500 hover:bg-blue-600 hover:scale-105 text-xl lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5;
+  }
+}
 /*
 
 @layer components {
