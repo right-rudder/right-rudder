@@ -21,6 +21,8 @@
     <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
   </div>
 
+  <%= invisible_captcha :confirm_email, :checklist_email %>
+
   <div class="my-5">
     <%= form.label :phone %>
     <%= form.text_field :phone, placeholder: "xxx-xxx-xxxx", class: "placeholder:text-slate-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>

@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
+  invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /messages or /messages.json
   def index

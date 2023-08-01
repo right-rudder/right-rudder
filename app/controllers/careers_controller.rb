@@ -14,6 +14,10 @@ class CareersController < ApplicationController
 
   end
 
+  def webdeveloper
+    @newsletter_email = NewsletterEmail.new
+  end
+
   # GET /careers/1 or /careers/1.json
   def show
   end
