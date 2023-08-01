@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to messaage_confirm_path, notice: "Message was successfully created." }
+        format.html { redirect_to message_confirm_path, notice: @message.content }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new, status: :unprocessable_entity }
