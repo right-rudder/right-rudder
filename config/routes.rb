@@ -11,7 +11,12 @@ Rails.application.routes.draw do
 
   resources :checklist_emails
   resources :newsletter_emails
+  
+  get 'careers/web_developer', to: "careers#webdeveloper", as: :webdeveloper
   resources :careers
+  
+
+
   devise_scope :admin do
     # Redirests signing out users back to sign-in
     get "admins", to: "devise/sessions#new"
