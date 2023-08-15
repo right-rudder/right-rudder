@@ -31,6 +31,7 @@ class NewsletterEmailsController < ApplicationController
 
     respond_to do |format|
       if @newsletter_email.save
+        NewsLetterMailer.news_letter(@newsletter_email.email, @newsletter_email.name).deliver_later
         format.html { redirect_to newsletter_confirm_path, notice: @newsletter_email.name }
         format.json { render :show, status: :created, location: @newsletter_email }
       else

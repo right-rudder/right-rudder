@@ -3,7 +3,7 @@ include NewsletterEmailsHelper
 
 class NewsletterEmail < ApplicationRecord
   validates :name, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "must be a valid email address" }
 
   validates_uniqueness_of :email
 

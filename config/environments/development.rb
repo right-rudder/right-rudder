@@ -39,7 +39,7 @@ Rails.application.configure do
   config.active_storage.service = :amazon
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # rails 7 devise setup
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
@@ -72,4 +72,14 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+address: "mail.smtp2go.com",
+port: 8025, # 8025, 587 and 25 can also be used.
+domain: "rightruddermarketing.com",
+authentication: "plain",
+enable_starttls_auto: true,
+user_name: "rightrudder.marketing",
+password: ENV["SMTP2GO_PASS"]
+}
 end
