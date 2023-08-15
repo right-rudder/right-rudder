@@ -2,13 +2,18 @@ require 'google_drive'
 include NewsletterEmailsHelper
 
 class ChecklistEmail < ApplicationRecord
+  before_validation :strip_phone_number
   validates :name, presence: true
-  validates :phone, presence: true
-  validates :email, presence: true
+  validates :phone, presence: true, format: { with: /\A\d{10}\z/, message: "must be a valid 10-digit phone number" }
+  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "must be a valid email address" }
 
   validates_uniqueness_of :email
 
   after_create :update_google_sheet
+
+  def strip_phone_number
+    self.phone = phone.to_s.gsub(/[-() ]/, "")
+  end
 
   private
 
