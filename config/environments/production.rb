@@ -103,7 +103,7 @@ Rails.application.configure do
     domain: "rightruddermarketing.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "no-reply@rightrudder.marketing",
+    user_name: "rightrudder.marketing",
     password: ENV["SMTP2GO_PASS"]
   }
 end
