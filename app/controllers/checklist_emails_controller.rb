@@ -31,6 +31,7 @@ class ChecklistEmailsController < ApplicationController
 
     respond_to do |format|
       if @checklist_email.save
+        CheckListMailer.check_list(@checklist_email.email, @checklist_email.name).deliver_later
         format.html { redirect_to checklist_confirm_path, notice: @checklist_email.name }
         format.json { render :show, status: :created, location: @checklist_email }
       else
