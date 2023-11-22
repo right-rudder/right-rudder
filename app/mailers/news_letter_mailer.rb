@@ -9,6 +9,6 @@ class NewsLetterMailer < ApplicationMailer
   def news_letter(email, name)
     @name = name
 
-    mail(to: email, bcc: ["no-reply@rightrudder.marketing", "info@rightruddermarketing.com"], subject: "✈️ Welcome Aboard! Your Exclusive Pass to Exciting Updates and Insights")
+    mail(to: email, bcc: ["no-reply@rightrudder.marketing", "info@rightruddermarketing.com"], subject: "✈️ Right Rudder Newsletter")
   end
 end
