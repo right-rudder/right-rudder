@@ -37,8 +37,10 @@
 # Additional ignores
 */.DS_Store/*
 .DS_Store
+/notes/*
+
 # Ignore application configuration
 /config/application.yml
-/notes/*
+
 
 #config/googleconfig.json
