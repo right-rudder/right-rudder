@@ -40,7 +40,7 @@
             <div class="pr-3">
               <%= image_tag "phone.webp", alt: "phone icon", class: "h-5 invert pt-1" %>
             </div>
-            <%= link_to "1-314-358-2100", "tel:1-314-358-2100" %>
+            <%= link_to "1-314-358-2100", "tel:1-314-358-2100", class: "hover:underline" %>
           </div>
         </li>
         <li class="pb-5">
@@ -52,12 +52,12 @@
           </div>
         </li>
         <li class="pb-5">
-          <!--<div class="flex flex-row">
+          <div class="flex flex-row">
             <div class="pr-3">
               <%= image_tag "support.webp", alt:"support headphones icon", class: "h-5 invert pt-1" %>
             </div>
-              <%= link_to "Support Ticket", root_path, class: "hover:underline"%>
-          </div>-->
+              <%= link_to "Contact Us", contact_path, class: "hover:underline"%>
+          </div>
         </li>
       </ul>
     </div>

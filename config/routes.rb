@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   match "/500", to: "errors#internal_server_error", via: :all
 
   get 'message_confirm', to: "messages#confirm", as: :message_confirm
+  get 'contact-us', to: "messages#new", as: :contact
   resources :messages
 
   # Checklist dl page
