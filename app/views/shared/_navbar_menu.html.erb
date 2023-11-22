@@ -1,5 +1,5 @@
 <!--Flex Container-->
-<div class="flex flex-row items-center justify-between py-0 lg:py-4 bg-slate-50">
+<div class="flex flex-row items-center justify-between py-0 lg:py-4">
   <!--Logo Box-->
   <div class="hover:brightness-125 transition-all duration-300">
     <%= link_to root_path, data: { turbo: false } do %>
@@ -11,120 +11,9 @@
     ☰
   </div>
   
-  <div class="hidden mr-5 text-lg font-semibold lg:flex flex-row items-center gap-3">
-    <!--Link Box Desktop-->
-    <div class="flex justify-center">
-      <!--Services Menu-->
-      <div
-        x-data="{
-          open: false,
-          toggle() {
-            if (this.open) {
-                return this.close()
-            }
-            this.$refs.button.focus()
-            this.open = true
-          },
-          close(focusAfter) {
-            if (! this.open) return
-            this.open = false
-            focusAfter && focusAfter.focus()
-          }
-        }"
-          x-on:keydown.escape.prevent.stop="close($refs.button)"
-          x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-          x-id="['dropdown-button']"
-          class="relative"
-      >
-        <!-- Button -->
-        <button
-          x-ref="button"
-          x-on:click="toggle()"
-          :aria-expanded="open"
-          :aria-controls="$id('dropdown-button')"
-          type="button"
-          class="px-3 hover:text-blue-700 transition-all duration-300"
-        >
-          Our Services
-        </button>
-        <!-- Panel -->
-        <div
-          x-ref="panel"
-          x-show="open"
-          x-transition.origin.top.left
-          x-on:click.outside="close($refs.button)"
-          :id="$id('dropdown-button')"
-          style="display: none;"
-          class="absolute left-0 mt-2 w-72 rounded-md bg-white shadow-md"
-        >
-          <%= link_to "Website Design", website_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Rank On Google Search", seo_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Google My Business", seo_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Facebook Ads", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Google Ads", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Video Production", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "CRM", "https://app.flightschoolcrm.com", target: "blank", class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Full Service Digital Marketing", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700"%>
-        </div>
-      </div>
-    </div>
-    
-    <!--Link Box Desktop-->
-    <div class="flex justify-center">
-      <!--How it works Menu-->
-      <div
-        x-data="{
-          open: false,
-          toggle() {
-            if (this.open) {
-                return this.close()
-            }
-            this.$refs.button.focus()
-            this.open = true
-          },
-          close(focusAfter) {
-            if (! this.open) return
-            this.open = false
-            focusAfter && focusAfter.focus()
-          }
-        }"
-          x-on:keydown.escape.prevent.stop="close($refs.button)"
-          x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-          x-id="['dropdown-button']"
-          class="relative"
-      >
-        <!-- Button -->
-        <button
-          x-ref="button"
-          x-on:click="toggle()"
-          :aria-expanded="open"
-          :aria-controls="$id('dropdown-button')"
-          type="button"
-          class="px-3 hover:text-blue-700 transition-all duration-300"
-        >
-          How It Works
-        </button>
-        <!-- Panel -->
-        <div
-          x-ref="panel"
-          x-show="open"
-          x-transition.origin.top.left
-          x-on:click.outside="close($refs.button)"
-          :id="$id('dropdown-button')"
-          style="display: none;"
-          class="absolute left-0 mt-2 w-80 rounded-md bg-white shadow-md"
-        >
-          <%= link_to "Make Your Flight School Known", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Fill Your Funnel With Leads", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Enroll More Students", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Flight School Marketing System", marketing_system_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700"%>
-        </div>
-      </div>
-    </div>
-
-    <%# PUT PRICING UP WHEN WE get to 20k MRR?%>
-    <%#= link_to "Pricing", root_path, data: { turbo: false }, class: "px-3"%>
-    
+  <div class="hidden mr-5 text-lg font-semibold lg:flex lg:flex-row lg:items-center">
+    <%= link_to "Home", root_path, data: { turbo: false }, class: "px-3 hover:text-blue-700 transition-all duration-300" %>
+    <%= link_to "Our System", marketing_system_path, data: { turbo: false }, class: "px-3 hover:text-blue-700 transition-all duration-300" %>
     <!--Link Box Desktop-->
     <div class="flex justify-center">
       <!--Resources Menu-->
@@ -170,72 +59,15 @@
           style="display: none;"
           class="absolute left-0 mt-2 w-80 rounded-md bg-white shadow-md"
         >
-          <%= link_to "🎥 Webinars", webinars_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "🆓 Marketing Checklist", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "🔥 Hot Flight School Keywords", "https://rightruddermarketing.com/notams/ultimate-flying-school-online-marketing-cheat-sheet", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "🔑 Flight School Tips", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "📝 SOP Template", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "🗞️ Blog", notams_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100" %>
-          <%= link_to "🚀 Growth Accelerator Session", schedule_call_path, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700"%>
+          <%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "Flight School Tips", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "Growth Accelerator Session", schedule_call_path, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
         </div>
       </div>
     </div>
-    
-    <!--Link Box Desktop-->
-    <div class="flex justify-center">
-      <!--About Menu-->
-      <div
-        x-data="{
-          open: false,
-          toggle() {
-            if (this.open) {
-                return this.close()
-            }
-            this.$refs.button.focus()
-            this.open = true
-          },
-          close(focusAfter) {
-            if (! this.open) return
-            this.open = false
-            focusAfter && focusAfter.focus()
-          }
-        }"
-          x-on:keydown.escape.prevent.stop="close($refs.button)"
-          x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-          x-id="['dropdown-button']"
-          class="relative"
-      >
-        <!-- Button -->
-        <button
-          x-ref="button"
-          x-on:click="toggle()"
-          :aria-expanded="open"
-          :aria-controls="$id('dropdown-button')"
-          type="button"
-          class="px-3 hover:text-blue-700 transition-all duration-300"
-        >
-          About
-        </button>
-        <!-- Panel -->
-        <div
-          x-ref="panel"
-          x-show="open"
-          x-transition.origin.top.left
-          x-on:click.outside="close($refs.button)"
-          :id="$id('dropdown-button')"
-          style="display: none;"
-          class="absolute left-0 mt-2 w-60 rounded-md bg-white shadow-md"
-        >
-          <%= link_to "Our Team", about_us_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Our Core Values", about_us_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Mission and Vision", about_us_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Partners and Affiliates", careers_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Investors", about_us_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Careers", careers_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700"%>
-        </div>
-      </div>
-    </div>
-    <%= link_to "SCHEDULE CALL", schedule_call_path, class: "bg-orange-500 hover:bg-orange-600  hover:scale-105 text-white rounded-lg text-center py-2 px-3 ml-8 mr-2 transition-all duration-300" %>
+    <%= link_to "NOTAMs", notams_path, data: { turbo: false }, class: "px-3 hover:text-blue-700 transition-all duration-300" %>
+    <%= link_to "Schedule Call", schedule_call_path, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2 transition-all duration-300" %>
   </div>
 </div>
 <!--Mobile Menu-->
@@ -251,7 +83,7 @@
       <li class="py-2"><%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, class: "hover:text-blue-700 transition-all duration-300" %></li>  
     </div>
-    <li class="py-3"><%= link_to "Blog", notams_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>
+    <li class="py-3"><%= link_to "NOTAMs", notams_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>
     <li class="py-3"><%= link_to "Schedule Call", schedule_call_path, class: "hover:text-blue-700 transition-all duration-300" %></li>
   </ul>
 </div>
