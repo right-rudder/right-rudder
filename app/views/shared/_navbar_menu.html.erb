@@ -11,7 +11,7 @@
     ☰
   </div>
   
-  <div class="hidden mr-5 text-lg font-semibold lg:flex lg:flex-row lg:items-center">
+  <div class="hidden mr-5 text-lg font-semibold lg:flex flex-row items-center gap-3">
     <!--Link Box Desktop-->
     <div class="flex justify-center">
       <!--Services Menu-->
@@ -58,7 +58,8 @@
           class="absolute left-0 mt-2 w-72 rounded-md bg-white shadow-md"
         >
           <%= link_to "Website Design", website_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Rank On Google Search", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "Rank On Google Search", seo_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "Google My Business", seo_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
           <%= link_to "Facebook Ads", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
           <%= link_to "Google Ads", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
           <%= link_to "Video Production", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
@@ -165,12 +166,12 @@
           style="display: none;"
           class="absolute left-0 mt-2 w-80 rounded-md bg-white shadow-md"
         >
-          <%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "FREE Marketing Checklist", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "🎥 Webinars", webinars_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "🆓 Marketing Checklist", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
           <%= link_to "🔥 Hot Flight School Keywords", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Flight School Tips", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "SOP Template", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Blog", notams_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100" %>
+          <%= link_to "🔑 Flight School Tips", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "📝 SOP Template", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "🗞️ Blog", notams_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100" %>
           <%= link_to "🚀 Growth Accelerator Session", schedule_call_path, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700"%>
         </div>
       </div>
