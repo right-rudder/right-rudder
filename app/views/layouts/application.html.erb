@@ -72,15 +72,6 @@
     </style>
   </head>
   
-  <!-- Google Analytics // Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LJZWJYJ4M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4LJZWJYJ4M');
-  gtag('config', 'AW-11007907558');
-</script>
   <body>
     <main class="">
     <% if admin_signed_in? %>
@@ -89,5 +80,18 @@
     <% end %>
       <%= yield %>
     </main>
+
+    <%# RUN ONLY DURING PROD %>
+      <% if Rails.env.production? %>
+      <!-- Google Analytics // Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LJZWJYJ4M"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4LJZWJYJ4M');
+        gtag('config', 'AW-11007907558');
+      </script>
+    <% end %>
   </body>
 </html>
