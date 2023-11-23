@@ -109,4 +109,9 @@ class PagesController < ApplicationController
     render 'pages/services/reputation_management'
   end
 
+  def gmb2024
+    @newsletter_email = NewsletterEmail.new
+    render 'pages/services/gmb2024'
+  end
+
 end

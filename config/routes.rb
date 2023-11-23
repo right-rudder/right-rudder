@@ -79,6 +79,7 @@ Rails.application.routes.draw do
   get 'flight-school-seo', to: 'pages#search_engine_optimization', as: :seo
   get 'flight-school-advertising-ppc', to: 'pages#pay_per_click_ads', as: :ppc
   get 'pay-per-click-ads', to: 'pages#pay_per_click_ads'
+  get 'how-to-optimize-google-my-business-2024', to: 'pages#gmb2024'
   #get 'video-creation', to: 'pages#video_creation'
   #get 'email-campaigns', to: 'pages#email_campaigns'
   #get 'social-media-management', to: 'pages#social_media_management'
