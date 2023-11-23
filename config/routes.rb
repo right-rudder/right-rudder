@@ -73,17 +73,14 @@ Rails.application.routes.draw do
 
 
   # Offering Pages / Services
-  get 'website-design', to: 'pages#website_design'
-  get 'flight-school-website-design', to: 'pages#website_design', as: :website
-  get 'search-engine-optimization', to: 'pages#search_engine_optimization' 
-  get 'flight-school-seo', to: 'pages#search_engine_optimization', as: :seo
-  get 'flight-school-advertising-ppc', to: 'pages#pay_per_click_ads', as: :ppc
-  get 'pay-per-click-ads', to: 'pages#pay_per_click_ads'
+  get 'website-design', to: 'pages#website_design'                              #previous route... #need to delete from GMB account then remove in app
+  get 'flight-school-website-design', to: 'pages#website_design', as: :website  #seo optimized "flight school" route
+  get 'search-engine-optimization', to: 'pages#search_engine_optimization'      #previous route...
+  get 'flight-school-seo', to: 'pages#search_engine_optimization', as: :seo     #seo optimized "flight school" route
+  get 'pay-per-click-ads', to: 'pages#pay_per_click_ads'                        #previous route...
+  get 'flight-school-advertising-ppc', to: 'pages#pay_per_click_ads', as: :ppc  #seo optimized "flight school" route
   get 'how-to-optimize-google-my-business-2024', to: 'pages#gmb2024'
   #get 'video-creation', to: 'pages#video_creation'
-  #get 'email-campaigns', to: 'pages#email_campaigns'
-  #get 'social-media-management', to: 'pages#social_media_management'
-  #get 'reputation-management', to: 'pages#reputation_management'
 
   # Legal Footer Pages
   get 'privacy-policy', to: 'pages#privacy_policy'

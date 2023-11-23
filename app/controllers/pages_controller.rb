@@ -1,25 +1,13 @@
 class PagesController < ApplicationController
-  # "Static" pages
-
+  # embed video switcher
   def intro_video_embed
     render 'intro_video_embed'
   end
-  
+
+  # Checklist Funnel
   def checklist
     @checklist_email = ChecklistEmail.new
   end
-
-  # Do i need these since they are in root?
-  #def home
-  #end
-  #def system
-  #end
-  #def system_video
-  #end
-  #def schedule_call
-  #end
-  #def about_us
-  #end
 
   # Qualify Quiz
   # Questions
@@ -65,33 +53,18 @@ class PagesController < ApplicationController
   def website_design
     render 'pages/services/website_design'
   end
-
   def search_engine_optimization
     render 'pages/services/search_engine_optimization'
   end
-
   def pay_per_click_ads
     render 'pages/services/pay_per_click_ads'
   end
-
   def video_creation
     render 'pages/services/video_creation'
   end
-
-  def email_campaigns
-    render 'pages/services/email_campaigns'
-  end
-
-  def social_media_management
-    render 'pages/services/social_media_management'
-  end
-
-  def reputation_management
-    render 'pages/services/reputation_management'
-  end
-
   def gmb2024
     render 'pages/services/gmb2024'
   end
+
 
 end
