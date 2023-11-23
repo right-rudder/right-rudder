@@ -55,10 +55,13 @@ Rails.application.routes.draw do
 
   # Menu Pages
   get 'marketing-system', to: 'pages#system'
-  get 'schedule-call', to: 'pages#schedule_call'
   get 'about-us', to: 'pages#about_us'
-  get 'system-video', to: 'pages#system_video'
+  #get 'system-video', to: 'pages#system_video'
+
+  # Funnels
+  get 'schedule-call', to: 'pages#schedule_call'
   get 'flight-school-marketing-checklist', to: 'pages#checklist', as: "checklist"
+  get 'flight-school-hot-aviation-keyword-list', to: 'pages#keyword', as: :keyword
 
   # Qualify Quiz
   get 'qualify_quiz', to: "pages#one", as: :quiz_start
@@ -79,7 +82,7 @@ Rails.application.routes.draw do
   get 'flight-school-seo', to: 'pages#search_engine_optimization', as: :seo     #seo optimized "flight school" route
   get 'pay-per-click-ads', to: 'pages#pay_per_click_ads'                        #previous route...
   get 'flight-school-advertising-ppc', to: 'pages#pay_per_click_ads', as: :ppc  #seo optimized "flight school" route
-  get 'how-to-optimize-google-my-business-2024', to: 'pages#gmb2024'
+  get 'how-to-optimize-google-my-business-2024', to: 'pages#gmb2024', as: :gmb
   #get 'video-creation', to: 'pages#video_creation'
 
   # Legal Footer Pages

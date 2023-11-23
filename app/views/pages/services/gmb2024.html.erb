@@ -1,0 +1,101 @@
+<% title("Google My Business for Flight Schools") %>
+
+<!--Set Page font size and limit sticky-->
+<div class="text-lg">
+  <%= render "shared/navbar"%>
+
+  <header class="w-full h-screen-80 lg:h-screen-3/4 flex flex-col justify-center items-center bg-cover bg-farm-selfie text-white bg-top">
+    
+    <!--Header Text-->
+    <div class="flex flex-col justify-center w-full px-5 text-right lg:-mt-40">
+      <h1 class="font-bold text-3xl lg:text-6xl uppercase italic">How To Optimize Your <br class="hidden lg:block">Google My Business Profile</h1>
+      <h2 class="text-lg lg:text-3xl font-semibold pt-7 lg:pt-10">Optimizing your GMB profile to <br class="hidden lg:block">rank your flight school on top in 2024</h2>
+    </div>
+
+    <!--Buttons-->
+    <div class="flex flex-col lg:flex-row lg:justify-end lg:w-full pt-5 gap-5">
+      <%= link_to "SCHEDULE CALL", schedule_call_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 hover:scale-105 text-sm lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5 mr-2" %>
+      <%= link_to "CONTACT US", contact_path, class: "font-semibold border-2 border-orange-500 hover:scale-105 text-sm lg:text-2xl transition-all duration-300 text-orange-500 rounded-lg text-center py-2 px-5 mr-2" %>
+    </div>
+  </header>
+
+  <section class="flex flex-col items-center bg-gradient-to-b from-white to-blue-200">
+    
+    <div class="max-w-3xl px-5 pt-20 ">
+      <h3 class="text-5xl font-bold italic text-center pb-10">What is a <br>Google My Business Profile?</h3>
+      <p>
+        Sometimes referred to as a GMB (Google My Business) or GBP (Google Business Page), the two acronyms are synonymous.  
+        A Google My Business Profile, or GMB, is like your <b>online business card on Google</b>. It's a simple, yet powerful, tool that helps people find and connect with your business. 
+        Think of your GMB profile as a snapshot of your business. It includes essential info like your address, phone number, and hours of operation. 
+        But it's more than just contact details. It's a chance to highlight what makes your business special - whether it's your top-notch service, exclusive deals, or unique offerings.
+      </p>
+
+      <div class="w-full flex flex-col items-center pt-10">
+        <%= image_tag "gmb-example.webp", class: "lg:w-1/2 ", alt: "Example of a Google Business Page"%>
+        <p class="text-slate-600 italic text-base">
+          Example of a Google Business Page
+        </p>
+      </div>
+
+      <p class="pt-10">
+        On organic search, if you look up the name of a business, the GMB profile shows to the right of the screen.  
+        In terms of online directory listings, this is the most powerful and highest impact directory listing you can create as it has a direct performance on your <%= link_to "organic search rankings", seo_path, class: "text-blue-800 hover:underline"%> and also allows you to start being put and found on Google Maps.
+      </p>
+
+
+      <h4 class="py-10 text-2xl font-semibold">
+        Strategies we employ to optimize GBP
+      </h4>
+      <h4 class="italic text-xl pb-5">Consistent NAP</h4>
+      <p class="pb-5">
+        NAP refers to <em>name, address, and phone number.</em>  We start by ensuring that your business details are accurate as far as your NAP goes along with your hours of operation.  
+        We use the GMB directory listing as a foundation or base and use it as a template for other directory listings.  When we start looking at and claiming other online directory listings, we base it off the information found on your GMB profile so we need to make sure this is correct.
+      </p>
+      <h4 class="italic text-xl pb-5">Optimized Business description</h4>
+      <p class="pb-5">
+        The next thing to consider is what <b>keywords</b> you want to rank for.  When prospective student pilots are looking for flight schools online, they are going to be searching for and inputting specific keywords into the search engines.
+        The most commonly search keyword is "flight school" or "flight school near me".  Other notable keyword searches include, "how to become a pilot", "pilot school", "discovery flight", and "pilot training".  Check out our <%= link_to "hot keyword list", keyword_path, class: "text-blue-800 hover:underline"%>
+      </p>
+
+      <p class="pb-5">
+        Most marketing agencies and web designers aren't technical.  So they rely on editors to generate the code.  
+        This may include WordPress, Wix, Squarespace, and GoDaddy.  These software packages are like a Boeing manufacturing plant. 
+        They're big, take up alot of space, and are designed to build one type of plane.
+        Building a website in this way means that the entire factory or software engine has to be loaded first, then that software has to build the finished product.  
+        Metaphors aside, this bloatware is the biggest reason why websites built with a no-code editor are slow.
+      </p>
+      <p>
+        What Right Rudder Marketing does differently is that we build the website from scratch and code line by line.  We only program using the absolute minimum requirements for the code to run which reduces file size and increases page speed.
+      </p>
+      <h5 class="py-10 text-2xl font-semibold">
+        Right Rudder Marketing Websites load fast and are efficient.  They are optimized for mobile and all screen sizes.
+      </h5>
+      <h4 class="italic text-xl pb-5">Content</h4>
+      <p class="pb-5">
+        When it comes to optimizing your flight school's website for search engines like Google, content creation plays a pivotal role. By developing relevant and informative content that revolves around flight training, you not only provide valuable insights to your audience but also assist search engines in understanding the nature and purpose of your website. This, in turn, enhances your website's chances of ranking higher in search engine results.
+      </p>
+      <p class="pb-5">
+        By incorporating flight school related keywords and phrases naturally into your website's content, you effectively signal to search engines that your flight school's website is a reliable and authoritative source in the flight training industry. By consistently creating content that aligns with your target audience's interests and search intent, you can establish your flight school as a go-to resource, thereby increasing your website's visibility and credibility.
+      </p>
+      <p class="">
+        In addition to optimizing your website's static pages, maintaining an active blog is a powerful strategy to boost your on page SEO efforts. By regularly publishing informative and engaging blog posts on flight training topics, you not only keep your website fresh and up to date but also provide search engines with new content to index. Each blog post becomes an opportunity to incorporate relevant keywords, answer common questions, and provide valuable information to potential and current student pilots.
+      </p>
+      <h5 class="py-10 text-2xl font-semibold">
+        Incorporate relevant keywords and phrases naturally into your website to become the authoritative source in the flight training industry.
+      </h5>
+      <h4 class="italic text-xl pb-5">Technical SEO</h4>
+      <p class="pb-5">
+        Technical SEO forms the foundation of a well optimized website, ensuring that search engines can easily crawl, understand, and index your flight school's content. Right Rudder Marketing specializes in implementing robust technical SEO strategies that enhance your website's visibility and improve its overall performance.
+      </p>
+      <p class="pb-5">
+        This can include title and heading tags which are HTML elements programmed on your website.  Title tags are commonly found as the clickable headlines in search engine results.  By incorporating relevant keywords into your title tags, we can optimize them for search intent, improving the chances of attracting organic traffic. 
+        Similarly, heading tags (H1, H2, etc.) help structure your content, making it more readable for both users and search engines.
+      </p>
+      <p class="pb-5">
+        Another essential element of technical SEO is the implementation of XML sitemaps and a robots.txt file.  These files act as a blueprint of your website, listing all the important pages, URLs, and their hierarchical relationships. By submitting an XML sitemap to search engines, we facilitate their understanding of your website's structure and ensure that no valuable pages are missed during the crawling and indexing process. This enables search engines to efficiently discover and rank your flight school's web pages, resulting in improved visibility and organic traffic.
+      </p>
+      <h5 class="pb-10 text-2xl font-semibold">
+        Correctly programming and optimizing your website helps search engines understand your flight school business better and therefore ranks your website higher.
+      </h5>
+    </div>
+  </section>
