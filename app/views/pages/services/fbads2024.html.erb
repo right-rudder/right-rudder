@@ -1,0 +1,26 @@
+<% title("Google My Business for Flight Schools") %>
+
+<!--Set Page font size and limit sticky-->
+<div class="text-lg">
+  <%= render "shared/navbar"%>
+
+  <header class="w-full h-screen-80 flex flex-col justify-center items-center bg-cover bg-fly-mesa text-white bg-center">
+    
+    <!--Header Text-->
+    <div class="flex flex-col justify-center w-full px-5 text-right lg:-mt-40">
+      <h1 class="font-bold text-3xl lg:text-6xl uppercase italic">Running Effective <br class="hidden lg:block">Facebook Ads</h1>
+      <h2 class="text-lg lg:text-3xl font-semibold pt-7 lg:pt-10">How to use Facebook Ads to <br class="hidden lg:block">increase student pilot enrollment</h2>
+    </div>
+
+    <!--Buttons-->
+    <div class="flex flex-col lg:flex-row lg:justify-end lg:w-full pt-5 gap-5">
+      <%= link_to "SCHEDULE CALL", schedule_call_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 hover:scale-105 text-sm lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5 mr-2" %>
+      <%= link_to "CONTACT US", contact_path, class: "font-semibold border-2 border-orange-500 hover:scale-105 text-sm lg:text-2xl transition-all duration-300 text-orange-500 rounded-lg text-center py-2 px-5 mr-2" %>
+    </div>
+  </header>
+
+
+<!--Sticky DIV-->
+</div>
+<%= render "shared/cta1"%>
+<%= render "shared/footer"%>

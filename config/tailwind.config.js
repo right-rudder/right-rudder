@@ -46,6 +46,8 @@ module.exports = {
         'featured-notam' : "url('computer.webp')",
         'videothumb' : "url('youtubethumbrrmintro.webp')",
         'farm-selfie' : "url('flying-over-farm-area-tim-jedrek.webp')",
+        'fly-mesa' : "url('tim-jedrek-flying-at-simplifly.webp')",
+        
       },
       height: theme => ({
         'screen-1/2': '50vh',
