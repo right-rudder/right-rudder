@@ -65,6 +65,9 @@ class PagesController < ApplicationController
   def gmb2024
     render 'pages/services/gmb2024'
   end
+  def fbads2024
+    render 'pages/services/fbads2024'
+  end
 
 
 end

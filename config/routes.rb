@@ -83,6 +83,7 @@ Rails.application.routes.draw do
   get 'pay-per-click-ads', to: 'pages#pay_per_click_ads'                        #previous route...
   get 'flight-school-advertising-ppc', to: 'pages#pay_per_click_ads', as: :ppc  #seo optimized "flight school" route
   get 'how-to-optimize-google-my-business-2024', to: 'pages#gmb2024', as: :gmb
+  get 'how-to-run-effective-facebook-ads-in-2024', to: 'pages#fbads2024', as: :fbads
   #get 'video-creation', to: 'pages#video_creation'
 
   # Legal Footer Pages
