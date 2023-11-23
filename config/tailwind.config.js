@@ -45,6 +45,7 @@ module.exports = {
         'headsys2' : "url('dave.webp')",
         'featured-notam' : "url('computer.webp')",
         'videothumb' : "url('youtubethumbrrmintro.webp')",
+        'farm-selfie' : "url('flying-over-farm-area-tim-jedrek.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
