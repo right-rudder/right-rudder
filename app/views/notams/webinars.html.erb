@@ -46,8 +46,8 @@
                 <div class="pb-5 font-semibold"><%=I18n.localize(upcoming_webinar.notam_date, :format => '%^a %^b %-d %Y') %></div>
                 <div class="">
                   <%
-                    truncated_text = upcoming_webinar.notam_body.truncate(250)
-                    if truncated_text != upcoming_webinar.notam_body
+                    truncated_text = upcoming_webinar.notam_meta_description.truncate(250)
+                    if truncated_text != upcoming_webinar.notam_meta_description
                       truncated_text += link_to "Click to read more", upcoming_webinar, class: "text-blue-700 hover:underline"
                     end
                   %>
