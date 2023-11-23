@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        #MessageMailer.message_email(@message).deliver_later
+        MessageMailer.message_email(@message).deliver_later
         format.html { redirect_to message_confirm_path, notice: @message.content }
         format.json { render :show, status: :created, location: @message }
       else
