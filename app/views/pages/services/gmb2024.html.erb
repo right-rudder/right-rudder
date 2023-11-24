@@ -208,66 +208,8 @@
     </div>
   </section>
 
-  <section class="flex lg:flex-row flex-col-reverse bg-gradient-to-b from-blue-900 to-blue-950 text-slate-50">
-    <div class="flex flex-col items-center justify-center lg:w-1/2 py-10 lg:py-0">
-      <%= image_tag "simplifly_500.webp", alt: "SimpliFly Logo", class: "w-1/2 py-10"%>
-    </div>
-    <div class="flex flex-col items-center justify-center lg:w-1/2 p-5">
-      <h4 class="text-5xl font-semibold italic font-serif pt-10 lg:pt-0">CASE STUDY</h4>
-      <p class="py-10 lg:mx-20">
-        Introducing SimpliFly.  A flight school in the highly competitive area of Mesa, AZ.
-      </p>
-      <h5 class="lg:mx-20 font-semibold text-xl italic">
-        We helped SimpliFly 10X the amount of leads coming to their school so they can train more pilots and expand their fleet.
-      </h5>
-    </div>
-  </section>
-  <section class="flex flex-col items-center bg-gradient-to-b from-white to-blue-200">
-    <div class="max-w-3xl px-5 pt-20 ">
-      <h3 class="text-5xl font-bold italic text-center pb-10">The Challenge</h3>
-      <p>
-        When Blake from SimpliFly gave Right Rudder Marketing a call, they were looking to update their website and get more leads coming into their school to increase their revenue.  They had a WordPress website already built out, social media profiles, and a GMB listing, but they weren't seeing much progress in their online rankings.
-        With multiple flight schools at their airport competing for prospective students' attention, Blake knew he needed to do something about his digital marketing.  They were ranking way below the first page of search and on the Google Map listings they were #14, well below the view so 
-        potential customers had difficulty even knowing they existed.
-      </p>
-      <h3 class="text-5xl font-bold italic text-center py-10">What We Did</h3>
-      <p>
-        The first thing we did was research the local area and their competition.  With so many flight schools in their area, we had to understand what keywords were being searched for and then come up with a strategy to really accelerate their growth.
-        We created an <%= link_to "awesome website", website_path, class: "text-blue-800 hover:underline"%> for them which really highlighted their main program: accelerated pilot training.
-        We used target keywords in their website and GMB profile to really take things up a notch and we've seen great results.
-      </p>
-      <h3 class="text-5xl font-bold italic text-center py-10">The Results</h3>
-        They are now getting flooded with inquiries and phone calls asking about their flight school.  
-        They're ranking on the first page of Google Search and Google Maps.
-
-      <div class="w-full flex flex-col items-center py-10">
-        <%= image_tag "simplifly-heat-map.webp", class: "", alt: "Heatmap showing SimpliFly's ranking around their airport"%>
-        <p class="text-slate-600 italic text-base">
-          Heatmap showing SimpliFly's ranking around their airport
-        </p>
-      </div>
-      <p>
-        Our focus now is looking at where they are ranking as #4.  This is important because Google's first page listings only contain three businesses.  
-        When we get a flight school to rank as #3 or higher, their business exponentially increases.
-      </p>
-
-      <!--Testimonial-->
-      <div class="flex flex-col lg:flex-row py-10">
-        <div class="lg:w-1/2 flex flex-col items-center">
-          <%= image_tag "blake-simplifly.webp", class: "rounded-full w-1/2 mb-10 lg:mb-0", alt: "Blake"%>
-        </div>
-        <div class="lg:w-1/2">
-          <p class="italic text-slate-800">
-            "Right rudder marketing has been a huge help and blessing in our business. They made an amazing website for us.  They also understand aviation and pilots which is a huge help. If you own a flight school then you definitely need to use Right Rudder Marketing."
-            <br><br>
-            -Blake, Owner at SimpliFly
-          </p>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
+  
+  <%= render "shared/blake_case_study"%>
   <%= render "shared/cta2"%>
 
 <!--Sticky DIV-->
