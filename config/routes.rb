@@ -84,6 +84,7 @@ Rails.application.routes.draw do
   get 'flight-school-advertising-ppc', to: 'pages#pay_per_click_ads', as: :ppc  #seo optimized "flight school" route
   get 'how-to-optimize-google-my-business-2024', to: 'pages#gmb2024', as: :gmb
   get 'how-to-run-effective-facebook-ads-in-2024', to: 'pages#fbads2024', as: :fbads
+  get 'how-to-enroll-more-students-with-google-ads-in-2024', to: 'pages#googleads2024', as: :googleads
   #get 'video-creation', to: 'pages#video_creation'
 
   # Legal Footer Pages

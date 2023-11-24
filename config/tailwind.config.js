@@ -45,8 +45,10 @@ module.exports = {
         'headsys2' : "url('dave.webp')",
         'featured-notam' : "url('computer.webp')",
         'videothumb' : "url('youtubethumbrrmintro.webp')",
-        'farm-selfie' : "url('flying-over-farm-area-tim-jedrek.webp')",
+        'farm-selfie' : "url('tim-flying-smiling.webp')",
         'fly-mesa' : "url('tim-jedrek-flying-at-simplifly.webp')",
+        'tim-cessna' : "url('tim-jedrek-in-front-of-cessna.webp')",
+        
         
       },
       height: theme => ({

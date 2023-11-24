@@ -68,6 +68,9 @@ class PagesController < ApplicationController
   def fbads2024
     render 'pages/services/fbads2024'
   end
+  def googleads2024
+    render 'pages/services/googleads2024'
+  end
 
 
 end
