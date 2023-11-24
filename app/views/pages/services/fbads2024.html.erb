@@ -248,35 +248,8 @@
       <%= link_to "SCHEDULE CALL", schedule_call_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 hover:scale-105 text-sm lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5 mr-2" %>
     </div>
   </section>
-  <section class="bg-slate-100 flex flex-col items-center py-20">
-    <h3 class="font-semibold text-3xl text-center">Join the leading flight schools that have <br class="hidden lg:block">turned their online presence into predictable revenue</h3>
-    <p class="py-10">
-      We make your flight school look as good as the planes you fly and help you make more money with ease.
-    </p>
-    <div class="flex flex-col lg:flex-row gap-5 lg:px-10 px-0">
-      <div class="lg:w-1/3 flex flex-col items-center">
-        <%= image_tag "pilot-call.webp", class: "w-full lg:rounded-2xl", alt: "Flight School Owner Calling Right Rudder Marketing"%>
-        <h4 class="font-semibold text-2xl py-5 px-10">Step 1. Start a conversation with Right Rudder</h4>
-        <p class="px-10">
-          After understanding your goals and understanding your current situation, we'll develop a marketing plan to help you reach your goals.
-        </p>
-      </div>
-      <div class="lg:w-1/3 flex flex-col items-center">
-        <%= image_tag "pilot-call.webp", class: "w-full lg:rounded-2xl", alt: "Flight School Owner Calling Right Rudder Marketing"%>
-        <h4 class="font-semibold text-2xl py-5 px-10">Step 2. Launch your marketing plan</h4>
-        <p class="px-10">
-          Get your marketing plan launched without the stress, hassle or guesswork. Right Rudder Marketing has you covered.
-        </p>
-      </div>
-      <div class="lg:w-1/3 flex flex-col items-center">
-        <%= image_tag "pilot-call.webp", class: "w-full lg:rounded-2xl", alt: "Flight School Owner Calling Right Rudder Marketing"%>
-        <h4 class="font-semibold text-2xl py-5 px-10">Step 3. Get results</h4><br>
-        <p class="px-10">
-          Grow and scale your flight school with a predictable plan and have a full scale digital marketing agency on your team to keep you on track.
-        </p>
-      </div>
-    </div>
-  </section>
+  
+  <%= render "shared/cta2"%>
 
 <!--Sticky DIV-->
 </div>
