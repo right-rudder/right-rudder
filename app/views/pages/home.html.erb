@@ -76,93 +76,98 @@
 
   <!--Section for the four forces of flight schools-->
   <section class="bg-gradient-to-t from-blue-100 to-blue-300 py-10 text-slate-800 overflow-hidden">
-      <p class="text-center">
-        We all know about the four forces of flight, but have you heard of the...
-      </p>
-      <!--Mobile-->
-      <h2 class="lg:hidden text-3xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
-        Four Forces of<br> Flight Schools
-      </h2>
-      <!--Desktop-->
-      <h2 class="hidden lg:block text-4xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
-        Four Forces of Flight Schools
-      </h2>
+    <p class="text-center">
+      We all know about the four forces of flight, but have you heard of the...
+    </p>
+    <!--Mobile-->
+    <h2 class="lg:hidden text-3xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
+      Four Forces of<br> Flight Schools
+    </h2>
+    <!--Desktop-->
+    <h2 class="hidden lg:block text-4xl font-bold text-center pt-5 pb-20 lg:pb-20 text-slate-900">
+      Four Forces of Flight Schools
+    </h2>
 
-      <div class="grid grid-cols-3 gap-4 justify-items-center font-semibold text-sm lg:text-3xl ">
-        <div class="col-span-3">
-          <div class="flex flex-col items-center">
-            <div class="">
-              Student Success
-            </div>
-            <div class="text-xl lg:text-6xl text-green-500 lg:pb-5">
-            ▲
-            </div>
+    <div class="grid grid-cols-3 gap-4 justify-items-center font-semibold text-sm lg:text-3xl ">
+      <div class="col-span-3">
+        <div class="flex flex-col items-center">
+          <div class="">
+            Student Success
+          </div>
+          <div class="text-xl lg:text-6xl text-green-500 lg:pb-5">
+          ▲
           </div>
         </div>
+      </div>
 
-        <div class="justify-self-end flex flex-col-reverse lg:flex-row items-center">
-          <div class="text-center">
-            Student Attrition
-          </div>
+      <div class="justify-self-end flex flex-col-reverse lg:flex-row items-center">
+        <div class="text-center">
+          Student Attrition
+        </div>
+        <div class="text-xl lg:text-6xl text-red-500">
+          ◀
+        </div>
+        
+      </div>
+
+      <div class="animate-[wiggle_12s_ease-in-out_infinite] lg:animate-[wiggle2_12s_ease-in-out_infinite]">
+        <%= image_tag "cessna172.webp", class: "", alt: "drawing of a cessna 172" %>
+      </div>
+
+      <div class="justify-self-start flex flex-col lg:flex-row items-center justify-end">
+        <div class="text-xl lg:text-6xl text-green-500">
+          ▶
+        </div>
+        <div class="text-center">
+        New Students
+        </div>
+        
+      </div>
+    
+      <div class="col-span-3">
+        <div class="flex flex-col items-center">
           <div class="text-xl lg:text-6xl text-red-500">
-            ◀
+          ▼
           </div>
-          
-        </div>
-
-        <div class="animate-[wiggle_12s_ease-in-out_infinite] lg:animate-[wiggle2_12s_ease-in-out_infinite]">
-          <%= image_tag "cessna172.webp", class: "", alt: "drawing of a cessna 172" %>
-        </div>
-
-        <div class="justify-self-start flex flex-col lg:flex-row items-center justify-end">
-          <div class="text-xl lg:text-6xl text-green-500">
-            ▶
-          </div>
-          <div class="text-center">
-          New Students
-          </div>
-          
-        </div>
-      
-        <div class="col-span-3">
-          <div class="flex flex-col items-center">
-            <div class="text-xl lg:text-6xl text-red-500">
-            ▼
-            </div>
-            <div class="">
-              Inadequate Service
-            </div>
+          <div class="">
+            Inadequate Service
           </div>
         </div>
       </div>
+    </div>
+    
+    <div class="flex flex-col items-center pt-20 w-full">
+      <p class="w-4/5 lg:w-3/5">
+        According to 
+        <%= link_to "https://www.boldmethod.com/blog/lists/2016/12/11-reasons-why-student-pilots-drop-out-of-training/", class: "text-blue-500 hover:underline", target: :blank do%>
+        AOPA and General Aviation News<%end%>, 
+        80% of student pilots drop out of training each year before receiving their pilot certificate.  While we might already know this and not think much about this statistic, this high dropout rate is directly correlated to your profits and revenue.  
+      </p>
+
+      <p class="w-4/5 lg:w-3/5 pt-10">
+        When student pilots quit, they stop showing up to your school and stop paying for rentals, ground school, and CFI instruction.  It also causes the family and friends of the student pilot to solidify and confirm their preconceived notions that pilot training is not worth the investment. This reduces the size of the pool of new students which hurts your flight school!  A profitable flight school always has a steady flow of new students and a low student attrition rate.
+      </p>
+
+      <p class="w-4/5 lg:w-3/5 pt-10">
+        Pilot training is hard and intense so it is understandable that there are going to be students who don't make the cut.  We need to make sure the future generation of pilots fly safely and follow FAA regulations.  However, if your school is failing to get a steady flow of new students to join your school to replace the ones that quit, then your flight school will never be able to scale up.    
+      </p>
+
+      <p class="w-4/5 lg:w-3/5 pt-10">
+        The number of student pilots has more than <%= link_to "https://www.faa.gov/data_research/aviation_data_statistics/civil_airmen_statistics", class: "text-blue-500 hover:underline", target: :blank do %>doubled<%end%> in the past 12 years. If your flight school has not seen an increase in student pilots, then you are missing out and leaving money on the table.  Upgrade your marketing engine to get more thrust to lift your flight school to a higher altitude.
+      </p>
       
-      <div class="flex flex-col items-center pt-20 w-full">
-        <p class="w-4/5 lg:w-3/5">
-          According to 
-          <%= link_to "https://www.boldmethod.com/blog/lists/2016/12/11-reasons-why-student-pilots-drop-out-of-training/", class: "text-blue-500 hover:underline", target: :blank do%>
-          AOPA and General Aviation News<%end%>, 
-          80% of student pilots drop out of training each year before receiving their pilot certificate.  While we might already know this and not think much about this statistic, this high dropout rate is directly correlated to your profits and revenue.  
-        </p>
-
-        <p class="w-4/5 lg:w-3/5 pt-10">
-          When student pilots quit, they stop showing up to your school and stop paying for rentals, ground school, and CFI instruction.  It also causes the family and friends of the student pilot to solidify and confirm their preconceived notions that pilot training is not worth the investment. This reduces the size of the pool of new students which hurts your flight school!  A profitable flight school always has a steady flow of new students and a low student attrition rate.
-        </p>
-
-        <p class="w-4/5 lg:w-3/5 pt-10">
-          Pilot training is hard and intense so it is understandable that there are going to be students who don't make the cut.  We need to make sure the future generation of pilots fly safely and follow FAA regulations.  However, if your school is failing to get a steady flow of new students to join your school to replace the ones that quit, then your flight school will never be able to scale up.    
-        </p>
-
-        <p class="w-4/5 lg:w-3/5 pt-10">
-          The number of student pilots has more than <%= link_to "https://www.faa.gov/data_research/aviation_data_statistics/civil_airmen_statistics", class: "text-blue-500 hover:underline", target: :blank do %>doubled<%end%> in the past 12 years. If your flight school has not seen an increase in student pilots, then you are missing out and leaving money on the table.  Upgrade your marketing engine to get more thrust to lift your flight school to a higher altitude.
-        </p>
-        <div class="flex flex-col items-center py-20">
-          <h3 class="text-2xl font-semibold text-blue-900 lg:w-2/5 w-4/5 text-center">Let's take a look at the strategies we implement to help get you more students than you've ever had before</h3>
-        </div>
-      </div>
+    </div>
   </section>
 
+  <%= render "shared/kim_case_study"%>
+  <%= render "shared/blake_case_study"%>
+  
 
-  <section class="bg-slate-100 py-10">
+
+  <section class="bg-gradient-to-br from-white to-blue-100 py-10">
+    <div class="flex flex-col items-center py-20">
+      <h3 class="text-2xl font-semibold text-blue-900 lg:w-2/5 w-4/5 text-center">Let's take a look at the strategies <br class="hidden lg:block">we implement to help you enroll <br class=""><span class="font-bold uppercase text-blue-700">more students</span> than you've ever had before</h3>
+    </div>
     <!--Number font, google letters-->
     <style>
       .g-blue{ color:#4285F4; }
@@ -176,7 +181,7 @@
 
         <div class="lg:w-2/5 mx-5">
           <h3 class="text-blue-900 text-4xl font-semibold py-5" style="">
-            1. Create a SEO optimized modern <%=link_to "website", website_path, class: "text-orange-500 underline"%> to funnel new students
+            1. Create a SEO optimized modern website to funnel new students
           </h3>
           
         </div>
