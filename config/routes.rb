@@ -53,11 +53,6 @@ Rails.application.routes.draw do
 
   ### Static pages routes
 
-  # Menu Pages
-  get 'marketing-system', to: 'pages#system'
-  get 'about-us', to: 'pages#about_us'
-  #get 'system-video', to: 'pages#system_video'
-
   # Funnels
   get 'schedule-call', to: 'pages#schedule_call'
   get 'flight-school-marketing-checklist', to: 'pages#checklist', as: "checklist"
@@ -74,6 +69,12 @@ Rails.application.routes.draw do
   get 'qualify_quiz/unqualified_capacity', to: "pages#unqualified_capacity", as: :quiz_unqualified_capacity
   get 'qualify_quiz/unqualified_service', to: "pages#unqualified_service", as: :quiz_unqualified_service
 
+  # Menu Pages
+  get 'marketing-system', to: 'pages#system'
+  #get 'system-video', to: 'pages#system_video'
+  get 'about-us', to: 'pages#about_us'  #Leave link due to Google previously knowing about this page
+  get 'our-team', to: 'pages#about_us', as: :our_team
+  get 'partners-affiliates-sponsors', to: 'pages#partners', as: :partners
 
   # Offering Pages / Services
   get 'website-design', to: 'pages#website_design'                              #previous route... #need to delete from GMB account then remove in app
