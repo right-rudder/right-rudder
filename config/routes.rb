@@ -85,7 +85,7 @@ Rails.application.routes.draw do
   get 'how-to-optimize-google-my-business-2024', to: 'pages#gmb2024', as: :gmb
   get 'how-to-run-effective-facebook-ads-in-2024', to: 'pages#fbads2024', as: :fbads
   get 'how-to-enroll-more-students-with-google-ads-in-2024', to: 'pages#googleads2024', as: :googleads
-  #get 'video-creation', to: 'pages#video_creation'
+  get 'video-creation', to: 'pages#video_creation', as: :video_production
 
   # Legal Footer Pages
   get 'privacy-policy', to: 'pages#privacy_policy'
