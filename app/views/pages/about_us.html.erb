@@ -8,34 +8,93 @@
 <!--Set Page font size and limit sticky-->
 <div class="text-lg">
   <%= render "shared/navbar" %>
-  
-  <section class="bg-gradient-to-t from-blue-100 to-blue-300 pt-10 pb-5 lg:pb-10 text-slate-800">
-    <div class="flex flex-col items-center">
-      <h1 class="font-bold text-5xl mt-10 mb-20">Our Team</h1>
-
-      <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-52">
-        <!--Tim-->
-        <div class="lg:w-1/4 flex flex-col items-center">
-          <%= image_tag "tim_profile.webp", alt: "profile picture of Tim Jedrek", class: "rounded-full w-3/5"%>
-          <div class="font-semibold text-2xl">Tim Jedrek</div>
-          <div class=" text-xl italic pb-5">Founder</div>
-          <p class="text-base text-center mx-10 pb-10 lg:pb-0">
-            Tim started programming as a teenager and then continued on to become a quality manager after graduating university.  He got his private pilot certificate in 2021 and enjoys flying for fun.  He started Right Rudder Marketing in 2022 to bring his two passions, programming and aviation, together.
-          </p>
-
-        </div>
-        <!--Tonie-->
-        <div class="lg:w-1/4 flex flex-col items-center">
-          <%= image_tag "tonie_profile.webp", alt: "profile picture of Tonie Santos", class: "rounded-full w-3/5"%>
-          <div class="font-semibold text-2xl">Tonie Santos</div>
-          <div class=" text-xl italic pb-5">Operations Director</div>
-          <div class="text-base text-center mx-10 pb-10 lg:pb-0">
-            Tonie graduated from the Philippine Military Academy and became a software engineer.  He has been programming for over three decades working with in various industries like steel manufacturing, finance, pharmacy, and telecom.  His son is a pilot and his daughter is an aeronautical engineer.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="py-6">
+		<div class="container p-4 mx-auto space-y-16 sm:p-10">
+			<div class="space-y-4">
+				<h2 class="text-2xl font-bold leadi sm:text-5xl">Meet our team</h2>
+				<p class="max-w-2xl ">
+          Right Rudder Marketing is a pilot owned digital marketing agency focused on helping flight schools and aviation businesses accomplish their goals: Grow, scale, and make a significant impact to the pilot training industry.  Flight schools that partner with Right Rudder Marketing become the #1 flight schools in their community and dominate the local area.  Right Rudder Marketing has <%= link_to "the secret sauce", marketing_system_path, class: "hover:underline"%>.
+        </p>
+			</div>
+			<div class="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
+				<div class="flex space-x-6">
+          <%= image_tag "tim_profile.webp", alt: "profile picture of Tim Jedrek", class: "object-cover w-auto h-56 mb-4 bg-center rounded-sm"%>
+					<div class="flex flex-col">
+						<h3 class="text-xl font-semibold">Tim Jedrek</h3>
+						<p class="text-sm ">Founder</p>
+						<div class="flex items-center mt-2 space-x-2">
+              <!--FB-->
+              <a rel="noopener noreferrer" href="https://www.facebook.com/Tim.is.amazing/" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+								<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="w-4 h-4" ><path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg>
+							</a>
+              <!--Insta-->
+              <a rel="noopener noreferrer" href="https://www.instagram.com/rightruddermarketing/" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+                <svg version="1.1" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" xml:space="preserve">
+                  <path id="XMLID_505_" d="M38.52,0.012h222.978C282.682,0.012,300,17.336,300,38.52v222.978c0,21.178-17.318,38.49-38.502,38.49H38.52c-21.184,0-38.52-17.313-38.52-38.49V38.52C0,17.336,17.336,0.012,38.52,0.012z M218.546,33.329c-7.438,0-13.505,6.091-13.505,13.525v32.314c0,7.437,6.067,13.514,13.505,13.514h33.903c7.426,0,13.506-6.077,13.506-13.514V46.854c0-7.434-6.08-13.525-13.506-13.525H218.546z M266.084,126.868h-26.396c2.503,8.175,3.86,16.796,3.86,25.759c0,49.882-41.766,90.34-93.266,90.34c-51.487,0-93.254-40.458-93.254-90.34c0-8.963,1.37-17.584,3.861-25.759H33.35v126.732c0,6.563,5.359,11.902,11.916,11.902h208.907c6.563,0,11.911-5.339,11.911-11.902V126.868z M150.283,90.978c-33.26,0-60.24,26.128-60.24,58.388c0,32.227,26.98,58.375,60.24,58.375c33.278,0,60.259-26.148,60.259-58.375C210.542,117.105,183.561,90.978,150.283,90.978z"/>
+                </svg>
+              </a>
+              <!--Linkedin-->
+              <a rel="noopener noreferrer" href="https://www.linkedin.com/in/timjedrek/" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-4 h-4">
+									<path d="M8.268 28h-5.805v-18.694h5.805zM5.362 6.756c-1.856 0-3.362-1.538-3.362-3.394s1.505-3.362 3.362-3.362 3.362 1.505 3.362 3.362c0 1.856-1.506 3.394-3.362 3.394zM29.994 28h-5.792v-9.1c0-2.169-0.044-4.95-3.018-4.95-3.018 0-3.481 2.356-3.481 4.794v9.256h-5.799v-18.694h5.567v2.55h0.081c0.775-1.469 2.668-3.019 5.492-3.019 5.875 0 6.955 3.869 6.955 8.894v10.269z"></path>
+								</svg>
+							</a>
+              <!--Twitter-->
+              <a rel="noopener noreferrer" href="https://twitter.com/rightruddermktg" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="w-4 h-4">
+									<path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
+								</svg>
+							</a>
+              <!--Git Hub-->
+							<a rel="noopener noreferrer" href="https://github.com/timjedrek" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-4 h-4">
+									<path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"></path>
+								</svg>
+							</a>
+              <!--Website-->
+              <a rel="noopener noreferrer" href="https://timjedrek.com" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.83824 18.4467C10.0103 18.7692 10.1826 19.0598 10.3473 19.3173C8.59745 18.9238 7.07906 17.9187 6.02838 16.5383C6.72181 16.1478 7.60995 15.743 8.67766 15.4468C8.98112 16.637 9.40924 17.6423 9.83824 18.4467ZM11.1618 17.7408C10.7891 17.0421 10.4156 16.1695 10.1465 15.1356C10.7258 15.0496 11.3442 15 12.0001 15C12.6559 15 13.2743 15.0496 13.8535 15.1355C13.5844 16.1695 13.2109 17.0421 12.8382 17.7408C12.5394 18.3011 12.2417 18.7484 12 19.0757C11.7583 18.7484 11.4606 18.3011 11.1618 17.7408ZM9.75 12C9.75 12.5841 9.7893 13.1385 9.8586 13.6619C10.5269 13.5594 11.2414 13.5 12.0001 13.5C12.7587 13.5 13.4732 13.5593 14.1414 13.6619C14.2107 13.1384 14.25 12.5841 14.25 12C14.25 11.4159 14.2107 10.8616 14.1414 10.3381C13.4732 10.4406 12.7587 10.5 12.0001 10.5C11.2414 10.5 10.5269 10.4406 9.8586 10.3381C9.7893 10.8615 9.75 11.4159 9.75 12ZM8.38688 10.0288C8.29977 10.6478 8.25 11.3054 8.25 12C8.25 12.6946 8.29977 13.3522 8.38688 13.9712C7.11338 14.3131 6.05882 14.7952 5.24324 15.2591C4.76698 14.2736 4.5 13.168 4.5 12C4.5 10.832 4.76698 9.72644 5.24323 8.74088C6.05872 9.20472 7.1133 9.68686 8.38688 10.0288ZM10.1465 8.86445C10.7258 8.95042 11.3442 9 12.0001 9C12.6559 9 13.2743 8.95043 13.8535 8.86447C13.5844 7.83055 13.2109 6.95793 12.8382 6.2592C12.5394 5.69894 12.2417 5.25156 12 4.92432C11.7583 5.25156 11.4606 5.69894 11.1618 6.25918C10.7891 6.95791 10.4156 7.83053 10.1465 8.86445ZM15.6131 10.0289C15.7002 10.6479 15.75 11.3055 15.75 12C15.75 12.6946 15.7002 13.3521 15.6131 13.9711C16.8866 14.3131 17.9412 14.7952 18.7568 15.2591C19.233 14.2735 19.5 13.1679 19.5 12C19.5 10.8321 19.233 9.72647 18.7568 8.74093C17.9413 9.20477 16.8867 9.6869 15.6131 10.0289ZM17.9716 7.46178C17.2781 7.85231 16.39 8.25705 15.3224 8.55328C15.0189 7.36304 14.5908 6.35769 14.1618 5.55332C13.9897 5.23077 13.8174 4.94025 13.6527 4.6827C15.4026 5.07623 16.921 6.08136 17.9716 7.46178ZM8.67765 8.55325C7.61001 8.25701 6.7219 7.85227 6.02839 7.46173C7.07906 6.08134 8.59745 5.07623 10.3472 4.6827C10.1826 4.94025 10.0103 5.23076 9.83823 5.5533C9.40924 6.35767 8.98112 7.36301 8.67765 8.55325ZM15.3224 15.4467C15.0189 16.637 14.5908 17.6423 14.1618 18.4467C13.9897 18.7692 13.8174 19.0598 13.6527 19.3173C15.4026 18.9238 16.921 17.9186 17.9717 16.5382C17.2782 16.1477 16.3901 15.743 15.3224 15.4467ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"/>
+                </svg>
+              </a>
+						</div>
+					</div>
+				</div>
+				<div class="flex space-x-6">
+          <%= image_tag "tonie_profile.webp", alt: "profile picture of Tonie Santos", class: "object-cover w-auto h-56 mb-4 bg-center rounded-sm"%>
+					<div class="flex flex-col">
+						<h3 class="text-xl font-semibold">Tonie Santos</h3>
+						<p class="text-sm ">Director of Operations</p>
+						<div class="flex items-center mt-2 space-x-2">
+              <!--FB-->
+              <a rel="noopener noreferrer" href="https://www.facebook.com/tonie.santos.87" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+								<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="w-4 h-4" ><path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg>
+							</a>
+              <!--Linkedin-->
+              <a rel="noopener noreferrer" href="https://www.linkedin.com/in/tonie-santos-23014a1b/" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-4 h-4">
+									<path d="M8.268 28h-5.805v-18.694h5.805zM5.362 6.756c-1.856 0-3.362-1.538-3.362-3.394s1.505-3.362 3.362-3.362 3.362 1.505 3.362 3.362c0 1.856-1.506 3.394-3.362 3.394zM29.994 28h-5.792v-9.1c0-2.169-0.044-4.95-3.018-4.95-3.018 0-3.481 2.356-3.481 4.794v9.256h-5.799v-18.694h5.567v2.55h0.081c0.775-1.469 2.668-3.019 5.492-3.019 5.875 0 6.955 3.869 6.955 8.894v10.269z"></path>
+								</svg>
+							</a>
+              <!--Twitter-->
+              <a rel="noopener noreferrer" href="https://twitter.com/tonie_santos" class="hover:fill-blue-700 hover:text-blue-700 hover:scale-105" target="blank">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="w-4 h-4">
+									<path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="py-8">
+		<div class="container flex flex-col items-center p-4 mx-auto space-y-6 md:p-8">
+			<p class="px-6 py-2 text-2xl font-semibold text-center sm:font-bold sm:text-3xl md:text-4xl lg:max-w-2xl xl:max-w-4xl ">
+        "We're on a mission to help 100 flight schools double their student body and dominate their service area by 2025"
+      </p>
+		</div>
+	</section>
 
   <section class="bg-slate-100">
     <div class="flex flex-col lg:flex-row items-center justify-center">
@@ -81,74 +140,7 @@
       </div>
     </div>
   </section>
-  <!--Sponsor section-->
-  <section class="bg-slate-200">
-    <div class="flex flex-col items-center">
-      <div class="pt-10">
-        <h2 class="text-xl font-semibold italic text-center px-16">Right Rudder Marketing proudly sponsors the following organizations</h2>
-      </div>
-      <div class="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-10 px-20 md:px-48  lg:px-5 pt-10 pb-20 lg:py-10">
-        <!--FSANA-->
-        <%= link_to "https://www.fsana.com/partners.php", class: "lg:w-1/5", target: :blank do %>
-          <%= image_tag "fsana.webp", alt: "Flight School Association of North America logo", class: "hover:scale-105 transition-all duration-300"%>
-        <%end%>
-        <!--NAFI-->
-        <%= link_to "https://www.nafinet.org/sponsors", class: "lg:w-1/5", target: :blank do %>
-          <%= image_tag "nafi2.webp", alt: "National Association of Flight Instructors logo", class: "hover:scale-105 transition-all duration-300 px-5"%>
-        <%end%>
-      </div>
-    </div>
-  </section>
-
-  <!--Member section-->
-  <section class="bg-slate-100">
-    <div class="flex flex-col items-center">
-      <div class="pt-10">
-        <h2 class="text-xl font-semibold italic text-center px-16">Right Rudder Marketing is a proud member of the following organizations</h2>
-      </div>
-      <div class="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-10 px-20 md:px-48  lg:px-5 pt-10 pb-20 lg:py-10">
-        <!--GSLFIA-->
-        <%= link_to "https://gslfia.com", class: "lg:w-1/5", target: :blank do %>
-          <%= image_tag "gslfia.webp", alt: "Greater St. Louis Flight Instructor Association logo", class: "hover:scale-105 transition-all duration-300"%>
-        <%end%>
-        <!--NBAA-->
-        <%= link_to "https://nbaa.org", class: "lg:w-1/5", target: :blank do %>
-          <%= image_tag "nbaa.webp", alt: "National Business Aviation Association logo", class: "hover:scale-105 transition-all duration-300"%>
-        <%end%>
-        <!--AMA-->
-        <%= link_to "https://www.ama.org", class: "lg:w-1/5", target: :blank  do %>
-          <%= image_tag "ama.webp", alt: "American Marketing Association logo" , class: "hover:scale-105 transition-all duration-300"%>
-        <%end%>
-        <!--Chamber of commerce-->
-        <%#= link_to "https://www.chamberofcommerce.com/united-states/missouri/farmington/marketing-agency/2017680081-right-rudder-marketing?source=memberwebsite" do %>
-          <%#= image_tag "https://coc.codes/images/badge/2017680081", alt: "Chamber of Commerce Verified logo" , class: "hover:scale-105 transition-all duration-300"%>
-        <%#end%>
-        <!--US Chamber of Commerce-->
-        <%= link_to "https://www.uschamber.com", class: "lg:w-1/4", target: :blank do %>
-          <%= image_tag "uschamber.webp", alt: "U.S. Chamber of Commerce Member" , class: "hover:scale-105 transition-all duration-300"%>
-        <%end%>
-        <!--NAFI-->
-      </div>
-    </div>
-  </section>
-  <!--Affiliate section-->
-  <section class="bg-slate-200">
-    <div class="flex flex-col items-center">
-      <div class="pt-10">
-        <h2 class="text-xl font-semibold italic text-center px-16">Right Rudder Marketing is a partner affiliate with the following organizations</h2>
-      </div>
-      <div class="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-10 px-20 md:px-48  lg:px-5 pt-10 pb-20 lg:py-10">
-        <!--STRATUS-->
-        <%= link_to "https://stratus.finance", class: "lg:w-1/4", target: :blank do %>
-          <%= image_tag "stratus_logo.webp", alt: "Stratus Financial logo", class: "hover:scale-105 transition-all duration-300"%>
-        <%end%>
-        <!--EZSIMS-->
-        <%= link_to "https://ezsims.io", class: "lg:w-1/6", target: :blank do %>
-          <%= image_tag "ezsim.webp", alt: "Stratus Financial logo", class: "hover:scale-105 transition-all duration-300"%>
-        <%end%>
-      </div>
-    </div>
-  </section>
+  
 </div>
 
 <!--CTA-->
