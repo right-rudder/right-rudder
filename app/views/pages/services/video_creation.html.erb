@@ -1,14 +1,38 @@
-<% title("Video Creation | Right Rudder Marketing") %>
+<% title("Video Production and Editing | Right Rudder Marketing") %>
 
 <!--Set Page font size and limit sticky-->
 <div class="text-lg">
   <%= render "shared/navbar"%>
-  <section class="w-full bg-headsys2 bg-cover h-screen-1/2 lg:h-screen bg-center flex justify-center items-center">
-    <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center drop-shadow-2xl text-slate-100 w-full">
-        <h2 class="font-bold lg:text-4xl text-center pb-10">Video Creation</h2>
-        <%= link_to "SCHEDULE A CALL", schedule_call_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 text-sm lg:text-lg transition-all duration-300 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2" %>
+  <section>
+    <div class="bg-gradient-to-br from-blue-600 to-blue-950">
+      <div class="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32">
+        <h1 class="text-5xl font-bold leadi sm:text-6xl xl:max-w-3xl text-white">We're all in with video</h1>
+        <h2 class="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl text-slate-200">Using video on your website helps with conversions.  Adding reels and shorts to your social media helps bring in more likes and followers to increase your digital presence.</h2>
+        <div class="flex pt-5 lg:gap-5">
+          <%= link_to "SCHEDULE CALL", schedule_call_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 hover:scale-105 text-sm lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5 mr-2" %>
+          <%= link_to "CONTACT US", contact_path, class: "font-semibold border-2 border-orange-500 hover:scale-105 text-sm lg:text-2xl transition-all duration-300 text-orange-500 rounded-lg text-center py-2 px-5 mr-2" %>
+        </div>
+      </div>  
     </div>
   </section>
+  <section class="py-20">
+    <div class="flex flex-col items-center w-full text-center">
+      <h3 class="text-3xl font-semibold">Take a look at some of our work: </h3>
+      <div class="pt-10">
+        <h4 class="text-xl">Short Form Content for Social Media</h4>
+        <p class="text-base italic pb-10">Use on your Facebook, Instagram, TikTok and Youtube</p>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-10">
+        <div class="lg:w-1/2">
+          <iframe width="315" height="560" src="https://www.youtube.com/embed/cCYPVjoWXGI?si=o5QyPx10sHvys9aL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="lg:w-1/2">
+          <iframe width="315" height="560" src="https://www.youtube.com/embed/u0munm2PtUY?si=RcG9i4OAdnYVp2sM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%= render "shared/cta2"%>  
 </div>
 <%= render "shared/cta1"%>
 <%= render "shared/footer"%>
