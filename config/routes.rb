@@ -75,6 +75,7 @@ Rails.application.routes.draw do
   get 'about-us', to: 'pages#about_us'  #Leave link due to Google previously knowing about this page
   get 'our-team', to: 'pages#about_us', as: :our_team
   get 'partners-affiliates-sponsors', to: 'pages#partners', as: :partners
+  get 'mission-and-vision', to: 'pages#mission', as: :mission
 
   # Offering Pages / Services
   get 'website-design', to: 'pages#website_design'                              #previous route... #need to delete from GMB account then remove in app
