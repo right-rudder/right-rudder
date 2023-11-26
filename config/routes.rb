@@ -77,6 +77,7 @@ Rails.application.routes.draw do
   get 'partners-affiliates-sponsors', to: 'pages#partners', as: :partners
   get 'mission-and-vision', to: 'pages#mission', as: :mission
   get 'core-values', to: 'pages#core', as: :core
+  get 'investors', to: 'pages#investors', as: :investors
 
   # Offering Pages / Services
   get 'website-design', to: 'pages#website_design'                              #previous route... #need to delete from GMB account then remove in app
