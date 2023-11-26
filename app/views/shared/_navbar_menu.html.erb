@@ -249,20 +249,46 @@
     <%= link_to "SCHEDULE CALL", schedule_call_path, class: "bg-orange-500 hover:bg-orange-600  hover:scale-105 text-white rounded-lg text-center py-2 px-3 ml-8 mr-2 transition-all duration-300" %>
   </div>
 </div>
+
+
+
 <!--Mobile Menu-->
-<div class="absolute bg-white w-full h-screen flex flex-col justify-center pb-52" x-cloak x-show="menu" x-transition x-transition:enter.duration.600ms >
-  <ul class="text-center font-semibold text-lg" x-data="{ dropdown: false }">
-    <li class="py-3"><%= link_to "Home", root_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>
-    <li class="py-3"><%= link_to "Our System", marketing_system_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>
-    <!--Resources Menu-->
-    <li class="py-3"><button class="hover:text-blue-700 transition-all duration-300" x-on:click="dropdown = ! dropdown">Resources</button></li>
+<div class="absolute bg-white w-full h-screen-phone overscroll-y-auto flex flex-col justify-start pl-10 pt-5" x-cloak x-show="menu" x-transition x-transition:enter.duration.600ms >
+  <ul class="text-left font-semibold text-lg" x-data="{ dropdown: false, dropdown2: false, dropdown3: false, dropdown4: false }">
+    
+    <!--Services Menu-->
+    <li class="py-3"><button class="transition-all duration-300" x-on:click="dropdown = ! dropdown">Our Services</button></li>
     <div class="" x-cloak x-show="dropdown" x-transition x-transition:enter.duration.600ms>
-      <li class="py-2"><%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Flight School Tips", checklist_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, class: "hover:text-blue-700 transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Flight School Tips", checklist_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, class: "transition-all duration-300" %></li>  
     </div>
-    <li class="py-3"><%= link_to "Blog", notams_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>
-    <li class="py-3"><%= link_to "Schedule Call", schedule_call_path, class: "hover:text-blue-700 transition-all duration-300" %></li>
+    <!--How it Works Menu-->
+    <li class="py-3"><button class="transition-all duration-300" x-on:click="dropdown2 = ! dropdown2">How It Works</button></li>
+    <div class="" x-cloak x-show="dropdown2" x-transition x-transition:enter.duration.600ms>
+      <li class="py-2"><%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Flight School Tips", checklist_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, class: "transition-all duration-300" %></li>  
+    </div>
+    <!--Resources Menu-->
+    <li class="py-3"><button class="transition-all duration-300" x-on:click="dropdown3 = ! dropdown3">Resources</button></li>
+    <div class="" x-cloak x-show="dropdown3" x-transition x-transition:enter.duration.600ms>
+      <li class="py-2"><%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Flight School Tips", checklist_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, class: "transition-all duration-300" %></li>  
+    </div>
+    <!--About Menu-->
+    <li class="py-3"><button class="transition-all duration-300" x-on:click="dropdown4 = ! dropdown4">About</button></li>
+    <div class="" x-cloak x-show="dropdown4" x-transition x-transition:enter.duration.600ms>
+      <li class="py-2"><%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Flight School Tips", checklist_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, class: "transition-all duration-300" %></li>  
+    </div>
+    
+    <li class="py-3"><%= link_to "Schedule Call", schedule_call_path, class: " bg-orange-500 text-white px-3 rounded-md py-2 transition-all duration-300" %></li>
   </ul>
 </div>
