@@ -56,7 +56,7 @@ module.exports = {
         'screen-2/3': '75vh',
         'screen-1/3': 'calc(100vh / 3)',
         'screen-80': '80vh',
-        'screen-phone': '90vh',
+        'screen-phone': '91vh',
       }),
     },
   },
