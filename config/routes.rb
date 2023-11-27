@@ -11,9 +11,6 @@ Rails.application.routes.draw do
   get 'contact-us', to: "messages#new", as: :contact
   resources :messages
 
-  # Checklist dl page
-  get 'checklist_confirm', to: "checklist_emails#confirm", as: :checklist_confirm
-  resources :checklist_emails
 
   # Newsletters
   get 'newsletter_confirm', to: "newsletter_emails#confirm", as: :newsletter_confirm
@@ -53,9 +50,16 @@ Rails.application.routes.draw do
 
   ### Static pages routes
 
-  # Funnels
-  get 'schedule-call', to: 'pages#schedule_call'
+  ### FUNNELS ###
+  # GROWTH ACCELERATOR SESSION
+  get 'schedule-call', to: 'pages#schedule_call'  
+  get 'schedule-call-confirmation', to: 'pages#schedule_call_confirmation'  
+  
   get 'flight-school-marketing-checklist', to: 'pages#checklist', as: "checklist"
+  # Checklist dl page
+  get 'checklist_confirm', to: "checklist_emails#confirm", as: :checklist_confirm
+  resources :checklist_emails
+
   get 'flight-school-hot-aviation-keyword-list', to: 'pages#keyword', as: :keyword
 
   # Qualify Quiz
