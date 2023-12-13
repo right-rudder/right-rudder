@@ -96,11 +96,13 @@
       </div>
     </div>
 
+    <% if upcoming_webinar.present?  %>
     <div class="w-full flex flex-col items-center">
       <div class="w-full hidden lg:block">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPlru-0PF8h5SqRHPtb74jfOhVd9dhmjgm4GNi4hszcuPSXA/viewform?embedded=true" class="w-full h-[1200px]" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </div>
     </div>
+    <%end%>
 
   </section>
   
