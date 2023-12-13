@@ -74,7 +74,7 @@
       <div class="lg:w-1/2 flex flex-col items-center lg:pb-20">
         <h2 class="text-3xl font-bold py-10">Previous Webinars</h2>
         <% if @notams.previous.published.present? %>
-          <% @notams.previous.published.each do |post| %> 
+          <% @notams.previous.published.order(notam_date: :desc).each do |post| %> 
             <div class="flex flex-row items-center  lg:w-3/4 lg:rounded-lg h-24 lg:mb-3 hover:brightness-105 transition-all duration-300">
               <%= link_to post, data: { turbo: false }, class: "flex flex-row items-center" do%>
                 <!--image-->
