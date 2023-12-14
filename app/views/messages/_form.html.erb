@@ -28,6 +28,11 @@
     <%= form.text_field :phone, placeholder: "xxx-xxx-xxxx", class: "placeholder:text-slate-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
   </div>
 
+  <div class="my-5 flex items-center gap-5">
+    <%= form.check_box :sms, class: "rounded-md w-6 h-6" %>
+    <%= form.label "I agree to be contacted via SMS" %>
+  </div>
+
   <div class="my-5">
     <%= form.label "How can we help?" %>
     <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
