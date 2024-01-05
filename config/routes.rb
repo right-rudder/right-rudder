@@ -99,4 +99,7 @@ Rails.application.routes.draw do
   get 'privacy-policy', to: 'pages#privacy_policy'
   get 'terms-of-service', to: 'pages#terms_of_service'
 
+  # Temporary FSCRM TOS
+  get 'flight-school-crm-terms-of-service-privacy-policy', to: 'pages#tos_fscrm'
+
 end
