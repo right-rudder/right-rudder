@@ -11,5 +11,6 @@ Disallow: /qualify_quiz/unqualified_ad
 Disallow: /qualify_quiz/unqualified_capacity
 Disallow: /qualify_quiz/unqualified_service
 Disallow: /cirrus-aviation-contact-us-form.html
+Disallow: /cirrus-aviation-links
 
 Sitemap: https://rightruddermarketing.com/sitemap.xml.gz
