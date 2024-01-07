@@ -102,7 +102,4 @@ Rails.application.routes.draw do
   # Temporary FSCRM TOS
   get 'flight-school-crm-terms-of-service-privacy-policy', to: 'pages#tos_fscrm'
 
-  #Cirrus Aviation Link Tree
-  get'cirrus-aviation-links', to: 'pages#cirrus_aviation_links'
-
 end
