@@ -1,115 +1,718 @@
-<form accept-charset="UTF-8" action="https://cl286.infusionsoft.com/app/form/process/832a57be4e0883e30608e3a2766bc7c4" class="infusion-form" id="inf_form_832a57be4e0883e30608e3a2766bc7c4" method="POST">
-  <input name="inf_form_xid" type="hidden" value="832a57be4e0883e30608e3a2766bc7c4" />
-  <input name="inf_form_name" type="hidden" value="Requests info from website" />
-  <input name="infusionsoft_version" type="hidden" value="1.70.0.620830" />
+<style type="text/css">
+  .beta-base .preheader, .beta-base .header, .beta-base .sidebar, .beta-base .body, .beta-base .footer, #mainContent {
+      text-align: start;
+  }
+  .beta-base .preheader, .beta-base .header, .beta-base .body, .beta-base .sidebar, .beta-base .leftSidebar, .beta-base .rightSidebar, .beta-base .footer {
+      margin: 0;
+      padding: 0;
+      border: none;
+      white-space: normal;
+      line-height: normal;
+  }
+  .beta-base .title, .beta-base .subtitle, .beta-base .text, .beta-base img {
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: none;
+      white-space: normal;
+      line-height: normal;
+  }
+  .beta-base .bodyContainer td.preheader{
+      padding: 10px 0;
+  }
+  .beta-base .bodyContainer td.header {
+      padding: 0;
+      height: 30px;
+  }
+  .beta-base .bodyContainer td.body, .beta-base .bodyContainer td.footer,
+  .beta-base .bodyContainer td.sidebar, .beta-base .bodyContainer td.leftSidebar, .beta-base .bodyContainer td.rightSidebar {
+      padding: 20px;
+  }
+  .beta-base .bodyContainer td.header p, .beta-base .bodyContainer td.preheader p, .beta-base .bodyContainer td.body p,
+  .beta-base .bodyContainer td.footer p, .beta-base .bodyContainer td.sidebar p,
+  .beta-base .bodyContainer td.leftSidebar p, .beta-base .bodyContainer td.rightSidebar p {
+      margin: 0;
+      color: inherit;
+  }
+  .beta-base .bodyContainer td.header div.title, .beta-base .bodyContainer td.preheader div.title, .beta-base .bodyContainer td.body div.title,
+  .beta-base .bodyContainer td.footer div.title, .beta-base .bodyContainer td.sidebar div.title,
+  .beta-base .bodyContainer td.leftSidebar div.title, .beta-base .bodyContainer td.rightSidebar div.title,
+  .beta-base .bodyContainer td.header div.subtitle, .beta-base .bodyContainer td.preheader div.subtitle, .beta-base .bodyContainer td.body div.subtitle,
+  .beta-base .bodyContainer td.footer div.subtitle, .beta-base .bodyContainer td.sidebar div.subtitle,
+  .beta-base .bodyContainer td.leftSidebar div.subtitle, .beta-base .bodyContainer td.rightSidebar div.subtitle,
+  .beta-base .bodyContainer td.header div.text, .beta-base .bodyContainer td.preheader div.text, .beta-base .bodyContainer td.body div.text, .beta-base .bodyContainer td.body div.text div,
+  .beta-base .bodyContainer td.footer div.text, .beta-base .bodyContainer td.sidebar div.text,
+  .beta-base .bodyContainer td.leftSidebar div.text, .beta-base .bodyContainer td.rightSidebar div.text {
+      overflow: auto;
+  }
+  .beta-base .optout {
+      margin-bottom: 10px;
+      margin-top: 10px;
+  }
+  div.infusion-captcha {
+      width: 220px;
+      padding: 10px;
+  }
+  div.infusion-captcha input, div.infusion-captcha select, div.infusion-captcha textarea {
+      width: 95%;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  table.infusion-field-container td.infusion-field-input-container {
+      padding-bottom: 12px;
+  }
+  table.infusion-field-container td + .infusion-field-input-container {
+      padding-bottom: 0 !important;
+  }
+  table.infusion-field-container td + .infusion-field-label-container {
+      padding-bottom: 12px !important;
+  }
+  table.infusion-field-container td.infusion-field-input-container input[type='text'],
+  table.infusion-field-container td.infusion-field-input-container input[type='email'],
+  table.infusion-field-container td.infusion-field-input-container input[type='tel'],
+  table.infusion-field-container td.infusion-field-input-container input[type='password'],
+  table.infusion-field-container td.infusion-field-input-container textarea {
+      width: 100%;
+      margin: 0;
+  }
+  table.infusion-field-container td.infusion-field-input-container input[type='text'],
+  table.infusion-field-container td.infusion-field-input-container input[type='email'],
+  table.infusion-field-container td.infusion-field-input-container input[type='tel'],
+  table.infusion-field-container td.infusion-field-input-container input[type='password'],
+  table.infusion-field-container td.infusion-field-input-container select {
+      background-color: #fff;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      padding: 8px 16px;
+      height: 40px;
+      line-height: normal;
+      outline: none;
+      -webkit-appearance: none;
+      -webkit-transition: border .3s ease;
+      transition: border .3s ease;
+  }
+  table.infusion-field-container td.infusion-field-input-container input.infusion-field-required {
+      border-color: red;
+  }
+  table.infusion-field-container td.infusion-field-input-container input.infusion-field-required::placeholder,
+  table.infusion-field-container td.infusion-field-input-container textarea.infusion-field-required::placeholder,
+  table.infusion-field-container td.infusion-field-label-container .span-required-field {
+      color: red;
+  }
+  table.infusion-field-container td.infusion-field-input-container div.infusion-field-input-container select.infusion-field-required,
+  table.infusion-field-container td.infusion-field-input-container select.infusion-field-required {
+      border-color: red;
+      color: red !important;
+  }
+  table.infusion-field-container td.infusion-field-input-container textarea.infusion-field-required {
+      border-color: red;
+  }
+  table.infusion-field-container td.infusion-field-input-container div.infusion-field-required-errorMessage {
+      color: red;
+      font-size: 12px;
+      font-family: Arial;
+      padding-left: 4px;
+      padding-top: 2px;
+      padding-bottom: 5px;
+  }
+  table.infusion-field-container td.infusion-field-input-container select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' id='chevron-down'%3E%3Cpath d='M6.293 9.293a1 1 0 0 1 1.414 0L12 13.586l4.293-4.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414z' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+      background-size: 20px;
+      background-position: calc(100% - 6px) center;
+      background-repeat: no-repeat;
+  }
+  table.infusion-field-container td.infusion-field-input-container select {
+      width: 100%;
+      margin: 0;
+  }
+  table.infusion-field-container td.infusion-field-input-container select.infusion-multiselect {
+      height: auto;
+      background-image: none;
+  }
+  table.infusion-field-container td.infusion-field-input-container input[type='text']:focus,
+  table.infusion-field-container td.infusion-field-input-container input[type='email']:focus,
+  table.infusion-field-container td.infusion-field-input-container input[type='tel']:focus,
+  table.infusion-field-container td.infusion-field-input-container input[type='password']:focus {
+      border-color: #bbb;
+  }
+  table.infusion-field-container td.infusion-field-label-container {
+      padding-right: 5px;
+      max-width: 200px;
+  }
+  .infusion-label-checkbox {
+      position: relative;
+      top: -3px;
+  }
+  span.infusion-checkbox {
+      display: block;
+      margin-left: -5px;
+  }
+  td.header .image-snippet img {
+      vertical-align: bottom;
+  }
+  #webformErrors {
+      color: #990000;
+      font-size: 14px;
+  }
+  html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+  }
+  .infusion-form {
+      margin: 0;
+      height: 100%;
+  }
+  .infusion-option {
+      display: block;
+      text-align: left;
+  }
+  @media only screen and (max-width: 675px) {
+      .infusion-form .infusion-field-container,
+      .infusion-form .infusion-field-container tr,
+      .infusion-form .infusion-field-container td,
+      .infusion-form .infusion-field-container tbody {
+          display: block;
+      }
+      .infusion-form .infusion-field-container .pika-table tr {
+          display: table-row !important;
+          margin-bottom: 0 !important;
+      }
+      .infusion-form .infusion-field-container .pika-table td {
+          display: table-cell !important;
+      }
+      .infusion-form .infusion-field-container .pika-table tbody {
+          display: table-row-group !important;
+      }
+      .infusion-form table.bodyContainer {
+          width: 100% !important;
+      }
+      .infusion-form img {
+          max-width: 100%;
+          height: auto;
+      }
+      .infusion-form .image-snippet[contentid="spotlight"] {
+          width: 64px;
+      }
+      .infusion-form .infusion-field-input-container {
+          width: 100% !important;
+      }
+      .infusion-form .video-container iframe {
+          width: 100%;
+      }
+      .infusion-form .infusion-submit button {
+          width: 100% !important;
+      }
+  }
+  </style><style type="text/css">
+  .beta-font-b h1, .beta-font-b h2, .beta-font-b h3, .beta-font-b h4, .beta-font-b h5, .beta-font-b h6 {
+      font-family: arial,sans-serif;
+  }
+  .beta-font-b h1 {font-size: 24px;}
+  .beta-font-b h2 {font-size: 20px;}
+  .beta-font-b h3 {font-size: 14px;}
+  .beta-font-b h4 {font-size: 12px;}
+  .beta-font-b h5 {font-size: 10px;}
+  .beta-font-b h6 {font-size: 8px;}
+  .beta-font-b address {font-style: italic;}
+  .beta-font-b pre {font-family: Courier New, monospace;}
+  .beta-font-b .title, .beta-font-b .title p {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: arial,sans-serif;
+  }
+  .beta-font-b .subtitle, .beta-font-b .subtitle p {
+      font-size: 11px;
+      font-weight: normal;
+      font-family: arial,sans-serif;
+  }
+  .beta-font-b .text, .beta-font-b p {
+      font-size: 12px;
+      font-family: arial,sans-serif;
+  }
+  .beta-font-b .preheader .text, .beta-font-b .preheader .text p {
+      font-size: 11px;
+      font-family: arial,sans-serif;
+  }
+  .beta-font-b .footer a {
+      font-size: 11px;
+      font-family: arial,sans-serif;
+  }
+  .beta-font-b .footer .text {
+      font-size: 10px;
+      font-family: verdana,sans-serif;
+  }
+  .beta-font-b .sidebar .title, .beta-font-b .leftSidebar .title, .beta-font-b .rightSidebar .title {
+      font-size: 15px;
+      font-weight: bold;
+      font-family: arial,sans-serif;
+  }
+  .beta-font-b .sidebar .subtitle, .beta-font-b .leftSidebar .subtitle, .beta-font-b .rightSidebar .subtitle {
+      font-size: 12px;
+      font-family: arial, sans-serif;
+  }
+  .beta-font-b .sidebar .text, .beta-font-b .sidebar .text p, .beta-font-b .leftSidebar .text, .beta-font-b .rightSidebar .text {
+      font-size: 11px;
+      font-family: arial, sans-serif;
+  }
+  .infusion-field-label-container {
+      font-size: 14px;
+      font-family: arial,sans-serif;
+  }
+  .infusion-field-input-container {
+      color: #000000;
+      font-size: 12px;
+  }
+  .infusion-option label {
+      color: #000000;
+      font-size: 14px;
+      font-family: arial,sans-serif;
+  }
+  </style><style type="text/css">
+  .custom-48 .background{
+  background-color:#f5f5f5;
+  ;
+  }
+  .custom-48 .title{
+  color:#000000;
+  ;
+  }
+  .custom-48 .subtitle{
+  color:#000000;
+  ;
+  }
+  .custom-48 .text{
+  color:#333333;
+  ;
+  }
+  .custom-48 a{
+  color:#0645ad;
+  ;
+  }
+  .custom-48 .background .preheader .text{
+  color:#1a242e;
+  ;
+  }
+  .custom-48 .background .preheader a{
+  color:#0645ad;
+  ;
+  }
+  .custom-48 .header{
+  background-color:#ffffff;
+  ;
+  }
+  .custom-48 .header .title{
+  color:#000000;
+  ;
+  }
+  .custom-48 .header .subtitle{
+  color:#000000;
+  ;
+  }
+  .custom-48 .header .text{
+  color:#000000;
+  ;
+  }
+  .custom-48 .header .a{
+  color:#157DB8;
+  ;
+  }
+  .custom-48 .hero{
+  background-color:#025C8D;
+  ;
+  }
+  .custom-48 .hero .title{
+  color:#FFFFFF;
+  ;
+  }
+  .custom-48 .hero .subtitle{
+  color:#FFFFFF;
+  ;
+  }
+  .custom-48 .hero .text{
+  color:#FFFFFF;
+  ;
+  }
+  .custom-48 .hero .a{
+  color:#157DB8;
+  ;
+  }
+  .custom-48 .quote{
+  background-color:#013B5A;
+  ;
+  }
+  .custom-48 .quote:after{
+  border-color:#013B5A transparent transparent transparent;
+  ;
+  }
+  .custom-48 .quote .title{
+  color:#FFFFFF;
+  ;
+  }
+  .custom-48 .quote .subtitle{
+  color:#FFFFFF;
+  ;
+  }
+  .custom-48 .quote .text{
+  color:#FFFFFF;
+  ;
+  }
+  .custom-48 .quote .a{
+  color:#157DB8;
+  ;
+  }
+  .custom-48 .body{
+  background-color:#ffffff;
+  ;
+  }
+  .custom-48 .main .title{
+  color:#000000;
+  ;
+  }
+  .custom-48 .main .subtitle{
+  color:#000000;
+  ;
+  }
+  .custom-48 .main .text{
+  color:#000000;
+  ;
+  }
+  .custom-48 .main .a{
+  color:#157DB8;
+  ;
+  }
+  .custom-48 .sidebar{
+  background-color:#ffffff;
+  ;
+  }
+  .custom-48 .sidebar .title{
+  color:#000000;
+  ;
+  }
+  .custom-48 .sidebar .subtitle{
+  color:#000000;
+  ;
+  }
+  .custom-48 .sidebar .text{
+  color:#000000;
+  ;
+  }
+  .custom-48 .sidebar .a{
+  color:#157DB8;
+  ;
+  }
+  .custom-48 .leftSidebar{
+  background-color:#ffffff;
+  ;
+  }
+  .custom-48 .leftSidebar .title{
+  color:#000000;
+  ;
+  }
+  .custom-48 .leftSidebar .subtitle{
+  color:#000000;
+  ;
+  }
+  .custom-48 .rightSidebar{
+  background-color:#ffffff;
+  ;
+  }
+  .custom-48 .rightSidebar .title{
+  color:#000000;
+  ;
+  }
+  .custom-48 .rightSidebar .subtitle{
+  color:#000000;
+  ;
+  }
+  .custom-48 .footer{
+  background-color:#ffffff;
+  ;
+  }
+  .custom-48 .footer .text{
+  color:#0d0d0d;
+  ;
+  }
+  .custom-48 .footer .title{
+  color:#000000;
+  ;
+  }
+  .custom-48 .footer a{
+  color:#1b38de;
+  ;
+  }
+  .custom-48 .footer .subtitle{
+  color:#000000;
+  ;
+  }
+  .custom-48 .infusion-field-label-container{
+  font-size:14px;
+  ;
+  }
+  .custom-48 .infusion-field-label-container{
+  font-family:arial;
+  ;
+  }
+  .custom-48 .infusion-field-label-container{
+  color:#000000;
+  ;
+  }
+  .custom-48 .infusion-field-input{
+  font-size:14px;
+  ;
+  }
+  .custom-48 .infusion-option label{
+  font-size:14px;
+  ;
+  }
+  .custom-48 .infusion-option label{
+  font-family:arial;
+  ;
+  }
+  .custom-48 .infusion-option label{
+  color:#000000;
+  ;
+  }
+  .custom-48 .webFormBodyContainer{
+  border-width:0px;
+  ;
+  }
+  .custom-48 .webFormBodyContainer{
+  border-style:Hidden;
+  ;
+  }
+  .custom-48 .webFormBodyContainer{
+  border-color:#000000;
+  ;
+  }
+  </style><style type="text/css">
+  .infusion-field-label-container {
+  text-align:Left;
+  }
+  .infusion-field-input-container {
+  width:270px;
+  }
+  .infusion-field-label-container {
+  vertical-align:Middle;
+  }
+  .bodyContainer {
+  width:560px;
+  }
+  </style><script src="https://cl286.infusionsoft.app/app/webTracking/getTrackingCode?b=1.70.0.620830-hf-202312121828" type="text/javascript">
+  </script><script src="https://cl286.infusionsoft.app/app/webform/overwriteRefererJs?b=1.70.0.620830-hf-202312121828" type="text/javascript">
+  </script>
+  <div class="text" id="webformErrors" name="errorContent">
+  </div>
+  <form accept-charset="UTF-8" action="https://cl286.infusionsoft.app/app/form/process/832a57be4e0883e30608e3a2766bc7c4" class="infusion-form" id="inf_form_832a57be4e0883e30608e3a2766bc7c4" method="POST" name="Requests info from website" onsubmit="submitWebForm()">
+  <script type="text/javascript">
+  function submitWebForm() {
+  var form = document.forms[0];
+  var resolution = document.createElement('input');
+  resolution.setAttribute('id', 'screenResolution');
+  resolution.setAttribute('type', 'hidden');
+  resolution.setAttribute('name', 'screenResolution');
+  var resolutionString = screen.width + 'x' + screen.height;
+  resolution.setAttribute('value', resolutionString);
+  form.appendChild(resolution);
+  var pluginString = '';
+  if (window.ActiveXObject) {
+      var activeXNames = {'AcroPDF.PDF':'Adobe Reader',
+          'ShockwaveFlash.ShockwaveFlash':'Flash',
+          'QuickTime.QuickTime':'Quick Time',
+          'SWCtl':'Shockwave',
+          'WMPLayer.OCX':'Windows Media Player',
+          'AgControl.AgControl':'Silverlight'};
+      var plugin = null;
+      for (var activeKey in activeXNames) {
+          try {
+              plugin = null;
+              plugin = new ActiveXObject(activeKey);
+          } catch (e) {
+              // do nothing, the plugin is not installed
+          }
+          pluginString += activeXNames[activeKey] + ',';
+      }
+      var realPlayerNames = ['rmockx.RealPlayer G2 Control',
+          'rmocx.RealPlayer G2 Control.1',
+          'RealPlayer.RealPlayer(tm) ActiveX Control (32-bit)',
+          'RealVideo.RealVideo(tm) ActiveX Control (32-bit)',
+          'RealPlayer'];
+      for (var index = 0; index < realPlayerNames.length; index++) {
+          try {
+              plugin = new ActiveXObject(realPlayerNames[index]);
+          } catch (e) {
+              continue;
+          }
+          if (plugin) {
+              break;
+          }
+      }
+      if (plugin) {
+          pluginString += 'RealPlayer,';
+      }
+  } else {
+      for (var i = 0; i < navigator.plugins.length; i++) {
+          pluginString += navigator.plugins[i].name + ',';
+      }
+  }
+  pluginString = pluginString.substring(0, pluginString.lastIndexOf(','));
+  var plugins = document.createElement('input');
+  plugins.setAttribute('id', 'pluginList');
+  plugins.setAttribute('type', 'hidden');
+  plugins.setAttribute('name', 'pluginList');
+  plugins.setAttribute('value', pluginString);
+  form.appendChild(plugins);
+  var java = navigator.javaEnabled();
+  var javaEnabled = document.createElement('input');
+  javaEnabled.setAttribute('id', 'javaEnabled');
+  javaEnabled.setAttribute('type', 'hidden');
+  javaEnabled.setAttribute('name', 'javaEnabled');
+  javaEnabled.setAttribute('value', java);
+  form.appendChild(javaEnabled);
+  jQuery('.infusion-submit button').attr('disabled', true);
+  }
+  </script><input name="inf_form_xid" type="hidden" value="832a57be4e0883e30608e3a2766bc7c4" /><input name="inf_form_name" type="hidden" value="Requests info from website" /><input name="infusionsoft_version" type="hidden" value="1.70.0.620830" />
+  <div class="custom-48 beta-base beta-font-b" id="mainContent" style="height:100%">
+  <table cellpadding="10" cellspacing="0" class="background" style="width: 100%; height: 100%"><tbody><tr><td align="center" valign="top">
+  <table bgcolor="#FFFFFF" cellpadding="20" cellspacing="0" class="bodyContainer webFormBodyContainer" width="100%"><tbody><tr><td bgcolor="#FFFFFF" class="body" sectionid="body" valign="top">
   <div>
-      <div class="authoring-image image-snippet" contentid="image">
-                  <div class="authoring-image image-snippet" contentid="image">
-                      <div class="imageSnippet-alignDiv">
-                          <img align="bottom" alt="Interesting Image" border="0" class="simage float_center" height="98" src="https://cl286.files.keap.app/cl286/cl286-8e48cd3d-8bb9-48ca-a655-c574ab769698-v2" title="Interesting Image" width="405" />
-                      </div>
-                  </div>
-      </div>
+  <div class="authoring-image image-snippet" contentid="image">
+  <div class="authoring-image image-snippet" contentid="image">
+  <div class="imageSnippet-alignDiv" style="text-align: center;">
+  <img align="bottom" alt="Interesting Image" border="0" class="simage float_center" height="98" src="https://cl286.files.keap.app/cl286/cl286-8e48cd3d-8bb9-48ca-a655-c574ab769698-v2" style="margin-left: 0px; margin-right: 0px;" title="Interesting Image" width="405" />
+  </div>
+  </div>
+  </div>
   </div>
   <div>
-      <div>
-          <div class="title">
-                      <div class="title" contentid="title">
-                          <div>
-                              <p> </p>
-                              <p>Want to learn more?</p>
-                              <p> </p>
-                          </div>
-                      </div>
-          </div>
-      </div>
+  <div>
+  <div class="title" style="text-align:left">
+  <div class="title" contentid="title" style="text-align: left;">
+  <div>
+  <p>
+  &nbsp;
+  </p>
+  <p>
+  Want to learn more?
+  </p>
+  <p>
+  &nbsp;
+  </p>
   </div>
-  <div class="infusion-field">
-      <label for="inf_field_FirstName">First Name *</label>
-      <input id="inf_field_FirstName" name="inf_field_FirstName" placeholder="First Name *" type="text" />
   </div>
-  <div class="infusion-field">
-      <label for="inf_field_LastName">Last Name *</label>
-      <input id="inf_field_LastName" name="inf_field_LastName" placeholder="Last Name *" type="text" />
   </div>
-  <div class="infusion-field">
-      <label for="inf_field_Email">Email *</label>
-      <input id="inf_field_Email" name="inf_field_Email" placeholder="Email *" type="text" />
   </div>
-  <div class="infusion-field">
-      <label for="inf_field_Phone1">Phone Number *</label>
-      <input id="inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone Number *" type="text" />
-  </div>
-  <div class="infusion-field">
-      <label for="inf_field_Fax1">Phone Country Code (Ex: +33)</label>
-      <input id="inf_field_Fax1" name="inf_field_Fax1" placeholder="Phone Country Code (Ex: +33)" type="text" />
   </div>
   <div>
-      <div>&nbsp;</div>
+  <table class="infusion-field-container" style="width:100%;"><tbody><tr><td class="infusion-field-label-container">
+  <label for="inf_field_FirstName">First Name *</label>
+  </td><td class="infusion-field-input-container" style="width:270px;">
+  <input autocomplete="given-name" id="inf_field_FirstName" is-required="true" name="inf_field_FirstName" placeholder="First Name *" type="text" />
+  </td></tr><tr><td class="infusion-field-label-container">
+  <label for="inf_field_LastName">Last Name *</label>
+  </td><td class="infusion-field-input-container" style="width:270px;">
+  <input autocomplete="family-name" id="inf_field_LastName" is-required="true" name="inf_field_LastName" placeholder="Last Name *" type="text" />
+  </td></tr></tbody></table>
   </div>
   <div>
-      <div>&nbsp;</div>
-  </div>
-  <div class="infusion-field">
-      <label for="inf_option_Whatisyourflighttraininggoal">What is your flight training goal? *</label>
-      <div class="infusion-radio">
-          <div class="options-container">
-              <span class="infusion-option">
-                  <input id="inf_option_Whatisyourflighttraininggoal_236" name="inf_option_Whatisyourflighttraininggoal" type="radio" value="236" />
-                  <label for="inf_option_Whatisyourflighttraininggoal_236">Career</label>
-              </span>
-              <span class="infusion-option">
-                  <input id="inf_option_Whatisyourflighttraininggoal_238" name="inf_option_Whatisyourflighttraininggoal" type="radio" value="238" />
-                  <label for="inf_option_Whatisyourflighttraininggoal_238">Pleasure</label>
-              </span>
-          </div>
-      </div>
+  <table class="infusion-field-container" style="width:100%;"><tbody><tr><td class="infusion-field-label-container">
+  <label for="inf_field_Email">Email *</label>
+  </td><td class="infusion-field-input-container" style="width:270px;">
+  <input autocomplete="email" id="inf_field_Email" is-required="true" name="inf_field_Email" placeholder="Email *" type="email" />
+  </td></tr></tbody></table>
   </div>
   <div>
-      <div>&nbsp;</div>
-  </div>
-  <div class="infusion-field">
-      <label for="inf_option_AreyouaUSCitizen">Are you a US Citizen? *</label>
-      <div class="infusion-radio">
-          <div class="options-container">
-              <span class="infusion-option">
-                  <input id="inf_option_AreyouaUSCitizen_230" name="inf_option_AreyouaUSCitizen" type="radio" value="230" />
-                  <label for="inf_option_AreyouaUSCitizen_230">Yes</label>
-              </span>
-              <span class="infusion-option">
-                  <input id="inf_option_AreyouaUSCitizen_232" name="inf_option_AreyouaUSCitizen" type="radio" value="232" />
-                  <label for="inf_option_AreyouaUSCitizen_232">No</label>
-              </span>
-          </div>
-      </div>
+  <table class="infusion-field-container" style="width:100%;"><tbody><tr><td class="infusion-field-label-container">
+  <label for="inf_field_Phone1">Phone Number *</label>
+  </td><td class="infusion-field-input-container" style="width:270px;">
+  <input autocomplete="tel" id="inf_field_Phone1" is-required="true" name="inf_field_Phone1" placeholder="Phone Number *" type="tel" />
+  </td></tr></tbody></table>
   </div>
   <div>
-      <div>&nbsp;</div>
-  </div>
-  <div class="infusion-field">
-      <span class="infusion-checkbox">
-          <input id="inf_option_HaveyouservedintheUSMilitaryandwanttouseyourGIBill" name="inf_option_HaveyouservedintheUSMilitaryandwanttouseyourGIBill" type="checkbox" value="240" />
-          <label class="infusion-field-label-container infusion-label-checkbox" for="inf_option_HaveyouservedintheUSMilitaryandwanttouseyourGIBill">Have you served in the US Military and want to use your G.I. Bill?</label>
-      </span>
+  <table class="infusion-field-container" style="width:100%;"><tbody><tr><td class="infusion-field-label-container">
+  <label for="inf_field_Fax1">Phone Country Code (Ex: +33)</label>
+  </td><td class="infusion-field-input-container" style="width:270px;">
+  <input id="inf_field_Fax1" name="inf_field_Fax1" placeholder="Phone Country Code (Ex: +33)" type="tel" />
+  </td></tr></tbody></table>
   </div>
   <div>
-      <div>&nbsp;</div>
+  <div style="height:15px; line-height:15px;">
+  &nbsp;
   </div>
-  <div class="infusion-submit">
-      <button type="submit">Submit</button>
-  </div>
-  <div>
-      <div>&nbsp;</div>
   </div>
   <div>
-      <div class="text">
-                  <div class="text" contentid="paragraph">
-                      <div>*Your contact information will be used by Cirrus Aviation only.</div>
-                  </div>
-      </div>
+  <div style="height:15px; line-height:15px;">
+  &nbsp;
   </div>
-</form>
-<script type="text/javascript" src="https://cl286.infusionsoft.app/app/webTracking/getTrackingCode"></script>
-<script type="text/javascript" src="https://cl286.infusionsoft.com/app/timezone/timezoneInputJs?xid=832a57be4e0883e30608e3a2766bc7c4"></script>
-<script type="text/javascript" src="https://cl286.infusionsoft.com/js/jquery/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="https://cl286.infusionsoft.app/app/webform/overwriteRefererJs"></script>
+  </div>
+  <div>
+  <table class="infusion-field-container" style="width:100%;"><tbody><tr><td class="infusion-field-label-container">
+  <label class="infusion-field-label-container" for="inf_option_Whatisyourflighttraininggoal">What is your flight training goal? *</label>
+  </td><td class="infusion-field-input-container" style="width:270px;">
+  <div class="infusion-radio" is-required="true">
+  <div class="options-container">
+  <span class="infusion-option"><input id="inf_option_Whatisyourflighttraininggoal_236" name="inf_option_Whatisyourflighttraininggoal" style="margin-right:3px;" type="radio" value="236" /><label for="inf_option_Whatisyourflighttraininggoal_236">Career</label></span><span class="infusion-option"><input id="inf_option_Whatisyourflighttraininggoal_238" name="inf_option_Whatisyourflighttraininggoal" style="margin-right:3px;" type="radio" value="238" /><label for="inf_option_Whatisyourflighttraininggoal_238">Pleasure</label></span>
+  </div>
+  </div>
+  </td></tr></tbody></table>
+  </div>
+  <div>
+  <div style="height:15px; line-height:15px;">
+  &nbsp;
+  </div>
+  </div>
+  <div>
+  <table class="infusion-field-container" style="width:100%;"><tbody><tr><td class="infusion-field-label-container">
+  <label class="infusion-field-label-container" for="inf_option_AreyouaUSCitizen">Are you a US Citizen? *</label>
+  </td><td class="infusion-field-input-container" style="width:270px;">
+  <div class="infusion-radio" is-required="true">
+  <div class="options-container">
+  <span class="infusion-option"><input id="inf_option_AreyouaUSCitizen_230" name="inf_option_AreyouaUSCitizen" style="margin-right:3px;" type="radio" value="230" /><label for="inf_option_AreyouaUSCitizen_230">Yes</label></span><span class="infusion-option"><input id="inf_option_AreyouaUSCitizen_232" name="inf_option_AreyouaUSCitizen" style="margin-right:3px;" type="radio" value="232" /><label for="inf_option_AreyouaUSCitizen_232">No</label></span>
+  </div>
+  </div>
+  </td></tr></tbody></table>
+  </div>
+  <div>
+  <div style="height:15px; line-height:15px;">
+  &nbsp;
+  </div>
+  </div>
+  <div>
+  <table class="infusion-field-container" style="width:100%;"><tbody><tr><td class="infusion-field-input-container" style="width:270px;">
+  <span class="infusion-checkbox"><input id="inf_option_HaveyouservedintheUSMilitaryandwanttouseyourGIBill" name="inf_option_HaveyouservedintheUSMilitaryandwanttouseyourGIBill" style="margin-right:3px;" type="checkbox" value="240" /><label class="infusion-field-label-container infusion-label-checkbox" for="inf_option_HaveyouservedintheUSMilitaryandwanttouseyourGIBill">Have you served in the US Military and want to use your G.I. Bill?</label></span>
+  </td></tr></tbody></table>
+  </div>
+  <div>
+  <div style="height:15px; line-height:15px;">
+  &nbsp;
+  </div>
+  </div>
+  <div>
+  <div class="infusion-submit" style="text-align:center;">
+  <button style="width:150px; height:26px; background-color:#BAFF1A; color:#040404; font-size:16px; font-family:Helvetica; border-color:#000000; border-style:Hidden; border-width:1px; -moz-border-radius:3px;border-radius:3px;" type="submit" value="Submit">Submit</button>
+  </div>
+  </div>
+  <div>
+  <div style="height:10px; line-height:10px;">
+  &nbsp;
+  </div>
+  </div>
+  <div>
+  <div class="text">
+  <div class="text" contentid="paragraph">
+  <div style="text-align: center;">
+  *Your contact information will be used by Cirrus Aviation only.
+  </div>
+  </div>
+  </div>
+  </div>
+  </td></tr></tbody></table>
+  </td></tr></tbody></table>
+  </div>
+  </form>
+  <script type="text/javascript" src="https://cl286.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+  <script type="text/javascript" src="https://cl286.infusionsoft.com/app/timezone/timezoneInputJs?xid=832a57be4e0883e30608e3a2766bc7c4"></script>
+  <script type="text/javascript" src="https://cl286.infusionsoft.com/js/jquery/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="https://cl286.infusionsoft.com/js/infusionsoft.js"></script>
+  <script type="text/javascript" src="https://cl286.infusionsoft.com/resources/component/calendar/calendar.js"></script>
