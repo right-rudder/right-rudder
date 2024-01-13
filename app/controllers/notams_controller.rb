@@ -1,9 +1,13 @@
 class NotamsController < ApplicationController
   before_action :set_notam, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:index, :show, :webinars]
+  before_action :authenticate_admin!, except: [:index, :show, :webinars, :webinar_confirmation]
 
   def webinars
     @notams = Notam.webinar
+    @newsletter_email = NewsletterEmail.new
+  end
+
+  def webinar_confirmation
     @newsletter_email = NewsletterEmail.new
   end
 

@@ -57,14 +57,14 @@
               </div>
             <% end %>
             <div class="w-full lg:hidden">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPlru-0PF8h5SqRHPtb74jfOhVd9dhmjgm4GNi4hszcuPSXA/viewform?embedded=true" class="w-full h-[1200px]" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              <%= render "ghl_form"%>
             </div>
           </div>
           
         <% else %>
           New webinar coming soon!
           <div class="w-full">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPlru-0PF8h5SqRHPtb74jfOhVd9dhmjgm4GNi4hszcuPSXA/viewform?embedded=true" class="w-full h-[1200px]" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <%= render "ghl_form"%>
           </div>
         <% end %>
         
@@ -99,7 +99,7 @@
     <% if upcoming_webinar.present?  %>
     <div class="w-full flex flex-col items-center">
       <div class="w-full hidden lg:block">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPlru-0PF8h5SqRHPtb74jfOhVd9dhmjgm4GNi4hszcuPSXA/viewform?embedded=true" class="w-full h-[1200px]" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <%= render "ghl_form"%>
       </div>
     </div>
     <%end%>

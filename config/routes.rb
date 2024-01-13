@@ -60,6 +60,9 @@ Rails.application.routes.draw do
   get 'checklist_confirm', to: "checklist_emails#confirm", as: :checklist_confirm
   resources :checklist_emails
 
+  # Webinar
+  get 'webinar-registration-confirmation', to: "notams#webinar_confirmation"
+
   get 'flight-school-hot-aviation-keyword-list', to: 'pages#keyword', as: :keyword
 
   # Qualify Quiz
