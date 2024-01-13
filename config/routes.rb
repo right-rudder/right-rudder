@@ -52,7 +52,7 @@ Rails.application.routes.draw do
 
   ### FUNNELS ###
   # GROWTH ACCELERATOR SESSION
-  get 'schedule-call', to: 'pages#schedule_call'  
+  get 'schedule-call', to: 'pages#schedule_call', as: :schedule_call  
   #get 'schedule-call-confirmation', to: 'pages#schedule_call_confirmation'  
   
   get 'flight-school-marketing-checklist', to: 'pages#checklist', as: "checklist"
