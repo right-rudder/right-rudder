@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   match "/404", to: "errors#not_found", via: :all
   match "/500", to: "errors#internal_server_error", via: :all
 
-  get 'message_confirm', to: "messages#confirm", as: :message_confirm
+  get 'contact-us-confirm', to: "messages#confirm", as: :message_confirm
   get 'contact-us', to: "messages#new", as: :contact
   resources :messages
 
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :newsletter_emails
   
   # Careers
-  get 'careers/web_developer', to: "careers#webdeveloper", as: :webdeveloper
+  #get 'careers/web_developer', to: "careers#webdeveloper", as: :webdeveloper
   resources :careers
   
 
@@ -38,15 +38,15 @@ Rails.application.routes.draw do
   # Notams
   get 'notams/select_featured', to: 'notams#select_featured_notams'
   post 'uploader/image', to: 'uploader#image' #add upload image to notams 
-  get 'webinars', to: 'notams#webinars'
-  resources :notams
-
   # Webinars
-  # resources :webinars
+  # resources :webinars  #no model
+  get 'webinar-registration-confirmation', to: "notams#webinar_confirmation"
+  get 'webinars', to: 'notams#webinars'
+  resources :notams #webinars are a part of notams right now..
   
   # Agreement
-  get 'agreements/form2', to: 'agreements#form2', as: :form2 
-  resources :agreements
+  #get 'agreements/form2', to: 'agreements#form2', as: :form2 
+  #resources :agreements
 
   ### Static pages routes
 
@@ -60,8 +60,7 @@ Rails.application.routes.draw do
   get 'checklist_confirm', to: "checklist_emails#confirm", as: :checklist_confirm
   resources :checklist_emails
 
-  # Webinar
-  get 'webinar-registration-confirmation', to: "notams#webinar_confirmation"
+  
 
   get 'flight-school-hot-aviation-keyword-list', to: 'pages#keyword', as: :keyword
 
