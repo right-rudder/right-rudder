@@ -32,7 +32,7 @@
         <h2 class="text-3xl font-bold py-10">Upcoming Webinars</h2>
         <% if upcoming_webinar.present? %>
           <div class="lg:w-3/4 lg:rounded-xl bg-slate-100 text-slate-800">  
-            <%= link_to upcoming_webinar, class: "" do %>
+            <%= link_to upcoming_webinar, data: { turbo: false }, class: "" do %>
               <%= image_tag upcoming_webinar.feature_image.url, class: "lg:rounded-t-xl w-full", alt: "picture for article: #{upcoming_webinar.title}" %>
               <div class="px-5 pb-5">
                 <h3 class="font-bold text-xl pt-5"><%= upcoming_webinar.title %></h3>
