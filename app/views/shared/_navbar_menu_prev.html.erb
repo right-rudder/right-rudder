@@ -62,12 +62,12 @@
           <%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
           <%= link_to "Flight School Tips", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
           <%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
-          <%= link_to "Growth Accelerator Session", schedule_call_path, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
+          <%= link_to "Growth Accelerator Session", schedule_call_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-slate-100"%>
         </div>
       </div>
     </div>
     <%= link_to "NOTAMs", notams_path, data: { turbo: false }, class: "px-3 hover:text-blue-700 transition-all duration-300" %>
-    <%= link_to "Schedule Call", schedule_call_path, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2 transition-all duration-300" %>
+    <%= link_to "Schedule Call", schedule_call_path, data: { turbo: false }, class: "bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2 transition-all duration-300" %>
   </div>
 </div>
 <!--Mobile Menu-->
@@ -81,9 +81,9 @@
       <li class="py-2"><%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Flight School Tips", checklist_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Business and Marketing Articles", notams_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, class: "hover:text-blue-700 transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>  
     </div>
     <li class="py-3"><%= link_to "NOTAMs", notams_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>
-    <li class="py-3"><%= link_to "Schedule Call", schedule_call_path, class: "hover:text-blue-700 transition-all duration-300" %></li>
+    <li class="py-3"><%= link_to "Schedule Call", schedule_call_path, data: { turbo: false }, class: "hover:text-blue-700 transition-all duration-300" %></li>
   </ul>
 </div>

@@ -187,7 +187,7 @@
           <%= link_to "🔑 Flight School Tips", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "📝 SOP Template", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "🗞️ Blog", notams_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300" %>
-          <%= link_to "🚀 Growth Accelerator Session", schedule_call_path, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700 duration-300"%>
+          <%= link_to "🚀 Growth Accelerator Session", schedule_call_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700 duration-300"%>
         </div>
       </div>
     </div>
@@ -262,11 +262,11 @@
       <li class="py-2"><%= link_to "Google Ads", googleads_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Facebook Ads", fbads_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Rank on Google Search", seo_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Google My Business", gmb_path, class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Website Design", website_path, class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Video Production", video_production_path, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Google My Business", gmb_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Website Design", website_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Video Production", video_production_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "CRM", "https://app.flightschoolcrm.com", target: "blank", class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Full Service Digital Marketing Agency", marketing_system_path, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Full Service Digital Marketing Agency", marketing_system_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
     </div>
     <!--How it Works Menu-->
     <li class="py-3"><button class="transition-all duration-300" x-on:click="dropdown2 = ! dropdown2">How It Works</button></li>
@@ -274,7 +274,7 @@
       <li class="py-2"><%= link_to "Make Your Flight School Known", "https://rightruddermarketing.com/notams/how-to-make-your-flight-school-known", data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Fill Your Funnel With Leads", "https://rightruddermarketing.com/notams/4-steps-to-enroll-more-student-pilots-at-your-flight-school", data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Enroll More Students", "https://rightruddermarketing.com/notams/why-your-messaging-is-scaring-off-future-student-pilots", data: { turbo: false }, class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Flight School Marketing System", marketing_system_path, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Flight School Marketing System", marketing_system_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
     </div>
     <!--Resources Menu-->
     <li class="py-3"><button class="transition-all duration-300" x-on:click="dropdown3 = ! dropdown3">Resources</button></li>
@@ -285,7 +285,7 @@
       <li class="py-2"><%= link_to "Flight School Tips", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "SOP Template", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Blog", notams_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Growth Accelerator Session", schedule_call_path, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Growth Accelerator Session", data: { turbo: false }, schedule_call_path, class: "transition-all duration-300" %></li>  
     </div>
     <!--About Menu-->
     <li class="py-3"><button class="transition-all duration-300" x-on:click="dropdown4 = ! dropdown4">About</button></li>
@@ -294,10 +294,10 @@
       <li class="py-2"><%= link_to "Our Core Values", core_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Mission and Vision", mission_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Partners and Affiliates", partners_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Investors", investors_path, class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Careers", careers_path, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Investors", investors_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Careers", careers_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
     </div>
     
-    <li class="py-3 -ml-3"><%= link_to "Schedule Call", schedule_call_path, class: " bg-orange-500 text-white px-3 rounded-md py-2 transition-all duration-300" %></li>
+    <li class="py-3 -ml-3"><%= link_to "Schedule Call", schedule_call_path, data: { turbo: false }, class: " bg-orange-500 text-white px-3 rounded-md py-2 transition-all duration-300" %></li>
   </ul>
 </div>
