@@ -5,39 +5,31 @@
 <% og_image(image_url("rrm-notams-trans.webp")) %>
 <% twitter_image(image_url("rrm-notams-trans.webp")) %>
 
+<% upcoming_webinar = @notams.upcoming.published.last %>
 
 <!--Set Page font size and limit sticky-->
 <div class="text-lg">
   <%= render "shared/navbar" %>
-  <!--Header Section-->
-  <section class="grid place-items-center bg-gradient-to-r from-slate-100 to-blue-100 lg:to-blue-200">
-    <div class="py-20 flex flex-col lg:flex-row-reverse lg:w-5/6">
-      <!--Blog image-->
-      <div class="grid place-items-center ">
-        <%= image_tag "webinartrans.webp", class: "w-4/5"%>
-      </div>
-      
-      <!--Text about webinar-->
-      <div class="px-5 lg:px-0 lg:w-3/4">
-        <h1 class="text-5xl font-bold text-center pt-20 pb-5">Right Rudder Marketing Webinar Series</h1>
-        <h2 class=" text-xl lg:text-2xl font-semibold text-center pb-5 italic">Hosted by Tim Jedrek</h2>
-        <p class="pb-5 text-md px-10 lg:text-xl text-left">The Right Rudder Marketing Webinar Series is a series created to inspire flight schools to achieve optimal success in their businesses.</p>
-        <p class="pb-5 text-md px-10 lg:text-xl text-left">Tim Jedrek is a digital marketing expert and a pilot.  Tim Jedrek has years of experience in management and leadership working with sales and marketing teams, decades of experience in computer science and programming, and experience working in flight schools interacting with customers and aircraft.</p>
-        <p class="lg:pb-20 text-md px-10 lg:text-xl text-left">On each episode, Tim will go over topics that will help flight schools develop their very own Flight School Marketing System.  Tim will also be sitting down with industry leaders to talk about their processes, the lessons they learned, and how to find success in aviation and business.</p>
-      </div>
-    </div>
-  </section>
-
-
+  
   <!--Feed (@notams is already filtered down to just webinars via notam controller)-->
   <section class="bg-gradient-to-l from-slate-900 to-slate-800 lg:to-slate-700 text-slate-50">
+    
+    <%# FORM (only available when webinar is upcoming?) %>
+    <% if upcoming_webinar.present?  %>
+        <div class="w-full flex flex-col items-center">
+          <div class="w-full pt-10 px-2">
+            <%= render "ghl_form"%>
+          </div>
+        </div>
+      <%end%>
+   
     <div class="flex flex-col lg:flex-row">
+
+      
       
       <!--Upcoming-->
       <div class="lg:w-1/2 flex flex-col items-center lg:pb-20">
         <h2 class="text-3xl font-bold py-10">Upcoming Webinars</h2>
-        
-        <% upcoming_webinar = @notams.upcoming.published.last %>
         <% if upcoming_webinar.present? %>
           <div class="lg:w-3/4 lg:rounded-xl bg-slate-100 text-slate-800">  
             <%= link_to upcoming_webinar, class: "" do %>
@@ -56,16 +48,10 @@
                 </div>
               </div>
             <% end %>
-            <div class="w-full lg:hidden">
-              <%= render "ghl_form"%>
-            </div>
           </div>
           
         <% else %>
           New webinar coming soon!
-          <div class="w-full">
-            <%= render "ghl_form"%>
-          </div>
         <% end %>
         
       </div>
@@ -96,19 +82,32 @@
       </div>
     </div>
 
-    <% if upcoming_webinar.present?  %>
-    <div class="w-full flex flex-col items-center">
-      <div class="w-full hidden lg:block">
-        <%= render "ghl_form"%>
+    
+
+  </section>
+  <!--Header Section (1/14/2024 move to bottom)-->
+  <section class="grid place-items-center bg-gradient-to-r from-slate-100 to-blue-100 lg:to-blue-200">
+    <div class="py-20 flex flex-col lg:flex-row-reverse lg:w-5/6">
+      <!--Blog image-->
+      <div class="grid place-items-center ">
+        <%= image_tag "webinartrans.webp", class: "w-4/5"%>
+      </div>
+      
+      <!--Text about webinar-->
+      <div class="px-5 lg:px-0 lg:w-3/4">
+        <h1 class="text-5xl font-bold text-center pt-20 pb-5">Right Rudder Marketing Webinar Series</h1>
+        <h2 class=" text-xl lg:text-2xl font-semibold text-center pb-5 italic">Hosted by Tim Jedrek</h2>
+        <p class="pb-5 text-md px-10 lg:text-xl text-left">The Right Rudder Marketing Webinar Series is a series created to inspire flight schools to achieve optimal success in their businesses.</p>
+        <p class="pb-5 text-md px-10 lg:text-xl text-left">Tim Jedrek is a digital marketing expert and a pilot.  Tim Jedrek has years of experience in management and leadership working with sales and marketing teams, decades of experience in computer science and programming, and experience working in flight schools interacting with customers and aircraft.</p>
+        <p class="lg:pb-20 text-md px-10 lg:text-xl text-left">On each episode, Tim will go over topics that will help flight schools develop their very own Flight School Marketing System.  Tim will also be sitting down with industry leaders to talk about their processes, the lessons they learned, and how to find success in aviation and business.</p>
       </div>
     </div>
-    <%end%>
-
   </section>
   
 
 
-<%= render "shared/cta1" %>
+  <%= render "shared/cta1" %>
+  </div>
 <%= render "shared/footer" %>
 
 
