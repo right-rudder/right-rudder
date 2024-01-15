@@ -1,0 +1,60 @@
+<%# LOADING CONTAINER that disappears after form is loaded %>
+<div id="loading-container" class="h-[555px]">
+  <div class="p-4 max-w-[650px] w-full mx-auto h-full bg-slate-100/0">
+    <div class="text-slate-800 text-base italic flex">
+      Page is loading...
+      <svg class="animate-spin ml-5 mr-3 h-5 w-5 text-slate-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>  
+    </div>
+      
+    <div x-data="{ repeats: = 5 }" x-init="() => { repeats = 5 }">
+      <template x-for="index in repeats" :key="index">
+        <div class="animate-pulse flex space-x-4 h-full">
+          <div class="flex-1 space-y-6 py-3">
+            <div class="h-2 bg-slate-500 rounded"></div>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="h-2 bg-slate-500 rounded col-span-2"></div>
+              <div class="h-2 bg-slate-500 rounded col-span-1"></div>
+            </div>
+            <div class="h-2 bg-slate-500 rounded"></div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+</div>
+
+
+<iframe
+  src="https://api.leadconnectorhq.com/widget/form/wspl4vZ3nE24pjcLrrcQ"
+  style="width:100%;height:100%;border:none;border-radius:3px"
+  id="inline-wspl4vZ3nE24pjcLrrcQ" 
+  data-layout="{'id':'INLINE'}"
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Contact Us Form"
+  data-height="592"
+  data-layout-iframe-id="inline-wspl4vZ3nE24pjcLrrcQ"
+  data-form-id="wspl4vZ3nE24pjcLrrcQ"
+  title="Contact Us Form"
+      >
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+<script>
+  // Display the loading animation while the iframe is loading
+  document.getElementById('loading-container').className = 'block';
+  document.getElementById('inline-wspl4vZ3nE24pjcLrrcQ').className = 'hidden';
+
+  // Hide the loading animation once the entire page, including the iframe, is fully loaded
+  window.addEventListener('load', function() {
+    document.getElementById('loading-container').className = 'hidden';
+    document.getElementById('inline-wspl4vZ3nE24pjcLrrcQ').className = 'block';
+  });
+</script>
