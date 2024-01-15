@@ -1,5 +1,5 @@
 <!--Copyright and social-->
-<section class="bg-slate-700 text-slate-300 py-5 lg:pl-9 text-center lg:text-left flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
+<section class="bg-slate-700 text-slate-300 py-5 lg:pl-9 text-center lg:text-left flex flex-col-reverse lg:flex-col-reverse lg:justify-between lg:items-start">
   <div>
     <!--Desktop-->
     <div class="hidden lg:block">
@@ -13,7 +13,7 @@
       <%=link_to privacy_policy_path, data: { turbo: false }, class: "hover:underline" do%>Privacy Policy<%end%> | <%= link_to terms_of_service_path, data: { turbo: false }, class: "hover:underline" do%>Terms of Service<%end%>
     </div>
   </div>
-  <div class="flex flex-row justify-center gap-5 lg:gap-3 lg:pr-10 pb-3 lg:pb-0">
+  <div class="flex flex-row justify-center gap-5 lg:gap-3 pb-3">
     <div class="hover:underline">
       <%=link_to "https://wa.me/13143582100", target: :blank do%>
         <%= image_tag "whatsappicon.webp", alt: "whatsapp icon", class: "invert hover:scale-125 transition-all duration-300"%>
