@@ -13,7 +13,7 @@
       <h3 class="font-bold text-xl pt-10 pb-5 lg:pb-10 lg:hidden">Free Resources<br> and Information</h3>
       <h3 class="font-bold text-xl pt-10 pb-5 lg:pb-10 hidden lg:block">Free Resources<br> and Information</h3>
       <ul class="font-semibold text-slate-200">
-        <li class="pb-3"><%= link_to schedule_call_path, class: "hover:underline" do %>FREE one on one consultation<%end%></li>        
+        <li class="pb-3"><%= link_to schedule_call_path, data: { turbo: false }, class: "hover:underline" do %>FREE one on one consultation<%end%></li>        
         <li class="pb-3"><%= link_to "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "hover:underline" do %>View tips to grow your school<%end%></li>
         <li class="pb-3"><%= link_to "https://rightruddermarketing.com/notams/tim-jedrek-at-king-schools-talks-sales-and-marketing", data: { turbo: false }, class: "hover:underline" do %>Marketing and Sales Video<%end%></li>
         <li class="pb-3"><%= link_to marketing_system_path, data: { turbo: false } , class: "hover:underline" do %>Flight School Marketing System<%end%></li>
@@ -56,7 +56,7 @@
             <div class="pr-3">
               <%= image_tag "support.webp", alt:"support headphones icon", class: "h-5 invert pt-1" %>
             </div>
-              <%= link_to "Contact Us", contact_path, class: "hover:underline"%>
+              <%= link_to "Contact Us", contact_path, data: { turbo: false }, class: "hover:underline"%>
           </div>
         </li>
       </ul>

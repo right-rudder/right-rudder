@@ -10,7 +10,7 @@
       Copyright <%= Date.today.year %> <%=link_to root_path, class: "hover:underline" do%>Right Rudder Marketing LLC<%end%>.  <br>All Rights Reserved.
     </div> 
     <div class="">
-      <%=link_to privacy_policy_path, class: "hover:underline" do%>Privacy Policy<%end%> | <%= link_to terms_of_service_path, class: "hover:underline" do%>Terms of Service<%end%>
+      <%=link_to privacy_policy_path, data: { turbo: false }, class: "hover:underline" do%>Privacy Policy<%end%> | <%= link_to terms_of_service_path, data: { turbo: false }, class: "hover:underline" do%>Terms of Service<%end%>
     </div>
   </div>
   <div class="flex flex-row justify-center gap-5 lg:gap-3 lg:pr-10 pb-3 lg:pb-0">
