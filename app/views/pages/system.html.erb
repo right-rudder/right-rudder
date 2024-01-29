@@ -126,7 +126,7 @@
         <p class="pb-5">Are you able to reach the thousands of potential customers in your area?  Are you having problems attracting new student pilots to your flight school?</p>
         <p class="pb-5">Get new student pilots on demand through using <%= link_to "targeted pay per click ad campaigns", googleads_path, class: "text-orange-500 hover:underline"%> on Google and <%= link_to "social media", fbads_path, class: "text-orange-500 hover:underline"%>.  Create and build marketing video ads to promote your flight school.  It's all here in one place for you. </p>
         <p class="pb-5">Schedule a FREE consultation today and see how you can implement this at your school.</p>
-        <%= link_to "Schedule Consultation", schedule_call_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+        <%= link_to "Schedule Consultation", schedule_call_path, data: {turbo: false}, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
       </div>
       <!--Picture-->
       <div class="w-full lg:w-1/2 grid place-items-center">
@@ -143,7 +143,7 @@
         <p class="pb-5">When interested customers make the first click, we ease them into the world of aviation.  We'll design your online resources to show them the steps it takes to become a pilot and why they should choose your flight school.</p>
         <p class="pb-5">We automate the process so you end up with a list full of interested customers and a full schedule.
         <p class="pb-5">Book a call today and see how your flight school can implement the Flight School Marketing System.</p>
-        <%= link_to "Book a Call", schedule_call_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
+        <%= link_to "Book a Call", schedule_call_path, data: {turbo: false}, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
       </div>
       <!--Picture-->
       <div class="w-full lg:w-1/2 lg:px-20 grid place-items-center">
@@ -160,7 +160,7 @@
         <p class="pb-5">Most marketing agencies don't understand the pilot training industry.  They put a generic template up for your website and hope for the best.  We are a team of marketing specialists and web developers that understand the flight training industry first hand.  </p>
         <p class="pb-5">Right Rudder Marketing is a full service <%= link_to "pilot owned", about_us_path, class: "text-orange-500 underline"%> digital marketing agency.  Our Flight School Marketing Plan includes all of the essential services needed by flight schools in one afforable package - including website design, SEO, and online advertising. </p>
         <p class="pb-5 font-semibold">We're here to help you book more discovery flights, be more profitable, and keep your CFIs happy with consistent work.</p>
-        <%= link_to schedule_call_path, class: "" do%>
+        <%= link_to schedule_call_path, data: {turbo: false}, class: "" do%>
           <div class="bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center w-3/5 py-2 transition-all duration-300 hidden lg:block">Book an accelerator session</div>
         <%end%>
         <%= link_to "Call Us Today", schedule_call_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300 lg:hidden" %>
@@ -179,7 +179,7 @@
         <p class="pb-5">We understand you might still be looking for more information about us and how we work.</p>
         <p class="pb-5">That's why we've put together a free checklist that explains how we help flight schools increase their discovery flight bookings, become more profitable, and find success online.</p>
         <p class="pb-5 font-semibold">
-        <%= link_to "Click HERE", checklist_path, class: "text-orange-500 hover:underline"%> to get access to this free checklist.  </p>
+        <%= link_to "Click HERE", data: {turbo: false}, checklist_path, class: "text-orange-500 hover:underline"%> to get access to this free checklist.  </p>
         <p class="pb-5 italic">Please note, not all areas are available.  We offer territory exclusivity.  Hurry!  Download the checklist and schedule a call to learn if your flight school qualifies.</p>
       </div>
       <!--Picture-->
