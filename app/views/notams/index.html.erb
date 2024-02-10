@@ -42,6 +42,9 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">Recent Articles</h2>
+        <%= link_to all_path, data: {turbo: false} do%>
+          <div class="text-gray-300 pt-3 hover:underline">Click here to view all published articles</div>
+        <%end%>
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         
@@ -145,9 +148,9 @@
     </div>
 
   </div>
+
+
+  <%= render "notams_blog"%>
 </div>
-
-<%= render "notams_blog"%>
-
 <%= render "shared/cta1" %>
 <%= render "shared/footer" %>

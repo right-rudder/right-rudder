@@ -1,5 +1,5 @@
 <%# Head / Meta Data %>
-<% title("Business and Marketing Articles") %>
+<% title("Business and Marketing Articles | Flight School Marketing") %>
 <% meta_description("Business and marketing articles for the flight school and pilot training industry.  Learn tips on how to grow and scale your pilot training academy.") %>
 <% meta_keywords("Right Rudder Marketing, Blog, aviation webinar, aviation marketing, aviation business marketing ideas") %>
 <% og_image(image_url("/images/rrm-notams-trans.webp")) %>
@@ -38,9 +38,15 @@
           <%end%>
         <%end %>
       </div>
+      <%= link_to notams_path, data: {turbo: false} do%>
+        <div class="text-gray-300 pt-10 hover:underline text-center">Click here to go back to the NOTAMs blog homepage</div>
+      <%end%>
     </div>
 
   </div>
 
+  <%= render "notams_blog"%>
+
+</div>
 <%= render "shared/cta1" %>
 <%= render "shared/footer" %>

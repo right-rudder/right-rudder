@@ -3,7 +3,7 @@ class NotamsController < ApplicationController
   before_action :authenticate_admin!, except: [:index, :show, :webinars, :webinar_confirmation, :bm, :af, :na, :all]
 
   def draft #drafts
-    @notams = Notam.draft
+    @notams = Notam.draft.all
   end
   
   def all #all
@@ -19,7 +19,7 @@ class NotamsController < ApplicationController
   end
 
   def na #news and annoucements
-    @notams = Notam.news_and_annoucements.all
+    @notams = Notam.news_and_announcements.all
   end
   
   def webinars

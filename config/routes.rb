@@ -41,7 +41,7 @@ Rails.application.routes.draw do
   get 'notams/aviation-and-flying', to: 'notams#af', as: :af
   get 'notams/news-and-annoucements', to: 'notams#na', as: :na
   get 'notams/all', to: 'notams#all', as: :all
-  get 'notams/draft', to: 'notams#draft', as: :draft
+  get 'notams/drafts', to: 'notams#draft', as: :draft
 
   # Webinars
   # resources :webinars  #no model
