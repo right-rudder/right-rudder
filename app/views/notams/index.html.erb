@@ -16,13 +16,13 @@
     
     <% @notams.published.featured.limit(1).reverse_each do |feature| %> 
       
-      <%= link_to feature, data: { turbo: false } do%>
+      <%= link_to feature, data: { turbo: false }, class: "group" do%>
       <div class="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
         <h2 class="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl mb-10">Featured Article</h2>
         <div class="mx-auto flex max-w-2xl flex-col items-start justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div class="w-full lg:max-w-lg lg:flex-auto">
             
-            <%= image_tag feature.feature_image, class: "aspect-[1/1] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[20.5rem]"%>
+            <%= image_tag feature.feature_image, class: "group-hover:scale-105 duration-300 aspect-[1/1] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[20.5rem]"%>
             
           </div>
           <div class="w-full h-full lg:max-w-xl lg:flex-auto flex flex-col items-start">
@@ -47,7 +47,7 @@
         
         <% @notams.published.last(6).reverse_each do |post| %> 
           <%= link_to post, data: { turbo: false }, class: "" do%>
-            <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-20 sm:pt-48 lg:pt-64">
+            <article class="hover:scale-105 duration-300 relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-20 sm:pt-48 lg:pt-64">
               <%= image_tag post.feature_image, class: "absolute inset-0 -z-10 h-full w-full object-cover" %>
               <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
               <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
@@ -75,7 +75,7 @@
         
         <% @notams.published.business_and_marketing.last(3).reverse_each do |post| %> 
           <%= link_to post, data: { turbo: false }, class: "" do%>
-            <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-20 sm:pt-48 lg:pt-64">
+            <article class="hover:scale-105 duration-300 relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-20 sm:pt-48 lg:pt-64">
               <%= image_tag post.feature_image, class: "absolute inset-0 -z-10 h-full w-full object-cover" %>
               <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
               <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
@@ -88,78 +88,6 @@
           <%end%>
         <%end %>
       </div>
-    </div>
-
-    
-  </div>
-
-  
-  <!--Top Section-->
-  <div class="flex flex-col lg:flex-row lg:justify-center lg:py-10 bg-gradient-to-r from-slate-700 to-slate-900">
-    
-    <!--Featured Article-->
-    <% @notams.published.featured.limit(1).reverse_each do |feature| %> 
-      <%= link_to feature, data: { turbo: false }, class: "w-full w-full lg:w-1/2 h-screen-1/2" do %>
-      <section style="background-image: url(<%=feature.feature_image.url%>)" class="h-screen-1/2 bg-cover bg-center flex flex-col justify-end lg:mx-5 lg:rounded-lg">
-        <!--Bottom Section of image feature-->
-        <div class="bg-gradient-to-r from-slate-50/50 to-slate-50/50 px-10 py-5 hover:from-slate-50/60 hover:to-slate-50/60 transition-all duration-300 lg:rounded-b-lg">
-          <h3 class="font-bold text-2xl lg:text-3xl line-clamp-3"><%= feature.title%></h3>
-          <div class="font-semibold text-sm">
-            <%= I18n.localize(feature.notam_date, :format => '%^a %^b %-d %Y') %>
-          </div>
-          <div class="text-sm italic">
-            <%= feature.category%>
-          </div>
-        </div>
-      </section>
-      <%end%>
-    <%end%>
-
-    <!--Side with recent articles-->
-    <aside class="w-full lg:w-1/3 lg:h-screen-1/2 flex flex-col items-center lg:justify-between lg:mr-5">
-      <h3 class="text-center font-semibold py-5 text-2xl text-slate-200 hidden lg:block">Recent Articles</h3>
-      <% @notams.published.last(3).reverse_each do |post| %> 
-        <%= link_to post, data: { turbo: false }, class: "" do%>
-          <div class="flex flex-row items-center  w-full lg:rounded-lg h-24 lg:mb-0 hover:brightness-105 transition-all duration-300">
-            <!--image-->
-            <div class="w-2/5 flex flex-row items-center">
-              <%= image_tag post.feature_image.url, class: "object-cover object-center lg:rounded-l-lg h-24 w-full", alt: "picture for article: #{post.title}"%>
-              <%#= post.feature_image %><br>    
-            </div>
-            <div class=" pl-5 w-3/5 flex flex-col justify-center items-start h-full text-md pr-5 bg-slate-50 lg:rounded-r-lg lg:bg-gradient-to-b from-slate-50 to-slate-200  ">
-              <div class="line-clamp-2 text-slate-800"><%= post.title %></div>
-              <div class="font-semibold text-sm pt-1">
-                <%= I18n.localize(post.notam_date, :format => '%^a %^b %-d %Y') %>
-              </div>
-            </div>
-          </div>
-        <% end %>
-      <%end %>
-    </aside>
-  </div>
-
-  <!--Next section with categories-->
-  <div class="flex flex-col lg:flex-row lg:justify-between lg:pb-10 bg-gradient-to-r from-slate-700 to-slate-900 text-slate-200">
-    <!--Category 1: Business and Marketing<-->
-    <div class="lg:w-1/3 lg:mx-5 flex flex-col lg:gap-5 items-center lg:py-5 ">
-      <h3 class="font-semibold py-5 lg:pt-0 lg:pb-5 text-2xl">Business and Marketing</h3>
-      <% @notams.published.business_and_marketing.last(5).reverse_each do |post| %> 
-        <%= render "notam_category_card", post: post %>
-      <%end %>
-    </div>
-    <!--Category 2: Aviation and Flying-->
-    <div class="lg:w-1/3 lg:mx-5 flex flex-col items-center py-5 lg:gap-5 ">
-      <h3 class="font-semibold pb-5 text-2xl">Aviation and Flying</h3>
-      <% @notams.published.aviation_and_flying.last(5).reverse_each do |post| %> 
-        <%= render "notam_category_card", post: post %>
-      <%end %>
-    </div>
-    <!--Category 3: News and announcements -->
-    <div class="lg:w-1/3 lg:mx-5 lg:gap-5 flex flex-col lg:py-5 items-center">
-      <h3 class="font-semibold pb-5 text-2xl">News and Announcements</h3>
-      <% @notams.published.news_and_announcements.last(5).reverse_each do |post| %> 
-        <%= render "notam_category_card", post: post %> 
-      <%end %>
     </div>
   </div>
 </div>
