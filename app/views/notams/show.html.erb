@@ -29,7 +29,19 @@
       <div class="">
         <div class="p-3">
           <h2 class="font-bold text-3xl"><%= @notam.title %></h2>
-          <div class="text-md font-semibold"><%= @notam.category %></div>      
+          <% if @notam.category == "News and Announcements" %>
+            <div class="text-md font-semibold hover:underline"><%= link_to "News and Announcements", na_path, data: {turbo: false} %></div>      
+          <%end%>
+
+          <% if @notam.category == "Aviation and Flying"%>
+            <div class="text-md font-semibold hover:underline"><%= link_to "Aviation and Flying", af_path, data: {turbo: false} %></div>
+          <% end %>
+
+          <% if @notam.category == "Business and Marketing"%>
+            <div class="text-md font-semibold hover:underline"><%= link_to "Business and Marketing", bm_path, data: {turbo: false} %></div>      
+          <%end%>  
+              
+          
           <div class="text-sm font-semibold"><%= I18n.localize(@notam.notam_date, :format => '%^a %^b %-d %Y') %></div>
           <div class="text-sm italic">Written by <%= @notam.author%></div>          
         </div>
