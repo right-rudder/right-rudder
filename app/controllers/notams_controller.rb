@@ -36,7 +36,7 @@ class NotamsController < ApplicationController
 
   # GET /notams/1 or /notams/1.json
   def show
-    @notams = Notam.published.order("RANDOM()").limit(3)
+    @notams = Notam.published.order("RANDOM()").limit(4)
   end
 
   # GET /notams/new
