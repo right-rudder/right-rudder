@@ -33,6 +33,7 @@
                 <time datetime="<%= post.notam_date %>" class="mr-8"><%= I18n.localize(post.notam_date, :format => '%^a %^b %-d %Y') %></time>
               </div>
               <div class="flex flex-wrap items-center gap-y-1 text-sm leading-6 text-gray-300"><%= post.author%></div>
+              <div class="flex flex-wrap items-center gap-y-1 text-sm leading-6 text-gray-300"><%= post.category%></div>
               <h3 class="mt-3 text-lg font-semibold leading-6 text-white"><%= post.title%></h3>
             </article>
           <%end%>
