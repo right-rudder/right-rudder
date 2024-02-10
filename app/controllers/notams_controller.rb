@@ -1,42 +1,39 @@
 class NotamsController < ApplicationController
   before_action :set_notam, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:index, :show, :webinars, :webinar_confirmation]
+  before_action :authenticate_admin!, except: [:index, :show, :webinars, :webinar_confirmation, :bm]
 
+  def bm
+    @notams = Notam.business_and_marketing.all
+  end
+  
   def webinars
     @notams = Notam.webinar
-    @newsletter_email = NewsletterEmail.new
   end
 
   def webinar_confirmation
-    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /notams or /notams.json
   def index
     @notams = Notam.all
-    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /notams/1 or /notams/1.json
   def show
-    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /notams/new
   def new
     @notam = Notam.new
-    @newsletter_email = NewsletterEmail.new
   end
 
   # GET /notams/1/edit
   def edit
-    @newsletter_email = NewsletterEmail.new
   end
 
   # POST /notams or /notams.json
   def create
     @notam = Notam.new(notam_params)
-    @newsletter_email = NewsletterEmail.new
 
     respond_to do |format|
       if @notam.save
@@ -51,7 +48,6 @@ class NotamsController < ApplicationController
 
   # PATCH/PUT /notams/1 or /notams/1.json
   def update
-    @newsletter_email = NewsletterEmail.new
     respond_to do |format|
       if @notam.update(notam_params)
         format.html { redirect_to notam_url(@notam), notice: "Notam was successfully updated." }

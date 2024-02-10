@@ -36,8 +36,9 @@ Rails.application.routes.draw do
 
 
   # Notams
-  get 'notams/select_featured', to: 'notams#select_featured_notams'
   post 'uploader/image', to: 'uploader#image' #add upload image to notams 
+  get 'notams/business-and-marketing', to: 'notams#bm', as: :bm
+
   # Webinars
   # resources :webinars  #no model
   get 'webinar-registration-confirmation', to: "notams#webinar_confirmation"

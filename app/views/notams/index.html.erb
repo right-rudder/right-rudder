@@ -36,6 +36,8 @@
       </div>
       <%end%>
     <%end%>
+
+
     <%# Recent Articles %>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
@@ -43,7 +45,7 @@
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         
-        <% @notams.published.last(9).reverse_each do |post| %> 
+        <% @notams.published.last(6).reverse_each do |post| %> 
           <%= link_to post, data: { turbo: false }, class: "" do%>
             <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-20 sm:pt-48 lg:pt-64">
               <%= image_tag post.feature_image, class: "absolute inset-0 -z-10 h-full w-full object-cover" %>
@@ -53,6 +55,7 @@
                 <time datetime="<%= post.notam_date %>" class="mr-8"><%= I18n.localize(post.notam_date, :format => '%^a %^b %-d %Y') %></time>
               </div>
               <div class="flex flex-wrap items-center gap-y-1 text-sm leading-6 text-gray-300"><%= post.author%></div>
+              <div class="flex flex-wrap items-center gap-y-1 text-sm leading-6 text-gray-300"><%= post.category%></div>
               <h3 class="mt-3 text-lg font-semibold leading-6 text-white"><%= post.title%></h3>
             </article>
           <%end%>
@@ -64,7 +67,9 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl pt-20">Business and Marketing Articles</h2>
-        <div class="text-gray-300 pt-3">Click here to view all business and marketing articles</div>
+        <%= link_to bm_path, data: {turbo: false} do%>
+          <div class="text-gray-300 pt-3 hover:underline">Click here to view all business and marketing articles</div>
+        <%end%>
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         
@@ -159,22 +164,7 @@
   </div>
 </div>
 
-<!--Header Section-->
-  <section class="grid place-items-center">
-    <div class="py-20 flex flex-col lg:flex-row lg:w-5/6">
-      <!--Blog image-->
-      <div class="grid place-items-center">
-        <%= image_tag "rrm-notams-trans.webp", class: "w-3/4"%>
-      </div>
-      
-      <!--Text about blog-->
-      <div class="px-5 lg:px-0">
-        <h2 class="text-5xl font-bold text-center pt-20 pb-5">Right Rudder Marketing NOTAMs</h2>
-        <h2 class=" text-lg lg:text-2xl font-semibold text-center pb-5">An aviation and flying blog.<br>Learn business and marketing.<br>Read the lastest news.</h2>
-        <p class="lg:pb-20 text-md px-10 lg:text-xl text-center">The Right Rudder Marketing blog</p>
-      </div>
-    </div>
-  </section>
+<%= render "notams_blog"%>
 
 <%= render "shared/cta1" %>
 <%= render "shared/footer" %>
