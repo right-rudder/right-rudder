@@ -1,9 +1,25 @@
 class NotamsController < ApplicationController
   before_action :set_notam, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:index, :show, :webinars, :webinar_confirmation, :bm]
+  before_action :authenticate_admin!, except: [:index, :show, :webinars, :webinar_confirmation, :bm, :af, :na, :all]
 
-  def bm
+  def draft #drafts
+    @notams = Notam.all
+  end
+  
+  def all #all
+    @notams = Notam.all
+  end
+  
+  def bm #business and marketing
     @notams = Notam.business_and_marketing.all
+  end
+
+  def af #aviation and flying
+    @notams = Notam.aviation_and_flying.all
+  end
+
+  def na #news and annoucements
+    @notams = Notam.news_and_annoucements.all
   end
   
   def webinars

@@ -38,6 +38,10 @@ Rails.application.routes.draw do
   # Notams
   post 'uploader/image', to: 'uploader#image' #add upload image to notams 
   get 'notams/business-and-marketing', to: 'notams#bm', as: :bm
+  get 'notams/aviation-and-flying', to: 'notams#af', as: :af
+  get 'notams/news-and-annoucements', to: 'notams#na', as: :na
+  get 'notams/all', to: 'notams#all', as: :all
+  get 'notams/draft', to: 'notams#draft', as: :draft
 
   # Webinars
   # resources :webinars  #no model
