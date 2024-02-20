@@ -109,4 +109,7 @@ Rails.application.routes.draw do
   # Temporary FSCRM TOS
   get 'flight-school-crm-terms-of-service-privacy-policy', to: 'pages#tos_fscrm'
 
+  #
+  get 'pre-meeting-questionnaire', to: 'pages#pre-meeting-questionnaire'
+
 end
