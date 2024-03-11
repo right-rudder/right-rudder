@@ -21,6 +21,10 @@ class NotamsController < ApplicationController
   def na #news and annoucements
     @notams = Notam.news_and_announcements.all
   end
+
+  def fs #Flight school articles
+    @notams = Notam.flight_school_articles.all
+  end
   
   def webinars
     @notams = Notam.webinar

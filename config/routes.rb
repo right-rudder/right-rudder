@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get 'notams/business-and-marketing', to: 'notams#bm', as: :bm
   get 'notams/aviation-and-flying', to: 'notams#af', as: :af
   get 'notams/news-and-annoucements', to: 'notams#na', as: :na
+  get 'notams/flight-school-blog-posts', to: 'notams#fs', as: :fs
   get 'notams/all', to: 'notams#all', as: :all
   get 'notams/drafts', to: 'notams#draft', as: :draft
 
