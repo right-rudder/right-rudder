@@ -53,6 +53,8 @@ gem "bootsnap", require: false
 
 ## MY GEMS ##
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem "httparty"
+
 # gem 'calendly'  # I don't think we need this gem.. It's just a straight embed.  I was messing with the API earlier but didn't do anything with it..
 gem 'sitemap_generator'
 gem 'tinymce-rails'
