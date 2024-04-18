@@ -49,13 +49,13 @@
         <!-- Button -->
         <button
           x-ref="button"
-          x-on:click="toggle()"
+          @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
           type="button"
           class="px-3 hover:text-blue-700 transition-all duration-300"
         >
-          Our Services
+          Services
         </button>
         <!-- Panel -->
         <div
@@ -107,7 +107,7 @@
         <!-- Button -->
         <button
           x-ref="button"
-          x-on:click="toggle()"
+          @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
           type="button"
@@ -163,7 +163,7 @@
         <!-- Button -->
         <button
           x-ref="button"
-          x-on:click="toggle()"
+          @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
           type="button"
@@ -219,7 +219,7 @@
         <!-- Button -->
         <button
           x-ref="button"
-          x-on:click="toggle()"
+          @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
           type="button"
