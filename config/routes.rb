@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get '/sitemap.xml.gz', to: redirect("https://rrmsitemaps.s3.us-east-2.amazonaws.com/sitemap.xml.gz")
-  
+
   # 404/500 pages
   get 'errors/not_found'
   get 'errors/internal_server_error'
@@ -15,18 +15,18 @@ Rails.application.routes.draw do
   # Newsletters
   get 'newsletter_confirm', to: "newsletter_emails#confirm", as: :newsletter_confirm
   resources :newsletter_emails
-  
+
   # Careers
   #get 'careers/web_developer', to: "careers#webdeveloper", as: :webdeveloper
   resources :careers
-  
+
 
 
   devise_scope :admin do
     # Redirests signing out users back to sign-in
     get "admins", to: "devise/sessions#new"
   end
-  
+
   devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
 
   # homepage
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
 
 
   # Notams
-  post 'uploader/image', to: 'uploader#image' #add upload image to notams 
+  post 'uploader/image', to: 'uploader#image' #add upload image to notams
   get 'notams/business-and-marketing', to: 'notams#bm', as: :bm
   get 'notams/aviation-and-flying', to: 'notams#af', as: :af
   get 'notams/news-and-annoucements', to: 'notams#na', as: :na
@@ -49,24 +49,29 @@ Rails.application.routes.draw do
   get 'webinar-registration-confirmation', to: "notams#webinar_confirmation"
   get 'webinars', to: 'notams#webinars'
   resources :notams #webinars are a part of notams right now..
-  
+
   # Agreement
-  #get 'agreements/form2', to: 'agreements#form2', as: :form2 
+  #get 'agreements/form2', to: 'agreements#form2', as: :form2
   #resources :agreements
 
   ### Static pages routes
 
   ### FUNNELS ###
   # GROWTH ACCELERATOR SESSION
-  get 'schedule-call', to: 'pages#schedule_call', as: :schedule_call  
-  #get 'schedule-call-confirmation', to: 'pages#schedule_call_confirmation'  
-  
+  get 'schedule-call', to: 'pages#schedule_call', as: :schedule_call
+  #get 'schedule-call-confirmation', to: 'pages#schedule_call_confirmation'
+
   get 'flight-school-marketing-checklist', to: 'pages#checklist', as: "checklist"
   # Checklist dl page
   get 'checklist_confirm', to: "checklist_emails#confirm", as: :checklist_confirm
   resources :checklist_emails
 
-  
+  # SOP
+  get 'sop', to: 'pages#sop', as: "sop"
+  # SOP dl page
+  get 'sop_confirm', to: "sop_emails#confirm", as: :sop_confirm
+  resources :sop_emails
+
 
   get 'flight-school-hot-aviation-keyword-list', to: 'pages#keyword', as: :keyword
 
@@ -82,7 +87,9 @@ Rails.application.routes.draw do
   get 'qualify_quiz/unqualified_service', to: "pages#unqualified_service", as: :quiz_unqualified_service
 
   # Menu Pages
+
   get 'marketing-system', to: 'pages#system'
+  get 'our-services', to: 'pages#services'
   #get 'system-video', to: 'pages#system_video'
   get 'about-us', to: 'pages#about_us'  #Leave link due to Google previously knowing about this page
   get 'our-team', to: 'pages#about_us', as: :our_team
