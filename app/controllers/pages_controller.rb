@@ -8,11 +8,15 @@ class PagesController < ApplicationController
   def checklist
     @checklist_email = ChecklistEmail.new
   end
+  # SOP Funnel
+  def sop
+    @sop_email = SopEmail.new
+  end
 
   # Qualify Quiz
   # Questions
   def one
-    render 'pages/qualify_quiz/one'  
+    render 'pages/qualify_quiz/one'
   end
   def two
     render 'pages/qualify_quiz/two'
