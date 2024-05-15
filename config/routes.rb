@@ -67,7 +67,7 @@ Rails.application.routes.draw do
   resources :checklist_emails
 
   # SOP
-  get 'sop', to: 'pages#sop', as: "sop"
+  get 'flight-school-sop-template', to: 'pages#sop', as: "sop"
   # SOP dl page
   get 'sop_confirm', to: "sop_emails#confirm", as: :sop_confirm
   resources :sop_emails
