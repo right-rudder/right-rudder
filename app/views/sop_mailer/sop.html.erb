@@ -1,14 +1,24 @@
+<h1 style="font-size:14pt;font-family:Arial,sans-serif">You're going to be the #1 flight school in your area</h1>
+
 <div style="font-size:12pt;font-family:Arial,sans-serif">
-  Hi <%=@message.name%>, 
-  <br><br>
-  Thanks for contacting Right Rudder Marketing.
-  <br><br>
-  Our team will reach out to your shortly.  Meanwhile, please feel free to continue browsing our <a href="https://rightruddermarketing">website</a> and enjoy the free resources and content available to you.
-  <br><br>
-  If you'd like to get a hold of us sooner, give us a call at <a href="tel:1-314-804-1200">1-314-804-1200</a>
- </div>
- <!--Sig-->
- 
+  <p>Hi <%= @name %>,</p>
+
+  <p>We're excited to connect with you and introduce you to the Flight School Marketing System SOP Template. I designed this SOP template based on the decades of experience working in the manufacturing industry and seeing how fortune 500 companies managed and grew their companies.</p>
+
+  <p>
+    🛫 <strong>Flight School Marketing System SOP Template:</strong> <a href="https://docs.google.com/document/d/1vIrR-Mxu0tNERmB4yFQa9Bj8zd-yG8Z8/edit?usp=sharing&ouid=110279877569764767816&rtpof=true&sd=true" target="_blank">Download Now</a>
+  </p>
+
+  <p>
+    We'll reach out in a few moments to see how you're doing to see if you're interested in scheduling a growth accelerator session with Right Rudder.  This is where we'd go over what your digital marketing looks like today, what your competition is doing, and a strategy specifically tailored for your flight school business.  The session is absolutely risk free and no cost.  Even flight schools that don't end up using Right Rudder find the session to be very beneficial.
+  </p>
+
+  <p>
+    Looking forward to talking with you, <%= @name %>.
+  </p>
+</div>
+
+<!--Sig-->
 <div>
   <br style="color:rgb(34,34,34)">
   <br style="color:rgb(34,34,34)">
@@ -57,12 +67,3 @@
     </tbody>
   </table>
 </div>
-
-<br><br><br>
-   -------- Your Form Submission Details --------
-<br><br><br>
-   Name: <%=@message.name%><br>
-   Phone: <%=@message.phone%><br>
-   SMS Text: <%=@message.sms%><br>
-   Email: <%=@message.email%><br>
-   Message: <%=@message.content%><br>

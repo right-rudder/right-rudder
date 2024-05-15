@@ -44,18 +44,20 @@
           x-on:keydown.escape.prevent.stop="close($refs.button)"
           x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
           x-id="['dropdown-button']"
-          class="relative"
+          class="relative focus-within:ring-0"
       >
         <!-- Button -->
         <button
           x-ref="button"
-          x-on:click="toggle()"
+          @click="window.location.href = '/our-services'"
+          @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
           type="button"
-          class="px-3 hover:text-blue-700 transition-all duration-300"
+          class="px-3 hover:text-blue-700 transition-all duration-300 outline-none hover:outline-none"
         >
-          Our Services
+          <%# <%= link_to "Services", our_services_path, data: { turbo: false }%>
+          Services
         </button>
         <!-- Panel -->
         <div
@@ -63,6 +65,7 @@
           x-show="open"
           x-transition.origin.top.left
           x-on:click.outside="close($refs.button)"
+          x-on:mouseleave="close($refs.button)"
           :id="$id('dropdown-button')"
           style="display: none;"
           class="absolute left-0 mt-2 w-72 rounded-md bg-slate-50 shadow-md"
@@ -107,11 +110,11 @@
         <!-- Button -->
         <button
           x-ref="button"
-          x-on:click="toggle()"
+          @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
           type="button"
-          class="px-3 hover:text-blue-700 transition-all duration-300"
+          class="px-3 hover:text-blue-700 transition-all duration-300 outline-none hover:outline-none"
         >
           How It Works
         </button>
@@ -121,6 +124,7 @@
           x-show="open"
           x-transition.origin.top.left
           x-on:click.outside="close($refs.button)"
+          x-on:mouseleave="close($refs.button)"
           :id="$id('dropdown-button')"
           style="display: none;"
           class="absolute left-0 mt-2 w-80 rounded-md bg-slate-50 shadow-md"
@@ -163,11 +167,11 @@
         <!-- Button -->
         <button
           x-ref="button"
-          x-on:click="toggle()"
+          @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
           type="button"
-          class="px-3 hover:text-blue-700 transition-all duration-300"
+          class="px-3 hover:text-blue-700 transition-all duration-300 outline-none hover:outline-none"
         >
           Resources
         </button>
@@ -177,6 +181,7 @@
           x-show="open"
           x-transition.origin.top.left
           x-on:click.outside="close($refs.button)"
+          x-on:mouseleave="close($refs.button)"
           :id="$id('dropdown-button')"
           style="display: none;"
           class="absolute left-0 mt-2 w-80 rounded-md bg-slate-50 shadow-md"
@@ -185,7 +190,8 @@
           <%= link_to "🆓 Marketing Checklist", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "🔥 Hot Flight School Keywords", "https://rightruddermarketing.com/notams/ultimate-flying-school-online-marketing-cheat-sheet", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "🔑 Flight School Tips", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
-          <%= link_to "📝 SOP Template", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
+          <%= link_to "📝 SOP Template", sop_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
+          <%# <%= link_to "📝 SOP Template", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "🗞️ Blog", notams_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300" %>
           <%= link_to "🚀 Growth Accelerator Session", schedule_call_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700 duration-300"%>
         </div>
@@ -219,11 +225,11 @@
         <!-- Button -->
         <button
           x-ref="button"
-          x-on:click="toggle()"
+          @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
           type="button"
-          class="px-3 hover:text-blue-700 transition-all duration-300"
+          class="px-3 hover:text-blue-700 transition-all duration-300 outline-none hover:outline-none"
         >
           About
         </button>
@@ -233,6 +239,7 @@
           x-show="open"
           x-transition.origin.top.left
           x-on:click.outside="close($refs.button)"
+          x-on:mouseleave="close($refs.button)"
           :id="$id('dropdown-button')"
           style="display: none;"
           class="absolute left-0 mt-2 w-60 rounded-md bg-slate-50 shadow-md"
