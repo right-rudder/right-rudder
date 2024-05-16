@@ -56,7 +56,6 @@
           type="button"
           class="px-3 hover:text-blue-700 transition-all duration-300 outline-none hover:outline-none"
         >
-          <%# <%= link_to "Services", our_services_path, data: { turbo: false }%>
           Services
         </button>
         <!-- Panel -->
@@ -110,6 +109,7 @@
         <!-- Button -->
         <button
           x-ref="button"
+          @click="window.location.href = '/how-it-works'"
           @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
@@ -167,6 +167,7 @@
         <!-- Button -->
         <button
           x-ref="button"
+          @click="window.location.href = '/resources'"
           @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
@@ -225,6 +226,7 @@
         <!-- Button -->
         <button
           x-ref="button"
+          @click="window.location.href = '/about-us'"
           @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"
