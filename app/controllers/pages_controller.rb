@@ -12,6 +12,10 @@ class PagesController < ApplicationController
   def sop
     @sop_email = SopEmail.new
   end
+  # GMB Funnel
+  def gmb_email
+    @gmb_email = GmbEmail.new
+  end
 
   # Qualify Quiz
   # Questions

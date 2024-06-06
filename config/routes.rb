@@ -72,6 +72,12 @@ Rails.application.routes.draw do
   get 'sop_confirm', to: "sop_emails#confirm", as: :sop_confirm
   resources :sop_emails
 
+  # Google My Business
+  get 'flight-school-google-my-business', to: 'pages#gmb_email', as: "gmb_email"
+  # GMB dl page
+  get 'gmb_confirm', to: "gmb_emails#confirm", as: :gmb_confirm
+  resources :gmb_emails
+
 
   get 'flight-school-hot-aviation-keyword-list', to: 'pages#keyword', as: :keyword
 
