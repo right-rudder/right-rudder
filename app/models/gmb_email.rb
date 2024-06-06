@@ -11,7 +11,7 @@ class GmbEmail < ApplicationRecord
 
   validates_uniqueness_of :email
 
-  # after_create :update_google_sheet
+  after_create :update_google_sheet
 
   def strip_phone_number
     self.phone = phone.to_s.gsub(/[-() ]/, "")
