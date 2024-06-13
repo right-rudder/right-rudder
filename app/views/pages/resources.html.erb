@@ -1,0 +1,83 @@
+<%# Head / Meta Data %>
+<% title("How It Works | Right Rudder Marketing") %>
+<% meta_description("Discover how Right Rudder Marketing's proven and tested digital marketing system can help your flight school get more visibility, more students, and more revenue. Learn about our three-step marketing system designed specifically for flight schools.") %>
+<% meta_keywords("flight school marketing, aviation business marketing, digital marketing for flight schools, SEO for flight schools, PPC ads for flight schools, social media marketing for flight schools, aviation marketing experts") %>
+<% og_image(image_url("/images/fsms.webp")) %>
+<% twitter_image(image_url("/images/fsms.webp")) %>
+
+<div class="text-lg">
+  <%= render "shared/navbar"%>
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"><span class="text-blue-800">Free</span> Resources to Elevate Your Flight School's Success</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">At Right Rudder Marketing, we are dedicated to helping flight schools achieve unparalleled success. We offer a comprehensive suite of free resources designed to provide you with the knowledge and tools necessary to grow your business. From insightful webinars and detailed marketing checklists to essential flight school tips and templates, our resources are crafted to enhance your visibility and attract more students. Embrace these free resources to elevate your flight school's performance and reach new heights.</p>
+      </div>
+      <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <%= link_to webinars_path do %>
+          <div class="border border-gray-200 hover:scale-105 duration-200">
+            <img src="https://img.youtube.com/vi/eGwfldJG7bk/hqdefault.jpg" class="h-52 w-full object-cover" />
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Webinars</dt>
+              <dd class="mt-1 text-gray-600">Join our expert-led webinars to gain valuable insights and strategies for optimizing your flight school's marketing efforts. Learn from industry leaders and get your questions answered in real-time.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to checklist_path do %>
+          <div class="border border-gray-200 hover:scale-105 duration-200">
+            <%= image_tag "fsms_checklist.webp", alt: "Flight School Marketing Checklist", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Marketing Checklist</dt>
+              <dd class="mt-1 text-gray-600">Utilize our comprehensive marketing checklist to ensure your flight school covers all essential areas for effective marketing. This resource will help you stay organized and implement proven strategies.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to "https://rightruddermarketing.com/notams/ultimate-flying-school-online-marketing-cheat-sheet" do %>
+          <div class="border border-gray-200 hover:scale-105 duration-200">
+            <%= image_tag "seo-keywords.webp", alt: "Flight School Keywords SEO", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Hot Flight School Keywords</dt>
+              <dd class="mt-1 text-gray-600">Discover the most effective keywords for your flight school with our curated list. These high-impact terms will boost your SEO efforts and help you attract more potential students online.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school" do %>
+          <div class="border border-gray-200 hover:scale-105 duration-200">
+            <img src="https://img.youtube.com/vi/uxOgV8PANtI/hqdefault.jpg" class="h-52 w-full object-cover" />
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Flight School Tips</dt>
+              <dd class="mt-1 text-gray-600">Access a collection of practical tips and best practices tailored for flight schools. From student retention strategies to marketing tactics, these tips are designed to help your school thrive.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to sop_path do %>
+          <div class="border border-gray-200 hover:scale-105 duration-200">
+            <%= image_tag "sop-image.jpg", alt: "SOP template", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">SOP template</dt>
+              <dd class="mt-1 text-gray-600">Streamline your operations with our Standard Operating Procedures (SOP) template. This resource provides a clear framework to ensure consistency and efficiency in your flight school’s processes.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to webinars_path do %>
+          <div class="border border-gray-200 hover:scale-105 duration-200">
+            <img src="https://img.youtube.com/vi/3KSu_gNW63M/hqdefault.jpg" class="h-52 w-full object-cover" />
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Growth Accelerator Session</dt>
+              <dd class="mt-1 text-gray-600">Book a free growth accelerator session with our marketing experts. Receive personalized advice and actionable steps to accelerate your flight school's growth and achieve your business goals.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/cta1"%>
+<%= render "shared/footer"%>
