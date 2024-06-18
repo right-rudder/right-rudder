@@ -16,6 +16,10 @@ class PagesController < ApplicationController
   def gmb_email
     @gmb_email = GmbEmail.new
   end
+  # Keyword Funnel
+  def keyword
+    @keyword_email = KeywordEmail.new
+  end
 
   # Qualify Quiz
   # Questions
