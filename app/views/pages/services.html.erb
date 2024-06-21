@@ -1,196 +1,103 @@
 <%# Head / Meta Data %>
-<% title("Right Rudder Marketing | Flight School Marketing System") %>
-<% meta_description("Learn more about the Flight School Marketing System from Right Rudder Marketing.  Digital Marketing for flight schools and aviation businesses.  Website design, search engine optimization (SEO), pay per click ads (PPC), email campaigns, social media ads, google ads, reputation management") %>
-<% meta_keywords("marketing for flight schools, marketing for aviation business, increase sales for flight schools, advertise to local for flight schools, pilot training near me") %>
+<% title("Services | Right Rudder Marketing") %>
+<% meta_description("Explore the comprehensive range of services offered by Right Rudder Marketing, including Facebook Ads, Google Ads, SEO, Google My Business optimization, website design, CRM, and full-service digital marketing to help your flight school succeed.") %>
+<% meta_keywords("flight school marketing services, Facebook Ads for flight schools, Google Ads for flight schools, SEO for flight schools, Google My Business optimization, website design for flight schools, CRM for flight schools, full-service digital marketing for flight schools") %>
 <% og_image(image_url("/images/fsms.webp")) %>
 <% twitter_image(image_url("/images/fsms.webp")) %>
 
-
-<!--Set Page font size and limit sticky-->
 <div class="text-lg">
   <%= render "shared/navbar"%>
-  <section class="w-full bg-headsys2 bg-cover h-screen-1/2 lg:h-screen bg-center flex justify-center items-center">
-    <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center drop-shadow-2xl text-slate-100 w-full">
-        <h2 class="font-bold lg:text-4xl text-center hidden lg:block">Reach More Students, Book More Flights, and Train More Pilots</h2>
-        <h2 class="font-bold text-3xl text-center lg:hidden">Reach More Students<br>Book More Flights<br>Train More Pilots</h2>
-        <p class="py-10 lg:py-16 text-xl lg:text-2xl"><b>Results</b> guaranteed.</p>
-        <%= link_to "SEE IF YOUR SCHOOL QUALIFIES", quiz_start_path, class: "font-semibold bg-orange-500 hover:bg-orange-600 text-sm lg:text-lg transition-all duration-300 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2" %>
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-[90rem] px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Discover Our Services at <br> <span class="text-blue-800">Right Rudder Marketing</span></h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">At Right Rudder Marketing, we are dedicated to providing top-notch marketing solutions tailored specifically for flight schools. Our expert team is committed to helping your school attract more students, increase visibility, and grow your business. Explore our comprehensive range of services and learn how we can support your success in the competitive aviation industry. Join us in transforming the aviation marketing landscape.</p>
+      </div>
+      <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+        <%= link_to googleads_path do %>
+          <div class="border border-gray-200 h-full hover:scale-105 duration-200">
+            <%= image_tag "google-ads.jpg", alt: "Google Ads", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Google Ads</dt>
+              <dd class="mt-1 text-gray-600">Maximize your visibility and attract potential students with targeted Google Ads campaigns tailored specifically for your flight school.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to fbads_path do %>
+          <div class="border border-gray-200 h-full hover:scale-105 duration-200">
+            <%= image_tag "facebook-ads.jpg", alt: "Facebook Ads", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Facebook Ads</dt>
+              <dd class="mt-1 text-gray-600">Engage with prospective students on social media using our highly effective Facebook Ads to boost your flight school's reach and enrollment.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to seo_path do %>
+          <div class="border border-gray-200 h-full hover:scale-105 duration-200">
+            <%= image_tag "off-page-seo.webp", alt: "Rank On Google Search", class: "h-52 w-full object-contain"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Rank On Google Search</dt>
+              <dd class="mt-1 text-gray-600">Improve your flight school's online presence and ranking on Google search results with our expert SEO services.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to gmb_path do %>
+          <div class="border border-gray-200 h-full hover:scale-105 duration-200">
+            <%= image_tag "google-my-business.png", alt: "Google My Business", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Google My Business</dt>
+              <dd class="mt-1 text-gray-600">Optimize your Google My Business profile to ensure your flight school stands out in local searches and attracts more students.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to website_path do %>
+          <div class="border border-gray-200 h-full hover:scale-105 duration-200">
+            <%= image_tag "website-design.jpg", alt: "Website Design", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Website Design</dt>
+              <dd class="mt-1 text-gray-600">Create a stunning, user-friendly website that converts visitors into students with our professional website design services.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to video_production_path do %>
+          <div class="border border-gray-200 h-full hover:scale-105 duration-200">
+            <%= image_tag "video-production.webp", alt: "Video Production", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Video Production</dt>
+              <dd class="mt-1 text-gray-600">Capture the essence of your flight school and engage your audience with high-quality video production services.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to "https://app.flightschoolcrm.com/", target: "_blank" do %>
+          <div class="border border-gray-200 h-full hover:scale-105 duration-200">
+            <%= image_tag "CRM.jpeg", alt: "CRM", class: "h-52 w-full object-cover"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">CRM</dt>
+              <dd class="mt-1 text-gray-600">Streamline your student management and communication with our advanced Customer Relationship Management (CRM) solutions.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+        <%= link_to marketing_system_path do %>
+          <div class="border border-gray-200 h-full hover:scale-105 duration-200">
+            <%= image_tag "fsms.webp", alt: "Full Service Digital Marketing", class: "h-52 w-full object-contain"%>
+            <div class="p-5">
+              <dt class="font-semibold text-xl text-blue-800">Full Service Digital Marketing</dt>
+              <dd class="mt-1 text-gray-600">Benefit from our comprehensive digital marketing package, covering all aspects from ads and SEO to web design and CRM, to ensure your flight school's success.</dd>
+              <p class="text-orange-500 font-medium mt-3">Read More</p>
+            </div>
+          </div>
+        <% end %>
+      </dl>
     </div>
-  </section>
-  <section>
-    <div class="flex flex-col items-center">
-      <h1 class="text-center font-bold text-3xl py-20 hidden lg:block">Proven, Tested, and Results Driven Digital Marketing Campaigns For Flight Schools</h1>
-      <h1 class="text-center font-bold text-xl py-20 lg:hidden">Proven, Tested & Results Driven<br> Digital Marketing Campaigns<br> For Flight Schools</h1>
-      <p class="w-4/5 lg:w-3/5 grid place-items-center pb-20">We've developed a marketing system for flight schools that will not only get you more visibility and more brand recognition, but also more students, more flights, and more revenue.  Your flight school will become “The Best Known Flight School” in your area.</p>
-    </div>
-    <!--Comparison-->
-    <div class="flex flex-col lg:flex-row justify-center lg:items-center pl-10 lg:pl-36">
-      <!--competitor-->
-      <div class="lg:w-1/3">
-        <h3 class="text-red-500 font-bold text-xl">Alternative Options</h3>
-        <ul class="lg:pb-10 py-5">
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-red-500 pr-3 font-extrabold">X</div>
-                No aviation knowlege
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-red-500 pr-3 font-extrabold">X</div>
-                Can't guarantee results
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-red-500 pr-3 font-extrabold">X</div>
-                Lack expertise and experience
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-red-500 pr-3 font-extrabold">X</div>
-                2X to 3X the cost!!!
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-red-500 pr-3 font-extrabold">X</div>
-                Work with your competitors
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-red-500 pr-3 font-extrabold">X</div>
-                Lock you into lengthy contracts
-            </div>
-          </li>
-        </ul>
-      </div>
-      
-      <!--Us-->
-      <div class="lg:w-1/3">
-        <h3 class="text-green-500 font-bold italic text-xl">Right Rudder Marketing</h3>
-        <ul class="lg:pb-10 py-5 font-semibold">
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-green-500 pr-3 font-extrabold">✓</div>
-                Right Rudder Marketing is pilot owned
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-green-500 pr-3 font-extrabold">✓</div>
-                Guaranteed results
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-green-500 pr-3 font-extrabold">✓</div>
-                Experienced digital marketing experts
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-green-500 pr-3 font-extrabold">✓</div>
-                Affordable plans
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-green-500 pr-3 font-extrabold">✓</div>
-                Territory exclusivity
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-green-500 pr-3 font-extrabold">✓</div>
-                No long term contracts
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <%= render "shared/associations"%>
-  <section>
-    <h2 class="text-center font-bold text-3xl pt-20 lg:hidden">Our 3 Step<br> Marketing System</h2>
-    <h2 class="text-center font-bold text-3xl pt-20 hidden lg:block">Our 3 Step Marketing System</h2>
-    <!--Step 1-->
-    <div class="flex flex-col lg:flex-row justify-center items-center pt-10 lg:py-10">
-      <!--Text-->
-      <div class="w-4/5 lg:w-1/2 lg:px-20 lg:pb-0 pb-20">
-        <h3 class="text-2xl font-bold pb-5">1. Get People Interested in Pilot Training to Visit Your Website and Look You Up Online</h3>
-        <p class="pb-5">Your competitors are doing it. And they're pulling more students online than you.  How could you ever compete?</p>
-        <p class="pb-5">This is where Right Rudder Marketing comes in! Our Flight School Marking System includes everything from creating a <%=link_to "beautiful website", website_path, class: "text-orange-500 hover:underline"%> with sales funnels that generate real potential students to proven and tested <%=link_to "SEO", seo_path, class: "text-orange-500 hover:underline" %>  strategies for flight schools that increase rankings on Google and gets your flight school on top. </p>
-        <p class="pb-5">Are you able to reach the thousands of potential customers in your area?  Are you having problems attracting new student pilots to your flight school?</p>
-        <p class="pb-5">Get new student pilots on demand through using <%= link_to "targeted pay per click ad campaigns", googleads_path, class: "text-orange-500 hover:underline"%> on Google and <%= link_to "social media", fbads_path, class: "text-orange-500 hover:underline"%>.  Create and build marketing video ads to promote your flight school.  It's all here in one place for you. </p>
-        <p class="pb-5">Schedule a FREE consultation today and see how you can implement this at your school.</p>
-        <%= link_to "Schedule Consultation", schedule_call_path, data: {turbo: false}, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
-      </div>
-      <!--Picture-->
-      <div class="w-full lg:w-1/2 grid place-items-center">
-        <%= image_tag "192.webp", alt:"pilot entering a cessna 172 during preflight", class: "lg:w-4/5" %>
-      </div>
-    </div>
-
-    <!--Step 2-->
-    <div class="flex flex-col lg:flex-row-reverse justify-center items-center pt-10 lg:py-10 bg-slate-50">
-      <!--Text-->
-      <div class="w-4/5 lg:w-1/2 lg:px-20 pb-20 lg:pb-0">
-        <h3 class="text-2xl font-bold pb-5">2. Guide Your Interested Website Visitors Into Booking a Discovery Flight at Your School</h3>
-        <p class="pb-5">Don't let these opportunities slip by!  Have a targeted marketing strategy and workflow to attract visitors on your site to book a discovery flight.</p>
-        <p class="pb-5">When interested customers make the first click, we ease them into the world of aviation.  We'll design your online resources to show them the steps it takes to become a pilot and why they should choose your flight school.</p>
-        <p class="pb-5">We automate the process so you end up with a list full of interested customers and a full schedule.
-        <p class="pb-5">Book a call today and see how your flight school can implement the Flight School Marketing System.</p>
-        <%= link_to "Book a Call", schedule_call_path, data: {turbo: false}, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300" %>
-      </div>
-      <!--Picture-->
-      <div class="w-full lg:w-1/2 lg:px-20 grid place-items-center">
-        <%= image_tag "alaska-2.webp", alt:"discovery flight over mountains in Alaska", class: "" %>
-      </div>
-    </div>
-
-    <!--Step 3-->
-    <div class="flex flex-col lg:flex-row justify-center items-center lg:items-start pt-10 lg:py-10">
-      <!--Text-->
-      <div class="w-4/5 lg:w-1/2 lg:px-20 lg:pb-0 pb-20">
-        <h3 class="text-2xl font-bold pb-5">3. Keep Your CFIs' Schedules Busy, Hire More CFIs, and Grow Your Flight School!</h3>
-        <p class="pb-5">The best way to recruit more CFIs to grow and scale your school is to focus on customer retention and help your student pilots get certified all the way to CFI.  We help you retain the customers after the discovery flight so you can have a bigger pool of CFIs in the future.</p>
-        <p class="pb-5">Most marketing agencies don't understand the pilot training industry.  They put a generic template up for your website and hope for the best.  We are a team of marketing specialists and web developers that understand the flight training industry first hand.  </p>
-        <p class="pb-5">Right Rudder Marketing is a full service <%= link_to "pilot owned", about_us_path, class: "text-orange-500 underline"%> digital marketing agency.  Our Flight School Marketing Plan includes all of the essential services needed by flight schools in one afforable package - including website design, SEO, and online advertising. </p>
-        <p class="pb-5 font-semibold">We're here to help you book more discovery flights, be more profitable, and keep your CFIs happy with consistent work.</p>
-        <%= link_to schedule_call_path, data: {turbo: false}, class: "" do%>
-          <div class="bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center w-3/5 py-2 transition-all duration-300 hidden lg:block">Book an accelerator session</div>
-        <%end%>
-        <%= link_to "Call Us Today", schedule_call_path, class: "bg-orange-500 font-semibold hover:bg-orange-600 text-white rounded-lg text-center py-2 px-5 transition-all duration-300 lg:hidden" %>
-      </div>
-      <!--Picture-->
-      <div class="w-full lg:w-1/2 lg:px-20 grid place-items-center">
-        <%= image_tag "fsms.webp", alt:"The Right Rudder Marketing Flight School Marketing System", class: "" %>
-      </div>
-    </div>
-
-    <!--Step 4-->
-    <div class="flex flex-col lg:flex-row-reverse justify-center items-center pt-10 lg:py-10 bg-slate-50">
-      <!--Text-->
-      <div class="w-4/5 lg:w-1/2 lg:px-20">
-        <h3 class="text-2xl font-bold pb-5">What to do next?</h3>
-        <p class="pb-5">We understand you might still be looking for more information about us and how we work.</p>
-        <p class="pb-5">That's why we've put together a free checklist that explains how we help flight schools increase their discovery flight bookings, become more profitable, and find success online.</p>
-        <p class="pb-5 font-semibold">
-        <%= link_to "Click HERE", checklist_path, data: {turbo: false}, class: "text-orange-500 hover:underline"%> to get access to this free checklist.  </p>
-        <p class="pb-5 italic">Please note, not all areas are available.  We offer territory exclusivity.  Hurry!  Download the checklist and schedule a call to learn if your flight school qualifies.</p>
-      </div>
-      <!--Picture-->
-      <div class="w-full lg:w-1/2 lg:px-20 hidden lg:grid place-items-center">
-        <%= image_tag "pull.webp", alt:"Guys pulling a plane out of a hangar", class: "" %>
-      </div>
-    </div>
-  </section>
-  <%= render "shared/cta2"%>
-  <%= render "shared/kim_case_study"%>
-
+  </div>
 </div>
+
 <%= render "shared/cta1"%>
 <%= render "shared/footer"%>
