@@ -227,6 +227,7 @@
         <!-- Button -->
         <button
           x-ref="button"
+          @click="window.location.href = '/about'"
           @mouseover="toggle()"
           :aria-expanded="open"
           :aria-controls="$id('dropdown-button')"

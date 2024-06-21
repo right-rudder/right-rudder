@@ -92,6 +92,7 @@ Rails.application.routes.draw do
   get 'our-services', to: 'pages#services'
   get 'how-it-works', to: 'pages#how_it_works'
   get 'resources', to: 'pages#resources'
+  get 'about', to: 'pages#about'
   #get 'system-video', to: 'pages#system_video'
   get 'about-us', to: 'pages#about_us'  #Leave link due to Google previously knowing about this page
   get 'our-team', to: 'pages#about_us', as: :our_team
