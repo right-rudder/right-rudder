@@ -9,7 +9,7 @@
   <!--Mobile Hamburger-->
   <div x-data="{ menuOpen: false }" class="mr-2 lg:hidden">
     <button @click=" menuOpen = !menuOpen; menu = !menu " class="" id="hamburger-button" aria-label="mobile menu button">
-      <div class="flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all " x-bind:class="{ '': menuOpen } duration-200 shadow-md">
+      <div class="flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all " x-bind:class="{ 'duration-200 shadow-md': menuOpen }">
         <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden" x-bind:class="{ 'rotate-180': menuOpen }">
           <div class="bg-slate-600 h-[2px] w-7 transform transition-all duration-300 origin-left" x-bind:class="{ 'rotate-[42deg] w-2/3 delay-150': menuOpen }"></div>
           <div class="bg-slate-600 h-[2px] w-7 rounded transform transition-all duration-300" x-bind:class="{ 'opacity-0': menuOpen }"></div>
