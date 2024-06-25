@@ -27,6 +27,10 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
 
+  authenticated :user do
+    get 'customer-portal', to: 'customer_portal#index', as: :customer_portal
+  end
+
   # homepage
   root "pages#home"
   get 'intro_video_embed', to: "pages#intro_video_embed", as: :embed_video
