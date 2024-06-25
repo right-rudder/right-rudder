@@ -1,6 +1,6 @@
 class ChecklistEmailsController < ApplicationController
   before_action :set_checklist_email, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:new, :edit, :create, :update, :confirm]
+  before_action :authenticate_user!, except: [:new, :edit, :create, :update, :confirm]
   #invisible_captcha only: [:create, :update], honeypot: :confirm_email
 
   # GET /checklist_emails or /checklist_emails.json

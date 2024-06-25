@@ -1,5 +1,5 @@
 class SessionsController < Devise::SessionsController
-  prepend_before_action :check_captcha, only: [:create] # Change this to be any actions you want to protect.
+  prepend_before_action :check_captcha, only: [:create] if Rails.env.production? # Change this to be any actions you want to protect.
 
   private
 

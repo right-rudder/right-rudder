@@ -1,7 +1,7 @@
 
 class GmbEmailsController < ApplicationController
   before_action :set_gmb_email, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:new, :edit, :create, :update, :confirm]
+  before_action :authenticate_user!, except: [:new, :edit, :create, :update, :confirm]
   #invisible_captcha only: [:create, :update], honeypot: :confirm_email
 
   # GET /gmb_emails or /gmb_emails.json

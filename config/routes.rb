@@ -20,14 +20,12 @@ Rails.application.routes.draw do
   #get 'careers/web_developer', to: "careers#webdeveloper", as: :webdeveloper
   resources :careers
 
+  # devise_scope :admin do
+  #   # Redirests signing out users back to sign-in
+  #   get "admins", to: "devise/sessions#new"
+  # end
 
-
-  devise_scope :admin do
-    # Redirests signing out users back to sign-in
-    get "admins", to: "devise/sessions#new"
-  end
-
-  devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
+  devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
 
   # homepage
   root "pages#home"

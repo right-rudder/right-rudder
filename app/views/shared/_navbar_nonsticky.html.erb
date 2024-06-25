@@ -5,7 +5,7 @@
   <p class="bg-red-100 text-red-700 px-5 py-1 text-center lg:text-left"><%= alert %></p>
 <% end %>
 
-<% if !admin_signed_in? %>
+<% if !user_signed_in? %>
   <!--Book now (mobile screens)-->
   <nav class="top-0 z-50">
     <%= render "shared/navbar_orange_call"%>
