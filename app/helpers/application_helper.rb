@@ -25,4 +25,17 @@ module ApplicationHelper
     content_for :twitter_image, image_name
   end
 
+  def customer_portal_path?
+    request.path.include?('/customer-portal')
+  end
+
+  def render_authenticated_user_navigation
+    if user_signed_in?
+      if customer_portal_path?
+        render "shared/customer_portal_sidebar"
+      else
+        render "shared/user_menu"
+      end
+    end
+  end
 end

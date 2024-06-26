@@ -73,11 +73,8 @@
   </head>
   
   <body>
-    <main class="">
-    <% if user_signed_in? %>
-      <!--USER MENU-->
-      <%= render "shared/user_menu" %>
-    <% end %>
+    <main>
+      <%= render_authenticated_user_navigation %>
       <%= yield %>
     </main>
 
