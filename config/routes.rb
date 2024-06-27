@@ -29,6 +29,12 @@ Rails.application.routes.draw do
 
   authenticated :user do
     get 'customer-portal', to: 'customer_portal#index', as: :customer_portal
+
+    scope '/customer-portal' do
+      resources :accounts do
+        resources :tasks
+      end
+    end
   end
 
   # homepage

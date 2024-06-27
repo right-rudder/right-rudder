@@ -1,0 +1,27 @@
+<div id="<%= dom_id task %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= task.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= task.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Due date:</strong>
+    <%= task.due_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Account:</strong>
+    <%= task.account_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this task", account_task_path(@account, task), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this task', edit_account_task_path(@account, task), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
