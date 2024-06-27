@@ -32,6 +32,7 @@ Rails.application.routes.draw do
 
     scope '/customer-portal' do
       resources :accounts do
+        resource :logo, only: [:destroy]
         resources :tasks
       end
     end
