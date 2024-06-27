@@ -177,7 +177,7 @@
       <% end %>
     </div>
     <nav class="flex flex-1 flex-col">
-      <%= select_tag('Account', options_from_collection_for_select(Account.all, 'id', 'name'), prompt: "Select an account", class: "mb-5") %>
+      <%= select_tag('account', options_from_collection_for_select(Account.all, 'id', 'name',  @account&.id), prompt: "Select an account", class: "mb-5", data: { controller: "account-select", account_select_target: "select", selected_account_id: @account&.id }) %>
       <ul role="list" class="flex flex-1 flex-col gap-y-7">
         <li>
           <ul role="list" class="-mx-2 space-y-1">
