@@ -1,7 +1,13 @@
 class SessionsController < Devise::SessionsController
   prepend_before_action :check_captcha, only: [:create] if Rails.env.production? # Change this to be any actions you want to protect.
 
+  
   private
+
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
+  end
+
 
   def check_captcha
     return if verify_recaptcha # verify_recaptcha(action: 'login') for v3
