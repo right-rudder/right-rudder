@@ -4,7 +4,13 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = @account.tasks.all
+    @overdue_tasks = @account.tasks.overdue
+    @due_today_tasks = @account.tasks.due_today
+    @due_tomorrow_tasks = @account.tasks.due_tomorrow
+    @due_later_this_week_tasks = @account.tasks.due_later_this_week
+    @due_next_week_tasks = @account.tasks.due_next_week
+    @due_later_tasks = @account.tasks.due_later
+    @completed_tasks = @account.tasks.completed.first(5)
   end
 
   # GET /tasks/1 or /tasks/1.json
