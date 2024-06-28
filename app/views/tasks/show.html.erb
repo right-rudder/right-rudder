@@ -1,15 +1,17 @@
-<div class="lg:pl-72 mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
+<div class="lg:pl-72">
+  <div class="mx-auto md:w-2/3 w-full flex p-10 bg-stone-500">
+    <div class="mx-auto">
+      <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <% end %>
 
-    <h1 class="text-3xl font-semibold"><%= @task.title %></h1>
+      <h1 class="text-3xl font-semibold"><%= @task.title %> hello</h1>
 
-    <%= link_to 'Edit this task', edit_account_task_path(@account, @task), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to 'Destroy this task', account_task_path(@account, @task), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= link_to 'Edit this task', edit_account_task_path(@account, @task), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <div class="inline-block ml-2">
+        <%= button_to 'Destroy this task', account_task_path(@account, @task), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      </div>
+      <%= link_to 'Back to tasks', account_tasks_path(@account), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     </div>
-    <%= link_to 'Back to tasks', account_tasks_path(@account), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

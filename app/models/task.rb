@@ -1,5 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :account
+  validates :title, presence: true
 
   scope :completed, -> { where(completed: true).order(updated_at: :desc) }
   scope :incompleted, -> { where(completed: false) }
