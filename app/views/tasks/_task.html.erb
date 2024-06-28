@@ -1,27 +1,13 @@
-<div id="<%= dom_id task %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= task.title %>
+<div id="<%= dom_id task %>" class="flex gap-10 items-center">
+  <p class="uppercase">
+    <%= task.due_date.strftime("%a, %b %d") %>
   </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= task.description %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Due date:</strong>
-    <%= task.due_date %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Account:</strong>
-    <%= task.account_id %>
-  </p>
-
-  <% if action_name != "show" %>
-    <%= link_to "Show this task", account_task_path(@account, task), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this task', edit_account_task_path(@account, task), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
+  <%= form_with(model: [@account, task], data: {controller: "tasks", tasks_target: "form"}) do |form| %> 
+    <%= form.check_box :completed, class: "size-6", data: {action: "change->tasks#submit"} %>
+  <% end %>
+  <%= link_to account_task_path(@account, task) do %>
+    <p class="<%= task.completed ? "text-gray-500" : "" %>">
+      <%= task.title %>
+    </p>
   <% end %>
 </div>

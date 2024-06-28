@@ -39,7 +39,8 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to account_task_url(@account, @task), notice: "Task was successfully updated." }
+        redirect_path = params[:task_id] ? account_task_url(@account, @task) : account_tasks_url(@account)
+        format.html { redirect_to redirect_path, notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -70,6 +71,6 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:title, :description, :due_date, :account_id)
+      params.require(:task).permit(:title, :description, :due_date, :account_id, :completed)
     end
 end
