@@ -1,0 +1,30 @@
+<%= form_with(model: @keyword_email, class: "contents") do |form| %>
+  <% if @keyword_email.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 text-sm font-medium rounded-lg mb-5">
+      <h2><%= pluralize(@keyword_email.errors.count, "error") %> prohibited you from continuing:</h2>
+
+      <ul>
+        <% @keyword_email.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="w-full">
+    <div class="mb-5">
+      <%= form.text_field :name, placeholder: "Name", class: " shadow text-black rounded-md border border-gray-200 focus:border-orange-500 focus:ring-orange-500 px-3 py-2 w-full" %>
+    </div>
+    <div class="mb-5">
+      <%= form.text_field :phone, placeholder: "Phone", class: " shadow text-black rounded-md border border-gray-200 focus:border-orange-500 focus:ring-orange-500 px-3 py-2 w-full" %>
+    </div>
+    <div class="mb-5">
+      <%= form.email_field :email, placeholder: "Email", class: " shadow text-black rounded-md border border-gray-200 focus:border-orange-500 focus:ring-orange-500 px-3 py-2 w-full"  %>
+    </div>
+    <%= invisible_captcha :confirm_email, :keyword_email %>
+    <div class="inline">
+      <%= form.submit "Download", class: "rounded-lg py-2 bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white text-lg inline-block font-bold cursor-pointer w-full" %>
+    </div>
+  </div>
+  Please enter your information to download your checklist.
+
+<% end %>

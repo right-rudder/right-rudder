@@ -78,8 +78,11 @@ Rails.application.routes.draw do
   get 'gmb_confirm', to: "gmb_emails#confirm", as: :gmb_confirm
   resources :gmb_emails
 
-
+  # Keywords
   get 'flight-school-hot-aviation-keyword-list', to: 'pages#keyword', as: :keyword
+  # Keyword dl page
+  get 'keyword_confirm', to: "keyword_emails#confirm", as: :keyword_confirm
+  resources :keyword_emails
 
   # Qualify Quiz
   get 'qualify_quiz', to: "pages#one", as: :quiz_start

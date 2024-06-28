@@ -1,7 +1,7 @@
 require 'google_drive'
 include NewsletterEmailsHelper
 
-class SopEmail < ApplicationRecord
+class KeywordEmail < ApplicationRecord
   before_validation :strip_phone_number
   after_create :to_ghl
 
@@ -18,7 +18,7 @@ class SopEmail < ApplicationRecord
   end
 
   def to_ghl
-    ghl_url = ENV['ghl_sop']
+    ghl_url = ENV['ghl_keyword']
     ghl_payload = {
       "name" => "#{self.name}",
       "email" => "#{self.email}",
@@ -36,7 +36,7 @@ class SopEmail < ApplicationRecord
     spreadsheet = session.spreadsheet_by_key("1-KvGu8x8Lqqsj7DhKPLhUPXWqFbcyUHYodhs0KdsZkw").worksheets[0]
 
     # Write the data from the new instance of the newsletter_emails model
-    spreadsheet.insert_rows(spreadsheet.num_rows + 1, [[self.name, self.email, self.phone, "SOP Sign Up", self.created_at]])
+    spreadsheet.insert_rows(spreadsheet.num_rows + 1, [[self.name, self.email, self.phone, "Keyword Sign Up", self.created_at]])
 
     # Save the changes to the Google Sheet
     spreadsheet.save
