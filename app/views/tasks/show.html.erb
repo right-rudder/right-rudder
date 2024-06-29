@@ -7,7 +7,7 @@
           <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
         <% end %>
         --->
-        <div class="grid grid-cols-[10rem_auto] gap-4">
+        <div class="grid grid-cols-[12rem_auto] gap-4">
           <%= form_with(model: [@account, @task], data: {controller: "tasks", tasks_target: "form"}, class: "text-right") do |form| %>
             <%= form.check_box :completed, class: "size-14 border-2 rounded-lg", data: {action: "change->tasks#submit"} %>
           <% end %>
