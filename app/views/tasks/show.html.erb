@@ -46,6 +46,8 @@
             <%= raw @task.content %>
           </div>
         </div>
+
+        <%= render "tasks/comments", task: @task, account: @account %>
        
       </div>
     </div>
