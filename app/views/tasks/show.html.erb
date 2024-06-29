@@ -1,15 +1,37 @@
-<div class="lg:pl-72">
+<div class="lg:pl-72 bg-blue-100">
   <div class="p-10">
-    <div class="min-h-96 w-full flex bg-stone-200">
-      <div class="p-10">
+    <div class="min-h-96 w-full flex bg-white shadow-md shadow-gray-400">
+      <div class="py-10 px-5 2xl:px-20 w-full">
         <!---
         <% if notice.present? %>
           <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
         <% end %>
         --->
+        <div class="grid grid-cols-[10rem_auto] gap-4">
+          <%= form_with(model: [@account, @task], data: {controller: "tasks", tasks_target: "form"}, class: "text-right") do |form| %>
+            <%= form.check_box :completed, class: "size-14 border-2 rounded-lg", data: {action: "change->tasks#submit"} %>
+          <% end %>
+          <h1 class="text-4xl font-semibold h-fit self-end"><%= @task.title %></h1>
 
-        <h1 class="text-3xl font-semibold"><%= @task.title %></h1>
-        <%= raw @task.content %>
+          <hr class="col-span-2 my-2" />
+
+          <p class="font-semibold text-right">Added by</p>
+          <p>Charles on April 10</p>
+          
+          <p class="font-semibold text-right">Assigned to</p>
+          <p>Diego</p>
+
+          <p class="font-semibold text-right">When done, notify</p>
+          <p>Charles</p>
+
+          <p class="font-semibold text-right">Due on</p>
+          <p><%= @task.due_date.strftime("%a, %b %d") %></p>
+
+          <p class="font-semibold text-right">Content</p>
+          <div>
+            <%= raw @task.content %>
+          </div>
+        </div>
 
         <%= link_to 'Edit this task', edit_account_task_path(@account, @task), data: {turbo: false}, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
         <div class="inline-block ml-2">
