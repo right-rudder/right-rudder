@@ -1,5 +1,6 @@
 # bc effem..
 promotion: false
+menubar: false
 toolbar_sticky: true
 toolbar:
   - undo redo | blocks | bold italic underline | forecolor backcolor | alignleft aligncenter alignright alignjustify bullist numlist | image link
@@ -11,17 +12,7 @@ plugins:
   - media
   - autoresize
   - help
-images_upload_url: '/uploader/image'
-
-
-
-
-
-
-
-
-
-
+images_upload_url: "/uploader/image"
 # default
 #toolbar:
 #  - styleselect | bold italic | undo redo
@@ -41,8 +32,6 @@ images_upload_url: '/uploader/image'
 #  - help
 #toolbar:
 #  - undo redo | blocks | bold italic underline | alignleft aligncentre alignright alignjustify | indent outdent | bullist numlist
-
-
 
 #### https://www.tiny.cloud/docs/tinymce/6/classic-demo/
 #toolbar:

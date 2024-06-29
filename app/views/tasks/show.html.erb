@@ -1,12 +1,26 @@
 <div class="lg:pl-72 bg-blue-100">
   <div class="p-10">
     <div class="min-h-96 w-full flex bg-white shadow-md shadow-gray-400">
-      <div class="py-10 px-5 2xl:px-20 w-full">
+      <div class="py-10 px-5 2xl:px-20 w-full relative overflow-hidden" data-controller="task-options">
         <!---
         <% if notice.present? %>
           <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
         <% end %>
         --->
+
+        <svg class="size-8 absolute top-5 right-5 cursor-pointer border border-gray-500 rounded-full" data-action="click->task-options#open" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg>
+
+        <div class="absolute p-10 pt-16 bg-blue-500 top-0 right-0 translate-x-full duration-200" data-task-options-target="menu">
+          <svg class="size-8 absolute top-5 right-5 text-white cursor-pointer border border-gray-600 rounded-full" data-action="click->task-options#close" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+
+          <%= link_to 'Edit this task', edit_account_task_path(@account, @task), data: {turbo: false}, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+          <%= button_to 'Destroy this task', account_task_path(@account, @task), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+        </div>
+
         <div class="grid grid-cols-[12rem_auto] gap-4">
           <%= form_with(model: [@account, @task], data: {controller: "tasks", tasks_target: "form"}, class: "text-right") do |form| %>
             <%= form.check_box :completed, class: "size-14 border-2 rounded-lg", data: {action: "change->tasks#submit"} %>
@@ -32,12 +46,7 @@
             <%= raw @task.content %>
           </div>
         </div>
-
-        <%= link_to 'Edit this task', edit_account_task_path(@account, @task), data: {turbo: false}, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-        <div class="inline-block ml-2">
-          <%= button_to 'Destroy this task', account_task_path(@account, @task), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-        </div>
-        <%= link_to 'Back to tasks', account_tasks_path(@account), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+       
       </div>
     </div>
   </div>

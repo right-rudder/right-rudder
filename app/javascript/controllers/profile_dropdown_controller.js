@@ -4,8 +4,6 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ["menu"];
 
-  connect() {}
-
   toggle(event) {
     event.preventDefault();
     this.menuTarget.classList.contains("open") ? this.close() : this.open();
