@@ -8,7 +8,7 @@
 
     <div class="flex justify-between items-center">
       <h1 class="font-bold text-4xl"><%= @account.name %> Tasks</h1>
-      <%= link_to 'New task', new_account_task_path(@account), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+      <%= link_to 'New task', new_account_task_path(@account), data: {turbo: false}, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
     </div>
 
     <div id="tasks" class="min-w-full flex flex-col gap-5 mt-10">
