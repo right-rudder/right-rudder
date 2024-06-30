@@ -23,7 +23,7 @@
           <%= button_to 'Destroy this task', account_task_path(@account, @task), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
         </div>
 
-        <div class="grid grid-cols-[12rem_auto] gap-4">
+        <div class="grid grid-cols-[12rem_auto] gap-4 mb-8">
           <%= form_with(model: [@account, @task], data: {controller: "tasks", tasks_target: "form"}, class: "text-right") do |form| %>
             <%= form.check_box :completed, class: "size-14 border-2 rounded-lg", data: {action: "change->tasks#submit"} %>
           <% end %>

@@ -19,4 +19,8 @@ class Task < ApplicationRecord
       incompleted.where(due_date: date_range_for_due_later_this_week).order(due_date: :asc).order(title: :asc)
     end
   end
+
+  def due_this_week?
+    due_date >= Date.current.beginning_of_week && due_date <= Date.current.end_of_week
+  end
 end
