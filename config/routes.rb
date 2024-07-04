@@ -80,6 +80,7 @@ Rails.application.routes.draw do
 
   # Keywords
   get 'flight-school-hot-aviation-keyword-list', to: 'pages#keyword', as: :keyword
+  get 'keywords', to: 'pages#keyword'
   # Keyword dl page
   get 'keyword_confirm', to: "keyword_emails#confirm", as: :keyword_confirm
   resources :keyword_emails
