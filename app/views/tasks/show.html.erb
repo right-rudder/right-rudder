@@ -14,13 +14,13 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
         </svg>
 
-        <div class="absolute p-10 pt-16 bg-blue-500 top-0 right-0 translate-x-full duration-200" data-task-options-target="menu">
+        <div class="absolute pt-16 bg-blue-500 top-0 right-0 translate-x-full duration-200" data-task-options-target="menu">
           <svg class="size-8 absolute top-5 right-5 text-white cursor-pointer border border-gray-600 rounded-full" data-action="click->task-options#close" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
 
-          <%= link_to 'Edit this task', edit_account_task_path(@account, @task), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-          <%= button_to 'Destroy this task', account_task_path(@account, @task), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+          <%= link_to 'Edit this task', edit_account_task_path(@account, @task), class: "w-full hover:bg-black/30 text-white block py-3 pl-6 pr-20" %>
+          <%= button_to 'Destroy this task', account_task_path(@account, @task), method: :delete, data: {turbo_confirm: "Are you sure you want to delete this task?"}, class: "w-full hover:bg-black/30 text-white block py-3 pl-6 pr-20" %>
         </div>
 
         <div class="grid grid-cols-[12rem_auto] gap-4 mb-8">
