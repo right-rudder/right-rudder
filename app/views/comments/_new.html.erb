@@ -1,5 +1,0 @@
-<%= form_with model: [account, task, Comment.new] do |form| %>
-  Your comment: <br>
-  <%= form.rich_text_area :content, class: "w-full" %>
-  <%= form.submit "Add this comment", class: "bg-green-600 py-4 px-6 rounded-full text-white cursor-pointer" %>
-<% end %>

@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "new_comment" do %>
+  <%= form_with model: [@account, @task, @comment] do |form| %>
+    <%= form.rich_text_area :content, class: "w-full" %>
+    <%= form.submit "Add this comment", class: "bg-green-600 mt-5 py-3 px-6 rounded-full text-white cursor-pointer" %>
+  <% end %>
+<% end %>
