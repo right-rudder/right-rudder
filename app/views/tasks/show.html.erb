@@ -19,7 +19,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
 
-          <%= link_to 'Edit this task', edit_account_task_path(@account, @task), data: {turbo: false}, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+          <%= link_to 'Edit this task', edit_account_task_path(@account, @task), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
           <%= button_to 'Destroy this task', account_task_path(@account, @task), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
         </div>
 

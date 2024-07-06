@@ -2,6 +2,7 @@ class Task < ApplicationRecord
   belongs_to :account
   has_many :comments, dependent: :destroy
   validates :title, presence: true
+  has_rich_text :body
 
   scope :completed, -> { where(completed: true).order(updated_at: :desc) }
   scope :incompleted, -> { where(completed: false) }

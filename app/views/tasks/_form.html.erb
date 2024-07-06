@@ -1,5 +1,3 @@
-<%= tinymce_assets %>
-
 <%= form_with(model: [account, task], class: "contents") do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
@@ -19,11 +17,10 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :content %>
-    <%= form.text_area :content, class: "tinymce block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-    <%= tinymce %>
+    <%= form.label :due_date %>
+    <%= form.rich_text_area :body, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
-
+  
   <div class="my-5">
     <%= form.label :due_date %>
     <%= form.date_field :due_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
