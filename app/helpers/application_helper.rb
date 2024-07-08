@@ -29,9 +29,13 @@ module ApplicationHelper
     request.path.include?('/customer-portal')
   end
 
+  def edit_user_path?
+    request.path.include?('/users/edit')
+  end
+
   def render_authenticated_user_navigation
     if user_signed_in?
-      if customer_portal_path?
+      if customer_portal_path? || edit_user_path?
         render "shared/customer_portal_sidebar"
       else
         render "shared/user_menu"

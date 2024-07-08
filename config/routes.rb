@@ -27,9 +27,11 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
 
+
+
   authenticated :user do
     get 'customer-portal', to: 'customer_portal#index', as: :customer_portal
-
+    resource :profile_image, only: [:destroy]
     scope '/customer-portal' do
       resources :accounts do
         resource :logo, only: [:destroy]
