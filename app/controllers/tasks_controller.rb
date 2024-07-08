@@ -19,7 +19,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @task = @account.tasks.build
+    @task = @account.tasks.build(user: current_user)
   end
 
   # GET /tasks/1/edit
@@ -28,7 +28,7 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    @task = @account.tasks.build(task_params)
+    @task = @account.tasks.build(task_params.merge(user: current_user))
 
     respond_to do |format|
       if @task.save

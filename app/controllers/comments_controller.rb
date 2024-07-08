@@ -3,11 +3,16 @@ class CommentsController < ApplicationController
 
   def new
     @account = @task.account
-    @comment = @task.comments.build
+    @comment = @task.comments.build(user: current_user)
   end
 
   def create
-    @task.comments.create!(comment_params)
+    @task.comments.create!(comment_params.merge(user: current_user))
+    redirect_to account_task_path(@task.account, @task)
+  end
+
+  def destroy
+    @task.comments.find(params[:id]).destroy
     redirect_to account_task_path(@task.account, @task)
   end
 

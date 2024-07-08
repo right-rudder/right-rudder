@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :profile_image
+  has_many :tasks
+  has_many :comments
 
   def resized_profile_image
     profile_image.variant(resize_to_limit: [300, 300]).processed

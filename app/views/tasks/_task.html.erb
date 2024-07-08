@@ -1,6 +1,6 @@
 <div id="<%= dom_id task %>" class="flex gap-10 items-center text-sm py-2 ml-5 border-t border-gray-300">
   <p class="uppercase w-28">
-    <%= task.due_date.strftime("%a, %b %d") %>
+    <%= task.due_date.strftime("%a, %b %e") %>
   </p>
   <%= form_with(model: [@account, task], data: {controller: "tasks", tasks_target: "form"}) do |form| %> 
     <%= form.check_box :completed, class: "size-5", data: {action: "change->tasks#submit"} %>
