@@ -39,6 +39,7 @@ Rails.application.routes.draw do
           resources :comments
         end
       end
+      resources :tasks, only: [:index], controller: 'customer_portal/tasks'
     end
   end
 

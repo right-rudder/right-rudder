@@ -45,7 +45,15 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        redirect_path = params[:task][:source] ? account_tasks_url(@account) : account_task_url(@account, @task)
+        case params[:task][:source]
+        when "account_index"
+          redirect_path = account_tasks_url(@account)
+        when "portal_index"
+          redirect_path = tasks_url
+        else
+          redirect_path = account_task_url(@account, @task)
+        end
+        # redirect_path = params[:task][:source] ? account_tasks_url(@account) : account_task_url(@account, @task)
         format.html { redirect_to redirect_path, notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
       else
