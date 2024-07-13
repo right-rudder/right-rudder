@@ -4,8 +4,12 @@ class Task < ApplicationRecord
   has_many :comments, dependent: :destroy
   validates :title, presence: true
   has_rich_text :content
-  has_many :assignments
+  has_many :assignments, dependent: :destroy
   has_many :assigned_users, through: :assignments, source: :user
+  has_many :task_notifications, dependent: :destroy
+  has_many :notified_users, through: :task_notifications, source: :user
+
+  after_update :notify_users_if_completed
 
   scope :completed, -> { where(completed: true).order(updated_at: :desc) }
   scope :incompleted, -> { where(completed: false) }
@@ -26,5 +30,15 @@ class Task < ApplicationRecord
 
   def due_this_week?
     due_date >= Date.current.beginning_of_week && due_date <= Date.current.end_of_week
+  end
+
+  private
+
+  def notify_users_if_completed
+    if completed_previously_changed? && completed?
+      notified_users.each do |user|
+        # implement notification logic here
+      end
+    end
   end
 end
