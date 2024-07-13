@@ -15,49 +15,49 @@
       <% if  @overdue_tasks.any? %>
         <div>
           <h2 class="text-red-500 font-semibold text-xl py-2">Overdue</h2>
-          <%= render @overdue_tasks %>
+          <%= render @overdue_tasks, source: "account_index" %>
         </div>
       <% end %>
 
       <% if @due_today_tasks.any? %>
         <div>
           <h2 class="font-semibold text-xl py-2">Due today</h2>
-          <%= render @due_today_tasks %>
+          <%= render @due_today_tasks, source: "account_index" %>
         </div>
       <% end %>
 
       <% if @due_tomorrow_tasks.any? %>
         <div>
           <h2 class="font-semibold text-xl py-2">Due tomorrow</h2>
-          <%= render @due_tomorrow_tasks %>
+          <%= render @due_tomorrow_tasks, source: "account_index" %>
         </div>
       <% end %>
 
       <% if @due_later_this_week_tasks.any? %>
         <div>
           <h2 class="font-semibold text-xl py-2">Due later this week</h2>
-          <%= render @due_later_this_week_tasks %>
+          <%= render @due_later_this_week_tasks, source: "account_index" %>
         </div>
       <% end %>
       
       <% if @due_next_week_tasks.any? %>
         <div>
           <h2 class="font-semibold text-xl py-2">Due next week</h2>
-          <%= render @due_next_week_tasks %>
+          <%= render @due_next_week_tasks, source: "account_index" %>
         </div>
       <% end %>
       
       <% if @due_later_tasks.any? %>
         <div>
           <h2 class="font-semibold text-xl py-2">Due later</h2>
-          <%= render @due_later_tasks %>
+          <%= render @due_later_tasks, source: "account_index" %>
         </div>
       <% end %>
 
       <% if @completed_tasks.any? %>
         <div>
           <h2 class="text-green-500 font-semibold text-xl py-2">Completed</h2>
-          <%= render @completed_tasks %>
+          <%= render @completed_tasks, source: "account_index" %>
         </div>
       <% end %>
     </div>

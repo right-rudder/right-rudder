@@ -10,49 +10,49 @@
         <% if  account.tasks_overdue.any? %>
           <div>
             <h2 class="text-red-500 font-semibold text-xl py-2">Overdue</h2>
-            <%= render partial: "task", collection: account.tasks_overdue %>
+            <%= render partial: "tasks/task", collection: account.tasks_overdue, locals: { source: "portal_index" } %>
           </div>
         <% end %>
 
         <% if account.tasks_due_today.any? %>
           <div>
             <h2 class="font-semibold text-xl py-2">Due today</h2>
-            <%= render partial: "task", collection: account.tasks_due_today %>
+            <%= render partial: "tasks/task", collection: account.tasks_due_today, locals: { source: "portal_index" } %>
           </div>
         <% end %>
 
         <% if account.tasks_due_tomorrow.any? %>
           <div>
             <h2 class="font-semibold text-xl py-2">Due tomorrow</h2>
-            <%= render partial: "task", collection: account.tasks_due_tomorrow %>
+            <%= render partial: "tasks/task", collection: account.tasks_due_tomorrow, locals: { source: "portal_index" } %>
           </div>
         <% end %>
 
         <% if account.tasks_due_later_this_week.any? %>
           <div>
             <h2 class="font-semibold text-xl py-2">Due later this week</h2>
-            <%= render partial: "task", collection: account.tasks_due_later_this_week %>
+            <%= render partial: "tasks/task", collection: account.tasks_due_later_this_week, locals: { source: "portal_index" } %>
           </div>
         <% end %>
         
         <% if account.tasks_due_next_week.any? %>
           <div>
             <h2 class="font-semibold text-xl py-2">Due next week</h2>
-            <%= render partial: "task", collection: account.tasks_due_next_week %>
+            <%= render partial: "tasks/task", collection: account.tasks_due_next_week, locals: { source: "portal_index" } %>
           </div>
         <% end %>
         
         <% if account.tasks_due_later.any? %>
           <div>
             <h2 class="font-semibold text-xl py-2">Due later</h2>
-            <%= render partial: "task", collection: account.tasks_due_later %>
+            <%= render partial: "tasks/task", collection: account.tasks_due_later, locals: { source: "portal_index" } %>
           </div>
         <% end %>
 
         <% if account.tasks_completed.any? %>
           <div>
             <h2 class="text-green-500 font-semibold text-xl py-2">Completed</h2>
-            <%= render partial: "task", collection: account.tasks_completed %>
+            <%= render partial: "tasks/task", collection: account.tasks_completed, locals: { source: "portal_index" } %>
           </div>
         <% end %>
       </div>
