@@ -35,7 +35,7 @@
           <p><%= @task.user.first_name %> on <%= @task.created_at.strftime("%b %e") %></p>
           
           <p class="font-semibold text-right">Assigned to</p>
-          <p>Diego</p>
+          <p><%= @task.assigned_users.map(&:first_name).join(", ") %></p>
 
           <p class="font-semibold text-right">When done, notify</p>
           <p>Charles</p>

@@ -7,8 +7,14 @@ class User < ApplicationRecord
   has_one_attached :profile_image
   has_many :tasks
   has_many :comments
+  has_many :assignments
+  has_many :assigned_tasks, through: :assignments, source: :task
 
   def resized_profile_image
     profile_image.variant(resize_to_limit: [300, 300]).processed
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
   end
 end

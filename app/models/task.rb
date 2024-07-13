@@ -4,6 +4,8 @@ class Task < ApplicationRecord
   has_many :comments, dependent: :destroy
   validates :title, presence: true
   has_rich_text :content
+  has_many :assignments
+  has_many :assigned_users, through: :assignments, source: :user
 
   scope :completed, -> { where(completed: true).order(updated_at: :desc) }
   scope :incompleted, -> { where(completed: false) }
