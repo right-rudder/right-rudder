@@ -32,7 +32,7 @@
           <hr class="col-span-2 my-2" />
 
           <p class="font-semibold text-right">Added by</p>
-          <p><%= @task.user.first_name || @task.user.email %> on <%= @task.created_at.strftime("%b %e") %></p>
+          <p><%= @task.user.username %> on <%= @task.created_at.strftime("%b %e") %></p>
           
           <p class="font-semibold text-right">Assigned to</p>
           <p><%= @task.assigned_users.map(&:first_name).join(", ") %></p>
