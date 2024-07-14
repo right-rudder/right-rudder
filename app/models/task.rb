@@ -8,6 +8,7 @@ class Task < ApplicationRecord
   has_many :assigned_users, through: :assignments, source: :user
   has_many :task_notifications, dependent: :destroy
   has_many :notified_users, through: :task_notifications, source: :user
+  has_many :users, through: :comments
 
   after_update :notify_users_if_completed
 

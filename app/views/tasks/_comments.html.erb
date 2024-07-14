@@ -1,5 +1,5 @@
 <div id="comments">
-  <%= render task.comments %>
+  <%= render task.comments.order(created_at: :asc) %>
 </div>
 
 <hr/>

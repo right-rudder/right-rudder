@@ -68,6 +68,7 @@ gem 'google_drive'
 gem 'invisible_captcha'
 gem 'whenever', require: false
 gem 'fog-aws'
+gem 'pry-byebug'
 
 
 group :development, :test do

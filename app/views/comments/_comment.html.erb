@@ -21,7 +21,7 @@
       <% end %>
     </div>
     <div>
-      <p class="font-semibold"><%= comment.user.first_name %></p>
+      <p class="font-semibold"><%= comment.user.first_name || comment.user.email %></p>
       <p><%= comment.content %></p>
     </div>
   </div>
