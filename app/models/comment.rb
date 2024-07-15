@@ -10,9 +10,9 @@ class Comment < ApplicationRecord
   private
 
   def create_notifications
-    users_to_notify = task.users + [task.user] - [user]
-    users_to_notify.uniq.each do |u|
-      Notification.create!(recipient: u, actor: user, action: "commented on", notifiable: task)
+    users_to_notify = task.users + [task.user]
+    users_to_notify.uniq.each do |user_to_notify|
+      Notification.create!(recipient: user_to_notify, actor: user, action: "commented on", notifiable: task) if user_to_notify != user
     end
   end
 end
