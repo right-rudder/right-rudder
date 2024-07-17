@@ -1,25 +1,4 @@
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
-<!--
-  This example requires updating your template:
-
-  ```
-  <html class="h-full bg-white">
-  <body class="h-full">
-  ```
--->
+<%= turbo_stream_from "notifications" %>
 
 <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
 <div class="relative z-50 lg:hidden" role="dialog" aria-modal="true">
@@ -305,9 +284,11 @@
           </button>
 
           <div class="absolute transition ease-out duration-100 right-0 z-10 mt-2.5 transform opacity-0 scale-0 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none" role="notification-list" aria-orientation="vertical" aria-labelledby="user-notification-list-button" tabindex="-1" data-notifications-dropdown-target="notificationList">
-            <% Notification.where(recipient: current_user).order(created_at: :desc).first(10).each do |notification| %>
-              <%= render partial: "notifications/notification", locals: { notification: } %>
-            <% end %>
+            <turbo-frame id="notifications">
+              <% Notification.where(recipient: current_user).order(created_at: :desc).first(10).each do |notification| %>
+                <%= render partial: "notifications/notification", locals: { notification: } %>
+              <% end %>
+            </turbo-frame>
           </div>
         </div>
 

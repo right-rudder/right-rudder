@@ -4,6 +4,8 @@ class Notification < ApplicationRecord
   belongs_to :notifiable, polymorphic: true
 
   scope :unread, -> { where(read_at: nil) }
+
+  broadcasts_to ->(notification) { "notifications" }, inserts_by: :prepend
   
   def mark_as_read!
     update(read_at: Time.current)
