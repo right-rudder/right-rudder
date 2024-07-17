@@ -15,6 +15,9 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    Notification.where(notifiable: @task, recipient: current_user).unread.each do |notification|
+      notification.mark_as_read!
+    end
   end
 
   # GET /tasks/new
