@@ -71,10 +71,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_14_164101) do
 
   create_table "assignments", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "task_id", null: false
+    t.bigint "ticket_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["task_id"], name: "index_assignments_on_task_id"
+    t.index ["ticket_id"], name: "index_assignments_on_ticket_id"
     t.index ["user_id"], name: "index_assignments_on_user_id"
   end
 
@@ -95,11 +95,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_14_164101) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.bigint "task_id", null: false
+    t.bigint "ticket_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
-    t.index ["task_id"], name: "index_comments_on_task_id"
+    t.index ["ticket_id"], name: "index_comments_on_ticket_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
@@ -177,16 +177,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_14_164101) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "task_notifications", force: :cascade do |t|
+  create_table "ticket_notifications", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "task_id", null: false
+    t.bigint "ticket_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["task_id"], name: "index_task_notifications_on_task_id"
-    t.index ["user_id"], name: "index_task_notifications_on_user_id"
+    t.index ["ticket_id"], name: "index_ticket_notifications_on_ticket_id"
+    t.index ["user_id"], name: "index_ticket_notifications_on_user_id"
   end
 
-  create_table "tasks", force: :cascade do |t|
+  create_table "tickets", force: :cascade do |t|
     t.string "title"
     t.date "due_date"
     t.bigint "account_id", null: false
@@ -194,8 +194,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_14_164101) do
     t.datetime "updated_at", null: false
     t.boolean "completed", default: false, null: false
     t.bigint "user_id", null: false
-    t.index ["account_id"], name: "index_tasks_on_account_id"
-    t.index ["user_id"], name: "index_tasks_on_user_id"
+    t.index ["account_id"], name: "index_tickets_on_account_id"
+    t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -214,12 +214,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_14_164101) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "assignments", "tasks"
+  add_foreign_key "assignments", "tickets"
   add_foreign_key "assignments", "users"
-  add_foreign_key "comments", "tasks"
+  add_foreign_key "comments", "tickets"
   add_foreign_key "comments", "users"
-  add_foreign_key "task_notifications", "tasks"
-  add_foreign_key "task_notifications", "users"
-  add_foreign_key "tasks", "accounts"
-  add_foreign_key "tasks", "users"
+  add_foreign_key "ticket_notifications", "tickets"
+  add_foreign_key "ticket_notifications", "users"
+  add_foreign_key "tickets", "accounts"
+  add_foreign_key "tickets", "users"
 end

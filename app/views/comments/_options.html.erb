@@ -1,12 +1,12 @@
-<svg class="size-6 absolute top-5 right-5 cursor-pointer text-gray-500" data-action="click->task-options#open" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+<svg class="size-6 absolute top-5 right-5 cursor-pointer text-gray-500" data-action="click->ticket-options#open" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
 </svg>
 
-<div class="absolute z-50 pt-16 bg-blue-500 top-0 max-w-0 max-h-0 overflow-hidden right-0 duration-200" data-task-options-target="menu">
-  <svg class="size-6 absolute top-5 right-5 text-white cursor-pointer border border-gray-600 rounded-full" data-action="click->task-options#close" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+<div class="absolute z-50 pt-16 bg-blue-500 top-0 max-w-0 max-h-0 overflow-hidden right-0 duration-200" data-ticket-options-target="menu">
+  <svg class="size-6 absolute top-5 right-5 text-white cursor-pointer border border-gray-600 rounded-full" data-action="click->ticket-options#close" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
   </svg>
 
-  <%#= link_to 'Edit', edit_account_task_path(@account, @task), class: "w-full hover:bg-black/30 text-white block py-3 pl-6 pr-20" %>
-  <%= button_to 'Delete', account_task_comment_path(comment.account, comment.task, comment), method: :delete, data: {turbo_confirm: "Are you sure you want to delete this comment?"}, class: "w-full hover:bg-black/30 text-white block py-3 pl-6 pr-20" %>
+  <%#= link_to 'Edit', edit_account_ticket_path(@account, @ticket), class: "w-full hover:bg-black/30 text-white block py-3 pl-6 pr-20" %>
+  <%= button_to 'Delete', account_ticket_comment_path(comment.account, comment.ticket, comment), method: :delete, data: {turbo_confirm: "Are you sure you want to delete this comment?"}, class: "w-full hover:bg-black/30 text-white block py-3 pl-6 pr-20" %>
 </div>

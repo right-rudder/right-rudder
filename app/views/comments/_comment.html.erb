@@ -1,12 +1,12 @@
 <hr/>
 <div id="<%= dom_id(comment) %>">
-  <div class="grid grid-cols-[12rem_auto] gap-4 py-4 relative" data-controller="task-options">
+  <div class="grid grid-cols-[12rem_auto] gap-4 py-4 relative" data-controller="ticket-options">
     
     <%= render "comments/options", comment: comment %>
 
     <div class="flex justify-between gap-2">
       <div class="text-sm text-gray-600">
-        <% if comment.task.due_this_week? %>
+        <% if comment.ticket.due_this_week? %>
           <p class="uppercase"><%= comment.created_at.strftime("%A") %></p>
         <% end %>
         <p><%= comment.created_at.strftime("%b %e") %></p>

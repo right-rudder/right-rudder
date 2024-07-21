@@ -5,12 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :profile_image
-  has_many :tasks
+  has_many :tickets
   has_many :comments
   has_many :assignments
-  has_many :assigned_tasks, through: :assignments, source: :task
-  has_many :task_notifications, dependent: :destroy
-  has_many :notified_tasks, through: :task_notifications, source: :task
+  has_many :assigned_tickets, through: :assignments, source: :ticket
+  has_many :ticket_notifications, dependent: :destroy
+  has_many :notified_tickets, through: :ticket_notifications, source: :ticket
   has_many :notifications, foreign_key: :recipient_id
 
   def resized_profile_image

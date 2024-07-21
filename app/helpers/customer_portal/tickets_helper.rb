@@ -1,0 +1,2 @@
+module CustomerPortal::TicketsHelper
+end

@@ -1,2 +1,0 @@
-module CustomerPortal::TasksHelper
-end

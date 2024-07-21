@@ -35,11 +35,11 @@ Rails.application.routes.draw do
     scope '/customer-portal' do
       resources :accounts do
         resource :logo, only: [:destroy]
-        resources :tasks do
+        resources :tickets do
           resources :comments
         end
       end
-      resources :tasks, only: [:index], controller: 'customer_portal/tasks'
+      resources :tickets, only: [:index], controller: 'customer_portal/tickets'
     end
   end
 
