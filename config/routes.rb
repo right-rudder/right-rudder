@@ -40,6 +40,7 @@ Rails.application.routes.draw do
         end
       end
       resources :tickets, only: [:index], controller: 'customer_portal/tickets'
+      get "my-assigned-tickets", to: "customer_portal/tickets#my_assigned_tickets"
     end
   end
 

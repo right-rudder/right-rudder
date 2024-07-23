@@ -3,60 +3,23 @@
     <h1 class="font-bold text-5xl">All Tickets</h1>
   </div>
 
-  <% @accounts.each do |account| %>
-    <div class="p-10 pl-20">
-      <h1 class="font-bold text-4xl"><%= account.name %></h1>
-      <div id="tickets" class="min-w-full flex flex-col gap-5 mt-10">
-        <% if  account.tickets_overdue.any? %>
-          <div>
-            <h2 class="text-red-500 font-semibold text-xl py-2">Overdue</h2>
-            <%= render partial: "tickets/ticket", collection: account.tickets_overdue, locals: { source: "portal_index" } %>
-          </div>
-        <% end %>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <%= link_to "All tickets", tickets_path, data: { turbo_frame: "tickets_frame" }, class: 'tab nav-link active' %>
+      <%#= link_to "Details", event_details_path(@event), data: { turbo_frame: "info_frame", controller: 'hello', action: 'click->hello#activate' }, class: 'tab nav-link active' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "My Assigned tickets", tickets_path(filter: "my-tickets"), data: { turbo_frame: "tickets_frame" }, class: 'tab nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%#= link_to "Workouts", event_workouts_path(@event), data: { turbo_frame: "info_frame", controller: 'hello', action: 'click->hello#activate' }, class: 'tab nav-link' %>
+    </li>
+  </ul>
 
-        <% if account.tickets_due_today.any? %>
-          <div>
-            <h2 class="font-semibold text-xl py-2">Due today</h2>
-            <%= render partial: "tickets/ticket", collection: account.tickets_due_today, locals: { source: "portal_index" } %>
-          </div>
-        <% end %>
-
-        <% if account.tickets_due_tomorrow.any? %>
-          <div>
-            <h2 class="font-semibold text-xl py-2">Due tomorrow</h2>
-            <%= render partial: "tickets/ticket", collection: account.tickets_due_tomorrow, locals: { source: "portal_index" } %>
-          </div>
-        <% end %>
-
-        <% if account.tickets_due_later_this_week.any? %>
-          <div>
-            <h2 class="font-semibold text-xl py-2">Due later this week</h2>
-            <%= render partial: "tickets/ticket", collection: account.tickets_due_later_this_week, locals: { source: "portal_index" } %>
-          </div>
-        <% end %>
-        
-        <% if account.tickets_due_next_week.any? %>
-          <div>
-            <h2 class="font-semibold text-xl py-2">Due next week</h2>
-            <%= render partial: "tickets/ticket", collection: account.tickets_due_next_week, locals: { source: "portal_index" } %>
-          </div>
-        <% end %>
-        
-        <% if account.tickets_due_later.any? %>
-          <div>
-            <h2 class="font-semibold text-xl py-2">Due later</h2>
-            <%= render partial: "tickets/ticket", collection: account.tickets_due_later, locals: { source: "portal_index" } %>
-          </div>
-        <% end %>
-
-        <% if account.tickets_completed.any? %>
-          <div>
-            <h2 class="text-green-500 font-semibold text-xl py-2">Completed</h2>
-            <%= render partial: "tickets/ticket", collection: account.tickets_completed, locals: { source: "portal_index" } %>
-          </div>
-        <% end %>
-      </div>
-    </div>
+  <%= turbo_frame_tag "tickets_frame" do %>
+    <%#= render 'events/detail' %>
+    <%= render "all_tickets" %>
   <% end %>
+
 </div>
 

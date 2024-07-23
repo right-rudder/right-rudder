@@ -48,11 +48,16 @@ class TicketsController < ApplicationController
   def update
     respond_to do |format|
       if @ticket.update(ticket_params)
+        # binding.pry
         case params[:ticket][:source]
         when "account_index"
           redirect_path = account_tickets_url(@account)
         when "portal_index"
-          redirect_path = tickets_url
+          if params[:ticket][:filter] == "my-tickets"
+            redirect_path = tickets_url(filter: "my-tickets")
+          else
+            redirect_path = tickets_url
+          end
         else
           redirect_path = account_ticket_url(@account, @ticket)
         end
