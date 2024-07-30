@@ -1,18 +1,15 @@
 <div class="lg:pl-72">
   <div class="p-10">
-    <h1 class="font-bold text-5xl">All Tickets</h1>
+    <h1 class="font-bold text-5xl">All Squawks</h1>
   </div>
 
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <%= link_to "All tickets", tickets_path, data: { turbo_frame: "tickets_frame" }, class: 'tab nav-link active' %>
+      <%= link_to "All squawks", tickets_path, data: { turbo_frame: "tickets_frame" }, class: 'tab nav-link active' %>
       <%#= link_to "Details", event_details_path(@event), data: { turbo_frame: "info_frame", controller: 'hello', action: 'click->hello#activate' }, class: 'tab nav-link active' %>
     </li>
     <li class="nav-item">
-      <%= link_to "My Assigned tickets", tickets_path(filter: "my-tickets"), data: { turbo_frame: "tickets_frame" }, class: 'tab nav-link' %>
-    </li>
-    <li class="nav-item">
-      <%#= link_to "Workouts", event_workouts_path(@event), data: { turbo_frame: "info_frame", controller: 'hello', action: 'click->hello#activate' }, class: 'tab nav-link' %>
+      <%= link_to "My assigned squawks", tickets_path(filter: "my-tickets"), data: { turbo_frame: "tickets_frame" }, class: 'tab nav-link' %>
     </li>
   </ul>
 
