@@ -10,6 +10,7 @@ class TicketsController < ApplicationController
     @due_later_this_week_tickets = @account.tickets.due_later_this_week
     @due_next_week_tickets = @account.tickets.due_next_week
     @due_later_tickets = @account.tickets.due_later
+    @no_due_date_tickets = @account.tickets.no_due_date
     @completed_tickets = @account.tickets.completed.first(5)
   end
 
@@ -93,6 +94,6 @@ class TicketsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ticket_params
-      params.require(:ticket).permit(:title, :content, :due_date, :account_id, :completed, assigned_user_ids: [], notified_user_ids: [])
+      params.require(:ticket).permit(:title, :content, :due_date, :account_id, :completed, :repeat_until, :repeat, assigned_user_ids: [], notified_user_ids: [])
     end
 end

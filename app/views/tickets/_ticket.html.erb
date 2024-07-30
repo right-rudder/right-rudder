@@ -1,6 +1,6 @@
 <div id="<%= dom_id ticket %>" class="flex gap-10 items-center text-sm py-2 ml-5 border-t border-gray-300">
   <p class="uppercase w-28">
-    <%= ticket.due_date.strftime("%a, %b %e") %>
+    <%= ticket.due_date&.strftime("%a, %b %e") %>
   </p>
   <%= form_with(model: [ticket.account, ticket], data: {controller: "tickets", tickets_target: "form"}) do |form| %> 
     <%= form.check_box :completed, class: "size-5", data: {action: "change->tickets#submit"} %>

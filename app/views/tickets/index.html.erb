@@ -54,6 +54,13 @@
         </div>
       <% end %>
 
+      <% if @no_due_date_tickets.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">No due date</h2>
+          <%= render @no_due_date_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+
       <% if @completed_tickets.any? %>
         <div>
           <h2 class="text-green-500 font-semibold text-xl py-2">Completed</h2>
