@@ -1,4 +1,4 @@
-<%= form_with(model: [account, ticket], class: "contents") do |form| %>
+<%= form_with(model: [account, ticket], class: "contents", data: { controller: 'ticket-form' } ) do |form| %>
   <% if ticket.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
@@ -36,14 +36,14 @@
     <%= form.collection_select :notified_user_ids, User.all, :id, :username, {}, { multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
   </div>
 
-  <div class="field">
+  <div class="field" >
     <%= form.label :repeat %>
-    <%= form.select :repeat, Ticket.repeats.keys.map { |w| [w.humanize, w] }, include_blank: false %>
+    <%= form.select :repeat, Ticket.repeats.keys.map { |w| [w.humanize, w] }, {}, { data: { action: "change->ticket-form#handleChange", ticket_form_target: "select" } } %>
   </div>
 
-  <div class="field">
+  <div class="field hidden" data-ticket-form-target="repeatUntil">
     <%= form.label :repeat_until, "Repeat until:" %>
-    <%= form.date_select :repeat_until, include_blank: true %>
+    <%= form.date_field :repeat_until, min: Date.current.to_s %>
   </div>
 
   <div class="inline">

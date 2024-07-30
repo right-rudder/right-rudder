@@ -11,7 +11,7 @@ class Ticket < ApplicationRecord
   has_many :users, through: :comments
 
   enum repeat: {
-    dont_repeat: 0,
+    no: 0,
     every_day: 1,
     every_weekday: 2,
     every_week: 3,
@@ -20,10 +20,11 @@ class Ticket < ApplicationRecord
   }
 
   after_update :notify_users_if_completed
-
   after_create :create_future_tickets, if: :repeating_ticket?
+
   validates :repeat_until, presence: true, if: :repeating_ticket?
-  validate :repeat_until_after_today, if: :repeating_ticket?
+  validates :due_date, presence: true, if: :repeating_ticket?
+  validate :repeat_until_after_today, if: :repeat_until_present?
 
   scope :completed, -> { where(completed: true).order(updated_at: :desc) }
   scope :incompleted, -> { where(completed: false) }
@@ -59,7 +60,11 @@ class Ticket < ApplicationRecord
   end
 
   def repeating_ticket?
-    repeat != "dont_repeat" && repeat_until.present?
+    repeat != "dont_repeat"
+  end
+
+  def repeat_until_present?
+    repeat_until.present?
   end
 
   def create_future_tickets
@@ -121,7 +126,7 @@ class Ticket < ApplicationRecord
 
   def repeat_until_after_today
     if repeat_until < Date.current
-      errors.add(:repeat_until, "must be after the start date")
+      errors.add(:repeat_until, "must be after today")
     end
   end
 end
