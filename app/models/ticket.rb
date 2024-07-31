@@ -60,7 +60,7 @@ class Ticket < ApplicationRecord
   end
 
   def repeating_ticket?
-    repeat != "dont_repeat"
+    repeat != "no"
   end
 
   def repeat_until_present?
