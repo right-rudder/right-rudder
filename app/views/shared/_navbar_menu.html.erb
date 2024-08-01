@@ -190,10 +190,10 @@
         >
           <%= link_to "🎥 Webinars", webinars_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "🆓 Marketing Checklist", checklist_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
-          <%= link_to "🔥 Hot Flight School Keywords", "https://rightruddermarketing.com/notams/ultimate-flying-school-online-marketing-cheat-sheet", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
+          <%= link_to "🔥 Hot Flight School Keywords", keyword_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "🔑 Flight School Tips", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "📝 SOP Template", sop_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
-          <%= link_to "🏢 Google Business Optimization", gmb_email_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
+          <%= link_to "🏢 Google Business Fixes", gmb_email_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%# <%= link_to "📝 SOP Template", "https://rightruddermarketing.com/notams/how-to-create-sops-to-scale-your-flight-school", data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300"%>
           <%= link_to "🗞️ Blog", notams_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left hover:bg-blue-700 hover:text-white duration-300" %>
           <%= link_to "🚀 Growth Accelerator Session", schedule_call_path, data: { turbo: false }, class: "flex font-semibold items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md bg-blue-800 text-white px-4 py-2.5 text-left hover:bg-blue-700 duration-300"%>
@@ -292,9 +292,10 @@
     <div class="ml-5 text-slate-600" x-cloak x-show="dropdown3" x-transition x-transition:enter.duration.600ms>
       <li class="py-2"><%= link_to "Webinars", webinars_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Marketing Checklist", checklist_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
-      <li class="py-2"><%= link_to "Hot Flight School Keywords", "https://rightruddermarketing.com/notams/ultimate-flying-school-online-marketing-cheat-sheet", data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Hot Flight School Keywords", keyword_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Flight School Tips", "https://rightruddermarketing.com/notams/5-tips-to-grow-your-flight-school", data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "SOP Template", sop_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
+      <li class="py-2"><%= link_to "Google Business Optimization", gmb_email_path, data: { turbo: false }, class: "transition-all duration-300"%></li>
       <li class="py-2"><%= link_to "Blog", notams_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
       <li class="py-2"><%= link_to "Growth Accelerator Session",schedule_call_path, data: { turbo: false }, class: "transition-all duration-300" %></li>  
     </div>
