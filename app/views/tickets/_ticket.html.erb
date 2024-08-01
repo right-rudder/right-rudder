@@ -1,0 +1,15 @@
+<div id="<%= dom_id ticket %>" class="flex gap-10 items-center text-sm py-2 ml-5 border-t border-gray-300">
+  <p class="uppercase w-28">
+    <%= ticket.due_date&.strftime("%a, %b %e") %>
+  </p>
+  <%= form_with(model: [ticket.account, ticket], data: {controller: "tickets", tickets_target: "form"}) do |form| %> 
+    <%= form.check_box :completed, class: "size-5", data: {action: "change->tickets#submit"} %>
+    <%= form.hidden_field :source, value: local_assigns[:source] %>
+    <%= form.hidden_field :filter, value: local_assigns[:filter] %>
+  <% end %>
+  <%= link_to account_ticket_path(ticket.account, ticket), data: { turbo_frame: "_top" } do %>
+    <p class="<%= ticket.completed ? "text-gray-500" : "" %>">
+      <%= ticket.title %> <span class="text-xs ml-5 text-gray-500"><%= ticket.assigned_users.map(&:first_name).join(", ") %></span>
+    </p>
+  <% end %>
+</div>

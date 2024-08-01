@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:new, :create, :confirm]
+  before_action :authenticate_user!, except: [:new, :create, :confirm]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /messages or /messages.json

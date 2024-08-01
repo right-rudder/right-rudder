@@ -10,9 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_18_152402) do
+
+ActiveRecord::Schema[7.1].define(version: 2024_07_30_180216) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "action_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -42,24 +62,21 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_18_152402) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "admins", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_admins_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
-  end
-
   create_table "agreements", force: :cascade do |t|
     t.string "name"
     t.date "sign_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "company"
+  end
+
+  create_table "assignments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "ticket_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ticket_id"], name: "index_assignments_on_ticket_id"
+    t.index ["user_id"], name: "index_assignments_on_user_id"
   end
 
   create_table "careers", force: :cascade do |t|
@@ -76,6 +93,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_18_152402) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "ticket_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["ticket_id"], name: "index_comments_on_ticket_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -141,6 +167,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_18_152402) do
     t.index ["slug"], name: "index_notams_on_slug", unique: true
   end
 
+  create_table "notifications", force: :cascade do |t|
+    t.integer "recipient_id"
+    t.integer "actor_id"
+    t.datetime "read_at"
+    t.string "action"
+    t.integer "notifiable_id"
+    t.string "notifiable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sop_emails", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -149,6 +186,51 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_18_152402) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "ticket_notifications", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "ticket_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ticket_id"], name: "index_ticket_notifications_on_ticket_id"
+    t.index ["user_id"], name: "index_ticket_notifications_on_user_id"
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.string "title"
+    t.date "due_date"
+    t.bigint "account_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "completed", default: false, null: false
+    t.bigint "user_id", null: false
+    t.integer "repeat", default: 0
+    t.date "repeat_until"
+    t.index ["account_id"], name: "index_tickets_on_account_id"
+    t.index ["user_id"], name: "index_tickets_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "assignments", "tickets"
+  add_foreign_key "assignments", "users"
+  add_foreign_key "comments", "tickets"
+  add_foreign_key "comments", "users"
+  add_foreign_key "ticket_notifications", "tickets"
+  add_foreign_key "ticket_notifications", "users"
+  add_foreign_key "tickets", "accounts"
+  add_foreign_key "tickets", "users"
 end

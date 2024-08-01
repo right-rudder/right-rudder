@@ -20,14 +20,28 @@ Rails.application.routes.draw do
   #get 'careers/web_developer', to: "careers#webdeveloper", as: :webdeveloper
   resources :careers
 
+  # devise_scope :admin do
+  #   # Redirests signing out users back to sign-in
+  #   get "admins", to: "devise/sessions#new"
+  # end
+
+  devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
 
 
-  devise_scope :admin do
-    # Redirests signing out users back to sign-in
-    get "admins", to: "devise/sessions#new"
+
+  authenticated :user do
+    get 'customer-portal', to: 'customer_portal#index', as: :customer_portal
+    resource :profile_image, only: [:destroy]
+    scope '/customer-portal' do
+      resources :accounts do
+        resource :logo, only: [:destroy]
+        resources :tickets do
+          resources :comments
+        end
+      end
+      resources :tickets, only: [:index], controller: 'customer_portal/tickets'
+    end
   end
-
-  devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
 
   # homepage
   root "pages#home"

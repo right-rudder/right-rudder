@@ -1,0 +1,8 @@
+<div class="lg:pl-72 mx-auto md:w-2/3 w-full">
+  <h1 class="font-bold text-4xl">Editing squawk</h1>
+
+  <%= render "form", ticket: @ticket, account: @account %>
+
+  <%= link_to "Show this ticket", account_ticket_path(@account, @ticket), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <%= link_to "Back to tickets", account_tickets_path(@account), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+</div>

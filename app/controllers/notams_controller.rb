@@ -1,6 +1,6 @@
 class NotamsController < ApplicationController
   before_action :set_notam, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:index, :show, :webinars, :webinar_confirmation, :bm, :af, :na, :all, :fs]
+  before_action :authenticate_user!, except: [:index, :show, :webinars, :webinar_confirmation, :bm, :af, :na, :all, :fs]
 
   def draft #drafts
     @notams = Notam.draft.all

@@ -1,0 +1,22 @@
+<div class="lg:pl-72">
+  <div class="p-10">
+    <h1 class="font-bold text-5xl">All Squawks</h1>
+  </div>
+
+  <ul class="border-b border-gray-400 flex gap-2 justify-center" data-controller="tabs">
+    <li class="-translate-y-[5px]">
+      <%= link_to "All squawks", tickets_path, data: { turbo_frame: "tickets_frame", action: "click->tabs#activate" }, class: 'tab border-t border-r border-l border-gray-400 px-3 py-2 rounded-t bg-white mb-2' %>
+      <%#= link_to "Details", event_details_path(@event), data: { turbo_frame: "info_frame", controller: 'hello', action: 'click->hello#activate' }, class: 'tab nav-link active' %>
+    </li>
+    <li class="-translate-y-[5px]">
+      <%= link_to "My assigned squawks", tickets_path(filter: "my-tickets"), data: { turbo_frame: "tickets_frame", action: "click->tabs#activate" }, class: 'tab border-t border-r border-l border-gray-400 px-3 py-2 rounded-t mb-2' %>
+    </li>
+  </ul>
+
+  <%= turbo_frame_tag "tickets_frame" do %>
+    <%#= render 'events/detail' %>
+    <%= render "all_tickets" %>
+  <% end %>
+
+</div>
+

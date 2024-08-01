@@ -12,7 +12,7 @@ partial navbar_nonsticky which still renders the same code as this but isn't sti
   <p class="sticky bg-red-100 text-red-700 px-5 py-1 text-center lg:text-left"><%= alert %></p>
 <% end %>
 
-<% if !admin_signed_in? %>
+<% if !user_signed_in? %>
   <!--Book now (mobile screens)-->
   <nav class="sticky top-0 z-50">
     <%= render "shared/navbar_orange_call"%>

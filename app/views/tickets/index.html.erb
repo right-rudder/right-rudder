@@ -1,0 +1,74 @@
+<div class="lg:pl-72">
+  <div class="p-10">
+    <!---
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+    --->
+
+    <div class="flex justify-between items-center">
+      <h1 class="font-bold text-4xl"><%= @account.name %> Squawks</h1>
+      <%= link_to 'New squawk', new_account_ticket_path(@account), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    </div>
+
+    <div id="tickets" class="min-w-full flex flex-col gap-5 mt-10">
+      <% if  @overdue_tickets.any? %>
+        <div>
+          <h2 class="text-red-500 font-semibold text-xl py-2">Overdue</h2>
+          <%= render @overdue_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+
+      <% if @due_today_tickets.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">Due today</h2>
+          <%= render @due_today_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+
+      <% if @due_tomorrow_tickets.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">Due tomorrow</h2>
+          <%= render @due_tomorrow_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+
+      <% if @due_later_this_week_tickets.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">Due later this week</h2>
+          <%= render @due_later_this_week_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+      
+      <% if @due_next_week_tickets.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">Due next week</h2>
+          <%= render @due_next_week_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+      
+      <% if @due_later_tickets.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">Due later</h2>
+          <%= render @due_later_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+
+      <% if @no_due_date_tickets.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">No due date</h2>
+          <%= render @no_due_date_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+
+      <% if @completed_tickets.any? %>
+        <div>
+          <h2 class="text-green-500 font-semibold text-xl py-2">Completed</h2>
+          <%= render @completed_tickets, source: "account_index" %>
+        </div>
+      <% end %>
+    </div>
+
+
+  </div>
+</div>

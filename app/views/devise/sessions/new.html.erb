@@ -31,8 +31,10 @@
           <%= form.label "Password" %>
           <%= form.password_field :password, placeholder: "Password", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
         </div>
-
-        <%= recaptcha_tags %><br>
+        
+        <% if Rails.env.production? %>
+          <%= recaptcha_tags %><br>
+        <% end %>
 
         <div class="inline">
           <%= form.submit "Sign In", class: "rounded-lg py-3 px-5 w-full bg-blue-800 text-white inline-block font-medium cursor-pointer hover:bg-blue-700 active:bg-blue-600" %>
