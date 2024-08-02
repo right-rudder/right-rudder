@@ -16,7 +16,7 @@
         <% end %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <% if flash[:recaptcha_error].present? %>
-        <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg h-full" id="alert"><%= flash[:recaptcha_error] %><p>
+          <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg h-full" id="alert"><%= flash[:recaptcha_error] %><p>
         <% end %>
       </div>
       <!--Container for fields/button-->
