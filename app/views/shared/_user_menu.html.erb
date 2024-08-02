@@ -1,7 +1,7 @@
 <div x-data="{ usermenu: false }" class="font-mono ">
   <div class="w-full lg:h-10 h-16 bg-slate-700 flex flex-row justify-between items-center sticky z-50">
     <div class="pl-5 text-slate-100">
-      Welcome, <%= current_user.email %>
+      Welcome, <%= current_user.username %>
     </div>
 
     <!--Hamburger button-->
@@ -16,9 +16,6 @@
       <%= button_to 'New Webinar', new_notam_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
       <%= button_to 'New NOTAM', new_notam_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
       <%= button_to 'NOTAM drafts', draft_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
-      <%= button_to 'Newsletter', root_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
-      <%= button_to 'Support Tickets', root_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
-      <%= button_to 'Careers', root_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
       <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
     </div>
   </div>
@@ -30,10 +27,7 @@
       <%= button_to 'Customer Portal', customer_portal_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
       <%= button_to 'New Webinar', new_notam_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
       <%= button_to 'New NOTAM', new_notam_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
-      <%= button_to 'NOTAM drafts', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
-      <%= button_to 'Newsletter', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
-      <%= button_to 'Support Tickets', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
-      <%= button_to 'Careers', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'NOTAM drafts', draft_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
       <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
 
     <!--Close button-->
