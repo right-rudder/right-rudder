@@ -1,6 +1,6 @@
 # bc effem..
 promotion: false
-menubar: false
+#menubar: false  ##need this menubar for webinar / notam posts...
 toolbar_sticky: true
 toolbar:
   - undo redo | blocks | bold italic underline | forecolor backcolor | alignleft aligncenter alignright alignjustify bullist numlist | image link
