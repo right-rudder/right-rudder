@@ -44,7 +44,7 @@
           <p><%= @ticket.due_date&.strftime("%a, %b %e") %></p>
 
           <p class="font-semibold text-right">Notes</p>
-          <div>
+          <div data-controller="target">
             <%= @ticket.content %>
           </div>
         </div>
