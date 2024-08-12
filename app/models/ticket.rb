@@ -54,7 +54,7 @@ class Ticket < ApplicationRecord
   def notify_users_if_completed
     if completed_previously_changed? && completed?
       notified_users.each do |user|
-        # implement notification logic here
+        TicketMailer.with(ticket: self, user: user).completed_ticket.deliver_later
       end
     end
   end
