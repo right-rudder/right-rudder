@@ -63,14 +63,11 @@ class Ticket < ApplicationRecord
 
   def store_initial_assigned_users
     @initial_assigned_users = assigned_users.to_a
-    # binding.pry
   end
 
   def check_assigned_users_change
     new_users = assigned_users - @initial_assigned_users
     removed_users = @initial_assigned_users - assigned_users
-    
-    
 
     new_users.each do |user|
       TicketMailer.with(ticket: self, user: user).assigned_ticket.deliver_later
