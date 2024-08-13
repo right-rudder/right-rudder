@@ -20,6 +20,8 @@ class Ticket < ApplicationRecord
   }
 
   after_update :notify_users_if_completed
+  after_find :store_initial_assigned_users
+  after_commit :check_assigned_users_change, on: :update
   after_create :create_future_tickets, if: :repeating_ticket?
 
   validates :repeat_until, presence: true, if: :repeating_ticket?
@@ -56,6 +58,26 @@ class Ticket < ApplicationRecord
       notified_users.each do |user|
         TicketMailer.with(ticket: self, user: user).completed_ticket.deliver_later
       end
+    end
+  end
+
+  def store_initial_assigned_users
+    @initial_assigned_users = assigned_users.to_a
+    # binding.pry
+  end
+
+  def check_assigned_users_change
+    new_users = assigned_users - @initial_assigned_users
+    removed_users = @initial_assigned_users - assigned_users
+    
+    
+
+    new_users.each do |user|
+      TicketMailer.with(ticket: self, user: user).assigned_ticket.deliver_later
+    end
+
+    removed_users.each do |user|
+      TicketMailer.with(ticket: self, user: user).unassigned_ticket.deliver_later
     end
   end
 
