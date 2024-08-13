@@ -46,7 +46,7 @@ class Ticket < ApplicationRecord
   end
 
   def due_this_week?
-    due_date >= Date.current.beginning_of_week && due_date <= Date.current.end_of_week
+    due_date >= Date.current.beginning_of_week && due_date <= Date.current.end_of_week if due_date 
   end
 
   private
