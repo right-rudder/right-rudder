@@ -49,7 +49,6 @@ class TicketsController < ApplicationController
   def update
     respond_to do |format|
       if @ticket.update(ticket_params)
-        # binding.pry
         case params[:ticket][:source]
         when "account_index"
           redirect_path = account_tickets_url(@account)

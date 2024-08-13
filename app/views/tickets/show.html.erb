@@ -32,13 +32,13 @@
           <hr class="col-span-2 my-2" />
 
           <p class="font-semibold text-right">Added by</p>
-          <p><%= @ticket.user.username %> on <%= @ticket.created_at.strftime("%b %e") %></p>
+          <p><%= @ticket.creator.username %> on <%= @ticket.created_at.strftime("%b %e") %></p>
           
           <p class="font-semibold text-right">Assigned to</p>
-          <p><%= @ticket.assigned_users.map(&:first_name).join(", ") %></p>
+          <p><%= @ticket.assigned_users.map(&:username).join(", ") %></p>
 
           <p class="font-semibold text-right">When done, notify</p>
-          <p><%= @ticket.notified_users.map(&:first_name).join(", ") %></p>
+          <p><%= @ticket.notified_users.map(&:username).join(", ") %></p>
 
           <p class="font-semibold text-right">Due on</p>
           <p><%= @ticket.due_date&.strftime("%a, %b %e") %></p>
@@ -51,6 +51,29 @@
 
         <%= render "tickets/comments", ticket: @ticket, account: @account %>
        
+
+        <hr/>
+        <div class="mt-10 ml-36 ">
+          <h3 class="font-semibold text-xl">Subscribers</h3>
+          <p class="text-sm"><%= @ticket.subscribers.count %> people will be notified when someone comments on this squawk.</p>
+          <ul>
+            <% @ticket.subscribers.each do |subscriber| %>
+              <li><%= subscriber.username %></li>
+            <% end %>
+          </ul>
+
+          <% if @ticket.subscribers.include?(current_user) %>
+            <h3 class="font-semibold text-xl mt-5">You're subscribed</h3>
+            <p class="text-sm">You'll get a notification when someone comments on this squawk.</p>
+            <p>Unsubscribe</p>
+            <%#= link_to "Unsubscribe", account_ticket_subscriptions_path(@account, @ticket), method: :delete, class: "text-red-500" %>
+          <% else %>
+            <h3 class="font-semibold text-xl mt-5">You're not subscribed</h3>
+            <p class="text-sm">You won't be notified when comments are posted.</p>
+            <%#= link_to "Subscribe", account_ticket_subscriptions_path(@account, @ticket), method: :post, class: "text-green-500" %>
+            <p>Subscribe</p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

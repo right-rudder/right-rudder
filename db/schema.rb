@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_30_180216) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_13_210810) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -194,6 +194,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_30_180216) do
     t.index ["user_id"], name: "index_ticket_notifications_on_user_id"
   end
 
+  create_table "ticket_subscriptions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "ticket_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ticket_id"], name: "index_ticket_subscriptions_on_ticket_id"
+    t.index ["user_id", "ticket_id"], name: "index_ticket_subscriptions_on_user_id_and_ticket_id", unique: true
+    t.index ["user_id"], name: "index_ticket_subscriptions_on_user_id"
+  end
+
   create_table "tickets", force: :cascade do |t|
     t.string "title"
     t.date "due_date"
@@ -230,6 +240,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_30_180216) do
   add_foreign_key "comments", "users"
   add_foreign_key "ticket_notifications", "tickets"
   add_foreign_key "ticket_notifications", "users"
+  add_foreign_key "ticket_subscriptions", "tickets"
+  add_foreign_key "ticket_subscriptions", "users"
   add_foreign_key "tickets", "accounts"
   add_foreign_key "tickets", "users"
 end

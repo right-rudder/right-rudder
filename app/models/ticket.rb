@@ -1,6 +1,6 @@
 class Ticket < ApplicationRecord
   belongs_to :account
-  belongs_to :user
+  belongs_to :creator, class_name: "User", foreign_key: "user_id"
   has_many :comments, dependent: :destroy
   validates :title, presence: true
   has_rich_text :content
@@ -9,6 +9,8 @@ class Ticket < ApplicationRecord
   has_many :ticket_notifications, dependent: :destroy
   has_many :notified_users, through: :ticket_notifications, source: :user
   has_many :users, through: :comments
+  has_many :ticket_subscriptions, dependent: :destroy
+  has_many :subscribers, through: :ticket_subscriptions, source: :user
 
   enum repeat: {
     no: 0,
@@ -23,6 +25,7 @@ class Ticket < ApplicationRecord
   after_find :store_initial_assigned_users
   after_commit :check_assigned_users_change, on: :update
   after_create :create_future_tickets, if: :repeating_ticket?
+  after_save :update_subscribers
 
   validates :repeat_until, presence: true, if: :repeating_ticket?
   validates :due_date, presence: true, if: :repeating_ticket?
@@ -52,6 +55,17 @@ class Ticket < ApplicationRecord
   end
 
   private
+
+  def update_subscribers
+    # Get all assigned users and the creator of the ticket
+    users_to_subscribe = assigned_users.to_a
+    users_to_subscribe << creator unless users_to_subscribe.include?(creator)
+
+    # Add new subscriptions for users not already subscribed
+    users_to_subscribe.each do |user|
+      ticket_subscriptions.find_or_create_by(user: user)
+    end
+  end
 
   def notify_users_if_completed
     if completed_previously_changed? && completed?
