@@ -1,6 +1,9 @@
-<h1>Customer Portal Notification</h1>
+<div class="box">
+  <h1>Customer Portal Notification</h1>
 
-<p><%= @actor.username %> commented on the squawk: <%= @comment.ticket.title %></p>
+  <p><%= @actor.username %> commented on the squawk: <%= @comment.ticket.title %></p>
 
-<h2>Comment:</h2>
-<p><%= @comment.content %></p>
+  <div class="comment"><%= @comment.content %></div>
+
+  <%= link_to "View Squawk", account_ticket_url(@comment.account, @comment.ticket), class: "button", target: "_blank" %>
+</div>
