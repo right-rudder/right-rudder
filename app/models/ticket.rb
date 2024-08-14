@@ -71,7 +71,7 @@ class Ticket < ApplicationRecord
   def notify_users_if_completed
     if completed_previously_changed? && completed?
       notified_users.each do |user|
-        TicketMailer.with(ticket: self, user: user).completed_ticket.deliver_later
+        TicketMailer.with(ticket: self, user: user).completed_ticket.deliver_later(wait: 5.seconds)
       end
     end
   end
@@ -85,11 +85,11 @@ class Ticket < ApplicationRecord
     removed_users = @initial_assigned_users - assigned_users
 
     new_users.each do |user|
-      TicketMailer.with(ticket: self, user: user).assigned_ticket.deliver_later
+      TicketMailer.with(ticket: self, user: user).assigned_ticket.deliver_later(wait: 5.seconds)
     end
 
     removed_users.each do |user|
-      TicketMailer.with(ticket: self, user: user).unassigned_ticket.deliver_later
+      TicketMailer.with(ticket: self, user: user).unassigned_ticket.deliver_later(wait: 5.seconds)
     end
   end
 
