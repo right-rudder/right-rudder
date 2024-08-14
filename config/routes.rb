@@ -37,6 +37,7 @@ Rails.application.routes.draw do
         resource :logo, only: [:destroy]
         resources :tickets do
           resources :comments
+          resources :ticket_subscriptions, only: [:create, :destroy]
         end
       end
       resources :tickets, only: [:index], controller: 'customer_portal/tickets'

@@ -5,10 +5,12 @@
 
   <figcaption class="attachment__caption">
     <% if caption = blob.try(:caption) %>
-      <%= caption %>
-    <% else %>
-      <span class="attachment__name"><%= blob.filename %></span>
-      <span class="attachment__size"><%= number_to_human_size blob.byte_size %></span>
+      <span><%= caption %></span> •
     <% end %>
+    <span class="attachment__name"><%= blob.filename %></span> •
+    <span class=""><%= number_to_human_size blob.byte_size %></span> •
+    <span class="underline"><%= link_to "View full size", rails_blob_path(blob), class: "target" %></span> •
+    <span class="attachment__download underline"><%= link_to "Download", rails_blob_path(blob, disposition: "attachment") %></span>
+    <%# end %>
   </figcaption>
 </figure>

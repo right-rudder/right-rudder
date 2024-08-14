@@ -9,6 +9,7 @@ class TicketsController < ApplicationController
     @due_tomorrow_tickets = @account.tickets.due_tomorrow
     @due_later_this_week_tickets = @account.tickets.due_later_this_week
     @due_next_week_tickets = @account.tickets.due_next_week
+    @due_later_within_a_month_tickets = @account.tickets.due_later_within_a_month
     @due_later_tickets = @account.tickets.due_later
     @no_due_date_tickets = @account.tickets.no_due_date
     @completed_tickets = @account.tickets.completed.first(5)
@@ -23,7 +24,7 @@ class TicketsController < ApplicationController
 
   # GET /tickets/new
   def new
-    @ticket = @account.tickets.build(user: current_user)
+    @ticket = @account.tickets.build(creator: current_user)
   end
 
   # GET /tickets/1/edit
@@ -32,7 +33,7 @@ class TicketsController < ApplicationController
 
   # POST /tickets or /tickets.json
   def create
-    @ticket = @account.tickets.build(ticket_params.merge(user: current_user))
+    @ticket = @account.tickets.build(ticket_params.merge(creator: current_user))
 
     respond_to do |format|
       if @ticket.save
@@ -49,7 +50,6 @@ class TicketsController < ApplicationController
   def update
     respond_to do |format|
       if @ticket.update(ticket_params)
-        # binding.pry
         case params[:ticket][:source]
         when "account_index"
           redirect_path = account_tickets_url(@account)

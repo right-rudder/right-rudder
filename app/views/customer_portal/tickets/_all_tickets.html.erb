@@ -36,6 +36,13 @@
           <%= render partial: "tickets/ticket", collection: tickets_to_show(account).due_next_week, locals: { source: "portal_index", filter: params["filter"] } %>
         </div>
       <% end %>
+
+      <% if tickets_to_show(account).due_later_within_a_month.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">Due later within a month</h2>
+          <%= render partial: "tickets/ticket", collection: tickets_to_show(account).due_later_within_a_month, locals: { source: "portal_index", filter: params["filter"] } %>
+        </div>
+      <% end %>
       
       <% if tickets_to_show(account).due_later.any? %>
         <div>

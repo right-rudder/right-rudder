@@ -1,0 +1,7 @@
+<div class="box">
+  <h1>Customer Portal Notification</h1>
+
+  <p><%= @ticket.creator.username %> assigned you the following squawk: <%= @ticket.title %></p>
+
+  <%= link_to "View Squawk", account_ticket_url(@ticket.account, @ticket), class: "button", target: "_blank" %>
+</div>

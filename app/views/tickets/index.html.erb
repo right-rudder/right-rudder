@@ -46,6 +46,13 @@
           <%= render @due_next_week_tickets, source: "account_index" %>
         </div>
       <% end %>
+
+      <% if @due_later_within_a_month_tickets.any? %>
+        <div>
+          <h2 class="font-semibold text-xl py-2">Due later within a month</h2>
+          <%= render @due_later_within_a_month_tickets, source: "account_index" %>
+        </div>
+      <% end %>
       
       <% if @due_later_tickets.any? %>
         <div>

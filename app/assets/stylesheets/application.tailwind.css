@@ -34,6 +34,10 @@
   .btn-primary {
     @apply font-sans font-semibold bg-blue-500 hover:bg-blue-600 hover:scale-105 text-xl lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5;
   }
+
+  .btn-neutral {
+    @apply border border-gray-400 rounded-full text-center py-1 px-3 text-sm;
+  }
 }
 /*
 
@@ -68,6 +72,13 @@
 .trix-content action-text-attachment .attachment {
   padding: 0 !important;
   max-width: 100% !important;
+}
+
+.trix-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 6px;
 }
 
 .trix-content,

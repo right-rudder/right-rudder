@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :ticket_notifications, dependent: :destroy
   has_many :notified_tickets, through: :ticket_notifications, source: :ticket
   has_many :notifications, foreign_key: :recipient_id
+  has_many :ticket_subscriptions, dependent: :destroy
+  has_many :subscribed_tickets, through: :ticket_subscriptions, source: :ticket
 
   def resized_profile_image
     profile_image.variant(resize_to_limit: [300, 300]).processed
