@@ -23,7 +23,7 @@ class TicketsController < ApplicationController
 
   # GET /tickets/new
   def new
-    @ticket = @account.tickets.build(user: current_user)
+    @ticket = @account.tickets.build(creator: current_user)
   end
 
   # GET /tickets/1/edit
@@ -32,7 +32,7 @@ class TicketsController < ApplicationController
 
   # POST /tickets or /tickets.json
   def create
-    @ticket = @account.tickets.build(ticket_params.merge(user: current_user))
+    @ticket = @account.tickets.build(ticket_params.merge(creator: current_user))
 
     respond_to do |format|
       if @ticket.save
