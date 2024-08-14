@@ -9,6 +9,7 @@ class TicketsController < ApplicationController
     @due_tomorrow_tickets = @account.tickets.due_tomorrow
     @due_later_this_week_tickets = @account.tickets.due_later_this_week
     @due_next_week_tickets = @account.tickets.due_next_week
+    @due_later_within_a_month_tickets = @account.tickets.due_later_within_a_month
     @due_later_tickets = @account.tickets.due_later
     @no_due_date_tickets = @account.tickets.no_due_date
     @completed_tickets = @account.tickets.completed.first(5)

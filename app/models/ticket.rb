@@ -38,7 +38,8 @@ class Ticket < ApplicationRecord
   scope :due_tomorrow, -> { incompleted.where(due_date: Date.tomorrow).order(due_date: :asc).order(title: :asc) }
   scope :due_later_this_week, -> { incompleted.where(due_date: date_range_for_due_later_this_week).order(due_date: :asc).order(title: :asc) }
   scope :due_next_week, -> { incompleted.where(due_date: Date.current.end_of_week + 1.day..Date.current.end_of_week + 1.week).order(due_date: :asc).order(title: :asc) }
-  scope :due_later, -> { incompleted.where("due_date > ?", Date.current.end_of_week + 1.week).order(due_date: :asc).order(title: :asc) }
+  scope :due_later_within_a_month, -> { incompleted.where(due_date: Date.current.end_of_week + 1.week..Date.current + 1.month).order(due_date: :asc).order(title: :asc) }
+  scope :due_later, -> { incompleted.where("due_date > ?", Date.current + 1.month).order(due_date: :asc).order(title: :asc) }
   scope :no_due_date, -> { incompleted.where(due_date: nil).order(title: :asc) }
   scope :my_assigned_tickets, ->(user) { includes(:assigned_users).where(assigned_users: { id: user.id }) }
 
@@ -125,7 +126,7 @@ class Ticket < ApplicationRecord
         content:,
         due_date: date,
         account:,
-        user:,
+        creator:,
         assigned_user_ids:,
         notified_user_ids:,
       )
@@ -142,7 +143,7 @@ class Ticket < ApplicationRecord
         content:,
         due_date: date,
         account:,
-        user:,
+        creator:,
         assigned_user_ids:,
         notified_user_ids:,
       )
