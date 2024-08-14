@@ -58,7 +58,7 @@ class Ticket < ApplicationRecord
 
   def update_subscribers
     # Get all assigned users and the creator of the ticket
-    users_to_subscribe = assigned_users.to_a
+    users_to_subscribe = assigned_users.to_a + notified_users.to_a
     users_to_subscribe << creator unless users_to_subscribe.include?(creator)
 
     # Add new subscriptions for users not already subscribed
