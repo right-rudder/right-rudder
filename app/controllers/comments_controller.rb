@@ -12,7 +12,22 @@ class CommentsController < ApplicationController
       add_creator_as_subscriber(@comment)
       respond_to do |format|
         format.html { redirect_to account_ticket_path(@account, @ticket) }
-        # format.turbo_stream
+        format.turbo_stream do
+          render turbo_stream: [
+            turbo_stream.replace(
+              "subscribers_list",
+              partial: "comments/subscribers_list",
+              layout: false,
+              locals: { account: @account, ticket: @ticket}
+            ),
+            turbo_stream.replace(
+              "new_comment",
+              partial: "comments/new_comment",
+              layout: false,
+              locals: { account: @account, ticket: @ticket}
+            )
+          ]
+        end
       end
     else
       render :new
