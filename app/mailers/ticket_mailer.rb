@@ -8,12 +8,14 @@ class TicketMailer < ApplicationMailer
   def assigned_ticket
     @ticket = params[:ticket]
     @user = params[:user]
+    @actor = params[:actor]
     mail(to: @user.email, subject: "Squawk Assigned: #{@ticket.title}")
   end
 
   def unassigned_ticket
     @ticket = params[:ticket]
     @user = params[:user]
+    @actor = params[:actor]
     mail(to: @user.email, subject: "Squawk Unassigned: #{@ticket.title}")
   end
 end

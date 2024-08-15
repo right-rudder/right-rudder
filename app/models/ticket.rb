@@ -22,10 +22,9 @@ class Ticket < ApplicationRecord
   }
 
   after_update :notify_users_if_completed
-  after_find :store_initial_assigned_users
-  after_save :check_assigned_users_change
   after_create :create_future_tickets, if: :repeating_ticket?
   after_save :update_subscribers
+  after_create :notify_assigned_users
 
   validates :repeat_until, presence: true, if: :repeating_ticket?
   validates :due_date, presence: true, if: :repeating_ticket?
@@ -74,25 +73,9 @@ class Ticket < ApplicationRecord
     end
   end
 
-  def store_initial_assigned_users
-    @initial_assigned_users = assigned_users.to_a
-  end
-
-  def check_assigned_users_change
-    if @initial_assigned_users
-      new_users = assigned_users - @initial_assigned_users
-      removed_users = @initial_assigned_users - assigned_users
-    else
-      new_users = assigned_users
-      removed_users = []
-    end
-
-    new_users.each do |user|
-      TicketMailer.with(ticket: self, user: user).assigned_ticket.deliver_later(wait: 5.seconds)
-    end
-
-    removed_users.each do |user|
-      TicketMailer.with(ticket: self, user: user).unassigned_ticket.deliver_later(wait: 5.seconds)
+  def notify_assigned_users
+    assigned_users.each do |user|
+      TicketMailer.with(ticket: self, user: user, actor: creator).assigned_ticket.deliver_later(wait: 5.seconds) unless user == creator
     end
   end
 
