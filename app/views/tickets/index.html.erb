@@ -11,28 +11,7 @@
       <%= link_to 'New squawk', new_account_ticket_path(@account), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
     </div>
 
-    <div id="tickets" class="min-w-full flex flex-col gap-5 mt-10" data-controller="expandable">
-      <div class="flex gap-5 justify-end">
-        <button data-action="click->expandable#expandAll" class="btn-neutral">Expand all</button>
-        <button data-action="click->expandable#collapseAll" class="btn-neutral">Collapse all</button>
-      </div>
-      <button></button>
-      <% ticket_categories.each do |key, category| %>
-        <% if category[:tickets].any? %>
-          <div>
-            <div class="flex gap-5">
-              <h2 class="<%= category[:color] %> font-semibold text-xl py-2"><%= category[:title] %></h2>
-              <button id="<%= "#{key.to_s.camelize(:lower)}Tickets" %>" data-action="click->expandable#toggle" class="rotate-0 duration-200">
-                <svg width="2em" height="2em" viewBox="0 0 24 24" class="pointer-events-none"><path fill="currentColor" d="M16.59 8.59L12 13.17L7.41 8.59L6 10l6 6l6-6z"/></svg>
-              </button>
-            </div>
-            <div class="max-h-[80rem] overflow-hidden duration-200 expandable" data-expandable-target="<%= "#{key.to_s.camelize(:lower)}Tickets" %>">
-              <%= render category[:tickets], source: "account_index" %>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
+    <%= render "account_tickets", account: @account %>
 
   </div>
 </div>

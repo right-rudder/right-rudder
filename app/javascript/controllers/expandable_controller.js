@@ -5,7 +5,6 @@ export default class extends Controller {
     "overdueTickets",
     "dueTodayTickets",
     "dueTomorrowTickets",
-    "dueThisWeekTickets",
     "dueLaterThisWeekTickets",
     "dueNextWeekTickets",
     "dueLaterWithinAMonthTickets",
