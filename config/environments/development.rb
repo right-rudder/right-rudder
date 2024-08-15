@@ -2,8 +2,6 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  Rails.application.routes.default_url_options[:host] = "127.0.0.1"
-  Rails.application.routes.default_url_options[:port] = 3000
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
@@ -75,14 +73,18 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  
+  config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3000 }
+  
   config.action_mailer.delivery_method = :smtp
+  
   config.action_mailer.smtp_settings = {
-  address: "mail.smtp2go.com",
-  port: 8025, # 8025, 587 and 25 can also be used.
-  domain: "rightruddermarketing.com",
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: "rightrudder.marketing",
-  password: ENV["SMTP2GO_PASS"]
+    address: "mail.smtp2go.com",
+    port: 8025, # 8025, 587 and 25 can also be used.
+    domain: "rightruddermarketing.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: "rightrudder.marketing",
+    password: ENV["SMTP2GO_PASS"]
   }
 end
