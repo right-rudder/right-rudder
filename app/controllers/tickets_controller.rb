@@ -48,6 +48,7 @@ class TicketsController < ApplicationController
 
   # PATCH/PUT /tickets/1 or /tickets/1.json
   def update
+    previous_assigned_users = @ticket.assigned_users.to_a
     respond_to do |format|
       if @ticket.update(ticket_params)
         case params[:ticket][:source]
@@ -62,6 +63,7 @@ class TicketsController < ApplicationController
         else
           redirect_path = account_ticket_url(@account, @ticket)
         end
+        check_assigned_users_change(@ticket, previous_assigned_users)
         # redirect_path = params[:ticket][:source] ? account_tickets_url(@account) : account_ticket_url(@account, @ticket)
         format.html { redirect_to redirect_path, notice: "Ticket was successfully updated." }
         format.json { render :show, status: :ok, location: @ticket }
@@ -95,5 +97,19 @@ class TicketsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def ticket_params
       params.require(:ticket).permit(:title, :content, :due_date, :account_id, :completed, :repeat_until, :repeat, assigned_user_ids: [], notified_user_ids: [])
+    end
+
+    def check_assigned_users_change(ticket, previous_assigned_users)
+      new_assigned_users = ticket.assigned_users.to_a
+      removed_users = previous_assigned_users - new_assigned_users
+      added_users = new_assigned_users - previous_assigned_users
+      
+      removed_users.each do |user|
+        TicketMailer.with(ticket: ticket, user: user, actor: current_user).unassigned_ticket.deliver_later(wait: 5.seconds) unless user == current_user
+      end
+
+      added_users.each do |user|
+        TicketMailer.with(ticket: ticket, user: user, actor: current_user).assigned_ticket.deliver_later(wait: 5.seconds) unless user == current_user
+      end
     end
 end
