@@ -23,7 +23,7 @@ class Ticket < ApplicationRecord
 
   after_update :notify_users_if_completed
   after_find :store_initial_assigned_users
-  after_commit :check_assigned_users_change, on: :update
+  after_save :check_assigned_users_change
   after_create :create_future_tickets, if: :repeating_ticket?
   after_save :update_subscribers
 
@@ -58,11 +58,9 @@ class Ticket < ApplicationRecord
   private
 
   def update_subscribers
-    # Get all assigned users and the creator of the ticket
     users_to_subscribe = assigned_users.to_a + notified_users.to_a
     users_to_subscribe << creator unless users_to_subscribe.include?(creator)
 
-    # Add new subscriptions for users not already subscribed
     users_to_subscribe.each do |user|
       ticket_subscriptions.find_or_create_by(user: user)
     end
@@ -81,8 +79,13 @@ class Ticket < ApplicationRecord
   end
 
   def check_assigned_users_change
-    new_users = assigned_users - @initial_assigned_users
-    removed_users = @initial_assigned_users - assigned_users
+    if @initial_assigned_users
+      new_users = assigned_users - @initial_assigned_users
+      removed_users = @initial_assigned_users - assigned_users
+    else
+      new_users = assigned_users
+      removed_users = []
+    end
 
     new_users.each do |user|
       TicketMailer.with(ticket: self, user: user).assigned_ticket.deliver_later(wait: 5.seconds)
