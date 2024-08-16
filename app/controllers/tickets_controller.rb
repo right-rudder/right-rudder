@@ -44,7 +44,11 @@ class TicketsController < ApplicationController
       if @ticket.update(ticket_params)
         case params[:ticket][:source]
         when "account_index"
-          redirect_path = account_tickets_url(@account)
+          if params[:ticket][:filter] == "my-tickets"
+            redirect_path = account_tickets_url(@account, filter: "my-tickets")
+          else
+            redirect_path = account_tickets_url(@account)
+          end
         when "portal_index"
           if params[:ticket][:filter] == "my-tickets"
             redirect_path = tickets_url(filter: "my-tickets")

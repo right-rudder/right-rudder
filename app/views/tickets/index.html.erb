@@ -5,13 +5,18 @@
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
     --->
-
     <div class="flex justify-between items-center">
       <h1 class="font-bold text-4xl"><%= @account.name %> Squawks</h1>
       <%= link_to 'New squawk', new_account_ticket_path(@account), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
     </div>
-
-    <%= render "account_tickets", account: @account %>
-
   </div>
+
+  <%= render partial: "shared/tabs", locals: { all_squawks_path: account_tickets_path(@account), my_squawks_path: account_tickets_path(@account, filter: "my-tickets") }  %>
+
+  <%= turbo_frame_tag "tickets_frame" do %>
+    <div class="px-10">
+      <%= render partial: "account_tickets", locals: { account: @account, source: "account_index" } %>
+    </div>
+  <% end %>
+  
 </div>

@@ -1,4 +1,4 @@
-<div id="<%=account.name%> squawks" class="min-w-full flex flex-col gap-5 mt-10" data-controller="expandable">
+<div id="<%= account.name %> squawks" class="min-w-full flex flex-col gap-5 mt-10" data-controller="expandable">
   <div class="flex gap-5 justify-end">
     <button data-action="click->expandable#expandAll" class="btn-neutral">Expand all</button>
     <button data-action="click->expandable#collapseAll" class="btn-neutral">Collapse all</button>
@@ -13,8 +13,8 @@
             <svg width="2em" height="2em" viewBox="0 0 24 24" class="pointer-events-none"><path fill="currentColor" d="M16.59 8.59L12 13.17L7.41 8.59L6 10l6 6l6-6z"/></svg>
           </button>
         </div>
-        <div class="max-h-[80rem] overflow-hidden duration-200 expandable" data-expandable-target="<%= "#{key.to_s.camelize(:lower)}Tickets" %>">
-          <%= render category[:tickets], source: "account_index" %>
+        <div class="max-h-[80rem] overflow-hidden duration-300 expandable" data-expandable-target="<%= "#{key.to_s.camelize(:lower)}Tickets" %>">
+          <%= render partial: "tickets/ticket", collection: category[:tickets], locals: { source: source, filter: params[:filter] } %>
         </div>
       </div>
     <% end %>
