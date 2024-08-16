@@ -9,11 +9,11 @@
       <div>
         <div class="flex gap-5">
           <h2 class="<%= category[:color] %> font-semibold text-xl py-2"><%= category[:title] %></h2>
-          <button id="<%= "#{key.to_s.camelize(:lower)}Tickets" %>" data-action="click->expandable#toggle" class="rotate-0 duration-200">
+          <button id="<%= "#{unique_id(account, key)}" %>" data-action="click->expandable#toggle" class="rotate-0 duration-200 arrow">
             <svg width="2em" height="2em" viewBox="0 0 24 24" class="pointer-events-none"><path fill="currentColor" d="M16.59 8.59L12 13.17L7.41 8.59L6 10l6 6l6-6z"/></svg>
           </button>
         </div>
-        <div class="max-h-[80rem] overflow-hidden duration-300 expandable" data-expandable-target="<%= "#{key.to_s.camelize(:lower)}Tickets" %>">
+        <div class="max-h-[80rem] overflow-hidden duration-300 dropdown" id="<%= "#{unique_id(account, key)}_dropdown" %>">
           <%= render partial: "tickets/ticket", collection: category[:tickets], locals: { source: source, filter: params[:filter] } %>
         </div>
       </div>

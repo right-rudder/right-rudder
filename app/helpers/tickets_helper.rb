@@ -17,4 +17,8 @@ module TicketsHelper
       completed: { tickets: tickets_scope.completed, title: "Completed", color: "text-green-500" }
     }
   end
+
+  def unique_id(account, key)
+    "#{key}-#{account.id}"
+  end
 end

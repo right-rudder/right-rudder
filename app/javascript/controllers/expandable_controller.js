@@ -1,21 +1,10 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = [
-    "overdueTickets",
-    "dueTodayTickets",
-    "dueTomorrowTickets",
-    "dueLaterThisWeekTickets",
-    "dueNextWeekTickets",
-    "dueLaterWithinAMonthTickets",
-    "dueLaterTickets",
-    "noDueDateTickets",
-    "completedTickets",
-  ];
-
   toggle(e) {
-    const targetId = e.target.id.concat("Target");
-    const targetElement = this[targetId];
+    const targetElement = this.element.querySelector(
+      `#${e.target.id}_dropdown`
+    );
 
     if (targetElement) {
       targetElement.classList.toggle("max-h-[80rem]");
@@ -27,30 +16,30 @@ export default class extends Controller {
   }
 
   expandAll() {
-    this.constructor.targets.forEach((target) => {
-      const targetElement = document.getElementById(target);
-      if (targetElement) {
-        const element = this[`${target}Target`];
-        element.classList.add("max-h-[80rem]");
-        element.classList.remove("max-h-0");
+    const dropdowns = this.element.querySelectorAll(".dropdown");
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.add("max-h-[80rem]");
+      dropdown.classList.remove("max-h-0");
+    });
 
-        targetElement.classList.remove("-rotate-90");
-        targetElement.classList.add("rotate-0");
-      }
+    const arrows = this.element.querySelectorAll(".arrow");
+    arrows.forEach((arrow) => {
+      arrow.classList.add("rotate-0");
+      arrow.classList.remove("-rotate-90");
     });
   }
 
   collapseAll() {
-    this.constructor.targets.forEach((target) => {
-      const targetElement = document.getElementById(target);
-      if (targetElement) {
-        const element = this[`${target}Target`];
-        element.classList.remove("max-h-[80rem]");
-        element.classList.add("max-h-0");
+    const dropdowns = this.element.querySelectorAll(".dropdown");
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.add("max-h-0");
+      dropdown.classList.remove("max-h-[80rem]");
+    });
 
-        targetElement.classList.add("-rotate-90");
-        targetElement.classList.remove("rotate-0");
-      }
+    const arrows = this.element.querySelectorAll(".arrow");
+    arrows.forEach((arrow) => {
+      arrow.classList.add("-rotate-90");
+      arrow.classList.remove("rotate-0");
     });
   }
 }
