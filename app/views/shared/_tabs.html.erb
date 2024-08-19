@@ -1,0 +1,8 @@
+<ul class="border-b border-gray-400 flex gap-2 justify-center" data-controller="tabs">
+  <li class="-translate-y-[5px]">
+    <%= link_to "All squawks", all_squawks_path, data: { turbo_frame: "tickets_frame", action: "click->tabs#activate" }, class: 'tab border-t border-r border-l border-gray-400 px-3 py-2 rounded-t bg-white mb-2' %>
+  </li>
+  <li class="-translate-y-[5px]">
+    <%= link_to "My assigned squawks", my_squawks_path, data: { turbo_frame: "tickets_frame", action: "click->tabs#activate" }, class: 'tab border-t border-r border-l border-gray-400 px-3 py-2 rounded-t mb-2' %>
+  </li>
+</ul>

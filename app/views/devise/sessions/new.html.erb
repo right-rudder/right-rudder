@@ -32,6 +32,13 @@
           <%= form.password_field :password, placeholder: "Password", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-blue-800 focus:ring-blue-800" %>
         </div>
         
+        <% if devise_mapping.rememberable? %>
+          <div class="my-5">
+            <%= form.check_box :remember_me %>
+            <%= form.label :remember_me %>
+          </div>
+        <% end %>
+        
         <% if Rails.env.production? %>
           <%= recaptcha_tags %><br>
         <% end %>
