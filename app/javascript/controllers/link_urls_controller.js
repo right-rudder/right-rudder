@@ -8,13 +8,12 @@ export default class extends Controller {
 
       if (innerDiv) {
         let innerHTML = innerDiv.innerHTML;
-        const urlRegex = /(\bhttps?:\/\/[^\s<>"']+)(?=\s|$)/g;
+        const urlRegex = /(\bhttps?:\/\/[^\s<>"',]+)/g;
 
         innerHTML = innerHTML.replace(urlRegex, function (url) {
           url = url.replace(/&nbsp;$/, "").trim();
           return `<a href="${url}" target="_blank">${url}</a>`;
         });
-
         innerDiv.innerHTML = innerHTML;
 
         const links = innerDiv.querySelectorAll("a");
