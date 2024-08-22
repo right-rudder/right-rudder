@@ -7,6 +7,22 @@ class Comment < ApplicationRecord
 
   delegate :account, to: :ticket
 
+  def created_at_is_today?
+    created_at.to_date == Date.current
+  end
+
+  def created_at_is_yesterday?
+    created_at.to_date == Date.yesterday
+  end
+
+  def created_at_is_not_this_year?
+    created_at.year != Date.current.year
+  end
+
+  def created_at_is_this_week?
+    created_at.to_date.cweek == Date.current.cweek
+  end
+
   private
 
   def send_notifications

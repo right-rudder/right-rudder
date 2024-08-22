@@ -6,10 +6,13 @@
 
     <div class="flex justify-between gap-2">
       <div class="text-sm text-gray-600">
-        <% if comment.ticket.due_this_week? %>
-          <p class="uppercase"><%= comment.created_at.strftime("%A") %></p>
+        <p class=""><%= format_date(comment) %></p>
+
+        <% if should_display_formatted_time_again?(comment) %>
+          <p><%= comment.created_at.strftime("%b %e") %></p>
+        <% elsif comment.created_at_is_today? || comment.created_at_is_yesterday? %>
+          <p><%= comment.created_at.strftime("%l:%M %p") %></p>
         <% end %>
-        <p><%= comment.created_at.strftime("%b %e") %></p>
       </div>
 
       <% if comment.user.profile_image.attached?  %>
