@@ -4,26 +4,44 @@ export default class extends Controller {
   connect() {
     const trixContents = document.querySelectorAll(".trix-content");
     trixContents.forEach((content) => {
-      const innerDiv = content.querySelector("div");
+      const textNodes = this.getTextNodes(content);
+      console.log(textNodes);
+      textNodes.forEach((node) => {
+        const urlRegex = /(https?:\/\/[^\s<>"',]+)/g;
 
-      if (innerDiv) {
-        let innerHTML = innerDiv.innerHTML;
-        const urlRegex = /(\bhttps?:\/\/[^\s<>"']+)(?=\s|$)/g;
+        if (urlRegex.test(node.textContent)) {
+          const html = node.textContent.replace(urlRegex, function (url) {
+            return `<a href="${url}" target="_blank">${url}</a>`;
+          });
 
-        innerHTML = innerHTML.replace(urlRegex, function (url) {
-          url = url.replace(/&nbsp;$/, "").trim();
-          return `<a href="${url}" target="_blank">${url}</a>`;
-        });
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = html;
 
-        innerDiv.innerHTML = innerHTML;
-
-        const links = innerDiv.querySelectorAll("a");
-        links.forEach((link) => {
-          if (link.getAttribute("target") !== "_blank") {
-            link.setAttribute("target", "_blank");
+          while (tempDiv.firstChild) {
+            node.parentNode.insertBefore(tempDiv.firstChild, node);
           }
-        });
-      }
+
+          node.parentNode.removeChild(node);
+        }
+      });
     });
+  }
+
+  getTextNodes(node) {
+    let textNodes = [];
+    const treeWalker = document.createTreeWalker(
+      node,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+    let currentNode = treeWalker.nextNode();
+
+    while (currentNode) {
+      textNodes.push(currentNode);
+      currentNode = treeWalker.nextNode();
+    }
+
+    return textNodes;
   }
 }

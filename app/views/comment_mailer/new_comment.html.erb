@@ -3,7 +3,7 @@
 
   <p><%= @actor.username %> commented on the squawk: <%= @comment.ticket.title %></p>
 
-  <div class="comment"><%= @comment.content %></div>
+  <div class="comment"><%= @comment.content.body.to_plain_text %></div>
 
   <%= link_to "View Squawk", account_ticket_url(@comment.account, @comment.ticket), class: "button", target: "_blank" %>
 </div>
