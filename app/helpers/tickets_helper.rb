@@ -19,6 +19,6 @@ module TicketsHelper
   end
 
   def unique_id(account, key)
-    "#{key}-#{account.id}"
+    "#{key}_#{account.id}"
   end
 end
