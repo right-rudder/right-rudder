@@ -4,6 +4,7 @@ class Comment < ApplicationRecord
   has_rich_text :content
   broadcasts_to :ticket
   after_create_commit :send_notifications
+  enum variant: { comment: 0, date_change_note: 1, completed_note: 2, reopened_note: 3 }
 
   delegate :account, to: :ticket
 

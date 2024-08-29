@@ -2,8 +2,10 @@
 <div id="<%= dom_id(comment) %>">
   <div class="grid grid-cols-[12rem_auto] gap-4 py-4 relative" data-controller="ticket-options">
 
-    <%= render "comments/options", comment: comment %>
-
+    <% if comment.variant == "comment" %>
+      <%= render "comments/options", comment: comment %>
+    <% end %>
+    
     <div class="flex justify-between gap-2">
       <div class="text-sm text-gray-600">
         <p><%= formatted_date(comment) %></p>
@@ -17,7 +19,9 @@
     </div>
 
     <div>
-      <p class="font-semibold"><%= comment.user.username %></p>
+      <% if comment.variant == "comment" %>
+        <p class="font-semibold"><%= comment.user.username %></p>
+      <% end %>
       <p><%= comment.content %></p>
     </div>
   </div>

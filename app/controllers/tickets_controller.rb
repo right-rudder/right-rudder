@@ -59,7 +59,7 @@ class TicketsController < ApplicationController
           redirect_path = account_ticket_url(@account, @ticket)
         end
         check_assigned_users_change(@ticket, previous_assigned_users)
-        # redirect_path = params[:ticket][:source] ? account_tickets_url(@account) : account_ticket_url(@account, @ticket)
+        @ticket.create_notes(current_user)
         format.html { redirect_to redirect_path, notice: "Ticket was successfully updated." }
         format.json { render :show, status: :ok, location: @ticket }
       else

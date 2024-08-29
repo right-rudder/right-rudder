@@ -54,7 +54,25 @@ class Ticket < ApplicationRecord
     due_date >= Date.current.beginning_of_week && due_date <= Date.current.end_of_week if due_date 
   end
 
+  def create_notes(actor)
+    create_note_on_date_change(actor)
+    create_note_on_completion(actor)
+    create_note_on_uncompletion(actor)
+  end
+
   private
+
+  def create_note_on_date_change(actor)
+    comments.create(content: "🗓 <strong>#{actor.username} changed the due date</strong> from #{due_date_previously_was.strftime('%b %e, %Y')} to #{due_date.strftime('%b %e, %Y')}.", user: actor, variant: :date_change_note) if due_date_previously_changed?
+  end
+
+  def create_note_on_completion(actor)
+    comments.create(content: "✅ <strong>#{actor.username} completed</strong> this squawk.", user: actor, variant: :completed_note) if completed_previously_changed? && completed?
+  end
+
+  def create_note_on_uncompletion(actor)
+    comments.create(content: "❌ <strong>#{actor.username} re-opened</strong> this squawk.", user: actor, variant: :reopened_note) if completed_previously_changed? && !completed?
+  end
 
   def update_subscribers
     users_to_subscribe = assigned_users.to_a + notified_users.to_a
