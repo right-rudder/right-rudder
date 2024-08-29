@@ -7,6 +7,7 @@ class Comment < ApplicationRecord
   enum variant: { comment: 0, date_change_note: 1, completed_note: 2, reopened_note: 3 }
 
   delegate :account, to: :ticket
+  scope :variant_comment, -> { where(variant: :comment) }
 
   def created_today?
     created_at.to_date == Date.current
