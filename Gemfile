@@ -69,6 +69,7 @@ gem 'invisible_captcha'
 gem 'whenever', require: false
 gem 'fog-aws'
 gem 'pry-byebug'
+gem 'requestjs-rails'
 
 
 group :development, :test do

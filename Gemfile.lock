@@ -335,6 +335,8 @@ GEM
       declarative (< 0.1.0)
       trailblazer-option (>= 0.1.1, < 0.2.0)
       uber (< 0.2.0)
+    requestjs-rails (0.0.11)
+      railties (>= 6.1.0)
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
@@ -434,6 +436,7 @@ DEPENDENCIES
   rails (~> 7.1.3.4)
   recaptcha
   redis (>= 4.0.1)
+  requestjs-rails
   selenium-webdriver
   sitemap_generator
   sprockets-rails

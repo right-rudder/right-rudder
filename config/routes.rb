@@ -26,10 +26,9 @@ Rails.application.routes.draw do
   # end
 
   devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
-
-
-
+  
   authenticated :user do
+    resources :users, only: [:index]
     get 'customer-portal', to: 'customer_portal#index', as: :customer_portal
     resource :profile_image, only: [:destroy]
     scope '/customer-portal' do
@@ -47,8 +46,6 @@ Rails.application.routes.draw do
   # homepage
   root "pages#home"
   get 'intro_video_embed', to: "pages#intro_video_embed", as: :embed_video
-
-
 
   # Notams
   post 'uploader/image', to: 'uploader#image' #add upload image to notams
