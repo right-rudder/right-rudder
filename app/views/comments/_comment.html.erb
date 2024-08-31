@@ -20,7 +20,7 @@
 
     <div>
       <% if comment.variant == "comment" %>
-        <p class="font-semibold"><%= comment.user.username %></p>
+        <p class="font-semibold"><%= comment.user.first_name %></p>
       <% end %>
       <p><%= comment.content %></p>
     </div>

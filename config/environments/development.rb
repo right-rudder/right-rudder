@@ -73,15 +73,6 @@ Rails.application.configure do
   
   config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3000 }
   
-  config.action_mailer.delivery_method = :smtp
-  
-  config.action_mailer.smtp_settings = {
-    address: "mail.smtp2go.com",
-    port: 8025, # 8025, 587 and 25 can also be used.
-    domain: "rightruddermarketing.com",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "rightrudder.marketing",
-    password: ENV["SMTP2GO_PASS"]
-  }
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
 end

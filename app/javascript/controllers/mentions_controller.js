@@ -6,10 +6,6 @@ import { get } from "@rails/request.js";
 export default class extends Controller {
   connect() {
     this.tribute = new Tribute({
-      // values: [
-      //   { key: "Phil Heartman", value: "pheartman" },
-      //   { key: "Gordon Ramsey", value: "gramsey" },
-      // ],
       values: async (text, cb) => {
         const response = await get(`/users.json?query=${text}`);
         if (response.ok) {
@@ -17,7 +13,7 @@ export default class extends Controller {
           cb(
             users.map((user) => ({
               key: `${user.first_name} ${user.last_name}`,
-              value: user.first_name,
+              value: user.username,
             }))
           );
         }

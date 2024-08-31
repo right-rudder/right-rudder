@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= form.label :assigned_user_ids, "Assign Users" %><br>
-    <%= form.collection_select :assigned_user_ids, User.all, :id, :username, {}, { multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
+    <%= form.collection_select :assigned_user_ids, User.all, :id, :first_name, {}, { multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
   </div>
 
   <div class="field">
     <%= form.label :assigned_user_ids, "When done, notify" %><br>
-    <%= form.collection_select :notified_user_ids, User.all, :id, :username, {}, { multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
+    <%= form.collection_select :notified_user_ids, User.all, :id, :first_name, {}, { multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" } %>
   </div>
 
   <div class="field" >
