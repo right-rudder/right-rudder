@@ -58,7 +58,7 @@
             <h3 class="font-semibold text-xl">Subscribers</h3>
             <p class="text-sm"><%= @ticket.subscribers.count %> people will be notified when someone comments on this squawk.</p>
             <ul class="flex">
-              <% @ticket.subscribers.each do |subscriber| %>
+              <% @ticket.subscribers.includes(profile_image_attachment: :blob).each do |subscriber| %>
                 <li>
                   <% if subscriber.profile_image.attached? %>
                     <%= image_tag subscriber.resized_profile_image, class: "size-8 rounded-full" %>

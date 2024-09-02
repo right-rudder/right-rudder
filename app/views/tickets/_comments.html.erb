@@ -1,5 +1,5 @@
 <div id="comments">
-  <%= render ticket.comments.order(created_at: :asc) %>
+  <%= render ticket.comments.includes(:user, :rich_text_content).order(created_at: :asc) %>
 </div>
 
 <hr/>

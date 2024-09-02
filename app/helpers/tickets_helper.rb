@@ -1,9 +1,9 @@
 module TicketsHelper
   def ticket_categories(account)
     if params["filter"] == "my-tickets"
-      tickets_scope = account.my_assigned_tickets(current_user)
+      tickets_scope = account.my_assigned_tickets(current_user).includes(:assigned_users, :rich_text_content)
     else
-      tickets_scope = account.tickets
+      tickets_scope = account.tickets.includes(:assigned_users, :rich_text_content)
     end
     {
       overdue: { tickets: tickets_scope.overdue, title: "Overdue", color: "text-red-500" },
