@@ -1,3 +1,3 @@
-<%= link_to account_ticket_path(notification.notifiable.account, notification.notifiable), data: { turbo_frame: "_top" } do %>
+<%= link_to account_ticket_path(notification.account, notification.notifiable), data: { turbo_frame: "_top" } do %>
   <p class="py-2 px-4 hover:bg-blue-400 whitespace-nowrap <%= notification.read_at ? "bg-white" : "bg-yellow-100" %>"><%= notification.actor.first_name %> <%= notification.action %> <%= notification.notifiable.class.name.downcase %>: <%= notification.notifiable.title %></p>
 <% end %>
