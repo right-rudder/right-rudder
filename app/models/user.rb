@@ -15,6 +15,10 @@ class User < ApplicationRecord
   has_many :ticket_subscriptions, dependent: :destroy
   has_many :subscribed_tickets, through: :ticket_subscriptions, source: :ticket
 
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :username, presence: true, uniqueness: true
+
   def resized_profile_image
     profile_image.variant(resize_to_limit: [300, 300]).processed
   end
@@ -23,7 +27,7 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
-  def username
-    first_name || email
+  def username_or_email
+    username || email
   end
 end

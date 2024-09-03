@@ -40,7 +40,7 @@ class Ticket < ApplicationRecord
   scope :due_later_within_a_month, -> { incompleted.where(due_date: Date.current.beginning_of_week + 2.weeks..Date.current + 1.month).order(due_date: :asc).order(title: :asc) }
   scope :due_later, -> { incompleted.where("due_date > ?", Date.current + 1.month).order(due_date: :asc).order(title: :asc) }
   scope :no_due_date, -> { incompleted.where(due_date: nil).order(title: :asc) }
-  scope :my_assigned_tickets, ->(user) { includes(:assigned_users).where(assigned_users: { id: user.id }) }
+  scope :my_assigned_tickets, ->(user) { where(assigned_users: { id: user.id }) }
 
   def self.date_range_for_due_later_this_week
     if Date.current.saturday? || Date.current.sunday?
@@ -54,7 +54,25 @@ class Ticket < ApplicationRecord
     due_date >= Date.current.beginning_of_week && due_date <= Date.current.end_of_week if due_date 
   end
 
+  def create_notes(actor)
+    create_note_on_date_change(actor)
+    create_note_on_completion(actor)
+    create_note_on_uncompletion(actor)
+  end
+
   private
+
+  def create_note_on_date_change(actor)
+    comments.create(content: "🗓 <strong>#{actor.first_name} changed the due date</strong> from #{due_date_previously_was.strftime('%b %e, %Y')} to #{due_date.strftime('%b %e, %Y')}.", user: actor, variant: :date_change_note) if due_date_previously_changed?
+  end
+
+  def create_note_on_completion(actor)
+    comments.create(content: "✅ <strong>#{actor.first_name} completed</strong> this squawk.", user: actor, variant: :completed_note) if completed_previously_changed? && completed?
+  end
+
+  def create_note_on_uncompletion(actor)
+    comments.create(content: "🚫 <strong>#{actor.first_name} re-opened</strong> this squawk.", user: actor, variant: :reopened_note) if completed_previously_changed? && !completed?
+  end
 
   def update_subscribers
     users_to_subscribe = assigned_users.to_a + notified_users.to_a

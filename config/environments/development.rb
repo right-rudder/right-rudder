@@ -1,6 +1,15 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.after_initialize do
+    Bullet.enable        = true
+    Bullet.alert         = false
+    Bullet.bullet_logger = true
+    Bullet.console       = true
+    Bullet.rails_logger  = true
+    Bullet.add_footer    = true
+  end
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -73,15 +82,6 @@ Rails.application.configure do
   
   config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3000 }
   
-  config.action_mailer.delivery_method = :smtp
-  
-  config.action_mailer.smtp_settings = {
-    address: "mail.smtp2go.com",
-    port: 8025, # 8025, 587 and 25 can also be used.
-    domain: "rightruddermarketing.com",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "rightrudder.marketing",
-    password: ENV["SMTP2GO_PASS"]
-  }
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
 end
