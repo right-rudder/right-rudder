@@ -8,6 +8,5 @@ export default class extends Controller {
       element.classList.remove("bg-white");
     });
     event.target.classList.add("bg-white");
-    // console.log(event.target);
   }
 }

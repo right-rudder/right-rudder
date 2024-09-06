@@ -40,7 +40,7 @@ class Ticket < ApplicationRecord
   scope :due_later_within_a_month, -> { incompleted.where(due_date: Date.current.beginning_of_week + 2.weeks..Date.current + 1.month).order(due_date: :asc).order(title: :asc) }
   scope :due_later, -> { incompleted.where("due_date > ?", Date.current + 1.month).order(due_date: :asc).order(title: :asc) }
   scope :no_due_date, -> { incompleted.where(due_date: nil).order(title: :asc) }
-  scope :my_assigned_tickets, ->(user) { where(assigned_users: { id: user.id }) }
+  scope :user_assigned_tickets, ->(user) { where(assigned_users: { id: user.id }) }
 
   def self.date_range_for_due_later_this_week
     if Date.current.saturday? || Date.current.sunday?

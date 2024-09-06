@@ -3,7 +3,7 @@
     <h1 class="font-bold text-5xl">All Squawks</h1>
   </div>
 
-  <%= render partial: "shared/tabs", locals: { all_squawks_path: tickets_path, my_squawks_path: tickets_path(filter: "my-tickets") }  %>
+  <%= render "shared/dropdowns" %>
 
   <%= turbo_frame_tag "tickets_frame" do %>
     <div class="px-10">
