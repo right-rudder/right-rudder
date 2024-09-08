@@ -5,11 +5,11 @@ module CommentsHelper
     elsif comment.created_yesterday?
       'Yesterday'
     elsif comment.created_this_week?
-      comment.created_at.strftime('%A')
+      local_time(comment.created_at, '%A')
     elsif !comment.created_this_year?
-      comment.created_at.strftime('%b %e, %Y')
+      local_time(comment.created_at, '%b %e, %Y')
     else
-      comment.created_at.strftime('%b %e')
+      local_time(comment.created_at, '%b %e')
     end
   end
 

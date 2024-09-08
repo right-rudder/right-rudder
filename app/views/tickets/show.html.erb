@@ -32,7 +32,7 @@
           <hr class="col-span-2 my-2" />
 
           <p class="font-semibold text-right">Added by</p>
-          <p><%= @ticket.creator.first_name %> on <%= @ticket.created_at.strftime("%b %e") %></p>
+          <p><%= @ticket.creator.first_name %> on <%= local_time(@ticket.created_at, "%b %e") %></p>
           
           <p class="font-semibold text-right">Assigned to</p>
           <p><%= @ticket.assigned_users.map(&:first_name).join(", ") %></p>
