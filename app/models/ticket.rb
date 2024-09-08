@@ -44,7 +44,7 @@ class Ticket < ApplicationRecord
 
   def self.date_range_for_due_later_this_week
     if Date.current.saturday? || Date.current.sunday?
-      nil
+      []
     else
       (Date.tomorrow + 1.day)..Date.current.end_of_week
     end

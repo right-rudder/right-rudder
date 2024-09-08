@@ -1,8 +1,0 @@
-
-<%= form_with url: tickets_path, method: :get, data: { controller: "filter", turbo_frame: 'tickets_frame' }, class: '' do |form| %>
-
-  <%= form.select :account_id, options_from_collection_for_select(Account.all, :id, :name), { include_blank: "All Flight Schools" }, data: { action: 'change->filter#submit' } %>
-
-  <%= form.select :user_id, options_from_collection_for_select(User.all, :id, :username), { include_blank: "All Users" }, data: { action: 'change->filter#submit' } %>
-
-<% end %>

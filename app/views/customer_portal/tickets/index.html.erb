@@ -3,7 +3,10 @@
     <h1 class="font-bold text-5xl">All Squawks</h1>
   </div>
 
-  <%= render "shared/dropdowns" %>
+  <%= form_with url: tickets_path, method: :get, data: { controller: "filter", turbo_frame: 'tickets_frame' }, class: '' do |form| %>
+    <%= form.select :selected_account_id, options_from_collection_for_select(Account.all.order(:name), :id, :name), { include_blank: "All Flight Schools" }, data: { action: 'change->filter#submit' } %>
+    <%= form.select :selected_user_id, options_from_collection_for_select(User.all.order(:username), :id, :username), { include_blank: "All Users" }, data: { action: 'change->filter#submit' } %>
+  <% end %>
 
   <%= turbo_frame_tag "tickets_frame" do %>
     <div class="px-10">

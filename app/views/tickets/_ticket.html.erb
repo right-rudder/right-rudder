@@ -2,11 +2,14 @@
   <p class="uppercase w-28">
     <%= ticket.due_date&.strftime("%a, %b %e") %>
   </p>
-  <%= form_with(model: [ticket.account, ticket], data: {controller: "tickets", tickets_target: "form"}) do |form| %> 
-    <%= form.check_box :completed, class: "size-5", data: {action: "change->tickets#submit"} %>
-    <%= form.hidden_field :source, value: local_assigns[:source] %>
-    <%= form.hidden_field :filter, value: local_assigns[:filter] %>
+  
+  <%= form_with(url: update_completed_account_ticket_path(ticket.account, ticket), method: :patch, data: { controller: "tickets" }) do |form| %> 
+    <%= form.check_box :completed, name: 'ticket[completed]', class: "size-5", data: { action: "change->tickets#submit" }, checked: ticket.completed %>
+    <%= form.hidden_field :source, name: 'ticket[source]', value: local_assigns[:source] %>
+    <%= form.hidden_field :selected_account_id, name: 'ticket[selected_account_id]', value: params[:selected_account_id] %>
+    <%= form.hidden_field :selected_user_id, name: 'ticket[selected_user_id]', value: params[:selected_user_id] %>
   <% end %>
+
   <%= link_to account_ticket_path(ticket.account, ticket), data: { turbo_frame: "_top" } do %>
     <div class="<%= ticket.completed ? "text-gray-500" : "" %> flex items-center gap-5">
       <p><%= ticket.title %></p>

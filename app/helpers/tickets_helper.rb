@@ -1,10 +1,11 @@
 module TicketsHelper
   def ticket_categories(account)
-    if params[:user_id].present?
-      tickets_scope = account.user_assigned_tickets(User.find(params[:user_id])).joins(:assigned_users).includes(:assigned_users, :rich_text_content)
+    if params[:selected_user_id].present?
+      tickets_scope = account.user_assigned_tickets(User.find(params[:selected_user_id])).includes(:assigned_users, :rich_text_content)
     else
-      tickets_scope = account.tickets.joins(:assigned_users).includes(:assigned_users, :rich_text_content)
+      tickets_scope = account.tickets.includes(:assigned_users, :rich_text_content)
     end
+    # binding.pry
     {
       overdue: { tickets: tickets_scope.overdue, title: "Overdue", color: "text-red-500" },
       due_today: { tickets: tickets_scope.due_today, title: "Due today" },

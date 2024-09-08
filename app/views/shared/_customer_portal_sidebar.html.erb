@@ -136,7 +136,7 @@
         <% end %>
       </div>
       <nav class="flex flex-1 flex-col">
-        <%= select_tag('account', options_from_collection_for_select(Account.all, 'id', 'name',  @account&.id), prompt: "Select an account", class: "mb-5 py-4 rounded-md border-gray-300", data: { controller: "account-select", account_select_target: "select", selected_account_id: @account&.id }) %>
+        <%= select_tag('account', options_from_collection_for_select(Account.all.order(:name), 'id', 'name',  @account&.id), prompt: "Select an account", class: "mb-5 py-4 rounded-md border-gray-300", data: { controller: "account-select", account_select_target: "select", selected_account_id: @account&.id }) %>
         <ul role="list" class="flex flex-1 flex-col gap-y-7">
           <li>
             <ul role="list" class="-mx-2 space-y-1">
