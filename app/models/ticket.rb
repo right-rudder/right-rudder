@@ -60,10 +60,18 @@ class Ticket < ApplicationRecord
     create_note_on_uncompletion(actor)
   end
 
+  def previous_due_date
+    due_date_previously_was&.strftime('%b %e, %Y') || "-No due date-"
+  end
+
+  def new_due_date
+    due_date&.strftime('%b %e, %Y') || "-No due date-"
+  end
+
   private
 
   def create_note_on_date_change(actor)
-    comments.create(content: "🗓 <strong>#{actor.first_name} changed the due date</strong> from #{due_date_previously_was.strftime('%b %e, %Y')} to #{due_date.strftime('%b %e, %Y')}.", user: actor, variant: :date_change_note) if due_date_previously_changed?
+    comments.create(content: "🗓 <strong>#{actor.first_name} changed the due date</strong> from #{previous_due_date} to #{new_due_date}.", user: actor, variant: :date_change_note) if due_date_previously_changed?
   end
 
   def create_note_on_completion(actor)

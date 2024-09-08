@@ -1,9 +1,7 @@
 <div class="box">
   <h1>Customer Portal Notification</h1>
 
-  <p><%= @actor.first_name %> mentioned you in a comment on the squawk: <%= @comment.ticket.title %></p>
-
-  <div class="comment"><%= @comment.content.body.to_plain_text %></div>
+  <p><%= @actor.first_name %> marked the squawk: <%= @comment.ticket.title %> as completed.</p>
 
   <%= link_to "View Squawk", account_ticket_url(@comment.account, @comment.ticket), class: "button", target: "_blank" %>
 </div>

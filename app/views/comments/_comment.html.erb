@@ -2,7 +2,7 @@
 <div id="<%= dom_id(comment) %>">
   <div class="grid grid-cols-[12rem_auto] gap-4 py-4 relative" data-controller="ticket-options">
 
-    <% if comment.variant == "comment" %>
+    <% if comment.user_made? %>
       <%= render "comments/options", comment: comment %>
     <% end %>
     
@@ -19,7 +19,7 @@
     </div>
 
     <div>
-      <% if comment.variant == "comment" %>
+      <% if comment.user_made? %>
         <p class="font-semibold"><%= comment.user.first_name %></p>
       <% end %>
       <p><%= comment.content %></p>

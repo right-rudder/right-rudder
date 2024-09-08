@@ -1,9 +1,7 @@
 <div class="box">
   <h1>Customer Portal Notification</h1>
 
-  <p><%= @actor.first_name %> mentioned you in a comment on the squawk: <%= @comment.ticket.title %></p>
-
-  <div class="comment"><%= @comment.content.body.to_plain_text %></div>
+  <p><%= @actor.first_name %> changed the due date to <%= @comment.ticket.new_due_date %> of the squawk: <%= @comment.ticket.title %>.</p>
 
   <%= link_to "View Squawk", account_ticket_url(@comment.account, @comment.ticket), class: "button", target: "_blank" %>
 </div>
