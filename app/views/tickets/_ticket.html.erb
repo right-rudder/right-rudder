@@ -1,31 +1,34 @@
-<div id="<%= dom_id ticket %>" class="flex gap-10 items-center text-sm py-2 ml-5 border-t border-gray-300">
+<div id="<%= dom_id ticket %>" class="flex flex-col lg:flex-row gap-2 lg:gap-10 text-sm py-2 ml-5 border-t border-gray-300">
+  
   <p class="uppercase w-28">
     <%= ticket.due_date&.strftime("%a, %b %e") %>
   </p>
-  
-  <%= form_with(url: update_completed_account_ticket_path(ticket.account, ticket), method: :patch, data: { controller: "tickets" }) do |form| %> 
-    <%= form.check_box :completed, name: 'ticket[completed]', class: "size-5", data: { action: "change->tickets#submit" }, checked: ticket.completed %>
-    <%= form.hidden_field :source, name: 'ticket[source]', value: local_assigns[:source] %>
-    <%= form.hidden_field :selected_account_id, name: 'ticket[selected_account_id]', value: params[:selected_account_id] %>
-    <%= form.hidden_field :selected_user_id, name: 'ticket[selected_user_id]', value: params[:selected_user_id] %>
-  <% end %>
 
-  <%= link_to account_ticket_path(ticket.account, ticket), data: { turbo_frame: "_top" } do %>
-    <div class="<%= ticket.completed ? "text-gray-500" : "" %> flex items-center gap-5">
-      <p><%= ticket.title %></p>
-      <% if ticket.assigned_users.any? %>
-        <p class="text-xs text-gray-500"><%= ticket.assigned_users.map(&:first_name).join(", ") %></p>
-      <% end %>
-      <% if ticket.content.body.present? %>
-        <svg width="1em" height="1em" viewBox="0 0 16 16">
-          <path fill="currentColor" d="M1.75 3a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5zm0 3a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5zM1 9.75A.75.75 0 0 1 1.75 9h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 9.75M1.75 12a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"/>
-        </svg>
-      <% end %>
-      <% if ticket.comments.user_made.any? %>
-        <div class="size-5 bg-blue-500 rounded-full flex justify-center items-center">
-          <p class="text-xs text-white font-semibold"><%= ticket.comments.user_made.count %></p>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+  <div class="flex gap-5 lg:gap-10 ml-3 lg:ml-0">
+    <%= form_with(url: update_completed_account_ticket_path(ticket.account, ticket), method: :patch, data: { controller: "tickets" }) do |form| %> 
+      <%= form.check_box :completed, name: 'ticket[completed]', class: "size-5", data: { action: "change->tickets#submit" }, checked: ticket.completed %>
+      <%= form.hidden_field :source, name: 'ticket[source]', value: local_assigns[:source] %>
+      <%= form.hidden_field :selected_account_id, name: 'ticket[selected_account_id]', value: params[:selected_account_id] %>
+      <%= form.hidden_field :selected_user_id, name: 'ticket[selected_user_id]', value: params[:selected_user_id] %>
+    <% end %>
+
+    <%= link_to account_ticket_path(ticket.account, ticket), data: { turbo_frame: "_top" } do %>
+      <div class="<%= ticket.completed ? "text-gray-500" : "" %> flex items-center gap-5">
+        <p class="space-x-4">
+          <span><%= ticket.title %></span>
+          <% if ticket.assigned_users.any? %>
+            <span class="text-xs text-gray-500"><%= ticket.assigned_users.map(&:first_name).join(", ") %></span>
+          <% end %>
+          <% if ticket.content.body.present? %>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="inline">
+              <path fill="currentColor" d="M1.75 3a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5zm0 3a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5zM1 9.75A.75.75 0 0 1 1.75 9h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 9.75M1.75 12a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"/>
+            </svg>
+          <% end %>
+          <% if ticket.comments.user_made.any? %>
+            <span class="bg-blue-500 rounded-full text-xs text-white font-semibold py-1 px-2"><%= ticket.comments.user_made.count %></span>
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+  </div>
 </div>

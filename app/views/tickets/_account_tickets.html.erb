@@ -1,9 +1,9 @@
 <div id="<%= account.name %> squawks" class="min-w-full flex flex-col gap-5 my-10" data-controller="expandable" data-account="<%= "#{account.id}" %>">
   <div class="flex gap-5 justify-between">
-    <h2 class="text-2xl font-semibold underline"><%= account.name %> Squawks</h2>
-    <div>
-      <button data-action="click->expandable#expandAll" class="btn-neutral">Expand all</button>
-      <button data-action="click->expandable#collapseAll" class="btn-neutral">Collapse all</button>
+    <h2 class="text-lg lg:text-2xl font-semibold underline"><%= account.name %> Squawks</h2>
+    <div class="flex flex-col sm:flex-row gap-2">
+      <button data-action="click->expandable#expandAll" class="btn-neutral text-xs lg:text-base whitespace-nowrap">Expand all</button>
+      <button data-action="click->expandable#collapseAll" class="btn-neutral text-xs lg:text-base whitespace-nowrap">Collapse all</button>
     </div>
   </div>
 

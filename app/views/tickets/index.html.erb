@@ -10,12 +10,12 @@
     </div>
   </div>
 
-  <%= form_with url: account_tickets_path(@account), method: :get, data: { controller: "filter", turbo_frame: 'tickets_frame' }, class: '' do |form| %>
+  <%= form_with url: account_tickets_path(@account), method: :get, data: { controller: "filter", turbo_frame: 'tickets_frame' }, class: 'px-3 lg:px-10' do |form| %>
     <%= form.select :selected_user_id, options_from_collection_for_select(User.all.order(:username), :id, :username), { include_blank: "All Users" }, data: { action: 'change->filter#submit' } %>
   <% end %>
 
   <%= turbo_frame_tag "tickets_frame" do %>
-    <div class="px-10">
+    <div class="px-3 lg:px-10">
       <%= render partial: "account_tickets", locals: { account: @account, source: "account_index" } %>
     </div>
   <% end %>
