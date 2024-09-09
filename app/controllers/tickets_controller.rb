@@ -1,5 +1,5 @@
 class TicketsController < ApplicationController
-  before_action :set_ticket, only: %i[ show edit update destroy ]
+  before_action :set_ticket, only: %i[ show edit update destroy update_completed ]
   before_action :set_account
 
   # GET /tickets or /tickets.json
@@ -42,30 +42,24 @@ class TicketsController < ApplicationController
     previous_assigned_users = @ticket.assigned_users.to_a
     respond_to do |format|
       if @ticket.update(ticket_params)
-        case params[:ticket][:source]
-        when "account_index"
-          if params[:ticket][:filter] == "my-tickets"
-            redirect_path = account_tickets_url(@account, filter: "my-tickets")
-          else
-            redirect_path = account_tickets_url(@account)
-          end
-        when "portal_index"
-          if params[:ticket][:filter] == "my-tickets"
-            redirect_path = tickets_url(filter: "my-tickets")
-          else
-            redirect_path = tickets_url
-          end
-        else
-          redirect_path = account_ticket_url(@account, @ticket)
-        end
         check_assigned_users_change(@ticket, previous_assigned_users)
         @ticket.create_notes(current_user)
-        format.html { redirect_to redirect_path, notice: "Ticket was successfully updated." }
+        format.html { redirect_to account_ticket_url(@account, @ticket), notice: "Ticket was successfully updated." }
         format.json { render :show, status: :ok, location: @ticket }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @ticket.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def update_completed
+    @ticket.update(completed_ticket_params)
+    @ticket.create_notes(current_user)
+    if params[:ticket][:source] == "account_index"
+      redirect_to account_tickets_url(@account, selected_user_id: params[:ticket][:selected_user_id])
+    else
+      redirect_to tickets_url(selected_account_id: params[:ticket][:selected_account_id], selected_user_id: params[:ticket][:selected_user_id])
     end
   end
 
@@ -92,6 +86,10 @@ class TicketsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def ticket_params
       params.require(:ticket).permit(:title, :content, :due_date, :account_id, :completed, :repeat_until, :repeat, assigned_user_ids: [], notified_user_ids: [])
+    end
+
+    def completed_ticket_params
+      params.require(:ticket).permit(:completed)
     end
 
     def check_assigned_users_change(ticket, previous_assigned_users)

@@ -35,6 +35,9 @@ Rails.application.routes.draw do
       resources :accounts do
         resource :logo, only: [:destroy]
         resources :tickets do
+          member do
+            patch :update_completed
+          end
           resources :comments
           resources :ticket_subscriptions, only: [:create, :destroy]
         end

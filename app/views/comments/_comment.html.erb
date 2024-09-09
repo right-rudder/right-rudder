@@ -1,25 +1,25 @@
 <hr/>
 <div id="<%= dom_id(comment) %>">
-  <div class="grid grid-cols-[12rem_auto] gap-4 py-4 relative" data-controller="ticket-options">
+  <div class="flex flex-col lg:flex-row lg:gap-5 py-4 relative" data-controller="ticket-options">
 
-    <% if comment.variant == "comment" %>
+    <% if comment.user_made? %>
       <%= render "comments/options", comment: comment %>
     <% end %>
     
-    <div class="flex justify-between gap-2">
-      <div class="text-sm text-gray-600">
+    <div class="flex justify-between gap-2 lg:flex-1">
+      <div class="text-sm text-gray-600 mb-1">
         <p><%= formatted_date(comment) %></p>
 
         <% if display_time?(comment) %>
-          <p><%= comment.created_at.strftime("%l:%M%P") %></p>
+          <p><%= local_time(comment.created_at, "%l:%M%P") %></p>
         <% end %>
       </div>
 
       <%= user_profile_image(comment.user) %>
     </div>
 
-    <div>
-      <% if comment.variant == "comment" %>
+    <div class="lg:flex-[4_4_0]">
+      <% if comment.user_made? %>
         <p class="font-semibold"><%= comment.user.first_name %></p>
       <% end %>
       <p><%= comment.content %></p>

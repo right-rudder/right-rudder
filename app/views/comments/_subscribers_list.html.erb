@@ -1,8 +1,8 @@
 <turbo-frame id="subscribers_list">
-  <div class="mt-10 ml-36">
+  <div class="mt-10 lg:ml-24">
     <h3 class="font-semibold text-xl">Subscribers</h3>
-    <p class="text-sm"><%= ticket.subscribers.count %> people will be notified when someone comments on this squawk.</p>
-    <ul class="flex">
+    <p class="text-sm mb-1"><%= ticket.subscribers.count %> people will be notified when someone comments on this squawk.</p>
+    <ul class="flex gap-1">
       <% ticket.subscribers.each do |subscriber| %>
         <li>
           <% if subscriber.profile_image.attached? %>

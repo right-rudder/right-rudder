@@ -1,6 +1,8 @@
 <div class="box">
   <h1>Customer Portal Notification</h1>
 
+  <h2><%= @ticket.account.name %></h2>
+
   <p><%= @ticket.assigned_users.map(&:first_name).to_sentence %> completed the following squawk: <%= @ticket.title %></p>
 
   <%= link_to "View Squawk", account_ticket_url(@ticket.account, @ticket), class: "button", target: "_blank" %>

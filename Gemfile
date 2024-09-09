@@ -70,7 +70,7 @@ gem 'whenever', require: false
 gem 'fog-aws'
 gem 'pry-byebug'
 gem 'requestjs-rails'
-
+gem 'local_time'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

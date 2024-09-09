@@ -32,19 +32,19 @@ class Ticket < ApplicationRecord
 
   scope :completed, -> { where(completed: true).order(updated_at: :desc) }
   scope :incompleted, -> { where(completed: false) }
-  scope :overdue, -> { incompleted.where("due_date < ?", Date.current).order(due_date: :asc).order(title: :asc) }
-  scope :due_today, -> { incompleted.where(due_date: Date.current).order(due_date: :asc).order(title: :asc) }
-  scope :due_tomorrow, -> { incompleted.where(due_date: Date.tomorrow).order(due_date: :asc).order(title: :asc) }
-  scope :due_later_this_week, -> { incompleted.where(due_date: date_range_for_due_later_this_week).order(due_date: :asc).order(title: :asc) }
-  scope :due_next_week, -> { incompleted.where(due_date: Date.current.end_of_week + 1.day..Date.current.end_of_week + 1.week).order(due_date: :asc).order(title: :asc) }
-  scope :due_later_within_a_month, -> { incompleted.where(due_date: Date.current.beginning_of_week + 2.weeks..Date.current + 1.month).order(due_date: :asc).order(title: :asc) }
-  scope :due_later, -> { incompleted.where("due_date > ?", Date.current + 1.month).order(due_date: :asc).order(title: :asc) }
-  scope :no_due_date, -> { incompleted.where(due_date: nil).order(title: :asc) }
-  scope :my_assigned_tickets, ->(user) { where(assigned_users: { id: user.id }) }
+  scope :overdue, -> { incompleted.where("due_date < ?", Date.current).order(:due_date).order(:title) }
+  scope :due_today, -> { incompleted.where(due_date: Date.current).order(:due_date).order(:title) }
+  scope :due_tomorrow, -> { incompleted.where(due_date: Date.tomorrow).order(:due_date).order(:title) }
+  scope :due_later_this_week, -> { incompleted.where(due_date: date_range_for_due_later_this_week).order(:due_date).order(:title) }
+  scope :due_next_week, -> { incompleted.where(due_date: Date.current.end_of_week + 1.day..Date.current.end_of_week + 1.week).order(:due_date).order(:title) }
+  scope :due_later_within_a_month, -> { incompleted.where(due_date: Date.current.beginning_of_week + 2.weeks..Date.current + 1.month).order(:due_date).order(:title) }
+  scope :due_later, -> { incompleted.where("due_date > ?", Date.current + 1.month).order(:due_date).order(:title) }
+  scope :no_due_date, -> { incompleted.where(due_date: nil).order(:title) }
+  scope :user_assigned_tickets, ->(user) { where(assigned_users: { id: user.id }) }
 
   def self.date_range_for_due_later_this_week
     if Date.current.saturday? || Date.current.sunday?
-      nil
+      []
     else
       (Date.tomorrow + 1.day)..Date.current.end_of_week
     end
@@ -60,10 +60,18 @@ class Ticket < ApplicationRecord
     create_note_on_uncompletion(actor)
   end
 
+  def previous_due_date
+    due_date_previously_was&.strftime('%b %e, %Y') || "-No due date-"
+  end
+
+  def new_due_date
+    due_date&.strftime('%b %e, %Y') || "-No due date-"
+  end
+
   private
 
   def create_note_on_date_change(actor)
-    comments.create(content: "🗓 <strong>#{actor.first_name} changed the due date</strong> from #{due_date_previously_was.strftime('%b %e, %Y')} to #{due_date.strftime('%b %e, %Y')}.", user: actor, variant: :date_change_note) if due_date_previously_changed?
+    comments.create(content: "🗓 <strong>#{actor.first_name} changed the due date</strong> from #{previous_due_date} to #{new_due_date}.", user: actor, variant: :date_change_note) if due_date_previously_changed?
   end
 
   def create_note_on_completion(actor)

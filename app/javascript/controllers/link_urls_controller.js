@@ -5,7 +5,6 @@ export default class extends Controller {
     const trixContents = document.querySelectorAll(".trix-content");
     trixContents.forEach((content) => {
       const textNodes = this.getTextNodes(content);
-      console.log(textNodes);
       textNodes.forEach((node) => {
         const urlRegex = /(https?:\/\/[^\s<>"',]+)/g;
 

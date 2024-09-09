@@ -2,6 +2,8 @@
 import "@hotwired/turbo-rails";
 import "controllers";
 
-import "trix"
-import "@rails/actiontext"
-import "@rails/request.js"
+import "trix";
+import "@rails/actiontext";
+import "@rails/request.js";
+import LocalTime from "local-time";
+LocalTime.start();

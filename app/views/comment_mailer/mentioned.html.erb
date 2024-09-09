@@ -1,7 +1,9 @@
 <div class="box">
   <h1>Customer Portal Notification</h1>
 
-  <p><%= @actor.first_name %> mentioned on the squawk: <%= @comment.ticket.title %></p>
+  <h2><%= @comment.account.name %></h2>
+
+  <p><%= @actor.first_name %> mentioned you in a comment on the squawk: <%= @comment.ticket.title %></p>
 
   <div class="comment"><%= @comment.content.body.to_plain_text %></div>
 
