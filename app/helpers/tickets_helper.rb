@@ -5,7 +5,6 @@ module TicketsHelper
     else
       tickets_scope = account.tickets.includes(:assigned_users, :rich_text_content)
     end
-    # binding.pry
     {
       overdue: { tickets: tickets_scope.overdue, title: "Overdue", color: "text-red-500" },
       due_today: { tickets: tickets_scope.due_today, title: "Due today" },
