@@ -14,6 +14,8 @@ class User < ApplicationRecord
   has_many :notifications, foreign_key: :recipient_id
   has_many :ticket_subscriptions, dependent: :destroy
   has_many :subscribed_tickets, through: :ticket_subscriptions, source: :ticket
+  has_many :managed_accounts, class_name: 'Account', foreign_key: 'account_manager_id'
+  has_many :led_accounts, class_name: 'Account', foreign_key: 'lead_developer_id'
 
   validates :first_name, presence: true
   validates :last_name, presence: true
