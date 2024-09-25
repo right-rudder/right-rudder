@@ -1,6 +1,8 @@
 class TicketsController < ApplicationController
   before_action :set_ticket, only: %i[ show edit update destroy update_completed ]
   before_action :set_account
+  load_and_authorize_resource :account
+  load_and_authorize_resource :ticket, through: :account
 
   # GET /tickets or /tickets.json
   def index

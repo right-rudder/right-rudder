@@ -1,5 +1,6 @@
 class ProfileImagesController < ApplicationController
   include ActionView::RecordIdentifier
+  load_and_authorize_resource :user
 
   def destroy
     current_user.profile_image.purge_later
