@@ -7,6 +7,11 @@
     </div>
   </div>
 
+  <div>
+    <p>Account Manager: <%= account.account_manager&.full_name %></p>
+    <p>Lead Developer: <%= account.lead_developer&.full_name %></p>
+  </div>
+
   <% ticket_categories(account).each do |key, category| %>
     <% if category[:tickets].any? %>
       <div>
