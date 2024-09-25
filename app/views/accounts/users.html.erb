@@ -1,0 +1,20 @@
+<div class="lg:pl-72 ">
+  <div class="mx-auto md:w-2/3 w-full">
+    <h1 class="font-bold text-4xl">Users</h1>
+
+    <%= form_with url: invite_user_account_path(@account), method: :post do %>
+      <%= label_tag :email, "User Email" %>
+      <%= text_field_tag :email %>
+      <%= submit_tag "Send Invitation" %>
+    <% end %>
+
+    <div class="grid grid-cols-5">
+      <div class="font-bold">Username</div>
+      <div class="font-bold">Full Name</div>
+      <div class="font-bold">Email</div>
+      <div class="font-bold">Role</div>
+      <div class="font-bold">Invitation Accepted</div>
+      <%= render partial: "account_user", collection: @account_users %>
+    </div>
+  </div>
+</div>

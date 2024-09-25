@@ -7,12 +7,6 @@
 
       <h1 class="text-3xl font-semibold"><%= @account.name %> Dashboard</h1>
 
-      <%= form_with url: invite_user_account_path(@account), method: :post do %>
-        <%= label_tag :email, "User Email" %>
-        <%= text_field_tag :email %>
-        <%= submit_tag "Send Invitation" %>
-      <% end %>
-
       <%= link_to 'Edit this account', edit_account_path(@account), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     </div>
   </div>

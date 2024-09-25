@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   before_action :set_account, only: %i[ show edit update destroy invite_user ]
-  load_and_authorize_resource
+  load_and_authorize_resource except: %i[ users ]
 
   # GET /accounts or /accounts.json
   def index
@@ -68,6 +68,13 @@ class AccountsController < ApplicationController
 
     @account.invite_user(user)
     redirect_to @account, notice: "Invitation sent to #{email}."
+  end
+
+  def users
+    @account = Account.find(params[:account_id])
+    authorize! :read, @account
+    @account_users = @account.account_users.includes(:user)
+    authorize! :read, AccountUser
   end
 
   private

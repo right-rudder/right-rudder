@@ -16,6 +16,7 @@ class Ability
         can :manage, account_user.account
         can :manage, Ticket, account_id: account_user.account_id
         can :manage, Comment, ticket: { account_id: account_user.account_id }
+        can :read, AccountUser, account_id: account_user.account_id
       end
     end
 

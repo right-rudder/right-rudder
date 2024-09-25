@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     scope '/customer-portal' do
       resources :accounts do
         post :invite_user, on: :member
+        get 'users', to: 'accounts#users', as: :users
         resource :logo, only: [:destroy]
         resources :tickets do
           member do
