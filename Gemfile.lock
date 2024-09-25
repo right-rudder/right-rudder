@@ -134,6 +134,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_invitable (2.0.9)
+      actionmailer (>= 5.0)
+      devise (>= 4.6)
     drb (2.2.1)
     erubi (1.13.0)
     excon (0.110.0)
@@ -434,6 +437,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  devise_invitable
   figaro (~> 1.1, >= 1.1.1)
   fog-aws
   friendly_id (~> 5.4.0)

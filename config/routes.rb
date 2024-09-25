@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   #   get "admins", to: "devise/sessions#new"
   # end
 
-  devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
+  devise_for :users, controllers: { registrations: "registrations", sessions: "sessions", invitations: 'invitations' }
   
   authenticated :user do
     resources :users, only: [:index]
@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resource :profile_image, only: [:destroy]
     scope '/customer-portal' do
       resources :accounts do
+        post :invite_user, on: :member
         resource :logo, only: [:destroy]
         resources :tickets do
           member do

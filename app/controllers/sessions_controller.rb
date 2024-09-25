@@ -3,6 +3,14 @@ class SessionsController < Devise::SessionsController
 
   private
 
+  def after_sign_in_path_for(resource)
+    if resource.account_users.any?
+      account_path(resource.account_users.first.account)
+    else
+      super
+    end
+  end
+
   def after_sign_out_path_for(resource_or_scope)
     root_path
   end

@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_action :set_account, only: %i[ show edit update destroy ]
+  before_action :set_account, only: %i[ show edit update destroy invite_user ]
 
   # GET /accounts or /accounts.json
   def index
@@ -55,6 +55,18 @@ class AccountsController < ApplicationController
       format.html { redirect_to accounts_url, notice: "Account was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def invite_user
+    email = params[:email]
+    user = User.find_by(email: email)
+
+    unless user
+      user = User.invite!(email: email, username: email)
+    end
+
+    @account.invite_user(user)
+    redirect_to @account, notice: "Invitation sent to #{email}."
   end
 
   private
