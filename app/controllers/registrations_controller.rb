@@ -11,6 +11,14 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def after_update_path_for(resource)
+    if resource.account_users.any?
+      account_path(resource.account_users.first.account)
+    else
+      customer_portal_path
+    end
+  end
+
   def after_sign_out_path_for(resource_or_scope)
     root_path
   end
@@ -24,9 +32,5 @@ class RegistrationsController < Devise::RegistrationsController
       flash.discard(:recaptcha_error) # We need to discard flash to avoid showing it on the next page reload
       render :new
     end
-  end
-
-  def after_update_path_for(resource)
-    customer_portal_path
   end
 end

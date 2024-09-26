@@ -12,10 +12,14 @@
     <!--desktop menu-->
     <div class="hidden lg:flex lg:flex-row lg:pr-10 xl:pr-5">
       <!--Button-->
-      <%= button_to 'Customer Portal', customer_portal_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
-      <%= button_to 'New Webinar', new_notam_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
-      <%= button_to 'New NOTAM', new_notam_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
-      <%= button_to 'NOTAM drafts', draft_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <% if current_user.admin? %>
+        <%= button_to 'Customer Portal', customer_portal_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+        <%= button_to 'New Webinar', new_notam_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+        <%= button_to 'New NOTAM', new_notam_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+        <%= button_to 'NOTAM drafts', draft_path, method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <% elsif current_user.user? && current_user.account_users.any? %>
+        <%= button_to 'Customer Portal', account_path(current_user.account_users.first.account), method: :get, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
+      <% end %>
       <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
     </div>
   </div>
@@ -24,10 +28,14 @@
     <div x-cloak x-show="usermenu" x-transition.duration.200ms class="bg-slate-700 flex flex-col justify-start items-center pb-10 z-50">
       <!--Spacer-->
       <div class="h-12"></div>
-      <%= button_to 'Customer Portal', customer_portal_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
-      <%= button_to 'New Webinar', new_notam_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
-      <%= button_to 'New NOTAM', new_notam_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
-      <%= button_to 'NOTAM drafts', draft_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <% if current_user.admin? %>
+        <%= button_to 'Customer Portal', customer_portal_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+        <%= button_to 'New Webinar', new_notam_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+        <%= button_to 'New NOTAM', new_notam_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+        <%= button_to 'NOTAM drafts', draft_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <% elsif current_user.user? && current_user.account_users.any? %>
+        <%= button_to 'Customer Portal', account_path(current_user.account_users.first.account), method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <% end %>
       <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
 
     <!--Close button-->
