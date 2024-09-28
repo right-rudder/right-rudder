@@ -1,4 +1,6 @@
 class Account < ApplicationRecord
+  include RandomId
+  
   has_many :tickets
   has_one_attached :logo
   belongs_to :account_manager, class_name: 'User', foreign_key: 'account_manager_id', optional: true

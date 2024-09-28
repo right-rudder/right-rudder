@@ -35,6 +35,7 @@ Rails.application.routes.draw do
       resources :accounts do
         post :invite_user, on: :member
         get 'users', to: 'accounts#users', as: :users
+        get 'onboarding', to: 'accounts#onboarding', as: :onboarding
         resource :logo, only: [:destroy]
         resources :tickets do
           member do

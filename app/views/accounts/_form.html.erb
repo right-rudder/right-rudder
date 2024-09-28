@@ -42,15 +42,17 @@
     <%= form.text_field :website, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div class="my-5">
-    <%= form.label :account_manager_id, "Account Manager" %><br>
-    <%= form.collection_select :account_manager_id, User.all, :id, :first_name, { include_blank: "None" }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  <% if current_user.admin? %>
+    <div class="my-5">
+      <%= form.label :account_manager_id, "Account Manager" %><br>
+      <%= form.collection_select :account_manager_id, User.all, :id, :first_name, { include_blank: "None" }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
 
-  <div class="my-5">
-    <%= form.label :lead_developer_id, "Lead Developer" %><br>
-    <%= form.collection_select :lead_developer_id, User.all, :id, :first_name, { include_blank: "None" }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+    <div class="my-5">
+      <%= form.label :lead_developer_id, "Lead Developer" %><br>
+      <%= form.collection_select :lead_developer_id, User.all, :id, :first_name, { include_blank: "None" }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  <% end %>
 
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>

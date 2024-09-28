@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_25_183524) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_28_185345) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_25_183524) do
     t.datetime "updated_at", null: false
     t.integer "account_manager_id"
     t.integer "lead_developer_id"
+    t.string "random_id", null: false
+    t.index ["random_id"], name: "index_accounts_on_random_id", unique: true
   end
 
   create_table "action_text_rich_texts", force: :cascade do |t|

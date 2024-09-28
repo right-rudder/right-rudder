@@ -71,16 +71,21 @@ class AccountsController < ApplicationController
   end
 
   def users
-    @account = Account.find(params[:account_id])
+    @account = Account.findr(params[:account_id])
     authorize! :read, @account
     @account_users = @account.account_users.includes(:user)
     authorize! :read, AccountUser
   end
 
+  def onboarding
+    @account = Account.findr(params[:account_id])
+    authorize! :read, @account
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
-      @account = Account.find(params[:id])
+      @account = Account.findr(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
