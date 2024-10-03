@@ -18,4 +18,16 @@ class Account < ApplicationRecord
   def invite_user(user)
     account_users.create(user: user)
   end
+
+  def countries
+    CS.countries.invert
+  end
+
+  def states
+    CS.states(country)&.invert || []
+  end
+
+  def cities
+    CS.cities(state, country)&.invert || []
+  end
 end

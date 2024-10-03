@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_28_185345) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_02_203150) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,6 +34,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_28_185345) do
     t.integer "account_manager_id"
     t.integer "lead_developer_id"
     t.string "random_id", null: false
+    t.string "address_line_1"
+    t.string "address_line_2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "country"
     t.index ["random_id"], name: "index_accounts_on_random_id", unique: true
   end
 

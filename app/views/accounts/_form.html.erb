@@ -1,4 +1,4 @@
-<%= form_with(model: account, class: "contents") do |form| %>
+<%= form_with(model: account, class: "contents", data: { controller: "country-select" }) do |form| %>
   <% if account.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
@@ -23,23 +23,68 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :name %>
+    <%= form.label :name, "Business Name" %>
     <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :email %>
+    <%= form.label :email, "Business Email" %>
     <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :phone %>
+    <%= form.label :phone, "Business Phone" %>
     <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :website %>
+    <%= form.label :website, "Business Website" %>
     <%= form.text_field :website, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :address_line_1 %>
+    <%= form.text_field :address_line_1, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :address_line_2 %>
+    <%= form.text_field :address_line_2, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :zip, "ZIP / Postal Code" %>
+    <%= form.text_field :zip, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :country %>
+    <%= form.select :country, 
+      [["United States", "US"]] + 
+      account.countries.reject { |country_name, _| country_name == "United States" }
+                        .sort_by { |country_name, _| country_name }
+                        .map { |country_name, country_code| [country_name, country_code] }, 
+      { include_blank: 'Select a country' }, 
+      data: { country_select_target: "country", action: 'change->country-select#changeCountry' }, 
+      class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :state %>
+    <%= form.select :state, 
+      account.country.present? ? CS.states(account.country).map { |code, name| [name, code] } : [], # Pre-populate states if available
+      { include_blank: 'Select a state', selected: account.state }, 
+      data: { country_select_target: "state", action: 'change->country-select#changeState' }, 
+      class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :city %>
+    <%= form.select :city, 
+      account.state.present? ? CS.cities(account.state, account.country).map { |name| [name, name] } : [], # Pre-populate cities if available
+      { include_blank: 'Select a city', selected: account.city }, 
+      data: { country_select_target: "city" }, 
+      class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <% if current_user.admin? %>

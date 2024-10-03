@@ -49,6 +49,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'locations/states', to: 'locations#states'
+  get 'locations/cities', to: 'locations#cities'
+
   # homepage
   root "pages#home"
   get 'intro_video_embed', to: "pages#intro_video_embed", as: :embed_video
