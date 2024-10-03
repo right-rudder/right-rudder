@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_02_203150) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_03_034042) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -198,6 +198,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_02_203150) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "onboardings", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.jsonb "primary_contact_information", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_onboardings_on_account_id"
+  end
+
   create_table "sop_emails", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -275,6 +283,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_02_203150) do
   add_foreign_key "assignments", "users"
   add_foreign_key "comments", "tickets"
   add_foreign_key "comments", "users"
+  add_foreign_key "onboardings", "accounts"
   add_foreign_key "ticket_notifications", "tickets"
   add_foreign_key "ticket_notifications", "users"
   add_foreign_key "ticket_subscriptions", "tickets"

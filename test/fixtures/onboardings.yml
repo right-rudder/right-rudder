@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account: one
+  primary_contact_information: 
+
+two:
+  account: two
+  primary_contact_information: 

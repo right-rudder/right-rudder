@@ -7,6 +7,7 @@ class Account < ApplicationRecord
   belongs_to :lead_developer, class_name: 'User', foreign_key: 'lead_developer_id', optional: true
   has_many :account_users
   has_many :users, through: :account_users
+  has_one :onboarding
 
   delegate :overdue, :due_today, :due_tomorrow, :due_later_this_week, :due_next_week, :due_later_within_a_month, :due_later, :no_due_date, :completed, to: :tickets, prefix: true
   delegate :user_assigned_tickets, to: :tickets
