@@ -11,29 +11,19 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= form.label :first_name, "First Name" %>
-    <%= form.text_field :first_name, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :last_name, "Last Name" %>
-    <%= form.text_field :last_name, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :phone, "Phone" %>
-    <%= form.telephone_field :phone, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :email, "Email" %>
-    <%= form.email_field :email, class: "form-control" %>
-  </div>
-
   <%= form.hidden_field :account_id, value: account.id %>
 
-  <div class="actions">
-    <%= form.submit "Save", class: "btn btn-primary" %>
+  <% case params[:section] %>
+    <% when "primary contact information" %>
+      <h3>Primary Contact Information</h3>
+      <%= dynamic_jsonb_form(form, :primary_contact_information) %>
+    <% when "specific business information" %>
+      <h3>Specific Business Information</h3>
+      <%= dynamic_jsonb_form(form, :specific_business_information) %>
+  <% end %>
+
+  <div class="inline">
+    <%= form.submit "Save", class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
+
 <% end %>

@@ -1,6 +1,9 @@
 class OnboardingsController < ApplicationController
   before_action :set_onboarding, only: %i[show edit update destroy]
-  before_action :set_account, only: %i[new create]
+  before_action :set_account
+
+  def index
+  end
 
   def new
     @onboarding = Onboarding.new
@@ -11,7 +14,7 @@ class OnboardingsController < ApplicationController
     
     respond_to do |format|
       if @onboarding.save
-        format.html { redirect_to account_onboarding_url(@account), notice: 'Onboarding was successfully created.' }
+        format.html { redirect_to account_onboardings_url(@account), notice: 'Onboarding was successfully created.' }
         format.json { render :show, status: :created, location: @onboarding }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -26,7 +29,7 @@ class OnboardingsController < ApplicationController
   def update
     respond_to do |format|
       if @onboarding.update(onboarding_params)
-        format.html { redirect_to account_onboarding_url(@account), notice: 'Onboarding was successfully updated.' }
+        format.html { redirect_to account_onboardings_url(@account), notice: 'Onboarding was successfully updated.' }
         format.json { render :show, status: :ok, location: @onboarding }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -42,7 +45,9 @@ class OnboardingsController < ApplicationController
   end
 
   def onboarding_params
-    params.require(:onboarding).permit(:account_id, :first_name, :last_name, :phone, :email)
+    params.require(:onboarding).permit(
+      :account_id, :first_name, :last_name, :email, :phone, :business_name, :industry, :business_size
+    )
   end
 
   def set_account

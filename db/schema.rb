@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_03_034042) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_06_001923) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -203,6 +203,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_03_034042) do
     t.jsonb "primary_contact_information", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.jsonb "specific_business_information", default: {}
     t.index ["account_id"], name: "index_onboardings_on_account_id"
   end
 
