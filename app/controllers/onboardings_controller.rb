@@ -46,7 +46,9 @@ class OnboardingsController < ApplicationController
 
   def onboarding_params
     params.require(:onboarding).permit(
-      :account_id, :first_name, :last_name, :email, :phone, :business_name, :industry, :business_size
+      :account_id,
+      :name, :email, :phone, :home_address,
+      :hours_of_operation, :creation_date, :business_type, :core_values, :number_of_locations, :primary_service_areas, :secondary_service_areas, :number_of_employees, :summary_of_history, :unique_selling_proposition, :unique_training_programs_proposition,
     )
   end
 

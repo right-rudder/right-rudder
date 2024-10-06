@@ -15,10 +15,10 @@
 
   <% case params[:section] %>
     <% when "primary contact information" %>
-      <h3>Primary Contact Information</h3>
+      <h3 class="text-xl font-semibold mt-10">Primary Contact Information</h3>
       <%= dynamic_jsonb_form(form, :primary_contact_information) %>
     <% when "specific business information" %>
-      <h3>Specific Business Information</h3>
+      <h3 class="text-xl font-semibold mt-10">Specific Business Information</h3>
       <%= dynamic_jsonb_form(form, :specific_business_information) %>
   <% end %>
 
