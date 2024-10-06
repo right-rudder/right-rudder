@@ -41,8 +41,8 @@
         <% else %>
           <li>
             <!-- Current: "bg-gray-50 text-blue-600", Default: "text-gray-700 hover:text-blue-600 hover:bg-gray-50" -->
-            <%= link_to customer_portal_path, class: "group flex gap-x-3 rounded-md #{current_page?(customer_portal_path) ? "bg-gray-50 text-blue-600" : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"} p-2 text-sm font-semibold leading-6" do %>          
-              <svg class="h-6 w-6 shrink-0 <%= current_page?(customer_portal_path) ? "text-blue-600" : "text-gray-400 group-hover:text-blue-600" %>" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <%= link_to root_path, class: "group flex gap-x-3 rounded-md #{current_page?(root_path) ? "bg-gray-50 text-blue-600" : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"} p-2 text-sm font-semibold leading-6" do %>          
+              <svg class="h-6 w-6 shrink-0 <%= current_page?(root_path) ? "text-blue-600" : "text-gray-400 group-hover:text-blue-600" %>" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
               </svg>
               Dashboard
@@ -96,8 +96,8 @@
     </li>
     <li class="mt-auto">
       <% if (params[:id] || params[:account_id]) && current_user.admin? %>
-        <%= link_to customer_portal_path, class: "group -mx-2 flex gap-x-3 rounded-md #{current_page?(customer_portal_path) ? "bg-gray-50 text-blue-600" : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"} p-2 text-sm font-semibold leading-6" do %>          
-          <svg class="h-6 w-6 shrink-0 rotate-180 <%= current_page?(customer_portal_path) ? "text-blue-600" : "text-gray-400 group-hover:text-blue-600" %>" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4.001H5v14a2 2 0 0 0 2 2h8m1-5l3-3m0 0l-3-3m3 3H9"/></svg>
+        <%= link_to root_path, class: "group -mx-2 flex gap-x-3 rounded-md #{current_page?(root_path) ? "bg-gray-50 text-blue-600" : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"} p-2 text-sm font-semibold leading-6" do %>          
+          <svg class="h-6 w-6 shrink-0 rotate-180 <%= current_page?(root_path) ? "text-blue-600" : "text-gray-400 group-hover:text-blue-600" %>" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4.001H5v14a2 2 0 0 0 2 2h8m1-5l3-3m0 0l-3-3m3 3H9"/></svg>
           Back to Agency Dashboard
         <% end %>
       <% end %>

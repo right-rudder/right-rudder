@@ -25,8 +25,8 @@ module ApplicationHelper
     content_for :twitter_image, image_name
   end
 
-  def customer_portal_path?
-    request.path.include?('/customer-portal')
+  def root_path?
+    request.path.include?('/')
   end
 
   def edit_user_path?
@@ -35,7 +35,7 @@ module ApplicationHelper
 
   def render_authenticated_user_navigation
     if user_signed_in?
-      if customer_portal_path? || edit_user_path?
+      if root_path? || edit_user_path?
         render "shared/customer_portal_sidebar"
       else
         render "shared/user_menu"

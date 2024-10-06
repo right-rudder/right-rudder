@@ -20,7 +20,7 @@ export default class extends Controller {
   redirect() {
     const accountId = this.selectTarget.value;
     if (accountId) {
-      Turbo.visit(`/customer-portal/accounts/${accountId}`);
+      Turbo.visit(`/accounts/${accountId}`);
     }
   }
 }
