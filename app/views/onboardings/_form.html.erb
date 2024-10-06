@@ -1,0 +1,29 @@
+<%= form_with(model: [account, onboarding], class: "contents") do |form| %>
+  <% if onboarding.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(onboarding.errors.count, "error") %> prohibited this onboarding from being saved:</h2>
+
+      <ul>
+        <% onboarding.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :account_id, value: account.id %>
+
+  <% case params[:section] %>
+    <% when "primary contact information" %>
+      <h3 class="text-xl font-semibold mt-10">Primary Contact Information</h3>
+      <%= dynamic_jsonb_form(form, :primary_contact_information) %>
+    <% when "specific business information" %>
+      <h3 class="text-xl font-semibold mt-10">Specific Business Information</h3>
+      <%= dynamic_jsonb_form(form, :specific_business_information) %>
+  <% end %>
+
+  <div class="inline">
+    <%= form.submit "Save", class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+
+<% end %>

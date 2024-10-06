@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   #   get "admins", to: "devise/sessions#new"
   # end
 
-  devise_for :users, controllers: { registrations: "registrations", sessions: "sessions" }
+  devise_for :users, controllers: { registrations: "registrations", sessions: "sessions", invitations: 'invitations' }
   
   authenticated :user do
     resources :users, only: [:index]
@@ -33,6 +33,9 @@ Rails.application.routes.draw do
     resource :profile_image, only: [:destroy]
     scope '/customer-portal' do
       resources :accounts do
+        post :invite_user, on: :member
+        get 'users', to: 'accounts#users', as: :users
+        resources :onboardings
         resource :logo, only: [:destroy]
         resources :tickets do
           member do
@@ -45,6 +48,9 @@ Rails.application.routes.draw do
       resources :tickets, only: [:index], controller: 'customer_portal/tickets'
     end
   end
+
+  get 'locations/states', to: 'locations#states'
+  get 'locations/cities', to: 'locations#cities'
 
   # homepage
   root "pages#home"

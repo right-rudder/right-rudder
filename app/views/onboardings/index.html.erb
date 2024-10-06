@@ -1,0 +1,15 @@
+<div class="lg:pl-72 ">
+  <div class="mx-auto w-full p-5">
+    <h1 class="font-bold text-4xl mb-10">Onboarding</h1>
+
+    <%= link_to "General Business Information", edit_account_path(@account), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit" %>
+
+    <% if @account.onboarding.present? %>
+      <%= link_to 'Primary Contact Information', edit_account_onboarding_path(@account, @account.onboarding, section: "primary contact information"), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit mt-5" %>
+      <%= link_to 'Specific Business Information', edit_account_onboarding_path(@account, @account.onboarding, section: "specific business information"), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit mt-5" %>
+    <% else %>
+      <%= link_to 'Primary Contact Information', new_account_onboarding_path(@account, section: "primary contact information"), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit mt-5" %>
+      <%= link_to 'Specific Business Information', new_account_onboarding_path(@account, section: "specific business information"), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium w-fit mt-5" %>
+    <% end %>
+  </div>
+</div>

@@ -16,6 +16,7 @@
       <div class="<%= ticket.completed ? "text-gray-500" : "" %> flex items-center gap-5">
         <p class="space-x-4">
           <span><%= ticket.title %></span>
+          <% ticket.assigned_users.reload %>
           <% if ticket.assigned_users.any? %>
             <span class="text-xs text-gray-500"><%= ticket.assigned_users.map(&:first_name).join(", ") %></span>
           <% end %>

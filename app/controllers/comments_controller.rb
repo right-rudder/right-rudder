@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
   before_action :set_ticket
   before_action :set_account
+  load_and_authorize_resource :ticket
+  load_and_authorize_resource :comment, through: :ticket
 
   def new
     @comment = @ticket.comments.build(user: current_user)

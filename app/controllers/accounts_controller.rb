@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
-  before_action :set_account, only: %i[ show edit update destroy ]
+  before_action :set_account, only: %i[ show edit update destroy invite_user ]
+  load_and_authorize_resource except: %i[ users ]
 
   # GET /accounts or /accounts.json
   def index
@@ -57,14 +58,38 @@ class AccountsController < ApplicationController
     end
   end
 
+  def invite_user
+    email = params[:email]
+    user = User.find_by(email: email)
+
+    unless user
+      user = User.invite!(email: email, username: email)
+    end
+
+    @account.invite_user(user)
+    redirect_to @account, notice: "Invitation sent to #{email}."
+  end
+
+  def users
+    @account = Account.findr(params[:account_id])
+    authorize! :read, @account
+    @account_users = @account.account_users.includes(:user)
+    authorize! :read, AccountUser
+  end
+
+  def onboarding
+    @account = Account.findr(params[:account_id])
+    authorize! :read, @account
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
-      @account = Account.find(params[:id])
+      @account = Account.findr(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def account_params
-      params.require(:account).permit(:name, :email, :phone, :website, :logo)
+      params.require(:account).permit(:name, :email, :phone, :website, :logo, :account_manager_id, :lead_developer_id, :address_line_1, :address_line_2, :city, :state, :zip, :country)
     end
 end

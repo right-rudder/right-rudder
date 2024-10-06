@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_30_223451) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_06_001923) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "account_users", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.bigint "user_id", null: false
+    t.integer "role", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_account_users_on_account_id"
+    t.index ["user_id"], name: "index_account_users_on_user_id"
+  end
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -21,6 +31,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_30_223451) do
     t.string "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "account_manager_id"
+    t.integer "lead_developer_id"
+    t.string "random_id", null: false
+    t.string "address_line_1"
+    t.string "address_line_2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "country"
+    t.index ["random_id"], name: "index_accounts_on_random_id", unique: true
   end
 
   create_table "action_text_rich_texts", force: :cascade do |t|
@@ -178,6 +198,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_30_223451) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "onboardings", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.jsonb "primary_contact_information", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.jsonb "specific_business_information", default: {}
+    t.index ["account_id"], name: "index_onboardings_on_account_id"
+  end
+
   create_table "sop_emails", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -230,17 +259,32 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_30_223451) do
     t.string "first_name"
     t.string "last_name"
     t.string "username", null: false
+    t.string "invitation_token"
+    t.datetime "invitation_created_at"
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
+    t.integer "invitation_limit"
+    t.string "invited_by_type"
+    t.bigint "invited_by_id"
+    t.integer "invitations_count", default: 0
+    t.integer "role", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
+    t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
+    t.index ["invited_by_type", "invited_by_id"], name: "index_users_on_invited_by"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "account_users", "accounts"
+  add_foreign_key "account_users", "users"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "assignments", "tickets"
   add_foreign_key "assignments", "users"
   add_foreign_key "comments", "tickets"
   add_foreign_key "comments", "users"
+  add_foreign_key "onboardings", "accounts"
   add_foreign_key "ticket_notifications", "tickets"
   add_foreign_key "ticket_notifications", "users"
   add_foreign_key "ticket_subscriptions", "tickets"
