@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   root to: 'customer_portal#index'
 
+  post 'uploader/image', to: 'uploader#image' #add upload image to notams
+
   authenticated :user do
     resources :users, only: [:index]
     resource :profile_image, only: [:destroy]
